@@ -23,7 +23,6 @@ function Controller() {
     };
 
     var initialiseListeners = function() {
-        // alert("Bla!");
 //        $("#clear").on(
 //                "click",
 //                function(e) {
