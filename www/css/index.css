@@ -77,50 +77,30 @@
 .right {
     float: right;
 }
-/*
-.options-row1 {
-    margin-top: 50px;
-}
-.options-row2 {
-    margin-top: 50+100+15px;
-}
-.options-row3 {
-    margin-top: 350px;
-}
 
-[data-role="option"].left {
-    margin-left: -100px;
-}
-[data-role="option"].far-left {
-    margin-left: -200px;
-}
-[data-role="option"].centre {
-    margin-left: -50px;
-}
-[data-role="option"].right {
-    margin-left: 0px;
-}
-[data-role="option"].far-right {
-    margin-left: 100px;
-}
-*/
 [data-role="option"] {
     position: absolute;
     left: 50%;
 
-
     width: 100px;
     height: 100px;
 
-    margin-left: -100px;
-    margin-top: -50px;
-
     text-align: center;
-    vertical-align: middle;
+    vertical-align: bottom;
 
     font-size: 8px;
     border: black solid thin;
 }
+
+// To be set using js
+.options-row1 {}
+.options-row2 {}
+.options-row3 {}
+[data-role="option"].left {}
+[data-role="option"].far-left {}
+[data-role="option"].centre {}
+[data-role="option"].right {}
+[data-role="option"].far-right {}
 
 [data-role="header"] {
     height: 40px;
@@ -141,7 +121,7 @@
     // height:50px;            // text area height
     // width:50px;             // text area width
     text-align: center;
-    vertical-align: middle;
+    // vertical-align: middle;
     // padding:180px 0px 0px 0px;      // image height is 200px (bottom 20px are overlapped with text)
     // margin:-115px 0px 0px -112px;   // offset vertical: half of image height and text area height
                                     // offset horizontal: half of text area width

@@ -42,7 +42,8 @@ function Controller() {
     var alignOptions = function() {
         var option_size = 100;
         var option_padding = 15;
-        var top_margin_start = 50;
+        var top_margin_start = 0;
+
         $(".options-row1").css("margin-top", (top_margin_start) + "px");
         $(".options-row2").css("margin-top", (top_margin_start + option_size + option_padding) + "px");
         $(".options-row3").css("margin-top", (top_margin_start + option_size + option_padding + option_size + option_padding) + "px");
