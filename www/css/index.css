@@ -2,7 +2,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
+[data-role="page"] {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
@@ -20,9 +20,9 @@ body {
     );
     background-attachment:fixed;
 
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    text-transform:uppercase;
+    font-family:'Verdana'; // HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:16px;
+    // text-transform:uppercase;
 
     width:100%;
     height:100%;
@@ -31,29 +31,137 @@ body {
     padding:0px;
 }
 
+#splash {
+    border: black thin solid;
+
+    position: absolute;
+    left: 50%;
+    top: 15%;
+
+    width: 200px;
+    height: 100px;
+
+    margin-left: -100px;
+    margin-top: -50px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer-button {
+    font-size: 12px;
+    padding: 0 15px;
+    // height: 45px;
+    // line-height: 45px;
+    vertical-align: middle;
+}
+.footer-progress {
+    font-size: 10px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header-button {
+    font-size: 12px;
+    padding: 0 15px;
+    // height: 45px;
+    // line-height: 45px;
+    vertical-align: middle;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+/*
+.options-row1 {
+    margin-top: 50px;
+}
+.options-row2 {
+    margin-top: 50+100+15px;
+}
+.options-row3 {
+    margin-top: 350px;
+}
+
+[data-role="option"].left {
+    margin-left: -100px;
+}
+[data-role="option"].far-left {
+    margin-left: -200px;
+}
+[data-role="option"].centre {
+    margin-left: -50px;
+}
+[data-role="option"].right {
+    margin-left: 0px;
+}
+[data-role="option"].far-right {
+    margin-left: 100px;
+}
+*/
+[data-role="option"] {
+    position: absolute;
+    left: 50%;
+
+
+    width: 100px;
+    height: 100px;
+
+    margin-left: -100px;
+    margin-top: -50px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: 8px;
+    border: black solid thin;
+}
+
+[data-role="header"] {
+    height: 40px;
+    border: white dotted thick;
+}
+[data-role="footer"] {
+    height: 40px;
+    border: white dotted thick;
+}
+
 /* Portrait layout (default) */
-/*.app {
-    border: black solid thick;
+[data-role="content"] {
+    border: black solid thin;
     // background:url(../img/logo.png) no-repeat center top;  170px x 200px
-    position:absolute;              position in the center of the screen
-    left:50%;
-    top:50%;
-    height:50px;                    text area height
-    width:50px; // 225px;                    text area width
-    text-align:center;
-    // padding:180px 0px 0px 0px;      image height is 200px (bottom 20px are overlapped with text)
-    // margin:-115px 0px 0px -112px;   offset vertical: half of image height and text area height
-                                    offset horizontal: half of text area width
-}*/
+    // position:absolute;      // position in the center of the screen
+    // left:50%;
+    // top:50%;
+    // height:50px;            // text area height
+    // width:50px;             // text area width
+    text-align: center;
+    vertical-align: middle;
+    // padding:180px 0px 0px 0px;      // image height is 200px (bottom 20px are overlapped with text)
+    // margin:-115px 0px 0px -112px;   // offset vertical: half of image height and text area height
+                                    // offset horizontal: half of text area width
+}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-/*    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;   padding-top + padding-bottom + text area = image height
-        margin:-90px 0px 0px -198px;   offset vertical: half of image height
-                                       offset horizontal: half of image width and text area width
-    }*/
+    body {
+        font-size:20px;
+    }
+    [data-role="content"] {
+        // font-size:20px;
+        // background-position:left center;
+        // padding:75px 0px 75px 170px;   // padding-top + padding-bottom + text area = image height
+        // margin:-90px 0px 0px -198px;   // offset vertical: half of image height
+                                       // offset horizontal: half of image width and text area width
+    }
+    #splash {
+        top: 25%;
+    }
 }
 
 @keyframes fade {

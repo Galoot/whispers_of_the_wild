@@ -13,8 +13,8 @@
         <!-- jQuery ======================================================== -->
         <script type="text/javascript" src="js/libs/jquery-1.10.2/jquery.min.js"></script>
         <!-- mobile -->
-        <!--<script type="text/javascript" src="js/libs/jquery-mobile-1.4.3/jquery.mobile.min.js"></script>-->
-        <!--<link rel="stylesheet" href="css/libs/jquery-mobile-1.4.3/jquery.mobile.min.css" />-->
+        <script type="text/javascript" src="js/libs/jquery-mobile/jquery.mobile.js"></script>
+        <link rel="stylesheet" href="js/libs/jquery-mobile/jquery.mobile.css" />
         <!-- =============================================================== -->
 
         <!-- local scripts & styling ======================================= -->
@@ -32,10 +32,53 @@
         <title>Whispers of the Wild</title>
     </head>
     <body>
-        <div id="header"></div>
-        <div id="content">
-            <!--<div class="app"></div>-->
+        <!-- splash screen -->
+        <div data-dom-cache="false" data-role="page" id="index">
+            <div id="splash">
+                Splash Screen
+            </div>
         </div>
-        <div id="footer"></div>
+
+        <!-- main menu -->
+        <div data-dom-cache="false" data-role="page" id="menu">
+            <div data-role="header">
+                <div class="header-button left">Left Icon</div>
+                <div class="header-button left">Index</div>
+                <div class="header-button right">Left</div>
+                <div class="header-button right">Right</div>
+                <div class="header-button right">Home</div>
+                <div class="header-button right">Options</div>
+            </div>
+            <div data-role="content">
+                <div class="options-row1">
+                    <div data-role="option" class="far-left">Animals</div>
+                    <div data-role="option" class="centre">Games</div>
+                    <div data-role="option" class="far-right">Ask a Question</div>
+                </div>
+
+                <div class="options-row2">
+                    <div data-role="option" class="left">Intro</div>
+                    <div data-role="option" class="right">Safety Advice</div>
+                </div>
+
+                <div class="options-row3">
+                    <div data-role="option" class="far-left">About Us</div>
+                    <div data-role="option" class="centre">Partners</div>
+                    <div data-role="option" class="far-right">Donate to a Conservation</div>
+                </div>
+            </div>
+            <div data-role="footer">
+                <div>
+                    <div class="footer-button left">Options</div>
+                    <div class="footer-button right">L Skip</div>
+                    <div class="footer-button right">Pause</div>
+                    <div class="footer-button right">Play</div>
+                    <div class="footer-button right">R Skip</div>
+                </div>
+                <div class="footer-progress">------- Progress Bar -------</div>
+            </div>
+        </div>
+
+
     </body>
 </html>
