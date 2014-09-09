@@ -18,8 +18,12 @@
         <!-- =============================================================== -->
 
         <!-- local scripts & styling ======================================= -->
-        <script type="text/javascript" src="js/index.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/datastore.js"></script>
+        <script type="text/javascript" src="js/model.js"></script>
+        <script type="text/javascript" src="js/view.js"></script>
+        
+        <script type="text/javascript" src="js/init.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
         <!-- =============================================================== -->
 
         <script>
@@ -41,33 +45,34 @@
 
         <!-- main menu -->
         <div data-dom-cache="false" data-role="page" id="menu">
-            <div data-role="header">
+            <div class="header">
                 <div class="header-button left">Left Icon</div>
                 <div class="header-button left">Index</div>
-                <div class="header-button right">Left</div>
-                <div class="header-button right">Right</div>
-                <div class="header-button right">Home</div>
+
                 <div class="header-button right">Options</div>
+                <div class="header-button right">Home</div>
+                <div class="header-button right">Right</div>
+                <div class="header-button right">Left</div>
             </div>
-            <div data-role="content">
+            <div class="content">
                 <div class="options-row1">
-                    <div data-role="option" class="far-left">Animals</div>
-                    <div data-role="option" class="centre">Games</div>
-                    <div data-role="option" class="far-right">Ask a Question</div>
+                    <div class="option far-left"><a href="#animals">Animals</a></div>
+                    <div class="option centre">Games</div>
+                    <div class="option far-right">Ask a Question</div>
                 </div>
 
                 <div class="options-row2">
-                    <div data-role="option" class="left">Intro</div>
-                    <div data-role="option" class="right">Safety Advice</div>
+                    <div class="option left">Intro</div>
+                    <div class="option right">Safety Advice</div>
                 </div>
 
                 <div class="options-row3">
-                    <div data-role="option" class="far-left">About Us</div>
-                    <div data-role="option" class="centre">Partners</div>
-                    <div data-role="option" class="far-right">Donate to a Conservation</div>
+                    <div class="option far-left">About Us</div>
+                    <div class="option centre">Partners</div>
+                    <div class="option far-right">Donate to a Conservation</div>
                 </div>
             </div>
-            <div data-role="footer">
+            <div class="footer">
                 <div>
                     <div class="footer-button left">Options</div>
                     <div class="footer-button right">L Skip</div>
@@ -79,6 +84,34 @@
             </div>
         </div>
 
+        <!-- animals search -->
+        <div data-dom-cache="false" data-role="page" id="animals">
+            <div class="header">
+                <div class="header-button left">Left Icon</div>
+                <div class="header-button left">Index</div>
+                <div class="header-button right">Options</div>
+                <div class="header-button right">Home</div>
+                <div class="header-button right">Right</div>
+                <div class="header-button right">Left</div>
+            </div>
+            <div class="content">
+                <ul id="animalsList"
+                        data-role="listview"
+                        data-inset="true"
+                        data-filter-placeholder="Search animals..."
+                        data-filter="true"></ul>
+            </div>
+            <div class="footer">
+                <div>
+                    <div class="footer-button left">Options</div>
+                    <div class="footer-button right">L Skip</div>
+                    <div class="footer-button right">Pause</div>
+                    <div class="footer-button right">Play</div>
+                    <div class="footer-button right">R Skip</div>
+                </div>
+                <div class="footer-progress">------- Progress Bar -------</div>
+            </div>
+        </div>
 
     </body>
 </html>

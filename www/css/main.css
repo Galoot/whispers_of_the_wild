@@ -78,7 +78,7 @@
     float: right;
 }
 
-[data-role="option"] {
+.option {
     position: absolute;
     left: 50%;
 
@@ -96,23 +96,27 @@
 .options-row1 {}
 .options-row2 {}
 .options-row3 {}
-[data-role="option"].left {}
-[data-role="option"].far-left {}
-[data-role="option"].centre {}
-[data-role="option"].right {}
-[data-role="option"].far-right {}
+.option.left {}
+.option.far-left {}
+.option.centre {}
+.option.right {}
+.option.far-right {}
 
-[data-role="header"] {
+.header {
     height: 40px;
     border: white dotted thick;
+    width: 100%;
+    text-align: center;
 }
-[data-role="footer"] {
+.footer {
     height: 40px;
     border: white dotted thick;
+    width: 100%;
+    text-align: center;
 }
 
 /* Portrait layout (default) */
-[data-role="content"] {
+.content {
     border: black solid thin;
     // background:url(../img/logo.png) no-repeat center top;  170px x 200px
     // position:absolute;      // position in the center of the screen
@@ -132,7 +136,7 @@
     body {
         font-size:20px;
     }
-    [data-role="content"] {
+    .content {
         // font-size:20px;
         // background-position:left center;
         // padding:75px 0px 75px 170px;   // padding-top + padding-bottom + text area = image height
