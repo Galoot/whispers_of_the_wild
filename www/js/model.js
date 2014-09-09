@@ -5,9 +5,10 @@ function Model() {
     var _get_animals = "SELECT animalID, name FROM ANM_Animal ORDER BY name ASC";
     var _get_animal = "SELECT name, cautionNotice, isFree, isEarned, isPaid FROM ANM_Animal WHERE animalID = ?";
     var _get_profile = "SELECT profileID, idPointers, lengthMaleMin, lengthMaleMax, lengthFemaleMin, lengthFemaleMax, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Profile WHERE animalID = ?";
-    var _get_audio = "SELECT audioID, trackName, filePath ANM_Audio WHERE animalID = ?";
-    var _get_maps = "SELECT mapID, mapName, filePath ANM_Map WHERE animalID = ?";
-    var _get_footprints = "SELECT footprintID, footprintName, filePath ANM_Footprint WHERE animalID = ?";
+    var _get_images = "SELECT imageID, imageName, filePath FROM ANM_Image WHERE animalID = ?";
+    var _get_audio = "SELECT audioID, trackName, filePath FROM ANM_Audio WHERE animalID = ?";
+    var _get_maps = "SELECT mapID, mapName, filePath FROM ANM_Map WHERE animalID = ?";
+    var _get_footprints = "SELECT footprintID, footprintName, filePath FROM ANM_Footprint WHERE animalID = ?";
 
     this.getAnimals = function(onResults) {
         this.data.dbQuery(_get_animals, null,

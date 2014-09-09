@@ -75,6 +75,11 @@ function Datastore() {
                             + "name TEXT, cautionNotice TEXT, isFree BOOLEAN, isEarned BOOLEAN, isPaid BOOLEAN)");
                     tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Baboon')");
 
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "
+                            + "(imageID INTEGER PRIMARY KEY UNIQUE, "
+                            + "animalID INTEGER, "
+                            + "imageName TEXT, filePath TEXT)");
+
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Profile "
                             + "(profileID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
