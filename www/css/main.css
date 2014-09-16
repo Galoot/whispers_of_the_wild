@@ -78,6 +78,24 @@
     float: right;
 }
 
+.profile-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: black thin solid;
+}
+
+.profile-tab-selected {
+    color: red;
+}
+
+.profile-option {
+    position: absolute;
+    border: black thin solid;
+
+    width: 100px;
+    height: 50px;
+}
 .option {
     position: absolute;
     left: 50%;

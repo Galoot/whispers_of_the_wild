@@ -16,6 +16,13 @@ function Model() {
                     onResults(jQuery.parseJSON(results).results);
                 });
     };
+
+    this.getAnimal = function(animalID, onResults) {
+        this.data.dbQuery(_get_animal, [animalID],
+                function(results) {
+                    onResults(jQuery.parseJSON(results).results[0]);
+                });
+    };
 }
 
 function Animal() {
