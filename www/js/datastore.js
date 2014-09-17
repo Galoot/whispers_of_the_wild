@@ -74,6 +74,11 @@ function Datastore() {
                             + "(animalID INTEGER PRIMARY KEY UNIQUE, "
                             + "name TEXT, cautionNotice TEXT, isFree BOOLEAN, isEarned BOOLEAN, isPaid BOOLEAN)");
                     tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Baboon')");
+                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Elephant')");
+                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Lion')");
+                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Leopard')");
+                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Buffalo')");
+                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Giraffe')");
 
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "
                             + "(imageID INTEGER PRIMARY KEY UNIQUE, "
