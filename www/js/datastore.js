@@ -80,6 +80,7 @@ function Datastore() {
                     tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Buffalo')");
                     tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Giraffe')");
                     tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Rhino')");
+                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Crocodile')");
 
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "
                             + "(imageID INTEGER PRIMARY KEY UNIQUE, "
