@@ -39,6 +39,10 @@ function Application() {
     };
 
     var initialiseListeners = function() {
+        $("div .action-home").on("click", function(event) {
+            location.href = "#menu";
+        });
+
         $("#profile .content").html(app.view.get_profile_tabs("profile"));
         $("#audio .content").html(app.view.get_profile_tabs("audio"));
         $("#map .content").html(app.view.get_profile_tabs("map"));
@@ -46,36 +50,15 @@ function Application() {
         $("#question .content").html(app.view.get_profile_tabs("question"));
         $("#donate .content").html(app.view.get_profile_tabs("donate"));
 
-        $("* .animal-profile").on("click", function(event) {
-            location.href = "#profile";
-        });
-        $("* .animal-audio").on("click", function(event) {
-            location.href = "#audio";
-        });
-        $("* .animal-map").on("click", function(event) {
-            location.href = "#map";
-        });
-        $("* .animal-footprints").on("click", function(event) {
-            location.href = "#footprints";
-        });
-        $("* .animal-question").on("click", function(event) {
-            location.href = "#question";
-        });
-        $("* .animal-donate").on("click", function(event) {
-            location.href = "#donate";
-        });
-
         $("#option_animals").on("click", function(event) {
-                app.view.animals_loadAnimals(function() {
-                    location.href = "#animals";
-                    // $("#animals .header .title").html("Animals");
-                    // $("#menu .content").html($("#animals .content").html());
+                    app.view.animal_loadAnimals(function() {
+                        location.href = "#animals";
+                        // $("#animals .header .title").html("Animals");
+                        // $("#menu .content").html($("#animals .content").html());
+                    });
+
+
                 });
-
-
-            });
-
-
 //        $("#clear").on(
 //                "click",
 //                function(e) {

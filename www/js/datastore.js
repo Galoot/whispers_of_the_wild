@@ -73,39 +73,36 @@ function Datastore() {
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Animal "
                             + "(animalID INTEGER PRIMARY KEY UNIQUE, "
                             + "name TEXT, cautionNotice TEXT, isFree BOOLEAN, isEarned BOOLEAN, isPaid BOOLEAN)");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Baboon')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Elephant')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Lion')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Leopard')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Buffalo')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Giraffe')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Rhino')");
-                    tx.executeSql("INSERT INTO ANM_Animal (name) VALUES ('Crocodile')");
 
+                    tx.executeSql("DROP TABLE IF EXISTS ANM_Image");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "
                             + "(imageID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "imageName TEXT, filePath TEXT)");
 
+                    tx.executeSql("DROP TABLE IF EXISTS ANM_Profile");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Profile "
                             + "(profileID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "idPointers TEXT, "
-                            + "lengthMaleMin INTEGER, lengthMaleMax INTEGER, "
-                            + "lengthFemaleMin INTEGER, lengthFemaleMax INTEGER, "
-                            + "weightMaleMin INTEGER, weightMaleMax INTEGER, "
-                            + "weightFemaleMin INTEGER, weightFemaleMax INTEGER)");
+                            + "lengthMaleMin DOUBLE, lengthMaleMax DOUBLE, "
+                            + "lengthFemaleMin DOUBLE, lengthFemaleMax DOUBLE, "
+                            + "weightMaleMin DOUBLE, weightMaleMax DOUBLE, "
+                            + "weightFemaleMin DOUBLE, weightFemaleMax DOUBLE)");
 
+                    tx.executeSql("DROP TABLE IF EXISTS ANM_Audio");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Audio "
                             + "(audioID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "trackName TEXT, filePath TEXT)");
 
+                    tx.executeSql("DROP TABLE IF EXISTS ANM_Map");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Map "
                             + "(mapID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "mapName TEXT, filePath TEXT)");
 
+                    tx.executeSql("DROP TABLE IF EXISTS ANM_Footprint");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Footprint "
                             + "(footprintID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
@@ -115,7 +112,7 @@ function Datastore() {
                     alert("SQL Error Creating Tables: " + error.code + ", " + error.message);
                 },
                 function() {
-                    // alert("Success creating tables...")
+                    // do nothing
                 }
         );
     };

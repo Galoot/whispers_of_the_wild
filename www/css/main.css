@@ -87,6 +87,7 @@
 
 .profile-tab-selected {
     color: red;
+    border: red thick solid;
 }
 
 .profile-option {
@@ -94,7 +95,7 @@
     border: black thin solid;
 
     width: 100px;
-    height: 50px;
+    // height: 50px;
 }
 .option {
     position: absolute;
@@ -163,6 +164,10 @@
     }
     #splash {
         top: 25%;
+    }
+
+    .profile-option {
+        width: 150px;
     }
 }
 
