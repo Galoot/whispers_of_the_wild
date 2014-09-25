@@ -15,10 +15,18 @@ function Datastore() {
     };
 
     var _getSQLCols = function(sql) {
-        return sql
-                .substring(7, sql.indexOf(" FROM"))
+        var cols = sql
+                .substring(
+                    (sql.indexOf("DISTINCT") === -1) ? 7 : 16,
+                sql.indexOf(" FROM"))
                 .replace(/ /g, '')
                 .split(",");
+        for (var x = 0; x < cols.length; x++) {
+            if (cols[x].indexOf('.') !== -1) {
+                cols[x] = cols[x].substring(cols[x].indexOf('.')+1);
+            }
+        }
+        return cols;
     };
 
     this.dbQuery = function(sql, params, onResults) {
@@ -57,6 +65,7 @@ function Datastore() {
                             },
                             function(tx, error) {
                                 alert("SQL Error: " + error.code + ", " + error.message);
+                                console.log('Error: ' + sql);
                             }
                     );
                 },
@@ -69,17 +78,24 @@ function Datastore() {
     this.init = function() {
         this.getDB().transaction(
                 function(tx) {
+                    tx.executeSql("DELETE FROM ANM_Animal");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Animal");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Animal "
                             + "(animalID INTEGER PRIMARY KEY UNIQUE, "
-                            + "name TEXT, cautionNotice TEXT, isFree BOOLEAN, isEarned BOOLEAN, isPaid BOOLEAN)");
+                            + "category TEXT, "
+                            + "name TEXT, cautionNotice TEXT, "
+                            + "iconFilePath TEXT, "
+                            + "isFree BOOLEAN, isEarned BOOLEAN, "
+                            + "isPaid BOOLEAN)");
 
+                    tx.executeSql("DELETE FROM ANM_Image");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Image");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "
                             + "(imageID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "imageName TEXT, filePath TEXT)");
 
+                    tx.executeSql("DELETE FROM ANM_Profile");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Profile");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Profile "
                             + "(profileID INTEGER PRIMARY KEY UNIQUE, "
@@ -90,18 +106,21 @@ function Datastore() {
                             + "weightMaleMin DOUBLE, weightMaleMax DOUBLE, "
                             + "weightFemaleMin DOUBLE, weightFemaleMax DOUBLE)");
 
+                    tx.executeSql("DELETE FROM ANM_Audio");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Audio");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Audio "
                             + "(audioID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "trackName TEXT, filePath TEXT)");
 
+                    tx.executeSql("DELETE FROM ANM_Map");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Map");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Map "
                             + "(mapID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "mapName TEXT, filePath TEXT)");
 
+                    tx.executeSql("DELETE FROM ANM_Footprint");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Footprint");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Footprint "
                             + "(footprintID INTEGER PRIMARY KEY UNIQUE, "

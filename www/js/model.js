@@ -2,12 +2,14 @@ function Model() {
     this.data = new Datastore();
     this.data.init();
 
-    var _get_animals = "SELECT animalID, name FROM ANM_Animal ORDER BY name ASC";
+    var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
+
+    var _get_animals = "SELECT a.animalID, name, iconFilePath, category, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
 
     var _add_animal = "INSERT INTO ANM_Animal (\n\
-            name, cautionNotice, isFree, isEarned, isPaid) \n\
-            VALUES (?, ?, ?, ?, ?)";
-    var _get_animal = "SELECT animalID, name, cautionNotice, isFree, isEarned, isPaid FROM ANM_Animal WHERE animalID = ?";
+            name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid) \n\
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    var _get_animal = "SELECT animalID, name, iconFilePath, cautionNotice, isFree, isEarned, isPaid FROM ANM_Animal WHERE animalID = ?";
 
     var _add_profile = "INSERT INTO ANM_Profile (\n\
             animalID, idPointers, lengthMaleMin, lengthMaleMax, lengthFemaleMin, \n\
@@ -26,6 +28,13 @@ function Model() {
 
     var _add_footprint = "INSERT INTO ANM_Footprint (animalID, footprintName, filePath) VALUES (?, ?, ?)";
     var _get_footprints = "SELECT footprintID, footprintName, filePath FROM ANM_Footprint WHERE animalID = ?";
+
+    this.getCategories = function(onResults) {
+        this.data.dbQuery(_get_categories, null,
+                function(results) {
+                    onResults(jQuery.parseJSON(results).results);
+                });
+    };
 
     this.getAnimals = function(onResults) {
         this.data.dbQuery(_get_animals, null,
@@ -76,11 +85,11 @@ function Model() {
                 });
     };
 
-    this.addAnimal = function(name, cautionNotice, payStatus, onCompleted) {
+    this.addAnimal = function(name, iconFilePath, category, cautionNotice, payStatus, onCompleted) {
         var isFree = (payStatus === Model.FREE);
         var isEarned = (payStatus === Model.EARNED);
         var isPaid = (payStatus === Model.PAID);
-        this.data.dbQuery(_add_animal, [name, cautionNotice, isFree, isEarned, isPaid],
+        this.data.dbQuery(_add_animal, [name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid],
                 function(results) {
                     if (onCompleted) {
                         onCompleted();
@@ -106,15 +115,21 @@ function Model() {
         var animal_counter = 0;
 
         // Baboon
-        mdl.addAnimal('Baboon', 'They bite!', PayStatus.FREE, function() {
+        mdl.addAnimal('Baboon', 'img/animals/baboon/icon.jpg', 'Primate', 'They bite!', PayStatus.FREE, function() {
             animal_counter++;
-            mdl.addProfile(animal_counter, 'Monkey like...', 1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
+            mdl.addProfile(animal_counter, 'Monkey like...', 2.2, 2.6, 2, 2.2, 35, 55, 22, 30);
+        });
+
+        // Bat-eared-fox
+        mdl.addAnimal('Bat-Eared-Fox', 'img/animals/bat-eared-fox/icon.jpg', 'Small Predator', 'They bite less than lion!', PayStatus.FREE, function() {
+            animal_counter++;
+            mdl.addProfile(animal_counter, 'Smaller than lion like...', 1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
         });
 
         // Lion
-        mdl.addAnimal('Lion', 'They bite even more!', PayStatus.PAID, function() {
+        mdl.addAnimal('Lion', 'img/animals/lion/icon.jpg', 'Large Predator', 'They bite even more!', PayStatus.PAID, function() {
             animal_counter++;
-            mdl.addProfile(animal_counter, 'A little bit larger than a house cat...', 1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
+            mdl.addProfile(animal_counter, 'A little bit larger than a house cat...', 3.2, 3.6, 3, 3.2, 45, 65, 32, 40);
         });
     };
 }

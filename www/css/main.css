@@ -134,6 +134,14 @@
     text-align: center;
 }
 
+.animal {
+    display:block;
+}
+
+.cautionNotice {
+    display: none;
+}
+
 /* Portrait layout (default) */
 .content {
     border: black solid thin;

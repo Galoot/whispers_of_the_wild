@@ -6,12 +6,31 @@ function View() {
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             var profileHtml = "Name: " + animal.name;
-            profileHtml += "<br/>Identification Pointers: " + profile.idPointers;
+            if (animal.cautionNotice) {
+                profileHtml += "<br/><span class=\"cautionLink\"><b>Potentially Dangerous Animal</b>"
+                        + "<br/>Click here to view safety advice</span>";
+                profileHtml += "<div class=\"cautionNotice\">" + animal.cautionNotice + "</div>";
+            }
+
+            profileHtml += "<br/><br/><b>IDENTIFICATION POINTERS</b>"
+                    + "<br/>" + profile.idPointers;
+
+            profileHtml += "<br/><br/><b>LENGTH</b>"
+                    + "<br/>Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
+                    + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
+
+            profileHtml += "<br/><br/><b>WEIGHT</b>"
+                    + "<br/>Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
+                    + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
 
             $("#profile .header .title").html(animal.name);
             $("#profile .content .profile-content").html(profileHtml);
 
-
+            $("#profile .content .cautionLink").on("click", function() {
+                var popupContent = "<b>Safety Notice</b>"
+                        + "<br/>" + $("#profile .content .cautionNotice").html();
+                alert(popupContent);
+            });
             if (onComplete) {
                 onComplete();
             }
@@ -20,43 +39,122 @@ function View() {
 
     this.animal_loadAnimals = function(onComplete) {
         model.getAnimals(function(animals) {
-            var animalsHtml = "";
-            for (var x = 0; x < animals.length; x++) {
-                if (x === 0) {
-                    animalsHtml += "<li class=\"ui-first-child\">";
-                } else if (x === (animals.length - 1)) {
-                    animalsHtml += "<li class=\"ui-last-child\">";
-                } else {
-                    animalsHtml += "<li>";
+            model.getCategories(function(categories) {
+                var animalsHtml = "";
+
+                animalsHtml += "<div class=\"search-by-category\">"
+                        + "<div class=\"category-label\"><b>SEARCH BY CATEGORY</b></div>";
+                for (var x = 0; x < categories.length; x++) {
+                    animalsHtml += "<div id=\"" + categories[x].category + "\" class=\"category-option\">"
+                            + categories[x].category + "</div>";
+                }
+                animalsHtml += "</div>";
+
+                animalsHtml += "<br/><div class=\"search-by-letter\">"
+                animalsHtml += "<div class=\"category-label\"><b>SEARCH BY LETTER</b></div>";
+                var lastLetter = '';
+                for (var x = 0; x < animals.length; x++) {
+                    var firstLetter = animals[x].name.charAt(0);
+                    if (firstLetter !== lastLetter) {
+                        animalsHtml += "<div id=\"" + firstLetter + "\" class=\"letter-heading\"><b>" + firstLetter + "</b></div>";
+                        lastLetter = firstLetter;
+                    }
+                    animalsHtml += "<div id=\"letter_" + animals[x].animalID + "\" class=\"letter-option\">"
+                            + animals[x].name + "</div>";
+                }
+                animalsHtml += "</div>";
+
+                animalsHtml += "<br/><div class=\"search-by-size\">";
+                animalsHtml += "<div class=\"category-label\"><b>NARROW IT DOWN BY SIZE</b></div>";
+                animalsHtml += "<input type=\"text\" name=\"minWeightTxt\" id=\"minWeightTxt\">";
+                animalsHtml += "<input type=\"range\" name=\"minWeight\" id=\"minWeight\" value=\"0\" min=\"0\" max=\"100\">";
+                animalsHtml += "<input type=\"range\" name=\"maxWeight\" id=\"maxWeight\" value=\"100\" min=\"0\" max=\"100\">";
+                animalsHtml += "<input type=\"text\" name=\"maxWeightTxt\" id=\"maxWeightTxt\">";
+                animalsHtml += "</div>";
+
+                for (var x = 0; x < animals.length; x++) {
+                    if (x === 0) {
+                        animalsHtml += "<li class=\"ui-first-child\">";
+                    } else if (x === (animals.length - 1)) {
+                        animalsHtml += "<li class=\"ui-last-child\">";
+                    } else {
+                        animalsHtml += "<li>";
+                    }
+
+                    animalsHtml += "<div class=\"animal\" category=\"" + animals[x].category + "\" minWeight=\"" + animals[x].weightFemaleMin + "\" maxWeight=\"" + animals[x].weightMaleMax + "\">";
+                    animalsHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                    animalsHtml += "<a id=\"animal_" + animals[x].animalID + "\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"
+                            + animals[x].name
+                            + "</a>";
+                    animalsHtml += "</div>";
+
+                    animalsHtml += "</li>";
+
                 }
 
-                animalsHtml += "<a id=\"animal_" + animals[x].animalID + "\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"
-                        + animals[x].name
-                        + "</a>";
+                $("#animalsList").html(animalsHtml);
 
-                animalsHtml += "</li>";
+                $("#minWeight").on("change", function() {
+                    _filterWeights();
+                });
+                $("#maxWeight").on("change", function() {
+                    _filterWeights();
+                });
 
-            }
+                $('.category-option').each(function() {
+                    $(this).on("click", function(event) {
+                        var category = event.target.id;
 
-            $("#animalsList").html(animalsHtml);
+                        $(".animal").each(function() {
+                            if (category == $(this).attr("category")) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
 
-            $('*[id^="animal_"]').on(
-                    "click",
-                    function(event) {
-                        var elementID = event.target.id;
-                        var animalID = elementID.substring(7);
-
-                        app.view.initializeProfileLinks(animalID);
-
-                        model.getAnimal(animalID, function(animal) {
-                            app.view.animal_loadProfile(animal, function() {
-                                location.href = "#profile";
-                            });
+                            }
                         });
-                    }
-            );
-            if (onComplete) {
-                onComplete();
+
+                    });
+                });
+
+                $('*[id^="animal_"], *[id^="letter_"]').on(
+                        "click",
+                        function(event) {
+                            var elementID = event.target.id;
+                            var animalID = elementID.substring(7);
+
+                            app.view.initializeProfileLinks(animalID);
+
+                            model.getAnimal(animalID, function(animal) {
+                                app.view.animal_loadProfile(animal, function() {
+                                    location.href = "#profile";
+                                });
+                            });
+                        }
+                );
+                if (onComplete) {
+                    onComplete();
+                }
+            });
+        });
+    };
+
+    _filterWeights = function() {
+        var min = parseFloat($("#minWeight").val());
+        var max = parseFloat($("#maxWeight").val());
+
+        $("#minWeightTxt").val(min);
+        $("#maxWeightTxt").val(max);
+
+        $(".animal").each(function() {
+            var animalMin = parseFloat($(this).attr("minWeight"));
+            var animalMax = parseFloat($(this).attr("maxWeight"));
+
+            if (min < animalMin && max > animalMax) {
+                $(this).show();
+            } else {
+                $(this).hide();
+
             }
         });
     };
