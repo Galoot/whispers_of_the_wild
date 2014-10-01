@@ -242,15 +242,13 @@ function View() {
 
         $(".options-row1").css("margin-top", (top_margin_start) + "px");
         $(".options-row2").css("margin-top", (top_margin_start + option_size + option_padding) + "px");
-        $(".options-row3").css("margin-top", (top_margin_start + option_size + option_padding + option_size + option_padding) + "px");
+        // $(".options-row3").css("margin-top", (top_margin_start + option_size + option_padding + option_size + option_padding) + "px");
 
         var left_margin_centre = -50; // from the centre of the content div
 
-        $(".option.far-left").css("margin-left", (left_margin_centre - option_size - option_padding) + "px");
-        $(".option.left").css("margin-left", (left_margin_centre - (option_size/2) - (option_padding/2)) + "px");
+        $(".option.left").css("margin-left", (left_margin_centre - option_size - option_padding) + "px");
         $(".option.centre").css("margin-left", (left_margin_centre + 0) + "px");
-        $(".option.right").css("margin-left", (left_margin_centre + (option_size/2) + (option_padding/2)) + "px");
-        $(".option.far-right").css("margin-left", (left_margin_centre + option_size + option_padding) + "px");
+        $(".option.right").css("margin-left", (left_margin_centre + option_size + option_padding) + "px");
     };
 
     this.app_maxHeight = function() {

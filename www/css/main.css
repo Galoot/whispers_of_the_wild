@@ -31,6 +31,10 @@
     padding:0px;
 }
 
+#intro {
+    display: none;
+}
+
 #splash {
     border: black thin solid;
 
@@ -114,12 +118,10 @@
 // To be set using js
 .options-row1 {}
 .options-row2 {}
-.options-row3 {}
+
 .option.left {}
-.option.far-left {}
 .option.centre {}
 .option.right {}
-.option.far-right {}
 
 .header {
     height: 40px;

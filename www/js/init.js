@@ -22,6 +22,7 @@ function Application() {
 
     this.onDeviceReady = function() {
         $(window).bind("pageshow resize orientationchange", function(e) { // resize page if needed
+            // These things get executed whenever teh page resizes
             app.view.app_maxHeight();
             app.view.menu_alignOptions();
             app.view.profile_alignOptions();
@@ -29,19 +30,44 @@ function Application() {
 
         // Initialise my stuff here
         initialiseListeners();
-
-        // Splash screen then main menu
-        window.setTimeout(
-            function() {
-                location.href = "#menu";
-            },
-            3000);
     };
 
     var initialiseListeners = function() {
+
+        // ==== Header =========================================================
         $("div .action-home").on("click", function(event) {
             location.href = "#menu";
         });
+        $(".forward").on("click", function(event) {
+            event.preventDefault();
+            history.go(1)
+        });
+        $(".back").on("click", function(event) {
+            event.preventDefault();
+            history.go(-1)
+        });
+
+        // =====================================================================
+
+        $("#enter").on("click", function(event) {
+            location.href = "#menu";
+        });
+
+        var video = $("#introVid").get(0);
+        $("#toggleIntro").on("click", function(event) {
+            $("#intro").toggle();
+            if ($("#intro").css("display") != "none") {
+                video.currentTime = 0;
+                video.load();
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+        video.onended = function(e) {
+            $("#intro").toggle();
+        };
+
 
         $("#profile .content").html(app.view.get_profile_tabs("profile"));
         $("#audio .content").html(app.view.get_profile_tabs("audio"));
