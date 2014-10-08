@@ -20,7 +20,7 @@
     );
     background-attachment:fixed;
 
-    font-family:'Verdana'; // HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-family:'Corbel'; // HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:16px;
     // text-transform:uppercase;
 
@@ -124,10 +124,26 @@
 .option.right {}
 
 .header {
-    height: 40px;
-    border: white dotted thick;
+    height: 100px;
     width: 100%;
     text-align: center;
+}
+
+.header .title {
+    line-height: 54px;
+    margin: 27px 0 0 25px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.header .logo {
+    background-image: url('../resources/menu_bar/wow_icon.png');
+    height: 54px;
+    width: 24px;
+    margin: 27px 0 0 34px;
 }
 .footer {
     height: 40px;
