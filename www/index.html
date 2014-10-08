@@ -17,10 +17,16 @@
         <link rel="stylesheet" href="js/libs/jquery-mobile/jquery.mobile.css" />
         <!-- =============================================================== -->
 
+        <!-- Image Swiper ================================================== -->
+        <link rel="stylesheet" href="js/libs/swiper/idangerous.swiper.css">
+        <script defer src="js/libs/swiper/idangerous.swiper.min.js"></script>
+        <!-- =============================================================== -->
+
         <!-- local scripts & styling ======================================= -->
         <script type="text/javascript" src="js/datastore.js"></script>
         <script type="text/javascript" src="js/model.js"></script>
         <script type="text/javascript" src="js/view.js"></script>
+        <script type="text/javascript" src="js/audio.js"></script>
 
         <script type="text/javascript" src="js/init.js"></script>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -36,6 +42,8 @@
         <title>Whispers of the Wild</title>
     </head>
     <body>
+        <audio id="audioTrack"></audio>
+
         <!-- splash screen -->
         <div data-dom-cache="false" data-role="page" id="index">
             <div id="splash">

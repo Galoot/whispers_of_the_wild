@@ -92,7 +92,7 @@ function Model() {
         this.data.dbQuery(_add_animal, [name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid],
                 function(results) {
                     if (onCompleted) {
-                        onCompleted();
+                        onCompleted(name);
                     }
                 });
     };
@@ -110,26 +110,52 @@ function Model() {
                 });
     };
 
+    this.addImage = function(animalID, imageName, filePath, onCompleted) {
+        this.data.dbQuery(_add_image, [animalID, imageName, filePath],
+                function(results) {
+                    if (onCompleted) {
+                        onCompleted();
+                    }
+                });
+    };
+
     this.load_data = function() {
         var mdl = this;
         var animal_counter = 0;
+        var imagePrefix = 'resources/images/animals/';
+        var animalName;
 
         // Baboon
-        mdl.addAnimal('Baboon', 'resources/images/animals/baboon/icon.jpg', 'Primate', 'They bite!', PayStatus.FREE, function() {
+        animalName = 'Baboon';
+        mdl.addAnimal(animalName, imagePrefix + animalName.toLowerCase()
+                + '/icon.jpg', 'Primate', 'They bite!', PayStatus.FREE, function(name) {
             animal_counter++;
             mdl.addProfile(animal_counter, 'Monkey like...', 2.2, 2.6, 2, 2.2, 35, 55, 22, 30);
+            mdl.addImage(animal_counter, 'Image 1', imagePrefix + name.toLowerCase() + '/image1.jpg');
+            mdl.addImage(animal_counter, 'Image 2', imagePrefix + name.toLowerCase() + '/image2.jpg');
+            mdl.addImage(animal_counter, 'Image 3', imagePrefix + name.toLowerCase() + '/image3.jpg');
         });
 
         // Bat-eared-fox
-        mdl.addAnimal('Bat-Eared-Fox', 'resources/images/animals/bat-eared-fox/icon.jpg', 'Small Predator', 'They bite less than lion!', PayStatus.FREE, function() {
+        animalName = 'Bat-Eared-Fox';
+        mdl.addAnimal(animalName, imagePrefix + animalName.toLowerCase()
+                + '/icon.jpg', 'Small Predator', 'They bite less than lion!', PayStatus.FREE, function(name) {
             animal_counter++;
             mdl.addProfile(animal_counter, 'Smaller than lion like...', 1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
+            mdl.addImage(animal_counter, 'Image 1', imagePrefix + name.toLowerCase() + '/image1.jpg');
+            mdl.addImage(animal_counter, 'Image 2', imagePrefix + name.toLowerCase() + '/image2.jpg');
+            mdl.addImage(animal_counter, 'Image 3', imagePrefix + name.toLowerCase() + '/image3.jpg');
         });
 
         // Lion
-        mdl.addAnimal('Lion', 'resources/images/animals/lion/icon.jpg', 'Large Predator', 'They bite even more!', PayStatus.PAID, function() {
+        animalName = 'Lion';
+        mdl.addAnimal(animalName, imagePrefix + animalName.toLowerCase()
+                + '/icon.jpg', 'Large Predator', 'They bite even more!', PayStatus.PAID, function(name) {
             animal_counter++;
             mdl.addProfile(animal_counter, 'A little bit larger than a house cat...', 3.2, 3.6, 3, 3.2, 45, 65, 32, 40);
+            mdl.addImage(animal_counter, 'Image 1', imagePrefix + name.toLowerCase() + '/image1.jpg');
+            mdl.addImage(animal_counter, 'Image 2', imagePrefix + name.toLowerCase() + '/image2.jpg');
+            mdl.addImage(animal_counter, 'Image 3', imagePrefix + name.toLowerCase() + '/image3.jpg');
         });
     };
 }

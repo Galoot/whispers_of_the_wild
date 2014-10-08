@@ -179,7 +179,7 @@
     .profile-option {
         width: 150px;
     }
-}
+    }
 
 @keyframes fade {
     from { opacity: 1.0; }

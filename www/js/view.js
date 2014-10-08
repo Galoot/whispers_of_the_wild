@@ -5,35 +5,57 @@ function View() {
 
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
-            var profileHtml = "Name: " + animal.name;
-            if (animal.cautionNotice) {
-                profileHtml += "<br/><span class=\"cautionLink\"><b>Potentially Dangerous Animal</b>"
-                        + "<br/>Click here to view safety advice</span>";
-                profileHtml += "<div class=\"cautionNotice\">" + animal.cautionNotice + "</div>";
-            }
+            model.getImages(animal.animalID, function(images) {
+                var profileHtml = "Name: " + animal.name;
+                if (animal.cautionNotice) {
+                    profileHtml += "<br/><span class=\"cautionLink\"><b>Potentially Dangerous Animal</b>"
+                            + "<br/>Click here to view safety advice</span>";
+                    profileHtml += "<div class=\"cautionNotice\">" + animal.cautionNotice + "</div>";
+                }
 
-            profileHtml += "<br/><br/><b>IDENTIFICATION POINTERS</b>"
-                    + "<br/>" + profile.idPointers;
+                profileHtml += ""
+                + "<div class=\"swiper-container\">"
+                + "    <div class=\"swiper-wrapper\">";
+                for (var i = 0; i < images.length; i++) {
+                    profileHtml += "        <!--First Slide-->"
+                            + "         <div class=\"swiper-slide\"> "
+                            + "             <img src=\"" + images[i].filePath + "\"/>"
+                            + "         </div>";
+                }
+                profileHtml += "    </div>"
+                + "  </div>";
 
-            profileHtml += "<br/><br/><b>LENGTH</b>"
-                    + "<br/>Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
-                    + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
+                profileHtml += "<br/><br/><b>IDENTIFICATION POINTERS</b>"
+                        + "<br/>" + profile.idPointers;
 
-            profileHtml += "<br/><br/><b>WEIGHT</b>"
-                    + "<br/>Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
-                    + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
+                profileHtml += "<br/><br/><b>LENGTH</b>"
+                        + "<br/>Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
+                        + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
 
-            $("#profile .header .title").html(animal.name);
-            $("#profile .content .profile-content").html(profileHtml);
+                profileHtml += "<br/><br/><b>WEIGHT</b>"
+                        + "<br/>Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
+                        + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
 
-            $("#profile .content .cautionLink").on("click", function() {
-                var popupContent = "<b>Safety Notice</b>"
-                        + "<br/>" + $("#profile .content .cautionNotice").html();
-                alert(popupContent);
+                $("#profile .header .title").html(animal.name);
+                $("#profile .content .profile-content").html(profileHtml);
+
+                $(function(){
+                    var mySwiper = $('.swiper-container').swiper({
+                        //Your options here:
+                        mode:'horizontal',
+                        loop: true
+                        //etc..
+                    });
+                });
+                $("#profile .content .cautionLink").on("click", function() {
+                    var popupContent = "<b>Safety Notice</b>"
+                            + "<br/>" + $("#profile .content .cautionNotice").html();
+                    alert(popupContent);
+                });
+                if (onComplete) {
+                    onComplete();
+                }
             });
-            if (onComplete) {
-                onComplete();
-            }
         });
     };
 
