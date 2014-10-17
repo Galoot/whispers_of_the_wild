@@ -6,38 +6,33 @@ function View() {
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
-                var profileHtml = "Name: " + animal.name;
-                if (animal.cautionNotice) {
-                    profileHtml += "<br/><span class=\"cautionLink\"><b>Potentially Dangerous Animal</b>"
-                            + "<br/>Click here to view safety advice</span>";
-                    profileHtml += "<div class=\"cautionNotice\">" + animal.cautionNotice + "</div>";
-                }
+                $("#profile .header .title").html(animal.name);
 
-                profileHtml += ""
-                + "<div class=\"swiper-container\">"
-                + "    <div class=\"swiper-wrapper\">";
+                var imagesHtml = "";
                 for (var i = 0; i < images.length; i++) {
-                    profileHtml += "        <!--First Slide-->"
+                    imagesHtml += ""
                             + "         <div class=\"swiper-slide\"> "
                             + "             <img src=\"" + images[i].filePath + "\"/>"
                             + "         </div>";
                 }
-                profileHtml += "    </div>"
-                + "  </div>";
+                $(".swiper-wrapper").html(imagesHtml);
 
-                profileHtml += "<br/><br/><b>IDENTIFICATION POINTERS</b>"
-                        + "<br/>" + profile.idPointers;
 
-                profileHtml += "<br/><br/><b>LENGTH</b>"
-                        + "<br/>Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
+                $(".animal-name").html(animal.name);
+                $(".cautionNotice").html(animal.cautionNotice);
+                $(".identification-pointers").html(profile.idPointers);
+
+                var lengthHtml =
+                        "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
                         + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
+                $(".animal-length").html(lengthHtml);
 
-                profileHtml += "<br/><br/><b>WEIGHT</b>"
-                        + "<br/>Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
+                var weightHtml =
+                        "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
+                $(".animal-weight").html(weightHtml);
 
-                $("#profile .header .title").html(animal.name);
-                $("#profile .content .profile-content").html(profileHtml);
+
 
                 $(function(){
                     var mySwiper = $('.swiper-container').swiper({
@@ -47,11 +42,126 @@ function View() {
                         //etc..
                     });
                 });
-                $("#profile .content .cautionLink").on("click", function() {
-                    var popupContent = "<b>Safety Notice</b>"
-                            + "<br/>" + $("#profile .content .cautionNotice").html();
-                    alert(popupContent);
+
+                if (onComplete) {
+                    onComplete();
+                }
+            });
+        });
+    };
+
+    this.animal_loadAudio = function(animal, onComplete) {
+        model.getAudio(animal.animalID, function(tracks) {
+            $("#audio .header .title").html(animal.name);
+
+            var audioHtml = "";
+
+            for (var i = 0; i < tracks.length; i++) {
+                audioHtml += "<div id=\"track_" + tracks[i].filePath + "\" class=\"audio-track\">" + tracks[i].trackName + "</div>";
+            }
+            $("#audio .profile-content").html(audioHtml);
+
+            $('*[id^="track_"]').on("click",
+                function(event) {
+                    var elementID = event.currentTarget.id;
+                    var src = elementID.substring(6);
+                    playAudio(src);
+                }
+            );
+
+            if (onComplete) {
+                onComplete();
+            }
+        });
+    };
+
+    this.animal_loadMap = function(animal, onComplete) {
+        model.getProfile(animal.animalID, function(profile) {
+            model.getMaps(animal.animalID, function(maps) {
+                $("#map .header .title").html(animal.name);
+
+                var imagesHtml = "";
+                for (var i = 0; i < maps.length; i++) {
+                    imagesHtml += ""
+                            + "         <div class=\"swiper-slide\"> "
+                            + "             <img src=\"" + maps[i].filePath + "\"/>"
+                            + "         </div>";
+                }
+                $("#map .swiper-wrapper").html(imagesHtml);
+
+
+                $("#map .animal-name").html(animal.name);
+                $("#map .cautionNotice").html(animal.cautionNotice);
+                $("#map .identification-pointers").html(profile.idPointers);
+
+                var lengthHtml =
+                        "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
+                        + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
+                $("#map .animal-length").html(lengthHtml);
+
+                var weightHtml =
+                        "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
+                        + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
+                $("#map .animal-weight").html(weightHtml);
+
+
+
+                $(function(){
+                    var mySwiper = $('#map .swiper-container').swiper({
+                        //Your options here:
+                        mode:'horizontal',
+                        loop: true
+                        //etc..
+                    });
                 });
+
+                if (onComplete) {
+                    onComplete();
+                }
+            });
+        });
+    };
+
+    this.animal_loadFootprints = function(animal, onComplete) {
+        model.getProfile(animal.animalID, function(profile) {
+            model.getFootprints(animal.animalID, function(footprints) {
+                $("#footprints .header .title").html(animal.name);
+
+                var imagesHtml = "";
+                for (var i = 0; i < footprints.length; i++) {
+                    imagesHtml += ""
+                            + "         <div class=\"swiper-slide\"> "
+                            + "             <img src=\"" + footprints[i].filePath + "\"/>"
+                            + "         </div>";
+                }
+                $("#footprints .swiper-wrapper").html(imagesHtml);
+
+
+                $("#footprints .animal-name").html(animal.name);
+                $("#footprints .cautionNotice").html(animal.cautionNotice);
+                $("#footprints .identification-pointers").html(profile.idPointers);
+
+                var lengthHtml =
+                        "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
+                        + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
+                $("#footprints .animal-length").html(lengthHtml);
+
+                var weightHtml =
+                        "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
+                        + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
+                $("#footprints .animal-weight").html(weightHtml);
+
+
+
+                $(function(){
+                    var mySwiper = $('#footprints .swiper-container').swiper({
+                        //Your options here:
+                        mode:'horizontal',
+                        loop: true
+                        //etc..
+                    });
+                });
+
                 if (onComplete) {
                     onComplete();
                 }
@@ -62,73 +172,68 @@ function View() {
     this.animal_loadAnimals = function(onComplete) {
         model.getAnimals(function(animals) {
             model.getCategories(function(categories) {
-                var animalsHtml = "";
-
-                animalsHtml += "<div class=\"search-by-category\">"
-                        + "<div class=\"category-label\"><b>SEARCH BY CATEGORY</b></div>";
+                // Categories --------------------------------------------------
+                var categoriesHtml = "";
+                categoriesHtml += "<div id=\"all\" class=\"category-option\">All</div>";
                 for (var x = 0; x < categories.length; x++) {
-                    animalsHtml += "<div id=\"" + categories[x].category + "\" class=\"category-option\">"
+                    categoriesHtml += "<hr/><div id=\"" + categories[x].category + "\" class=\"category-option\">"
                             + categories[x].category + "</div>";
                 }
-                animalsHtml += "</div>";
+                $("#search-by-category").html(categoriesHtml);
 
-                animalsHtml += "<br/><div class=\"search-by-letter\">"
-                animalsHtml += "<div class=\"category-label\"><b>SEARCH BY LETTER</b></div>";
+                // Letters -----------------------------------------------------
+                var lettersHtml = "";
                 var lastLetter = '';
+                lettersHtml += "<div id=\"all\" class=\"letter-option\">All</div>";
                 for (var x = 0; x < animals.length; x++) {
                     var firstLetter = animals[x].name.charAt(0);
                     if (firstLetter !== lastLetter) {
-                        animalsHtml += "<div id=\"" + firstLetter + "\" class=\"letter-heading\"><b>" + firstLetter + "</b></div>";
+                        lettersHtml += "<hr/><div id=\"" + firstLetter + "\" class=\"letter-heading\">"
+                                + "<b>" + firstLetter + "</b></div>";
                         lastLetter = firstLetter;
                     }
-                    animalsHtml += "<div id=\"letter_" + animals[x].animalID + "\" class=\"letter-option\">"
+                    lettersHtml += "<div id=\"" + animals[x].animalID + "\" class=\"letter-option\">"
                             + animals[x].name + "</div>";
                 }
-                animalsHtml += "</div>";
+                $("#search-by-letter").html(lettersHtml);
 
-                animalsHtml += "<br/><div class=\"search-by-size\">";
-                animalsHtml += "<div class=\"category-label\"><b>NARROW IT DOWN BY SIZE</b></div>";
-                animalsHtml += "<input type=\"text\" name=\"minWeightTxt\" id=\"minWeightTxt\">";
-                animalsHtml += "<input type=\"range\" name=\"minWeight\" id=\"minWeight\" value=\"0\" min=\"0\" max=\"100\">";
-                animalsHtml += "<input type=\"range\" name=\"maxWeight\" id=\"maxWeight\" value=\"100\" min=\"0\" max=\"100\">";
-                animalsHtml += "<input type=\"text\" name=\"maxWeightTxt\" id=\"maxWeightTxt\">";
-                animalsHtml += "</div>";
-
+                // Animals -----------------------------------------------------
+                var animalGridHtml = "";
                 for (var x = 0; x < animals.length; x++) {
-                    if (x === 0) {
-                        animalsHtml += "<li class=\"ui-first-child\">";
-                    } else if (x === (animals.length - 1)) {
-                        animalsHtml += "<li class=\"ui-last-child\">";
-                    } else {
-                        animalsHtml += "<li>";
-                    }
-
-                    animalsHtml += "<div class=\"animal\" category=\"" + animals[x].category + "\" minWeight=\"" + animals[x].weightFemaleMin + "\" maxWeight=\"" + animals[x].weightMaleMax + "\">";
-                    animalsHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
-                    animalsHtml += "<a id=\"animal_" + animals[x].animalID + "\" class=\"ui-btn ui-btn-icon-right ui-icon-carat-r\">"
-                            + animals[x].name
-                            + "</a>";
-                    animalsHtml += "</div>";
-
-                    animalsHtml += "</li>";
-
+                    animalGridHtml += "<div id=\"animalID_" + animals[x].animalID + "\" "
+                            + "class=\"animal-block\" "
+                            + "category=\"" + animals[x].category + "\" "
+                            + "minLength=\"" + animals[x].weightFemaleMin + "\" "
+                            + "maxLength=\"" + animals[x].weightMaleMax + "\">";
+                    animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                    animalGridHtml += "</div>";
                 }
+                $("#animal-grid").html(animalGridHtml);
 
-                $("#animalsList").html(animalsHtml);
-
-                $("#minWeight").on("change", function() {
+                // Listeners ---------------------------------------------------
+                $("#minLength").on("keyup", function() {
                     _filterWeights();
                 });
-                $("#maxWeight").on("change", function() {
+                $("#maxLength").on("keyup", function() {
                     _filterWeights();
+                });
+
+                $(".category-option").on("click", function(event) {
+                    $("#search-by-category").toggle();
+                });
+
+                $(".letter-option").on("click", function(event) {
+                    $("#search-by-letter").toggle();
                 });
 
                 $('.category-option').each(function() {
                     $(this).on("click", function(event) {
                         var category = event.target.id;
 
-                        $(".animal").each(function() {
-                            if (category == $(this).attr("category")) {
+                        $(".animal-block").each(function() {
+                            if (category === ("all")) {
+                                $(this).show();
+                            } else if (category == $(this).attr("category")) {
                                 $(this).show();
                             } else {
                                 $(this).hide();
@@ -139,14 +244,31 @@ function View() {
                     });
                 });
 
-                $('*[id^="animal_"], *[id^="letter_"]').on(
+                $('.letter-option').each(function() {
+                    $(this).on("click", function(event) {
+                        var letter = event.target.id;
+
+                        $(".animal-block").each(function() {
+                            if (letter === ("all")) {
+                                $(this).show();
+                            } else if (("animalID_" + letter) == $(this).attr("id")) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+
+                            }
+                        });
+
+                    });
+                });
+
+                $('*[id^="animalID_"]').on(
                         "click",
                         function(event) {
-                            var elementID = event.target.id;
-                            var animalID = elementID.substring(7);
+                            var elementID = event.currentTarget.id;
+                            var animalID = elementID.substring(9);
 
                             app.view.initializeProfileLinks(animalID);
-
                             model.getAnimal(animalID, function(animal) {
                                 app.view.animal_loadProfile(animal, function() {
                                     location.href = "#profile";
@@ -154,6 +276,8 @@ function View() {
                             });
                         }
                 );
+                // -------------------------------------------------------------
+
                 if (onComplete) {
                     onComplete();
                 }
@@ -162,16 +286,15 @@ function View() {
     };
 
     _filterWeights = function() {
-        var min = parseFloat($("#minWeight").val());
-        var max = parseFloat($("#maxWeight").val());
+        var min = parseFloat($("#minLength").val());
+        var max = parseFloat($("#maxLength").val());
 
-        $("#minWeightTxt").val(min);
-        $("#maxWeightTxt").val(max);
+        // $("#minLengthTxt").val(min);
+        // $("#maxLengthTxt").val(max);
 
-        $(".animal").each(function() {
-            var animalMin = parseFloat($(this).attr("minWeight"));
-            var animalMax = parseFloat($(this).attr("maxWeight"));
-
+        $(".animal-block").each(function() {
+            var animalMin = parseFloat($(this).attr("minLength"));
+            var animalMax = parseFloat($(this).attr("maxLength"));
             if (min < animalMin && max > animalMax) {
                 $(this).show();
             } else {
@@ -189,9 +312,6 @@ function View() {
         html += "<div class=\"profile-option animal-footprints" + (page === "footprints" ? " profile-tab-selected" : "") + "\">Footprints</div>";
         html += "<div class=\"profile-option animal-question" + (page === "question" ? " profile-tab-selected" : "") + "\">Ask a Question</div>";
         html += "<div class=\"profile-option animal-donate" + (page === "donate" ? " profile-tab-selected" : "") + "\">Donate to a Conservation</div>";
-
-        var currentContent = ""; // $("#" + page + " .profile-content").html();
-        html += "<div class=\"profile-content\">" + currentContent + "</div>";
 
         return html;
     };
@@ -234,19 +354,23 @@ function View() {
         model.getAnimal(animalID, function(animal) {
             $("* .animal-profile").on("click", function(event) {
                 app.view.animal_loadProfile(animal, function() {
-                        location.href = "#profile";
-                        // $("#animals .header .title").html("Animals");
-                        // $("#menu .content").html($("#animals .content").html());
-                    });
+                    location.href = "#profile";
+                });
             });
             $("* .animal-audio").on("click", function(event) {
-                location.href = "#audio";
+                app.view.animal_loadAudio(animal, function() {
+                    location.href = "#audio";
+                });
             });
             $("* .animal-map").on("click", function(event) {
-                location.href = "#map";
+                app.view.animal_loadMap(animal, function() {
+                    location.href = "#map";
+                });
             });
             $("* .animal-footprints").on("click", function(event) {
-                location.href = "#footprints";
+                app.view.animal_loadFootprints(animal, function() {
+                    location.href = "#footprints";
+                });
             });
             $("* .animal-question").on("click", function(event) {
                 location.href = "#question";
@@ -255,6 +379,16 @@ function View() {
                 location.href = "#donate";
             });
         });
+    };
+
+    this.animals_alignGrid = function() {
+        if ($('#animal_grid')) {
+            $('.animal_grid').css('width', 'auto'); //reset
+            var windowWidth = $(document).width();
+            var blockWidth = $('.animal').outerWidth(true);
+            var maxBoxPerRow = Math.floor(windowWidth / blockWidth);
+            $('.animal_grid').width(maxBoxPerRow * blockWidth);
+        }
     };
 
     this.menu_alignOptions = function() {

@@ -42,7 +42,7 @@
         <title>Whispers of the Wild</title>
     </head>
     <body>
-        <audio id="audioTrack"></audio>
+        <audio id="audio-controller" src=""></audio>
 
         <!-- splash screen -->
         <div data-dom-cache="false" data-role="page" id="index">
@@ -80,16 +80,15 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
-                <div class="options-row1">
-                    <div id="option_animals" class="option left">Animals</div>
-                    <div class="option centre">Games</div>
-                    <div class="option right">Ask a Question</div>
+                <div class="menu_grid">
+                    <div class="menu_block" id="option_animals" >Animals</div>
+                    <div class="menu_block">Games</div>
+                    <div class="menu_block">Ask a Question</div>
                 </div>
-
-                <div class="options-row2">
-                    <div class="option left">About Us</div>
-                    <div class="option centre">Safety Advice</div>
-                    <div class="option right">Donate to a Conservation</div>
+                <div class="menu_grid">
+                    <div class="menu_block">About Us</div>
+                    <div class="menu_block">Safety Advice</div>
+                    <div class="menu_block">Donate</div>
                 </div>
 
                 <div id="facebook" class="share">Share Facebook</div>
@@ -111,18 +110,37 @@
         <div data-dom-cache="false" data-role="page" id="animals">
             <div class="header">
                 <div class="header-button left logo"></div>
-                <div class="header-button left title">Animals</div>
+                <div class="header-button left title">Mammals Index</div>
                 <div class="header-button right">Options</div>
                 <div class="header-button right action-home">Home</div>
                 <div class="header-button right forward">Forward ></div>
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
-                <ul id="animalsList"
-                        data-role="listview"
-                        data-inset="true"
-                        data-filter-placeholder="Search animals..."
-                        data-filter="true"></ul>
+
+                <div class="category-label"><b>SEARCH BY CATEGORY</b></div>
+                <div class="search-by-category" id="search-by-category">
+                    <div id="all" class="category-option">All</div>
+                    <!-- categories go here once loaded from the database -->
+                </div>
+
+                <div class="letter-label"><b>SEARCH BY LETTER</b></div>
+                <div class="search-by-letter" id="search-by-letter">
+                    <div id="all" class="letter-option">All</div>
+                    <!-- letters go here once loaded from the database -->
+                </div>
+
+                <div class="animal-grid" id="animal-grid">
+                    <!-- animal icons go here once loaded from the database -->
+                </div>
+
+
+                <div class="search-by-size" id="search-by-size">
+                    <span id="howto-size">How does this work?</span>
+                    <label for="minLength">Min Size</label><input type="text" name="minLength" id="minLength" value="0" size="5"/>
+                    <label for="maxLength">Max Size</label><input type="text" name="maxLength" id="maxLength" value="100" size="5"/>
+                </div>
+                <div class="size-label"><b>NARROW IT DOWN BY SIZE</b></div>
             </div>
             <div class="footer">
                 <div>
@@ -147,6 +165,32 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
+                <span class="profile-tabs"></span>
+                <div class="profile-content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- The images get loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="listen-to">
+                        <span>[ICON]</span>&nbsp;Listen to a <span class="animal-name"></span>
+                    </div>
+                    <div class="caution">
+                        <span>[ICON]</span>&nbsp;<b>Potentially Dangerous Animal</b>
+                        <div class="cautionLink">Click to view safety advise</div>
+                        <div class="cautionNotice"></div>
+                    </div>
+
+                    <br/><b>IDENTIFICATION POINTERS</b>
+                    <div class="identification-pointers"></div>
+
+                    <br/><b>LENGTH</b><br/>
+                    <div class="animal-length"></div>
+
+                    <br/><b>WEIGHT</b><br/>
+                    <div class="animal-weight"></div>
+                </div>
             </div>
             <div class="footer">
                 <div>
@@ -171,6 +215,32 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
+                <span class="profile-tabs"></span>
+                <div class="profile-content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- The images get loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="listen-to">
+                        <span>[ICON]</span>&nbsp;Listen to a <span class="animal-name"></span>
+                    </div>
+                    <div class="caution">
+                        <span>[ICON]</span>&nbsp;<b>Potentially Dangerous Animal</b>
+                        <div class="cautionLink">Click to view safety advise</div>
+                        <div class="cautionNotice"></div>
+                    </div>
+
+                    <br/><b>IDENTIFICATION POINTERS</b>
+                    <div class="identification-pointers"></div>
+
+                    <br/><b>LENGTH</b><br/>
+                    <div class="animal-length"></div>
+
+                    <br/><b>WEIGHT</b><br/>
+                    <div class="animal-weight"></div>
+                </div>
             </div>
             <div class="footer">
                 <div>
@@ -195,6 +265,32 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
+                <span class="profile-tabs"></span>
+                <div class="profile-content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- The images get loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="listen-to">
+                        <span>[ICON]</span>&nbsp;Listen to a <span class="animal-name"></span>
+                    </div>
+                    <div class="caution">
+                        <span>[ICON]</span>&nbsp;<b>Potentially Dangerous Animal</b>
+                        <div class="cautionLink">Click to view safety advise</div>
+                        <div class="cautionNotice"></div>
+                    </div>
+
+                    <br/><b>IDENTIFICATION POINTERS</b>
+                    <div class="identification-pointers"></div>
+
+                    <br/><b>LENGTH</b><br/>
+                    <div class="animal-length"></div>
+
+                    <br/><b>WEIGHT</b><br/>
+                    <div class="animal-weight"></div>
+                </div>
             </div>
             <div class="footer">
                 <div>
@@ -219,6 +315,32 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
+                <span class="profile-tabs"></span>
+                <div class="profile-content">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- The images get loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="listen-to">
+                        <span>[ICON]</span>&nbsp;Listen to a <span class="animal-name"></span>
+                    </div>
+                    <div class="caution">
+                        <span>[ICON]</span>&nbsp;<b>Potentially Dangerous Animal</b>
+                        <div class="cautionLink">Click to view safety advise</div>
+                        <div class="cautionNotice"></div>
+                    </div>
+
+                    <br/><b>IDENTIFICATION POINTERS</b>
+                    <div class="identification-pointers"></div>
+
+                    <br/><b>LENGTH</b><br/>
+                    <div class="animal-length"></div>
+
+                    <br/><b>WEIGHT</b><br/>
+                    <div class="animal-weight"></div>
+                </div>
             </div>
             <div class="footer">
                 <div>
@@ -243,6 +365,10 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
+                <span class="profile-tabs"></span>
+                <div class="profile-content">
+                    
+                </div>
             </div>
             <div class="footer">
                 <div>
@@ -267,6 +393,10 @@
                 <div class="header-button right back">< Back</div>
             </div>
             <div class="content">
+                <span class="profile-tabs"></span>
+                <div class="profile-content">
+
+                </div>
             </div>
             <div class="footer">
                 <div>

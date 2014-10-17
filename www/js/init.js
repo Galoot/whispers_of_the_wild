@@ -38,6 +38,7 @@ function Application() {
             app.view.app_maxHeight();
             app.view.menu_alignOptions();
             app.view.profile_alignOptions();
+            app.view.animals_alignGrid();
         });
 
         // Initialise my stuff here
@@ -80,7 +81,6 @@ function Application() {
 
         $("#enter").on("click", function(event) {
             // playAudio("resources/audio/intro.mp3");
-
             location.href = "#menu";
         });
 
@@ -104,13 +104,40 @@ function Application() {
             $("#intro").toggle();
         };
 
+        $(".category-label").on("click", function(event) {
+            $("#search-by-category").toggle();
+        });
 
-        $("#profile .content").html(app.view.get_profile_tabs("profile"));
-        $("#audio .content").html(app.view.get_profile_tabs("audio"));
-        $("#map .content").html(app.view.get_profile_tabs("map"));
-        $("#footprints .content").html(app.view.get_profile_tabs("footprints"));
-        $("#question .content").html(app.view.get_profile_tabs("question"));
-        $("#donate .content").html(app.view.get_profile_tabs("donate"));
+        $(".letter-label").on("click", function(event) {
+            $("#search-by-letter").toggle();
+        });
+
+        $("#howto-size").on("click", function(event) {
+            alert("How does the scale slider work?\nSlides the circles across to eliminate teh animals that are shorter and taller (at shoulder height) than the animal you are looking for.");
+        });
+
+        $("#profile .content .cautionLink").on("click", function() {
+            var popupContent = "Safety Notice\n"
+                    + $("#profile .content .cautionNotice").html();
+            alert(popupContent);
+        });
+        $("#map .content .cautionLink").on("click", function() {
+            var popupContent = "Safety Notice\n"
+                    + $("#map .content .cautionNotice").html();
+            alert(popupContent);
+        });
+        $("#footprints .content .cautionLink").on("click", function() {
+            var popupContent = "Safety Notice\n"
+                    + $("#footprints .content .cautionNotice").html();
+            alert(popupContent);
+        });
+
+        $("#profile .content .profile-tabs").html(app.view.get_profile_tabs("profile"));
+        $("#audio .content .profile-tabs").html(app.view.get_profile_tabs("audio"));
+        $("#map .content .profile-tabs").html(app.view.get_profile_tabs("map"));
+        $("#footprints .content .profile-tabs").html(app.view.get_profile_tabs("footprints"));
+        $("#question .content .profile-tabs").html(app.view.get_profile_tabs("question"));
+        $("#donate .content .profile-tabs").html(app.view.get_profile_tabs("donate"));
 
         $("#option_animals").on("click", function(event) {
                     app.view.animal_loadAnimals(function() {
@@ -118,9 +145,8 @@ function Application() {
                         // $("#animals .header .title").html("Animals");
                         // $("#menu .content").html($("#animals .content").html());
                     });
-
-
                 });
+
 //        $("#clear").on(
 //                "click",
 //                function(e) {
