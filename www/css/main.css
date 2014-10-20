@@ -67,6 +67,10 @@
     vertical-align: middle;
 }
 
+footer-controls {
+    text-align: center;
+}
+
 .header-button {
     font-size: 12px;
     padding: 0 15px;
@@ -293,7 +297,7 @@
     padding-top: 25px;
     background-color: lightgray;
     border: black solid thin;
-    
+
     vertical-align: middle;
 }
 

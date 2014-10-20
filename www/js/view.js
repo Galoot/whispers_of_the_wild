@@ -57,22 +57,27 @@ function View() {
             var audioHtml = "";
 
             for (var i = 0; i < tracks.length; i++) {
-                audioHtml += "<div id=\"track_" + tracks[i].filePath + "\" class=\"audio-track\">" + tracks[i].trackName + "</div>";
+                audioHtml += "<div duration=\"" + tracks[i].duration + "\" path=\"" + tracks[i].filePath + "\" id=\"track_" + i + "\" class=\"audio-track\">" + tracks[i].trackName + "</div>";
             }
             $("#audio .profile-content").html(audioHtml);
 
             $('*[id^="track_"]').on("click",
                 function(event) {
                     var elementID = event.currentTarget.id;
-                    var src = elementID.substring(6);
-                    playAudio(src);
-                }
-            );
-
-            if (onComplete) {
-                onComplete();
-            }
+                    var src = $("#" + elementID).attr("path");
+                    var dur = $("#" + elementID).attr("duration");
+                    // var src = elementID.substring(6);
+                    pauseAudio();
+                    playAudio(src, dur,
+                        function(position, duration) {
+                            $(".footer-progress").html(position + " secs" + (duration ? " / " + duration : ""));
+                        });
+                });
         });
+
+        if (onComplete) {
+            onComplete();
+        }
     };
 
     this.animal_loadMap = function(animal, onComplete) {

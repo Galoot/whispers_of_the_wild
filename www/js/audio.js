@@ -1,81 +1,101 @@
 // Audio player
 //
 var my_media = null;
-var mediaTimer = null;
-var useHtml5 = true;
+var mediaTimer = null;                      // interval that watches audioElement progress/position
+var lastSrc = null;
+var lastDuration = null;
+var lastSetPosition = null;
+var useHtml5 = false;                       // boolean to determine type of element audioElement is
+var audio_state_play = false;
 // Play audio
 //
-function playAudio(src) {
-    if (!useHtml5) {
-        // Create Media object from src
-        my_media = new Media(src, onSuccess, onError);
+function playAudio(src, duration, setPosition) {
+    if (!src && !setPosition) {
+        src = lastSrc;
+        setPosition = lastSetPosition;
+    } else {
+        lastSrc = src;
+        lastDuration = duration;
+        lastSetPosition = setPosition;
+    }
 
-        // Play audio
+    if (src != null) {
+        src = getFullPath(src);
+        // create/init [audioElement]
+        if (!useHtml5) {
+          // (Cordova MEDIA element)
+          my_media = new Media(src, onSuccess, onError);
+        } else {
+          // (HTML5 Audio)
+          my_media = $("#app_audio");
+        }
+
         my_media.play();
+        audio_state_play = true;
+
+        var position;
 
         // Update my_media position every second
         if (mediaTimer == null) {
             mediaTimer = setInterval(function() {
-                // get my_media position
-                my_media.getCurrentPosition(
-                    // success callback
-                    function(position) {
-                        if (position > -1) {
-                            setAudioPosition((position) + " sec");
+
+                if (!useHtml5) {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            report("DEBUG", "Audio (Media) position: " + position);
+                            if (setPosition && position > -1) {
+                                setPosition(position, duration);
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
                         }
-                    },
-                    // error callback
-                    function(e) {
-                        console.log("Error getting pos=" + e);
-                        setAudioPosition("Error: " + e);
+                    );
+                } else {
+                    if (setPosition) {
+                        report("DEBUG", "Audio (HTML5) position: " + my_media.currentTime);
+                        if (parseInt(my_media.duration)) {
+                            setPosition(my_media.currentTime, my_media.duration);
+                        } else {
+                            setPosition(my_media.currentTime, duration);
+                        }
                     }
-                );
+                }
             }, 1000);
-        }
-    } else {
-        var aud = $('#audio-controller');
-        if (aud) {
-            aud.src = src;
-            aud.trigger("play");
-            alert('music playing: ' + aud.src);
         }
     }
 }
 
+// Resume audio
+//
+function resumeAudio() {
+    if (my_media) {
+        my_media.play();
+        audio_state_play = true;
+    }
+}
+//
 // Pause audio
 //
 function pauseAudio() {
-    if (!useHtml5) {
-        if (my_media) {
-            my_media.pause();
-        }
-    } else {
-        var aud = $('#audio-controller');
-        if (aud) {
-            aud.src = src;
-            aud.pause();
-            alert('music paused: ' + aud.src);
-        }
+    if (my_media) {
+        my_media.pause();
+        audio_state_play = false;
     }
 }
 
 // Stop audio
 //
 function stopAudio() {
-    if (!useHtml5) {
-        if (my_media) {
-            my_media.stop();
-        }
-        clearInterval(mediaTimer);
-        mediaTimer = null;
-    } else {
-        var aud = $('#audio-controller');
-        if (aud) {
-            aud.src = src;
-            aud.stop();
-            alert('music stopped: ' + aud.src);
-        }
+    if (my_media) {
+        my_media.stop();
+        audio_state_play = false;
     }
+    clearInterval(mediaTimer);
+    mediaTimer = null;
 }
 
 // onSuccess Callback

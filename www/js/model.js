@@ -20,8 +20,8 @@ function Model() {
     var _add_image = "INSERT INTO ANM_Image (animalID, imageName, filePath) VALUES (?, ?, ?)";
     var _get_images = "SELECT imageID, imageName, filePath FROM ANM_Image WHERE animalID = ?";
 
-    var _add_audio = "INSERT INTO ANM_Audio (animalID, trackName, filePath) VALUES (?, ?, ?)";
-    var _get_audio = "SELECT audioID, trackName, filePath FROM ANM_Audio WHERE animalID = ?";
+    var _add_audio = "INSERT INTO ANM_Audio (animalID, trackName, duration, filePath) VALUES (?, ?, ?, ?)";
+    var _get_audio = "SELECT audioID, trackName, duration, filePath FROM ANM_Audio WHERE animalID = ?";
 
     var _add_map = "INSERT INTO ANM_Map (animalID, mapName, filePath) VALUES (?, ?, ?)";
     var _get_maps = "SELECT mapID, mapName, filePath FROM ANM_Map WHERE animalID = ?";
@@ -119,8 +119,8 @@ function Model() {
                 });
     };
 
-    this.addAudio = function(animalID, trackName, filePath, onCompleted) {
-        this.data.dbQuery(_add_audio, [animalID, trackName, filePath],
+    this.addAudio = function(animalID, trackName, duration, filePath, onCompleted) {
+        this.data.dbQuery(_add_audio, [animalID, trackName, duration, filePath],
                 function(results) {
                     if (onCompleted) {
                         onCompleted();
@@ -162,9 +162,9 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
 
-            mdl.addAudio(animal_counter, '1) Track 1', resourcesPrefix + name.toLowerCase() + '/track1.mp3');
-            mdl.addAudio(animal_counter, '2) Track 2', resourcesPrefix + name.toLowerCase() + '/track2.mp3');
-            mdl.addAudio(animal_counter, '3) Track 3', resourcesPrefix + name.toLowerCase() + '/track3.mp3');
+            mdl.addAudio(animal_counter, '1) Track 1', 52, resourcesPrefix + name.toLowerCase() + '/track1.mp3');
+            mdl.addAudio(animal_counter, '2) Track 2', 173, resourcesPrefix + name.toLowerCase() + '/track2.mp3');
+            mdl.addAudio(animal_counter, '3) Track 3', 163, resourcesPrefix + name.toLowerCase() + '/track3.mp3');
 
             mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
 

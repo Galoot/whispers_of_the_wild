@@ -78,7 +78,8 @@ function Datastore() {
     this.init = function() {
         this.getDB().transaction(
                 function(tx) {
-                    tx.executeSql("DELETE FROM ANM_Animal");
+//                    tx.executeSql("DELETE FROM ANM_Animal");
+
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Animal");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Animal "
                             + "(animalID INTEGER PRIMARY KEY UNIQUE, "
@@ -88,14 +89,14 @@ function Datastore() {
                             + "isFree BOOLEAN, isEarned BOOLEAN, "
                             + "isPaid BOOLEAN)");
 
-                    tx.executeSql("DELETE FROM ANM_Image");
+//                    tx.executeSql("DELETE FROM ANM_Image");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Image");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "
                             + "(imageID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "imageName TEXT, filePath TEXT)");
 
-                    tx.executeSql("DELETE FROM ANM_Profile");
+//                    tx.executeSql("DELETE FROM ANM_Profile");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Profile");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Profile "
                             + "(profileID INTEGER PRIMARY KEY UNIQUE, "
@@ -106,21 +107,21 @@ function Datastore() {
                             + "weightMaleMin DOUBLE, weightMaleMax DOUBLE, "
                             + "weightFemaleMin DOUBLE, weightFemaleMax DOUBLE)");
 
-                    tx.executeSql("DELETE FROM ANM_Audio");
+//                    tx.executeSql("DELETE FROM ANM_Audio");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Audio");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Audio "
                             + "(audioID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
-                            + "trackName TEXT, filePath TEXT)");
+                            + "trackName TEXT, duration INTEGER, filePath TEXT)");
 
-                    tx.executeSql("DELETE FROM ANM_Map");
+//                    tx.executeSql("DELETE FROM ANM_Map");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Map");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Map "
                             + "(mapID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "mapName TEXT, filePath TEXT)");
 
-                    tx.executeSql("DELETE FROM ANM_Footprint");
+//                    tx.executeSql("DELETE FROM ANM_Footprint");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Footprint");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Footprint "
                             + "(footprintID INTEGER PRIMARY KEY UNIQUE, "

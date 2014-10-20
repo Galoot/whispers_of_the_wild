@@ -4,7 +4,7 @@ $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReady, false);
 
     // Only to run when testing in Chrome Browser
-    app.onDeviceReady();
+    // app.onDeviceReady();
 });
 
 function onDeviceReady() {
@@ -63,6 +63,21 @@ function Application() {
 //    };
 
     var initialiseListeners = function() {
+        // ==== Audio ==========================================================
+        $(".audio-play-pause").on("click", function(event) {
+            // check audio state
+            if (audio_state_play) {
+                pauseAudio();
+            } else {
+                resumeAudio();
+            }
+
+            if (audio_state_play) {
+                $(".audio-play-pause").html("Pause");
+            } else {
+                $(".audio-play-pause").html("Resume");
+            }
+        });
 
         // ==== Header =========================================================
         $("div .action-home").on("click", function(event) {
