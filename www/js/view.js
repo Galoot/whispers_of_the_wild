@@ -12,15 +12,21 @@ function View() {
                 for (var i = 0; i < images.length; i++) {
                     imagesHtml += ""
                             + "         <div class=\"swiper-slide\"> "
-                            + "             <img src=\"" + images[i].filePath + "\"/>"
+//                            + "         <li class=\"slide\"> "
+                            + "             <img class=\"slide\" src=\"" + images[i].filePath + "\"/>"
+//                            + "         </li>";
                             + "         </div>";
                 }
                 $(".swiper-wrapper").html(imagesHtml);
-
+//                $(".bjqs").html(imagesHtml);
 
                 $(".animal-name").html(animal.name);
                 $(".cautionNotice").html(animal.cautionNotice);
                 $(".identification-pointers").html(profile.idPointers);
+                $(".animal-gestation").html(profile.gestation);
+                $(".animal-lifespan").html(profile.lifespan);
+                $(".animal-diet").html(profile.diet);
+                $(".animal-habitat").html(profile.habitat);
 
                 var lengthHtml =
                         "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
@@ -33,12 +39,12 @@ function View() {
                 $(".animal-weight").html(weightHtml);
 
 
-
                 $(function(){
                     var mySwiper = $('.swiper-container').swiper({
                         //Your options here:
                         mode:'horizontal',
-                        loop: true
+                        loop: true,
+                        centeredSlides: true
                         //etc..
                     });
                 });
