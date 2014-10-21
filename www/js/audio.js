@@ -23,11 +23,11 @@ function playAudio(src, duration, setPosition) {
         src = getFullPath(src);
         // create/init [audioElement]
         if (!useHtml5) {
-          // (Cordova MEDIA element)
-          my_media = new Media(src, onSuccess, onError);
+            // (Cordova MEDIA element)
+            my_media = new Media(src, onSuccess, onError);
         } else {
-          // (HTML5 Audio)
-          my_media = $("#app_audio");
+            // (HTML5 Audio)
+            my_media = $("#app_audio");
         }
 
         my_media.play();

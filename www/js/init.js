@@ -32,6 +32,10 @@ function Application() {
     };
 
     this.onDeviceReady = function() {
+        $.mobile.defaultPageTransition = 'none';
+        $.mobile.defaultDialogTransition = 'none';
+        $.mobile.useFastClick = true;
+
         // alert('Path: ' + getAppPath());
         $(window).bind("pageshow resize orientationchange", function(e) { // resize page if needed
             // These things get executed whenever teh page resizes
@@ -39,6 +43,15 @@ function Application() {
             app.view.menu_alignOptions();
             app.view.profile_alignOptions();
             app.view.animals_alignGrid();
+
+//            jQuery($('.profile-images')).ready(function($) {
+//                $('.profile-images').bjqs({
+//                    'height' : 500,
+//                    'width' : 900,
+//                    'animtype' : 'slide',
+//                    'responsive' : true
+//                });
+//            });
         });
 
         // Initialise my stuff here
