@@ -56,50 +56,89 @@ h4 {line-height: 34px;
     display: none;
 }
 
-
 #splash {
     border: none;
 
-    position: absolute;
-    left: 0%;
-    top: 0%;
+    // position: absolute;
+    // left: 0%;
+    // top: 0%;
     margin: 0 auto;
 
     width: 100%;
     height: 100%;
 
     text-align: center;
-    vertical-align: middle;
-    
-    overflow: none;
-    
+    // vertical-align: middle;
+
+    overflow: auto;
+
     background-image: url('../resources/splashbg.jpg');
-   
+    background-repeat: no-repeat;
+    background-position: left;
+
+
 }
 
-#splashlogo {background-image: url('../resources/logo.png');
+#splashlogo {
+    display: block;
+
+    position: absolute;
+    top: 10px;
+
+    background-image: url('../resources/logo.png');
+
     height: 200px;
-    width: 425px;
-    margin: 0 auto;
-    margin-top: 65px;
+    width: 426px;
+    left: 50%; /* centre div */
+    margin-left:-213px; /* half of the width */
 }
 
 #toggleIntro {
+    display: block;
+
+    position: absolute;
+    bottom: 240px;
+
     background-image: url('../resources/buttons/front_page/play.png');
+
     height: 90px;
     width: 90px;
-    margin: 0 auto;
-    margin-top: 50%;}
+    left: 50%; /* centre div */
+    margin-left:-45px; /* half of the width */
+}
 
 #welcome {
-    margin: 0 auto;
-    width: 350px;}
+    display: block;
+
+    position: absolute;
+    bottom: 150px;
+
+    width: 350px;
+    left: 50%; /* centre div */
+    margin-left:-175px; /* half of the width */
+}
 
 .splashtitle {
     background-image: url('../resources/buttons/front_page/splashtitle.jpg');
-    height: 92px; 
+    background-position: center;
+
+    position: absolute;
+    bottom: 0px;
+    height: 60px;
     width: 100%;
-    }
+}
+
+#enter {
+    display: block;
+    text-transform: uppercase;
+
+    position: absolute;
+    bottom: 75px;
+
+    width: 200px;
+    left: 50%; /* centre div */
+    margin-left:-100px; /* half of the width */
+}
 
 .footer-button {
     font-size: 12px;
@@ -393,6 +432,28 @@ footer-controls {
     }
     #splash {
         top: 25%;
+    }
+
+    .splashtitle {
+        background-position: center;
+        -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+        transform: rotate(270deg);
+
+        width: 500px; /* this should be adjusted */
+        bottom: 50%;
+        right: -220px;
+    }
+
+    #toggleIntro {
+        bottom: 190px;
+    }
+
+    #welcome {
+        bottom: 100px;
+    }
+
+    #enter {
+        bottom: 25px;
     }
 
     .profile-option {
