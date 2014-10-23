@@ -3,8 +3,8 @@ var app = new Application();
 $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    // Only to run when testing in Chrome Browser
-    // app.onDeviceReady();
+   //Only to run when testing in Chrome Browser
+    app.onDeviceReady();
 });
 
 function onDeviceReady() {
@@ -167,7 +167,7 @@ function Application() {
         $("#question .content .profile-tabs").html(app.view.get_profile_tabs("question"));
         $("#donate .content .profile-tabs").html(app.view.get_profile_tabs("donate"));
 
-        $("#option_animals").on("click", function(event) {
+        $(".option_animals").on("click", function(event) {
                     app.view.animal_loadAnimals(function() {
                         location.href = "#animals";
                         // $("#animals .header .title").html("Animals");
