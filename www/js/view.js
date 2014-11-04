@@ -40,7 +40,7 @@ function View() {
 
 
                 $(function(){
-                    var mySwiper = $('.swiper-container').swiper({
+                    var mySwiper = $('#profile .swiper-container').swiper({
                         //Your options here:
                         mode:'horizontal',
                         loop: true,
@@ -72,10 +72,13 @@ function View() {
                     var elementID = event.currentTarget.id;
                     var src = $("#" + elementID).attr("path");
                     var dur = $("#" + elementID).attr("duration");
-                    // var src = elementID.substring(6);
+                    var trackName = $("#" + elementID).html();
+
                     pauseAudio();
+                    $(".footer-trackName").html(trackName);
                     playAudio(src, dur,
                         function(position, duration) {
+                            var progress = position ? (position / duration * 100) : 0;
                             $(".footer-progress").html(position + " secs" + (duration ? " / " + duration : ""));
                         });
                 });
@@ -296,6 +299,13 @@ function View() {
         });
     };
 
+    var progressBar = {
+        setValue:function(element, value) {
+            $(element).val(value);
+            $(element).slider("refresh");
+        }
+    };
+
     _filterWeights = function() {
         var min = parseFloat($("#minLength").val());
         var max = parseFloat($("#maxLength").val());
@@ -327,37 +337,51 @@ function View() {
         return html;
     };
 
-    this.profile_alignOptions = function() {
-        var option_width = $(".profile-option").width(); // width and height of the option boxes (squares)
+    this.profile_alignOptions = function(pageID) {
+        var page = "*";
+        if (pageID) {
+            page = "#" + pageID;
+        }
+        var option_width = $(page + " .profile-option").width(); // width and height of the option boxes (squares)
         var option_height = 50; // width and height of the option boxes (squares)
         var option_padding = 0; // space between option boxes
         var top_margin_start = 0; // from the top of the content div
 
         var option_count = 0;
-        var contentHeight = $("* .content").height();
+        var contentHeight = $(page + " .content").height();
         var option_height = contentHeight / 6;
 
-        $(".profile-option")
+        $(page + " .profile-option")
                 .css("margin-left", (0) + "px")
                 .css("height", (option_height) + "px");
 
-        $("* .content .animal-profile")
+        $(page + " .content .animal-profile")
                 .css("margin-top", (top_margin_start + (option_height*option_count++)) + "px");
-        $("* .content .animal-audio")
+        $(page + " .content .animal-audio")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
-        $("* .content .animal-map")
+        $(page + " .content .animal-map")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
-        $("* .content .animal-footprints")
+        $(page + " .content .animal-footprints")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
-        $("* .content .animal-question")
+        $(page + " .content .animal-question")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
-        $("* .content .animal-donate")
+        $(page + " .content .animal-donate")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
 
         var left_margin_centre = 0; // from the centre of the content div
 
-        $("* .content .profile-content").css("margin-top", (-1) + "px");
-        $("* .content .profile-content").css("margin-left", (option_width + left_margin_centre) + "px");
+        $(page + " .content .profile-content").css("margin-top", (-1) + "px");
+        $(page + " .content .profile-content").css("margin-left", (option_width + left_margin_centre) + "px");
+
+
+//        var content = $(".profile-content");
+//        var window_w = $(window).outerWidth(true);
+//        var content_w = content.width();
+//        var content_ow = content_w > 0 ? content.outerWidth(true) : 0;
+//        var c_new = window_w - option_width - content_ow + content_w;
+//        console.log('content width = ' + c_new);
+//        content.height(c_new);
+//        $("* .content .profile-content").css("width", (c_new) + "px");
         // $("* .content .profile-content").css("margin-right", (option_padding) + "px");
     };
 
@@ -365,28 +389,34 @@ function View() {
         model.getAnimal(animalID, function(animal) {
             $("* .animal-profile").on("click", function(event) {
                 app.view.animal_loadProfile(animal, function() {
+                    app.view.profile_alignOptions("profile");
                     location.href = "#profile";
                 });
             });
             $("* .animal-audio").on("click", function(event) {
                 app.view.animal_loadAudio(animal, function() {
+                    app.view.profile_alignOptions("audio");
                     location.href = "#audio";
                 });
             });
             $("* .animal-map").on("click", function(event) {
                 app.view.animal_loadMap(animal, function() {
+                    app.view.profile_alignOptions("map");
                     location.href = "#map";
                 });
             });
             $("* .animal-footprints").on("click", function(event) {
                 app.view.animal_loadFootprints(animal, function() {
+                    app.view.profile_alignOptions("footprints");
                     location.href = "#footprints";
                 });
             });
             $("* .animal-question").on("click", function(event) {
+                app.view.profile_alignOptions("question");
                 location.href = "#question";
             });
             $("* .animal-donate").on("click", function(event) {
+                app.view.profile_alignOptions("donate");
                 location.href = "#donate";
             });
         });
@@ -421,9 +451,11 @@ function View() {
     this.app_maxHeight = function() {
         var header = $(".header");
         var header_oh = header.height() > 0 ? header.outerHeight(true) : 0;
+//        console.log("header height: " + header_oh);
 
         var footer = $(".footer");
         var footer_oh = footer.height() > 0 ? footer.outerHeight(true) : 0;
+//        console.log("footer height: " + footer_oh);
 
         var content = $(".content");
 
@@ -433,6 +465,7 @@ function View() {
         var content_oh = content_h > 0 ? content.outerHeight(true) : 0;
 
         var c_new = window_h - header_oh - footer_oh - content_oh + content_h;
+//        console.log("content height: " + c_new);
         content.height(c_new);
 
         $("* .content .profile-content").css("height", (c_new) + "px");

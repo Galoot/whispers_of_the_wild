@@ -21,11 +21,6 @@ function Application() {
     // applicatiom view
     this.view = new View();
 
-//    var media;
-//    this.getPlayer = function() {
-//        return media;
-//    };
-
     // database connection
     this.getDB = function() {
         return app.view.model.data.getDB();
@@ -43,79 +38,18 @@ function Application() {
             app.view.menu_alignOptions();
             app.view.profile_alignOptions();
             app.view.animals_alignGrid();
-
-//            jQuery($('.profile-images')).ready(function($) {
-//                $('.profile-images').bjqs({
-//                    'height' : 500,
-//                    'width' : 900,
-//                    'animtype' : 'slide',
-//                    'responsive' : true
-//                });
-//            });
         });
 
         // Initialise my stuff here
         initialiseListeners();
-//        initAudio();
-//        this.getPlayer().play();
     };
 
-//    var initAudio = function() {
-//        media = new Media("resources/audio/intro.mp3",
-//                onSuccess = function() {
-//                    console.log("Media success...");
-//                    this.getPlayer().play();
-//                },
-//                onError = function() {
-//                    console.log("Media error...");
-//                },
-//                onStatus = function() {
-//                    console.log("Media status change...");
-//                });
-//        media.play();
-//    };
-
     var initialiseListeners = function() {
-        // ==== Audio ==========================================================
-        $(".audio-play-pause").on("click", function(event) {
-            // check audio state
-            if (audio_state_play) {
-                pauseAudio();
-            } else {
-                resumeAudio();
-            }
-
-            if (audio_state_play) {
-                $(".audio-play-pause").html("Pause");
-            } else {
-                $(".audio-play-pause").html("Resume");
-            }
-        });
-
-        // ==== Header =========================================================
-        $("div .action-home").on("click", function(event) {
-            location.href = "#menu";
-        });
-        $(".forward").on("click", function(event) {
-            event.preventDefault();
-            history.go(1)
-        });
-        $(".back").on("click", function(event) {
-            event.preventDefault();
-            history.go(-1)
-        });
-
-        // =====================================================================
-
+        // ==== Splash =========================================================
         $("#enter").on("click", function(event) {
             // playAudio("resources/audio/intro.mp3");
             location.href = "#menu";
         });
-
-        function mediaError(e) {
-            alert('Media Error');
-            alert(JSON.stringify(e));
-        }
 
         var video = $("#introVid").get(0);
         $("#toggleIntro").on("click", function(event) {
@@ -132,6 +66,38 @@ function Application() {
             $("#intro").toggle();
         };
 
+        // ==== Header =========================================================
+        $("div .action-home").on("click", function(event) {
+            location.href = "#menu";
+        });
+        $(".forward").on("click", function(event) {
+            event.preventDefault();
+            history.go(1);
+        });
+        $(".back").on("click", function(event) {
+            event.preventDefault();
+            history.go(-1);
+        });
+
+        // ==== Footer =========================================================
+        $(".audio-play-pause").on("click", function(event) {
+            // check audio state
+            if (audio_state_play) {
+                pauseAudio();
+            } else {
+                resumeAudio();
+            }
+
+            if (audio_state_play) {
+                $(".audio-play-pause").html("Pause");
+            } else {
+                $(".audio-play-pause").html("Resume");
+            }
+        });
+
+        // $(".footer-progress").html("<input class=\"audio-progress\"/>");
+
+        // ==== Animals ========================================================
         $(".category-label").on("click", function(event) {
             $("#search-by-category").toggle();
         });
@@ -144,6 +110,7 @@ function Application() {
             alert("How does the scale slider work?\nSlides the circles across to eliminate teh animals that are shorter and taller (at shoulder height) than the animal you are looking for.");
         });
 
+        // ==== Profile ========================================================
         $("#profile .content .cautionLink").on("click", function() {
             var popupContent = "Safety Notice\n"
                     + $("#profile .content .cautionNotice").html();
@@ -168,18 +135,10 @@ function Application() {
         $("#donate .content .profile-tabs").html(app.view.get_profile_tabs("donate"));
 
         $(".option_animals").on("click", function(event) {
-                    app.view.animal_loadAnimals(function() {
-                        location.href = "#animals";
-                        // $("#animals .header .title").html("Animals");
-                        // $("#menu .content").html($("#animals .content").html());
-                    });
-                });
-
-//        $("#clear").on(
-//                "click",
-//                function(e) {
-//                    controller.output(null, true);
-//                }
-//        );
+            app.view.animal_loadAnimals(function() {
+                location.href = "#animals";
+            });
+        });
+        // =====================================================================
     };
 }

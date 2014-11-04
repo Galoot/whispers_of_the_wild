@@ -140,7 +140,11 @@ h4 {line-height: 34px;
     margin-left:-100px; /* half of the width */
 }
 
+.footer-trackName {
+    font-size: 12px;
+}
 .footer-button {
+    display: inline;
     font-size: 12px;
     padding: 0 15px;
     // height: 45px;
@@ -176,10 +180,12 @@ footer-controls {
 
 .profile-content {
     position: absolute;
-    width: 100%;
+    width: auto;
     height: 100%;
     border: black thin solid;
-    overflow: auto;
+    overflow-wrap: normal;
+    overflow-y: auto;
+    /*right: 100px;*/
 }
 
 .profile-tab-selected {
@@ -222,6 +228,10 @@ footer-controls {
     height: 100px;
     width: 100%;
     text-align: center;
+}
+
+.content {
+
 }
 
 .title {
@@ -275,10 +285,12 @@ footer-controls {
 }
 
 .footer {
-    height: 40px;
+    height: 80px;
     border: white dotted thick;
     width: 100%;
     text-align: center;
+    position: absolute;
+    bottom: 0px;
 }
 
 #menu .content {
@@ -546,7 +558,7 @@ footer-controls {
     body {
         font-size:20px;
     }
-    
+
     .content {
         // font-size:20px;
         // background-position:left center;
@@ -565,12 +577,14 @@ footer-controls {
         background-repeat: no-repeat;
         // -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
         // transform: rotate(270deg);
+        top: 0px;
+        margin-bottom: auto;
 
         height: 768px; /* this should be adjusted */
         width: 92px;
-        bottom: 0px;
+        /*bottom: 0px;*/
         right: 0px;
-        
+
     }
 
     #toggleIntro {
@@ -584,10 +598,10 @@ footer-controls {
     #enter {
         bottom: 25px;
     }
-    
+
     #menu .content {
     padding-top: 25px;}
-    
+
 
     .profile-option {
         width: 150px;
