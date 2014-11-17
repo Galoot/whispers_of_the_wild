@@ -241,3 +241,8 @@ function doPrompt(promptText, promptTitle, promptDefaultText, promptCallback, pr
   }catch(e){ catchError('doPrompt()',e); }
 
 }
+
+function zeroLeftPad(str, max) {
+    str = str.toString();
+    return str.length < max ? zeroLeftPad("0" + str, max) : str;
+}

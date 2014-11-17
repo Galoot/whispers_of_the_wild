@@ -317,8 +317,8 @@ footer-controls {
 
 .swiper-container {
     // text-align: center;
-    height: 400px;
-    width: 100%;
+    height: 300px;
+    // width: *%;
 }
 
 .slide {

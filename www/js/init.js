@@ -37,6 +37,7 @@ function Application() {
             app.view.app_maxHeight();
             app.view.menu_alignOptions();
             app.view.profile_alignOptions();
+            app.view.about_alignOptions();
             app.view.animals_alignGrid();
         });
 
@@ -127,6 +128,7 @@ function Application() {
             alert(popupContent);
         });
 
+        // Profile tabs
         $("#profile .content .profile-tabs").html(app.view.get_profile_tabs("profile"));
         $("#audio .content .profile-tabs").html(app.view.get_profile_tabs("audio"));
         $("#map .content .profile-tabs").html(app.view.get_profile_tabs("map"));
@@ -134,10 +136,37 @@ function Application() {
         $("#question .content .profile-tabs").html(app.view.get_profile_tabs("question"));
         $("#donate .content .profile-tabs").html(app.view.get_profile_tabs("donate"));
 
+        // About tabs
+        $("#founder .content .profile-tabs").html(app.view.get_about_tabs("founder"));
+        $("#partners .content .profile-tabs").html(app.view.get_about_tabs("partners"));
+        $("#board .content .profile-tabs").html(app.view.get_about_tabs("board"));
+        $("#sounds .content .profile-tabs").html(app.view.get_about_tabs("sounds"));
+        $("#photographers .content .profile-tabs").html(app.view.get_about_tabs("photographers"));
+        $("#sources .content .profile-tabs").html(app.view.get_about_tabs("sources"));
+        
         $(".option_animals").on("click", function(event) {
             app.view.animal_loadAnimals(function() {
+                $(".profile-tabs").show();
                 location.href = "#animals";
             });
+        });
+
+        $(".option_donate").on("click", function(event) {
+            app.view.animal_loadAnimals(function() {
+                $(".profile-tabs").hide();
+                location.href = "#donate";
+            });
+        });
+
+        $(".option_question").on("click", function(event) {
+            $(".profile-tabs").hide();
+            location.href = "#question";
+        });
+
+        $(".option_about").on("click", function(event) {
+            app.view.initializeAboutLinks();
+            $(".profile-tabs").show();
+            location.href = "#founder";
         });
         // =====================================================================
     };

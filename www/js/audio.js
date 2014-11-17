@@ -5,7 +5,7 @@ var mediaTimer = null;                      // interval that watches audioElemen
 var lastSrc = null;
 var lastDuration = null;
 var lastSetPosition = null;
-var useHtml5 = false;                       // boolean to determine type of element audioElement is
+var useHtml5 = !isMobile.Android() && !isMobile.iOS();                       // boolean to determine type of element audioElement is
 var audio_state_play = false;
 // Play audio
 //
@@ -27,7 +27,9 @@ function playAudio(src, duration, setPosition) {
             my_media = new Media(src, onSuccess, onError);
         } else {
             // (HTML5 Audio)
-            my_media = $("#app_audio");
+//            my_media = $("#audio-controller");
+            my_media = document.getElementById('audio-controller');
+            my_media.src = src;
         }
 
         my_media.play();
@@ -37,6 +39,7 @@ function playAudio(src, duration, setPosition) {
 
         // Update my_media position every second
         if (mediaTimer == null) {
+            setPosition(0, duration);
             mediaTimer = setInterval(function() {
 
                 if (!useHtml5) {
@@ -44,19 +47,19 @@ function playAudio(src, duration, setPosition) {
                     my_media.getCurrentPosition(
                         // success callback
                         function(position) {
-                            report("DEBUG", "Audio (Media) position: " + position);
+                            // report("DEBUG", "Audio (Media) position: " + position);
                             if (setPosition && position > -1) {
                                 setPosition(position, duration);
                             }
                         },
                         // error callback
                         function(e) {
-                            console.log("Error getting pos=" + e);
+                            // console.log("Error getting pos=" + e);
                         }
                     );
                 } else {
                     if (setPosition) {
-                        report("DEBUG", "Audio (HTML5) position: " + my_media.currentTime);
+                        // report("DEBUG", "Audio (HTML5) position: " + my_media.currentTime);
                         if (parseInt(my_media.duration)) {
                             setPosition(my_media.currentTime, my_media.duration);
                         } else {

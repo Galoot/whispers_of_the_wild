@@ -76,10 +76,17 @@ function View() {
 
                     pauseAudio();
                     $(".footer-trackName").html(trackName);
+                    $(".audio-play-pause").html("Pause");
                     playAudio(src, dur,
                         function(position, duration) {
-                            var progress = position ? (position / duration * 100) : 0;
-                            $(".footer-progress").html(position + " secs" + (duration ? " / " + duration : ""));
+                            var progress = Math.round(position ? (position / duration * 100) : 0);
+
+                            var current = Math.ceil(position);
+                            var total = duration ? Math.round(duration) : 0;
+
+                            var currentStr = Math.floor(current / 60) + ":" + zeroLeftPad("" + (current % 60), 2);
+                            var totalStr = Math.floor(total / 60) + ":" + zeroLeftPad("" + (total % 60), 2);
+                            $(".footer-progress").html(currentStr + " / " + totalStr);
                         });
                 });
         });
@@ -372,17 +379,55 @@ function View() {
 
         $(page + " .content .profile-content").css("margin-top", (-1) + "px");
         $(page + " .content .profile-content").css("margin-left", (option_width + left_margin_centre) + "px");
+    };
 
+    this.get_about_tabs = function(page) {
+        var html = "";
+        html += "<div class=\"profile-option about-founder" + (page === "founder" ? " profile-tab-selected" : "") + "\">FOUNDER</div>";
+        html += "<div class=\"profile-option about-partners" + (page === "partners" ? " profile-tab-selected" : "") + "\">PARTNERS</div>";
+        html += "<div class=\"profile-option about-board" + (page === "board" ? " profile-tab-selected" : "") + "\">ADVISORY BOARD</div>";
+        html += "<div class=\"profile-option about-sounds" + (page === "sounds" ? " profile-tab-selected" : "") + "\">VOICES AND SOUNDS</div>";
+        html += "<div class=\"profile-option about-photographers" + (page === "photographers" ? " profile-tab-selected" : "") + "\">PHOTOGRAPHERS</div>";
+        html += "<div class=\"profile-option about-sources" + (page === "sources" ? " profile-tab-selected" : "") + "\">SOURCES</div>";
 
-//        var content = $(".profile-content");
-//        var window_w = $(window).outerWidth(true);
-//        var content_w = content.width();
-//        var content_ow = content_w > 0 ? content.outerWidth(true) : 0;
-//        var c_new = window_w - option_width - content_ow + content_w;
-//        console.log('content width = ' + c_new);
-//        content.height(c_new);
-//        $("* .content .profile-content").css("width", (c_new) + "px");
-        // $("* .content .profile-content").css("margin-right", (option_padding) + "px");
+        return html;
+    };
+
+    this.about_alignOptions = function(pageID) {
+        var page = "*";
+        if (pageID) {
+            page = "#" + pageID;
+        }
+        var option_width = $(page + " .profile-option").width(); // width and height of the option boxes (squares)
+        var option_height = 50; // width and height of the option boxes (squares)
+        var option_padding = 0; // space between option boxes
+        var top_margin_start = 0; // from the top of the content div
+
+        var option_count = 0;
+        var contentHeight = $(page + " .content").height();
+        var option_height = contentHeight / 6;
+
+        $(page + " .profile-option")
+                .css("margin-left", (0) + "px")
+                .css("height", (option_height) + "px");
+
+        $(page + " .content .about-founder")
+                .css("margin-top", (top_margin_start + (option_height*option_count++)) + "px");
+        $(page + " .content .about-partners")
+                .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
+        $(page + " .content .about-board")
+                .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
+        $(page + " .content .about-sounds")
+                .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
+        $(page + " .content .about-photographers")
+                .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
+        $(page + " .content .about-sources")
+                .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
+
+        var left_margin_centre = 0; // from the centre of the content div
+
+        $(page + " .content .profile-content").css("margin-top", (-1) + "px");
+        $(page + " .content .profile-content").css("margin-left", (option_width + left_margin_centre) + "px");
     };
 
     this.initializeProfileLinks = function(animalID) {
@@ -419,6 +464,33 @@ function View() {
                 app.view.profile_alignOptions("donate");
                 location.href = "#donate";
             });
+        });
+    };
+
+    this.initializeAboutLinks = function() {
+        $("* .about-founder").on("click", function(event) {
+            app.view.about_alignOptions("founder");
+            location.href = "#founder";
+        });
+        $("* .about-partners").on("click", function(event) {
+            app.view.about_alignOptions("partners");
+            location.href = "#partners";
+        });
+        $("* .about-board").on("click", function(event) {
+            app.view.about_alignOptions("board");
+            location.href = "#board";
+        });
+        $("* .about-sounds").on("click", function(event) {
+            app.view.about_alignOptions("sounds");
+            location.href = "#sounds";
+        });
+        $("* .about-photographers").on("click", function(event) {
+            app.view.about_alignOptions("photographers");
+            location.href = "#photographers";
+        });
+        $("* .about-sources").on("click", function(event) {
+            app.view.about_alignOptions("sources");
+            location.href = "#sources";
         });
     };
 
