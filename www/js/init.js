@@ -3,7 +3,7 @@ var app = new Application();
 $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReady, false);
 
-   //Only to run when testing in Chrome Browser
+    //Only to run when testing in Chrome Browser
     app.onDeviceReady();
 });
 
@@ -66,6 +66,44 @@ function Application() {
         video.onended = function(e) {
             $("#intro").toggle();
         };
+
+        // ==== Social Share ===================================================
+        $("#share-facebook").on("click", function(event) {
+            if (window.plugins && window.plugins.socialsharing) {
+                alert('Before Facebook share...');
+                window.plugins.socialsharing.shareViaFacebook(
+                        'Message via Facebook', null /* img */, null /* url */,
+                        function() {
+                            console.log('share ok')
+                        },
+                        function(errormsg) {
+                            alert(errormsg)
+                        }
+                        );
+                alert('After Facebook share...');
+            } else {
+                console.log("Could not find scoialsharing plugin");
+            }
+            // share(SOCIAL_SHARE_FACEBOOK, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
+        });
+        $("#share-twitter").on("click", function(event) {
+            if (window.plugins && window.plugins.socialsharing) {
+                alert('Before Twitter share...');
+                window.plugins.socialsharing.shareViaTwitter(
+                        'Message and link via Twitter', null /* img */, 'http://www.x-services.nl',
+                        function() {
+                            console.log('share ok')
+                        },
+                        function(errormsg) {
+                            alert(errormsg)
+                        }
+                        )
+                alert('After Twitter share...');
+            } else {
+                console.log("Could not find scoialsharing plugin");
+            }
+            // share(SOCIAL_SHARE_TWITTER, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
+        });
 
         // ==== Header =========================================================
         $("div .action-home").on("click", function(event) {
@@ -143,7 +181,7 @@ function Application() {
         $("#sounds .content .profile-tabs").html(app.view.get_about_tabs("sounds"));
         $("#photographers .content .profile-tabs").html(app.view.get_about_tabs("photographers"));
         $("#sources .content .profile-tabs").html(app.view.get_about_tabs("sources"));
-        
+
         $(".option_animals").on("click", function(event) {
             app.view.animal_loadAnimals(function() {
                 $(".profile-tabs").show();

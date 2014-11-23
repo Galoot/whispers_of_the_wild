@@ -398,13 +398,13 @@ footer-controls {
     left: 50%; /* centre div */
     margin-left:-150px; /* half of the width */}
 
-#facebook {
+#share-facebook {
     background-image: url('../resources/buttons/other/facebook_share.png');
     width: 143px;
     height: 46px;
     float: left;}
 
-#twitter {
+#share-twitter {
     background-image: url('../resources/buttons/other/twitter_share.png');
     width: 143px;
     height: 46px;
