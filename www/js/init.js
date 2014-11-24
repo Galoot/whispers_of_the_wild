@@ -4,7 +4,9 @@ $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReady, false);
 
     //Only to run when testing in Chrome Browser
-    app.onDeviceReady();
+    if (!isMobile.Android() && !isMobile.iOS()) {
+        app.onDeviceReady();
+    }
 });
 
 function onDeviceReady() {
@@ -70,35 +72,67 @@ function Application() {
         // ==== Social Share ===================================================
         $("#share-facebook").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
-                alert('Before Facebook share...');
-                window.plugins.socialsharing.shareViaFacebook(
-                        'Message via Facebook', null /* img */, null /* url */,
+                window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint(
+                        null,
+                        null, //'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
+                        'https://www.facebook.com/whispersofthewild',
                         function() {
                             console.log('share ok')
+//                            app.view.model.unlockLimited(function() {
+//                                console.log('unlocked ok')
+//                            });
                         },
                         function(errormsg) {
                             alert(errormsg)
                         }
-                        );
-                alert('After Facebook share...');
-            } else {
-                console.log("Could not find scoialsharing plugin");
+                );
             }
             // share(SOCIAL_SHARE_FACEBOOK, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
         });
         $("#share-twitter").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
-                alert('Before Twitter share...');
                 window.plugins.socialsharing.shareViaTwitter(
-                        'Message and link via Twitter', null /* img */, 'http://www.x-services.nl',
+                        '@Whispers_Wild\n'
+                                + 'https://www.facebook.com/whispersofthewild\n'
+                                + 'I just love this site!',
+                        'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
+                        null, //'https://www.facebook.com/whispersofthewild',
                         function() {
                             console.log('share ok')
+//                            app.view.model.unlockLimited(function() {
+//                                console.log('unlocked ok')
+//                            });
                         },
                         function(errormsg) {
                             alert(errormsg)
                         }
-                        )
-                alert('After Twitter share...');
+                );
+            } else {
+                console.log("Could not find scoialsharing plugin");
+            }
+            // share(SOCIAL_SHARE_TWITTER, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
+        });
+
+        // ==== Question Submit ================================================
+        $("#question-submit").on("click", function(event) {
+            if (window.plugins && window.plugins.socialsharing) {
+                window.plugins.socialsharing.shareViaTwitter(
+                        '@Whispers_Wild\n'
+                                + 'Name & Surname: ' + $("#question-name").val() + '\n'
+                                + 'Question: ' + $("#question-desc").val() + '\n'
+                                + 'Tags: ' + $("#question-hashtags").val(),
+                        'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
+                        null, //'https://www.facebook.com/whispersofthewild',
+                        function() {
+                            console.log('share ok')
+                            $("#question-name").val('');
+                            $("#question-desc").val('');
+                            $("#question-hashtags").val('');
+                        },
+                        function(errormsg) {
+                            alert(errormsg)
+                        }
+                );
             } else {
                 console.log("Could not find scoialsharing plugin");
             }

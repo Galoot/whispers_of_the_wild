@@ -29,6 +29,10 @@ function Model() {
     var _add_footprint = "INSERT INTO ANM_Footprint (animalID, footprintName, filePath) VALUES (?, ?, ?)";
     var _get_footprints = "SELECT footprintID, footprintName, filePath FROM ANM_Footprint WHERE animalID = ?";
 
+    this.unlockLimited = function(onComplete) {
+        console.log('Unlocked...');
+    };
+
     this.getCategories = function(onResults) {
         this.data.dbQuery(_get_categories, null,
                 function(results) {

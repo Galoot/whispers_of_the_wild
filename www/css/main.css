@@ -411,6 +411,19 @@ footer-controls {
     float: right;
 }
 
+#visit-facebook {
+    background-image: url('../resources/buttons/other/facebook_share.png');
+    width: 143px;
+    height: 46px;
+    float: left;}
+
+#visit-twitter {
+    background-image: url('../resources/buttons/other/twitter_share.png');
+    width: 143px;
+    height: 46px;
+    float: right;
+}
+
 #animals .content {
     overflow: auto;
 }
