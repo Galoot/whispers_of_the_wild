@@ -248,7 +248,7 @@ function zeroLeftPad(str, max) {
 }
 
 function openPage(url) {
-    if (Mobile.iOS()) {
+    if (isMobile.iOS()) {
         window.open(url, '_system');
     } else {
         window.open(url);
