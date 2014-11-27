@@ -246,3 +246,11 @@ function zeroLeftPad(str, max) {
     str = str.toString();
     return str.length < max ? zeroLeftPad("0" + str, max) : str;
 }
+
+function openPage(url) {
+    if (Mobile.iOS()) {
+        window.open(url, '_system');
+    } else {
+        window.open(url);
+    }
+}
