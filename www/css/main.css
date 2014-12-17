@@ -550,6 +550,28 @@ footer-controls {
     vertical-align: middle;
 }
 
+// Game styling ================================================================
+.icon-selected {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+.game-animal-grid {
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+.game-select-animal-block {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.game-select-animal-icon {
+    height: 80px;
+    width: 80px;
+}
+
 /* Portrait layout (default) */
 .content {
     border: black solid thin;
@@ -629,13 +651,13 @@ footer-controls {
         text-shadow: 1px 1px 2px #000;
     }
 
-    .animal-block {
+    .animal-block, .game-select-animal-block {
         width: 150px;
         height: 150px;
         margin: 25px;
     }
 
-    .animal-icon {
+    .animal-icon, .game-select-animal-icon {
         height: 150px;
         width: 150px;
     }

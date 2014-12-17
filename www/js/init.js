@@ -20,6 +20,9 @@ function getAppPath() {
     };
 
 function Application() {
+    // game
+    this.game = new SpotTheGame();
+
     // applicatiom view
     this.view = new View();
 
@@ -41,6 +44,13 @@ function Application() {
             app.view.profile_alignOptions();
             app.view.about_alignOptions();
             app.view.animals_alignGrid();
+
+            // game related ----------------------------------------------------
+            app.view.animal_animalGrid('game-select-', function(animalGridHtml) {
+                $("#game-animal-grid").html(animalGridHtml);
+                loanAnimalSelection();
+            });
+            // -----------------------------------------------------------------
         });
 
         // Initialise my stuff here
@@ -235,11 +245,40 @@ function Application() {
             location.href = "#question";
         });
 
+        $(".option_game").on("click", function(event) {
+            location.href = "#game";
+        });
+        $(".game-start-label").on("click", function(event) {
+            location.href = "#players";
+        });
+
         $(".menu_about").on("click", function(event) {
             app.view.initializeAboutLinks();
             $(".profile-tabs").show();
             location.href = "#founder";
         });
+
+        // ==== Game ========================================================
+        $(".game-players-next").on("click", function(event) {
+            app.view.animal_animalGrid('game-select-', function(animalGridHtml) {
+                $("#game-animal-grid").html(animalGridHtml);
+                // save any name that was in edit mode
+                saveNames();
+
+                // clear any previous selections
+                $.each(app.game.players, function(index, player) {
+                    player.selection = [];
+                });
+
+                // reset player for animal selection
+                app.game.animalSelectplayerIndex = 0;
+
+                location.href = "#game-animal-select";
+            });
+        });
+
+
+
         // =====================================================================
     };
 }

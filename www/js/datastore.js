@@ -87,7 +87,7 @@ function Datastore() {
                             + "name TEXT, cautionNotice TEXT, "
                             + "iconFilePath TEXT, "
                             + "isFree BOOLEAN, isEarned BOOLEAN, "
-                            + "isPaid BOOLEAN)");
+                            + "isPaid BOOLEAN, score INT)");
 
 //                    tx.executeSql("DELETE FROM ANM_Image");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Image");

@@ -36,6 +36,9 @@
         <script type="text/javascript" src="js/global.js"></script>
         <script type="text/javascript" src="js/audio.js"></script>
 
+        <!-- game ========================================================== -->
+        <script type="text/javascript" src="js/game.js"></script>
+
 <!--        <script type="text/javascript" src="js/cordova-mediaplayer.js"></script>
         <script type="text/javascript" src="js/common/global.js"></script>
         <script type="text/javascript" src="js/common/mobile.js"></script>-->
@@ -648,6 +651,124 @@
                 <div class="profile-content">
                     <br/><b>SOURCES</b>
 
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Track Name</div>
+                <div class="footer-progress">------- Progress Bar -------</div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev">L Skip</div>
+                    <div class="footer-button audio-play-pause">Play</div>
+                    <div class="footer-button audio-next">R Skip</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game intro -->
+        <div data-dom-cache="false" data-role="page" id="game">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="game-icon">ICON><br/>SPOT THE GAME</div>
+
+                <div class="game-start-label">START GAME</div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Track Name</div>
+                <div class="footer-progress">------- Progress Bar -------</div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev">L Skip</div>
+                    <div class="footer-button audio-play-pause">Play</div>
+                    <div class="footer-button audio-next">R Skip</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game players -->
+        <div data-dom-cache="false" data-role="page" id="players">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="game-players">
+
+                </div>
+                <div class="game-new-player">
+                    NEW PLAYER
+                </div>
+                <div class="game-players-next">
+                    NEXT
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Track Name</div>
+                <div class="footer-progress">------- Progress Bar -------</div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev">L Skip</div>
+                    <div class="footer-button audio-play-pause">Play</div>
+                    <div class="footer-button audio-next">R Skip</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game select animals -->
+        <div data-dom-cache="false" data-role="page" id="game-animal-select">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div id="player-selecting"></div>
+                <div id="player-selecting-next">Next/Finish</div>
+                <div id="game-select-instruction">Select the three animals you think you are most likely to spot first.</div>
+                <div class="game-animal-grid" id="game-animal-grid">
+                    <!-- animal icons go here once loaded from the database -->
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Track Name</div>
+                <div class="footer-progress">------- Progress Bar -------</div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev">L Skip</div>
+                    <div class="footer-button audio-play-pause">Play</div>
+                    <div class="footer-button audio-next">R Skip</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game spot animals -->
+        <div data-dom-cache="false" data-role="page" id="game-animal-spot">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div id="game-spot-instruction">Touch the animal once it has been spotted. The first player to get two animals correct wins the round. Let's see who spots the game first.</div>
+                <div class="game-spot-grid" id="game-spot-grid">
+                    <!-- player and animal icons go here once loaded from the database -->
                 </div>
             </div>
             <div class="footer">

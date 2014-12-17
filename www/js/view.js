@@ -190,6 +190,29 @@ function View() {
         });
     };
 
+    this.animal_animalGrid = function(idPrefix, onComplete) {
+        if (typeof idPrefix === "undefined") {
+            idPrefix = '';
+        }
+        model.getAnimals(function(animals) {
+            // Animals -----------------------------------------------------
+            var animalGridHtml = "";
+            for (var x = 0; x < animals.length; x++) {
+                animalGridHtml += "<div id=\"" + idPrefix + "animalID_" + animals[x].animalID + "\" "
+                        + "class=\"" + idPrefix + "animal-block\" "
+                        + "category=\"" + animals[x].category + "\" "
+                        + "minLength=\"" + animals[x].weightFemaleMin + "\" "
+                        + "maxLength=\"" + animals[x].weightMaleMax + "\">";
+                animalGridHtml += "<img class=\"" + idPrefix + "animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                animalGridHtml += "</div>";
+            }
+
+            if (onComplete) {
+                onComplete(animalGridHtml);
+            }
+        });
+    };
+
     this.animal_loadAnimals = function(onComplete) {
         model.getAnimals(function(animals) {
             model.getCategories(function(categories) {
@@ -229,6 +252,7 @@ function View() {
                     animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
                     animalGridHtml += "</div>";
                 }
+                this.animal_animalGrid
                 $("#animal-grid").html(animalGridHtml);
 
                 // Listeners ---------------------------------------------------
