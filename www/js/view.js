@@ -1,6 +1,11 @@
 function View() {
     model = new Model();
-    model.load_data();
+    model.load_data(function() {
+        model.getAnimals(function(animals) {
+            app.animals = animals;
+        });
+    });
+
     this.animal = new Animal();
 
     this.animal_loadProfile = function(animal, onComplete) {
@@ -215,6 +220,8 @@ function View() {
 
     this.animal_loadAnimals = function(onComplete) {
         model.getAnimals(function(animals) {
+            app.animals = animals;
+
             model.getCategories(function(categories) {
                 // Categories --------------------------------------------------
                 var categoriesHtml = "";

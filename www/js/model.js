@@ -4,7 +4,7 @@ function Model() {
 
     var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
 
-    var _get_animals = "SELECT a.animalID, name, iconFilePath, category, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
+    var _get_animals = "SELECT a.animalID, idPointers, name, score, iconFilePath, category, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
 
     var _add_animal = "INSERT INTO ANM_Animal (\n\
             name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) \n\
@@ -151,11 +151,14 @@ function Model() {
                 });
     };
 
-    this.load_data = function() {
+    this.load_data = function(onCompleted) {
         var mdl = this;
         var animal_counter = 0;
         var resourcesPrefix = 'resources/animals/';
         var animalName;
+
+        // should indicate the total number of animals loaded here
+        var totalAnimals = 5;
 
         // Baboon
         animalName = 'Baboon';
@@ -193,6 +196,12 @@ function Model() {
 
             mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/Baboon back.png');
             mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/Baboon front.png');
+
+            if (animal_counter === totalAnimals) {
+                if (onCompleted) {
+                    onCompleted();
+                }
+            }
         });
 
         // Zebra
@@ -204,6 +213,12 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+            if (animal_counter === totalAnimals) {
+                if (onCompleted) {
+                    onCompleted();
+                }
+            }
         });
 
         // Bat-eared-fox
@@ -215,6 +230,12 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+            if (animal_counter === totalAnimals) {
+                if (onCompleted) {
+                    onCompleted();
+                }
+            }
         });
 
         // Lion
@@ -226,6 +247,12 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+            if (animal_counter === totalAnimals) {
+                if (onCompleted) {
+                    onCompleted();
+                }
+            }
         });
 
         // Springbok
@@ -237,6 +264,12 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+            if (animal_counter === totalAnimals) {
+                if (onCompleted) {
+                    onCompleted();
+                }
+            }
         });
     };
 }

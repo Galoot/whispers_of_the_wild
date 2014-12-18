@@ -22,6 +22,9 @@ function getAppPath() {
 function Application() {
     // game
     this.game = new SpotTheGame();
+    $('.game-players').ready(function() {
+        resetPlayers();
+    });
 
     // applicatiom view
     this.view = new View();
@@ -249,6 +252,7 @@ function Application() {
             location.href = "#game";
         });
         $(".game-start-label").on("click", function(event) {
+            resetPlayers();
             location.href = "#players";
         });
 
@@ -269,15 +273,32 @@ function Application() {
                 $.each(app.game.players, function(index, player) {
                     player.selection = [];
                 });
+                validatePlayerNames();
 
                 // reset player for animal selection
                 app.game.animalSelectplayerIndex = 0;
-
                 location.href = "#game-animal-select";
             });
         });
 
-
+        $(".game-link-spot").on("click", function(event) {
+            location.href = "#game-animal-spot";
+        });
+        $(".game-link-next").on("click", function(event) {
+            // same player, keep scores, select different animals
+            location.href = "#game-animal-select";
+            app.game.animalSelectplayerIndex = 0;
+            for (var x = 0; x < app.game.players.length; x++) {
+                app.game.players[x].selection = [];
+            }
+        });
+        $(".game-link-scoreboard").on("click", function(event) {
+            location.href = "#game-animal-scoreboard";
+        });
+        $(".game-link-finish").on("click", function(event) {
+            resetPlayers();
+            location.href = "#game";
+        });
 
         // =====================================================================
     };

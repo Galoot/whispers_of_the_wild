@@ -551,7 +551,12 @@ footer-controls {
 }
 
 // Game styling ================================================================
+.game-spot-player {
+    display: block;
+}
+
 .icon-selected {
+    height: 20px;
     opacity: 0.4;
     filter: alpha(opacity=40);
 }
@@ -560,16 +565,30 @@ footer-controls {
     margin: 0 auto;
 }
 
-.game-select-animal-block {
+.game-select-animal-block, .game-spot-animal-block, .game-spot-player-block, .game-winner-player-block, .game-winner-score-block {
+    vertical-align: top;
+    text-align: center;
     width: 80px;
     height: 80px;
     margin: 10px;
     display: inline-block;
 }
 
-.game-select-animal-icon {
+.game-select-animal-icon, .game-spot-animal-icon, .game-spot-player-icon, .game-winner-player-icon {
+    text-align: center;
     height: 80px;
     width: 80px;
+}
+
+.game-scoreboard-player {
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+}
+.game-scoreboard-score {
+    display: inline-block;
+    height: 30px;
+    width: 20px;
 }
 
 /* Portrait layout (default) */
@@ -651,18 +670,24 @@ footer-controls {
         text-shadow: 1px 1px 2px #000;
     }
 
-    .animal-block, .game-select-animal-block {
+    .animal-block, .game-select-animal-block, .game-spot-animal-block, .game-spot-player-block, .game-winner-player-block, .game-winner-score-block {
+        vertical-align: top;
         width: 150px;
         height: 150px;
         margin: 25px;
     }
 
-    .animal-icon, .game-select-animal-icon {
+    .animal-icon, .game-select-animal-icon, .game-spot-animal-icon, .game-spot-player-icon, .game-winner-player-icon {
         height: 150px;
         width: 150px;
     }
     #menu .content {
-    background-image: url('../resources/indexbg2.jpg');
+        background-image: url('../resources/indexbg2.jpg');
+    }
+
+    .icon-selected {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
     }
 }
 
