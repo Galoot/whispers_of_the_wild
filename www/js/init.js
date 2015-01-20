@@ -177,7 +177,7 @@ function Application() {
             if (audio_state_play) {
                 $(".audio-play-pause").html("Pause");
             } else {
-                $(".audio-play-pause").html("<img src='../resources/buttons/media_player/play.png'>");
+                $(".audio-play-pause").html("Resume");
             }
         });
 
@@ -193,9 +193,23 @@ function Application() {
         });
 
         $("#howto-size").on("click", function(event) {
-            alert("How does the scale slider work?\nSlides the circles across to eliminate teh animals that are shorter and taller (at shoulder height) than the animal you are looking for.");
+            alert("How does the scale slider work?\nSlides the circles across to eliminate the animals that are shorter and taller (at shoulder height) than the animal you are looking for.");
         });
 
+        $(function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [ 75, 300 ],
+                slide: function( event, ui ) {
+                  $("#minLength").val(ui.values[0]);
+                  $("#maxLength").val(ui.values[1]);
+                }
+            });
+            $("#minLength").val($("#slider-range").slider("values", 0));
+            $("#maxLength").val($("#slider-range").slider("values", 1));
+        });
         // ==== Profile ========================================================
         $("#profile .content .cautionLink").on("click", function() {
             var popupContent = "Safety Notice\n"

@@ -268,7 +268,7 @@ footer-controls {
     //border: 1px solid red;
     line-height: 34px;
     }
-    
+
 .listenicon {
     background-image: url('../resources/buttons/other/audio_animal_profile.png');
     background-repeat: no-repeat;
@@ -287,7 +287,7 @@ footer-controls {
     //border: 1px solid blue;
     float: right;
     }
-    
+
 .cautionicon {
     background-image: url('../resources/buttons/other/safety_warning.png');
     background-repeat: no-repeat;
@@ -297,7 +297,7 @@ footer-controls {
     margin-right:15px;
     //border: 1px solid red;
     }
-    
+
     .copywrap {
        padding: 20px 100px 20px 20px;
        margin-right: 50px;
@@ -344,14 +344,14 @@ footer-controls {
     border-bottom-color: #000;
     border-top-color: grey;
     border-right-color: 1px solid;
-    
-    
+
+
     //min-height: 138px;
     vertical-align: bottom;
    // line-height: 55px;
 }
 
-.profile-option-image {    
+.profile-option-image {
     width: 82px;
     height: 75px;
     margin: 0 auto;
@@ -619,7 +619,7 @@ height: 100%;
     width: 166px;
     height: 166px;
     display:inline-block;
-    margin: 15px;
+    margin: 10px;
     border: 2px solid #ffffff;
     border-radius: 5px;
     text-shadow: 1px 1px 2px #000;
@@ -900,13 +900,13 @@ height: 100%;
                                     // offset horizontal: half of text area width
 }
 @media screen and (max-width:500px) {
-    
+
 .animal-top {
     width: 200;
     height: 102px;
     //display: block;
     margin-top:15px;}
-   
+
 .listen-to {
     position: absolute;
     margin-left: auto;
@@ -914,7 +914,7 @@ height: 100%;
     width: 100%;
     height: 50px;
     }
-    
+
 
 .caution {
     width:100%;
@@ -925,7 +925,7 @@ height: 100%;
     //border: 1px solid blue;
     //float: right;
     }
-    
+
 }
 
 

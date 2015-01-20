@@ -170,12 +170,9 @@ function Model() {
                     '6 months', '20 – 30 years', 'omnivorous, highly varied – fruits, seeds, grass, invertebrates, birds, young mammals, shellfish',
                     'omnivorous, highly varied – fruits, seeds, grass, invertebrates, birds, young mammals, shellfish',
                     1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
-//            mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/Adult-male-southern-chacma-baboon-portrait.jpg');
-            mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/Female-grey-footed-chacma-baboon-walking-and-carrying-young.jpg');
-            mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/Female-southern-chacma-baboon-with-young-grooming-male.jpg');
-            mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/Young-southern-chacma-baboon-side-view.jpg');
-            mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/Southern-chacma-baboon-side-view.jpg');
-            mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/Southern-chacma-baboon-infant-riding-on-mothers-back.jpg');
+            mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+            mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+            mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
 
             mdl.addAudio(animal_counter, '01 The troop centre of baboon society',
                     100, resourcesPrefix + name.toLowerCase() + '/01 The troop centre of baboon society.mp3');
@@ -192,7 +189,7 @@ function Model() {
             mdl.addAudio(animal_counter, '07 Education and innovation on  the troop',
                     100, resourcesPrefix + name.toLowerCase() + '/07 Education and innovation on  the troop.mp3');
 
-            mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+            mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
 
             mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/Baboon back.png');
             mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/Baboon front.png');

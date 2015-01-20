@@ -8,6 +8,14 @@ function View() {
 
     this.animal = new Animal();
 
+    this.imageSwiper = null;
+
+    this.reInitImageSliders = function() {
+        if (app.view.imageSwiper) {
+            app.view.imageSwiper.reInit();
+        }
+    };
+
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
@@ -16,13 +24,13 @@ function View() {
                 var imagesHtml = "";
                 for (var i = 0; i < images.length; i++) {
                     imagesHtml += ""
-                            + "         <div class=\"swiper-slide\"> "
-//                            + "         <li class=\"slide\"> "
-                            + "             <img class=\"slide\" src=\"" + images[i].filePath + "\"/>"
-//                            + "         </li>";
-                            + "         </div>";
+//                            + "         <div class=\"swiper-slide\"> "
+                            + "         <li> "
+                            + "             <img src=\"" + images[i].filePath + "\"/>"
+                            + "         </li>";
+//                            + "         </div>";
                 }
-                $(".swiper-wrapper").html(imagesHtml);
+                $("#profile .image-slider").html(imagesHtml);
 //                $(".bjqs").html(imagesHtml);
 
                 $(".animal-name").html(animal.name);
@@ -44,15 +52,30 @@ function View() {
                 $(".animal-weight").html(weightHtml);
 
 
-                $(function(){
-                    var mySwiper = $('#profile .swiper-container').swiper({
-                        //Your options here:
-                        mode:'horizontal',
-                        loop: true,
-                        centeredSlides: true
-                        //etc..
+
+                    var pgwSlider = $('#profile .image-slider').pgwSlider();
+                    pgwSlider.reload({
+                        displayList : false,
+                        transitionEffect: 'sliding',
+                        displayControls : true,
+                        autoSlide: false
+
                     });
-                });
+
+//                    app.view.imageSwiper = $('#profile .swiper-container').swiper({
+//                        // Your options here:
+//                        pagination: '.pagination',
+//                        paginationClickable: true,
+//                        grabCursor: true,
+//
+//                        resizeReInit: true,
+//                        loop: true,
+//                        visibilityFullFit: true,
+//                        calculateHeight: true,
+//                        // centeredSlides: true
+//                        //etc..
+//                    });
+
 
                 if (onComplete) {
                     onComplete();
@@ -109,11 +132,11 @@ function View() {
                 var imagesHtml = "";
                 for (var i = 0; i < maps.length; i++) {
                     imagesHtml += ""
-                            + "         <div class=\"swiper-slide\"> "
+                            + "         <li> "
                             + "             <img src=\"" + maps[i].filePath + "\"/>"
-                            + "         </div>";
+                            + "         </li>";
                 }
-                $("#map .swiper-wrapper").html(imagesHtml);
+                $("#map .image-slider").html(imagesHtml);
 
 
                 $("#map .animal-name").html(animal.name);
@@ -133,12 +156,21 @@ function View() {
 
 
                 $(function(){
-                    var mySwiper = $('#map .swiper-container').swiper({
-                        //Your options here:
-                        mode:'horizontal',
-                        loop: true
-                        //etc..
+                    var pgwSlider = $('#map .image-slider').pgwSlider();
+                    pgwSlider.reload({
+                        displayList : false,
+                        transitionEffect: 'sliding',
+                        displayControls : true,
+                        autoSlide: false
+
                     });
+//                    var mySwiper = $('#profile .swiper-container').swiper({
+//                        //Your options here:
+//                        mode:'horizontal',
+//                        loop: true,
+//                        centeredSlides: true
+//                        //etc..
+//                    });
                 });
 
                 if (onComplete) {
@@ -156,11 +188,11 @@ function View() {
                 var imagesHtml = "";
                 for (var i = 0; i < footprints.length; i++) {
                     imagesHtml += ""
-                            + "         <div class=\"swiper-slide\"> "
+                            + "         <li> "
                             + "             <img src=\"" + footprints[i].filePath + "\"/>"
-                            + "         </div>";
+                            + "         </li>";
                 }
-                $("#footprints .swiper-wrapper").html(imagesHtml);
+                $("#footprints .image-slider").html(imagesHtml);
 
 
                 $("#footprints .animal-name").html(animal.name);
@@ -180,12 +212,21 @@ function View() {
 
 
                 $(function(){
-                    var mySwiper = $('#footprints .swiper-container').swiper({
-                        //Your options here:
-                        mode:'horizontal',
-                        loop: true
-                        //etc..
+                    var pgwSlider = $('#footprints .image-slider').pgwSlider();
+                    pgwSlider.reload({
+                        displayList : false,
+                        transitionEffect: 'sliding',
+                        displayControls : true,
+                        autoSlide: false
+
                     });
+//                    var mySwiper = $('#profile .swiper-container').swiper({
+//                        //Your options here:
+//                        mode:'horizontal',
+//                        loop: true,
+//                        centeredSlides: true
+//                        //etc..
+//                    });
                 });
 
                 if (onComplete) {
@@ -502,6 +543,7 @@ function View() {
             $("* .animal-profile").on("click", function(event) {
                 app.view.animal_loadProfile(animal, function() {
                     app.view.profile_alignOptions("profile");
+                    app.view.reInitImageSliders();
                     location.href = "#profile";
                 });
             });
@@ -514,12 +556,14 @@ function View() {
             $("* .animal-map").on("click", function(event) {
                 app.view.animal_loadMap(animal, function() {
                     app.view.profile_alignOptions("map");
+                    app.view.reInitImageSliders();
                     location.href = "#map";
                 });
             });
             $("* .animal-footprints").on("click", function(event) {
                 app.view.animal_loadFootprints(animal, function() {
                     app.view.profile_alignOptions("footprints");
+                    app.view.reInitImageSliders();
                     location.href = "#footprints";
                 });
             });
@@ -587,7 +631,7 @@ function View() {
         $(".option.right").css("margin-left", (left_margin_centre + option_size + option_padding) + "px");
     };
 
-    var prev_height = 0;
+
     this.app_maxHeight = function() {
         var header = $(".header");
         var header_oh = header.height() > 0 ? header.outerHeight(true) : 0;
@@ -606,8 +650,12 @@ function View() {
 
         var c_new = window_h - header_oh - footer_oh - content_oh + content_h + 56;
 
+
         content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
+
+        // resize height of slider container to keep 16:9
+        $(".swiper-container").css("height", ($(".swiper-container").width() / 16 * 9) + "px");
 
     //        var total = header_oh + footer_oh + content_oh;
     //        if (content_h < content.get(0).scrollHeight) {
