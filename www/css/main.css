@@ -207,7 +207,7 @@ footer-controls {
 }
 
 .audio-play-pause {
-    background-image: url('../resources/buttons/media_player/play.png');
+    //background-image: url('../resources/buttons/media_player/play.png');
     height: 22px;
     width: 20px;
     background-repeat: no-repeat;
@@ -240,39 +240,67 @@ footer-controls {
 .profile-content {
     position: absolute;
     color: #2e2a2b;
-    width: 100%;
     height: 100%;
+    width: 100%;
     overflow-wrap: normal;
     overflow-y: auto;
     background-color: #cbc9c5;
     //padding: 20px 0 20px 20px;
+    margin-left: 20px;
     /*right: 100px;*/
 }
 
+.animal-top {
+    width: 540px;
+    height: 50px;
+    display: block;
+    margin-top:15px;
+    margin-right: 50px;
+    padding-left: 20px;
+    //border: 1px solid black;
+}
+
 .listen-to {
-    padding-left: 50px;
-    width: 50%;
+    width: 260px;
     float: left;
+    height: 50px;
     position: relative;
+    //border: 1px solid red;
+    line-height: 34px;
     }
     
-    .listenicon {
+.listenicon {
     background-image: url('../resources/buttons/other/audio_animal_profile.png');
     background-repeat: no-repeat;
-    width: 47px;
-    height: 50px;
+    float: left;
+    min-width: 47px;
+    min-height: 50px;
+    margin-right:15px;
+    //border: 1px solid red;
     }
 
-    .caution {
-    width: 50%;
+.caution {
+    width: 270px;
+    line-height: 10px;
+    height: 50px;
+    //padding-left: 50px;
+    //border: 1px solid blue;
     float: right;
-    position: relative;
-    padding-left: 50px;   
     }
-    .cautionicon {
-        width: 50px;
-        height: 50px;
+    
+.cautionicon {
     background-image: url('../resources/buttons/other/safety_warning.png');
+    background-repeat: no-repeat;
+    float: left;
+    min-width: 47px;
+    min-height: 50px;
+    margin-right:15px;
+    //border: 1px solid red;
+    }
+    
+    .copywrap {
+       padding: 20px 100px 20px 20px;
+       margin-right: 50px;
     }
 
 .profile-tabs {
@@ -309,8 +337,16 @@ footer-controls {
 .profile-option {
     position: absolute;
     width: 128px;
+    border-right: 2px solid;
+    border-right-color: #272521;
+    border-bottom: 2px solid;
+    border-top: 1px solid;
+    border-bottom-color: #000;
+    border-top-color: grey;
+    border-right-color: 1px solid;
+    
+    
     //min-height: 138px;
-    border: 1px solid red;
     vertical-align: bottom;
    // line-height: 55px;
 }
@@ -318,7 +354,14 @@ footer-controls {
 .profile-option-image {    
     width: 82px;
     height: 75px;
-    margin: 0 auto;}
+    margin: 0 auto;
+    margin-top: 14px;
+}
+
+.profile-option-text
+{
+    margin: 5px 5px 5px 0;
+}
 
 .animal-profile .profile-option-image {
     background-image: url('../resources/buttons/navigation/profile.png');
@@ -856,6 +899,35 @@ height: 100%;
     // margin:-115px 0px 0px -112px;   // offset vertical: half of image height and text area height
                                     // offset horizontal: half of text area width
 }
+@media screen and (max-width:500px) {
+    
+.animal-top {
+    width: 200;
+    height: 102px;
+    //display: block;
+    margin-top:15px;}
+   
+.listen-to {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 50px;
+    }
+    
+
+.caution {
+    width:100%;
+    position: relative;
+    margin-top: 50px;
+   //top:50px;
+    //padding-left: 50px;
+    //border: 1px solid blue;
+    //float: right;
+    }
+    
+}
+
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -904,7 +976,8 @@ height: 100%;
     }
 
     #menu .content {
-    padding-top: 25px;}
+    //padding-top: 25px;
+    }
 
 
     .profile-option {

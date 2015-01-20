@@ -177,7 +177,7 @@ function Application() {
             if (audio_state_play) {
                 $(".audio-play-pause").html("Pause");
             } else {
-                $(".audio-play-pause").html("Resume");
+                $(".audio-play-pause").html("<img src='../resources/buttons/media_player/play.png'>");
             }
         });
 

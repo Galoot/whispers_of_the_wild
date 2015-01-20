@@ -366,27 +366,27 @@ function View() {
     this.get_profile_tabs = function(page) {
         var html = "";
         html += "<div class=\"profile-option animal-profile" + (page === "profile" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Profile</div>"
                 + "</div>";
         html += "<div class=\"profile-option animal-audio" + (page === "audio" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Audio</div>"
                 + "</div>";
         html += "<div class=\"profile-option animal-map" + (page === "map" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Map</div>"
                 + "</div>";
         html += "<div class=\"profile-option animal-footprints" + (page === "footprints" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Footprints</div>"
                 + "</div>";
         html += "<div class=\"profile-option animal-question" + (page === "question" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Ask a Question</div>"
                 + "</div>";
         html += "<div class=\"profile-option animal-donate" + (page === "donate" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Donate to a Conservation</div>"
                 + "</div>";
 
@@ -433,27 +433,27 @@ function View() {
     this.get_about_tabs = function(page) {
         var html = "";
         html += "<div class=\"profile-option about-founder" + (page === "founder" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">FOUNDER</div>"
                 + "</div>";
         html += "<div class=\"profile-option about-partners" + (page === "partners" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">PARTNERS</div>"
                 + "</div>";
         html += "<div class=\"profile-option about-board" + (page === "board" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">ADVISORY BOARD</div>"
                 + "</div>";
         html += "<div class=\"profile-option about-sounds" + (page === "sounds" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">VOICES AND SOUNDS</div>"
                 + "</div>";
         html += "<div class=\"profile-option about-photographers" + (page === "photographers" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">PHOTOGRAPHERS</div>"
                 + "</div>";
         html += "<div class=\"profile-option about-sources" + (page === "sources" ? " profile-tab-selected" : "") + "\">"
-                + "<div class=\"profile-option-image\">ICON</div>"
+                + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">SOURCES</div>"
                 + "</div>";
 
