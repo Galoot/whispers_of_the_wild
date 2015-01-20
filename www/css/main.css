@@ -58,7 +58,6 @@ h4 {line-height: 34px;
 font-family:'Corbel';}
 
 b {line-height: 24px;
-    color: #fff;
     //text-shadow: 1px 1px 2px #000;
     //text-align: center;
     font-size: 16px;
@@ -240,26 +239,213 @@ footer-controls {
 
 .profile-content {
     position: absolute;
-    width: auto;
+    color: #2e2a2b;
+    width: 100%;
     height: 100%;
-    border: black thin solid;
     overflow-wrap: normal;
     overflow-y: auto;
+    background-color: #cbc9c5;
+    //padding: 20px 0 20px 20px;
     /*right: 100px;*/
 }
 
+.listen-to {
+    padding-left: 50px;
+    width: 50%;
+    float: left;
+    position: relative;
+    }
+    
+    .listenicon {
+    background-image: url('../resources/buttons/other/audio_animal_profile.png');
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 50px;
+    }
+
+    .caution {
+    width: 50%;
+    float: right;
+    position: relative;
+    padding-left: 50px;   
+    }
+    .cautionicon {
+        width: 50px;
+        height: 50px;
+    background-image: url('../resources/buttons/other/safety_warning.png');
+    }
+
+.profile-tabs {
+    //background-image: url('../resources/buttons/navigation/navigation_bar.png');
+    //border: black thin solid;
+    width: 128px;
+    //height: 828px;
+    position: absolute;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    //vertical-align: middle;
+    //display:inline-block;
+    //margin: 15px;
+}
+
 .profile-tab-selected {
-    color: red;
-    border: red thick solid;
+    background-color: #9a9080;
+    width: 128px;
+    //min-height: 138px;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    color: #272521;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: inset -2px -2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset -2px -2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset -2px -2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .profile-option {
     position: absolute;
-    border: black thin solid;
-
-    width: 100px;
-    // height: 50px;
+    width: 128px;
+    //min-height: 138px;
+    border: 1px solid red;
+    vertical-align: bottom;
+   // line-height: 55px;
 }
+
+.profile-option-image {    
+    width: 82px;
+    height: 75px;
+    margin: 0 auto;}
+
+.animal-profile .profile-option-image {
+    background-image: url('../resources/buttons/navigation/profile.png');
+    background-repeat: no-repeat;
+    height: 75px;
+    //margin: 40px 45px 0 0;
+    }
+
+.animal-profile.profile-tab-selected .profile-option-image {
+    background-image: url('../resources/buttons/navigation/profile_grey.png');
+    background-repeat: no-repeat;
+    height: 75px;
+    /* margin: 10px 20px 10px 5px; */
+}
+
+.animal-audio .profile-option-image{
+    background-image: url('../resources/buttons/navigation/audio.png');
+    background-repeat: no-repeat;
+    height: 75px}
+
+.animal-audio.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/audio_grey.png');
+    background-repeat: no-repeat;
+    /* margin: 10px 20px 10px 5px; */
+}
+
+.animal-map .profile-option-image{
+    background-image: url('../resources/buttons/navigation/map.png');
+    background-repeat: no-repeat;
+}
+
+.animal-map.profile-tab-selected .profile-option-image{
+background-image: url('../resources/buttons/navigation/map_grey.png');
+    background-repeat: no-repeat;
+}
+
+.animal-footprints .profile-option-image{
+background-image: url('../resources/buttons/navigation/footprint.png');
+    background-repeat: no-repeat;
+}
+
+.animal-footprints.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/footprint_grey.png');
+    background-repeat: no-repeat;
+}
+
+.animal-question .profile-option-image{
+    background-image: url('../resources/buttons/navigation/ask_a_question.png');
+    background-repeat: no-repeat;
+}
+
+.animal-question.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/ask_a_question_grey.png');
+    background-repeat: no-repeat;
+}
+
+.animal-donate .profile-option-image{
+    background-image: url('../resources/buttons/navigation/donate_to_conservation.png');
+    background-repeat: no-repeat;
+}
+
+.animal-donate.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/donate_to_conservation_grey.png');
+    background-repeat: no-repeat;
+}
+
+.about-founder .profile-option-image{
+    background-image: url('../resources/buttons/navigation/founder.png');
+    background-repeat: no-repeat;
+}
+
+.about-founder.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/founder_grey.png');
+    background-repeat: no-repeat;
+}
+
+.about-partners .profile-option-image{
+    background-image: url('../resources/buttons/navigation/partners.png');
+    background-repeat: no-repeat;
+}
+
+.about-partners.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/partners_grey.png');
+    background-repeat: no-repeat;
+}
+
+.about-board .profile-option-image{
+    background-image: url('../resources/buttons/navigation/advisory_board.png');
+    background-repeat: no-repeat;
+}
+
+.about-board.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/advisory_board_grey.png');
+    background-repeat: no-repeat;
+}
+
+.about-sounds .profile-option-image{
+    background-image: url('../resources/buttons/navigation/voices_and_sound.png');
+    background-repeat: no-repeat;
+}
+
+.about-sounds.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/voices_and_sound_grey.png');
+    background-repeat: no-repeat;
+}
+
+.about-photographers .profile-option-image{
+    background-image: url('../resources/buttons/navigation/photographers.png');
+    background-repeat: no-repeat;
+}
+
+.about-photographers.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/photographers_grey.png');
+    background-repeat: no-repeat;
+}
+
+.about-sources .profile-option-image{
+    background-image: url('../resources/buttons/navigation/sources.png');
+    background-repeat: no-repeat;
+}
+
+.about-sources.profile-tab-selected .profile-option-image{
+    background-image: url('../resources/buttons/navigation/sources_grey.png');
+    background-repeat: no-repeat;
+}
+
+
 .option {
     position: absolute;
     left: 50%;
@@ -271,7 +457,7 @@ footer-controls {
     vertical-align: bottom;
 
     font-size: 8px;
-    border: black solid thin;
+    //border: black solid thin;
 }
 
 // To be set using js
@@ -291,7 +477,7 @@ footer-controls {
 }
 
 .content {
-
+height: 100%;
 }
 
 .title {
@@ -507,7 +693,6 @@ footer-controls {
     position: absolute;
     top: 120px;
     left: 28px;
-
     border: none;
     padding: 10px 10px 1px 10px;
     border-radius: 5px;
@@ -521,12 +706,12 @@ footer-controls {
     position: absolute;
     top: 150px;
     left: 28px;
-    max-height: 300px;
+    max-height: 298px;
 
     //background-color: lightgray;
     border: none;
     padding: 0 10px 0 10px;
-    width: 300px;
+    width: 298px;
     background-color: #68666a;
 
     display: none; // hide by default, must be last style
@@ -539,7 +724,7 @@ footer-controls {
     margin-bottom: 5px;
 
     //height: 1px;
-    width: 300px;
+    width: 298px;
     border-top: 1px solid black;
     //box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
 }
@@ -559,15 +744,16 @@ footer-controls {
 }
 .search-by-letter {
     overflow: auto;
+    padding: 0 10px 0 10px;
 
     position: absolute;
     top: 150px;
-    right: 20px;
+    right: 44px;
     max-height: 300px;
 
     //background-color: lightgray;
-    border: black solid thin;
-    width: 200px;
+    //border: black solid thin;
+    width: 331px;
 
     display: none; // hide by default, must be last style
 }
@@ -722,7 +908,8 @@ footer-controls {
 
 
     .profile-option {
-        width: 150px;
+        width: 128px;
+        height: 138px;
     }
 
     .menu_block {
