@@ -587,6 +587,7 @@ function View() {
         $(".option.right").css("margin-left", (left_margin_centre + option_size + option_padding) + "px");
     };
 
+    var prev_height = 0;
     this.app_maxHeight = function() {
         var header = $(".header");
         var header_oh = header.height() > 0 ? header.outerHeight(true) : 0;
@@ -603,10 +604,9 @@ function View() {
         var content_h = content.height();
         var content_oh = content_h > 0 ? content.outerHeight(true) : 0;
 
-        var c_new = window_h - header_oh - footer_oh - content_oh + content_h;
-//        console.log("content height: " + c_new);
-        content.height(c_new);
+        var c_new = window_h - header_oh - footer_oh - content_oh + content_h + 56;
 
+        content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
 
     //        var total = header_oh + footer_oh + content_oh;
