@@ -62,12 +62,14 @@ function Application() {
 
     var initialiseListeners = function() {
         // ==== Splash =========================================================
+        $("#enter").off();
         $("#enter").on("click", function(event) {
             // playAudio("resources/audio/intro.mp3");
             location.href = "#menu";
         });
 
         var video = $("#introVid").get(0);
+        $("#toggleIntro").off();
         $("#toggleIntro").on("click", function(event) {
             $("#intro").toggle();
             if ($("#intro").css("display") != "none") {
@@ -83,6 +85,7 @@ function Application() {
         };
 
         // ==== Social Share ===================================================
+        $("#share-facebook").off();
         $("#share-facebook").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint(
@@ -102,6 +105,7 @@ function Application() {
             }
             // share(SOCIAL_SHARE_FACEBOOK, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
         });
+        $("#share-twitter").off();
         $("#share-twitter").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaTwitter(
@@ -127,6 +131,7 @@ function Application() {
         });
 
         // ==== Question Submit ================================================
+        $("#question-submit").off();
         $("#question-submit").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaTwitter(
@@ -153,19 +158,23 @@ function Application() {
         });
 
         // ==== Header =========================================================
+        $("div .action-home").off();
         $("div .action-home").on("click", function(event) {
             location.href = "#menu";
         });
+        $(".forward").off();
         $(".forward").on("click", function(event) {
             event.preventDefault();
             history.go(1);
         });
+        $(".back").off();
         $(".back").on("click", function(event) {
             event.preventDefault();
             history.go(-1);
         });
 
         // ==== Footer =========================================================
+        $(".audio-play-pause").off();
         $(".audio-play-pause").on("click", function(event) {
             // check audio state
             if (audio_state_play) {
@@ -184,14 +193,17 @@ function Application() {
         // $(".footer-progress").html("<input class=\"audio-progress\"/>");
 
         // ==== Animals ========================================================
+        $(".category-label").off();
         $(".category-label").on("click", function(event) {
             $("#search-by-category").toggle();
         });
 
+        $(".letter-label").off();
         $(".letter-label").on("click", function(event) {
             $("#search-by-letter").toggle();
         });
 
+        $("#howto-size").off();
         $("#howto-size").on("click", function(event) {
             alert("How does the scale slider work?\nSlides the circles across to eliminate the animals that are shorter and taller (at shoulder height) than the animal you are looking for.");
         });
@@ -211,16 +223,19 @@ function Application() {
             $("#maxLength").val($("#slider-range").slider("values", 1));
         });
         // ==== Profile ========================================================
+        $("#profile .content .cautionLink").off();
         $("#profile .content .cautionLink").on("click", function() {
             var popupContent = "Safety Notice\n"
                     + $("#profile .content .cautionNotice").html();
             alert(popupContent);
         });
+        $("#map .content .cautionLink").off();
         $("#map .content .cautionLink").on("click", function() {
             var popupContent = "Safety Notice\n"
                     + $("#map .content .cautionNotice").html();
             alert(popupContent);
         });
+        $("#footprints .content .cautionLink").off();
         $("#footprints .content .cautionLink").on("click", function() {
             var popupContent = "Safety Notice\n"
                     + $("#footprints .content .cautionNotice").html();
@@ -243,6 +258,7 @@ function Application() {
         $("#photographers .content .profile-tabs").html(app.view.get_about_tabs("photographers"));
         $("#sources .content .profile-tabs").html(app.view.get_about_tabs("sources"));
 
+        $(".menu_animals").off();
         $(".menu_animals").on("click", function(event) {
             app.view.animal_loadAnimals(function() {
                 $(".profile-tabs").show();
@@ -250,6 +266,7 @@ function Application() {
             });
         });
 
+        $(".menu_donate").off();
         $(".menu_donate").on("click", function(event) {
             app.view.animal_loadAnimals(function() {
                 $(".profile-tabs").hide();
@@ -257,19 +274,24 @@ function Application() {
             });
         });
 
+        $(".menu_question").off();
         $(".menu_question").on("click", function(event) {
             $(".profile-tabs").hide();
             location.href = "#question";
         });
 
+        $(".option_game").off();
         $(".option_game").on("click", function(event) {
             location.href = "#game";
         });
+
+        $(".game-start-label").off();
         $(".game-start-label").on("click", function(event) {
             resetPlayers();
             location.href = "#players";
         });
 
+        $(".menu_about").off();
         $(".menu_about").on("click", function(event) {
             app.view.initializeAboutLinks();
             $(".profile-tabs").show();
@@ -277,6 +299,7 @@ function Application() {
         });
 
         // ==== Game ========================================================
+        $(".game-players-next").off();
         $(".game-players-next").on("click", function(event) {
             app.view.animal_animalGrid('game-select-', function(animalGridHtml) {
                 $("#game-animal-grid").html(animalGridHtml);
@@ -295,9 +318,12 @@ function Application() {
             });
         });
 
+        $(".game-link-spot").off();
         $(".game-link-spot").on("click", function(event) {
             location.href = "#game-animal-spot";
         });
+
+        $(".game-link-next").off();
         $(".game-link-next").on("click", function(event) {
             // same player, keep scores, select different animals
             location.href = "#game-animal-select";
@@ -306,9 +332,13 @@ function Application() {
                 app.game.players[x].selection = [];
             }
         });
+
+        $(".game-link-scoreboard").off();
         $(".game-link-scoreboard").on("click", function(event) {
             location.href = "#game-animal-scoreboard";
         });
+
+        $(".game-link-finish").off();
         $(".game-link-finish").on("click", function(event) {
             resetPlayers();
             location.href = "#game";

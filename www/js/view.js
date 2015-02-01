@@ -8,19 +8,59 @@ function View() {
 
     this.animal = new Animal();
 
-    this.imageSwiper = null;
+    // image sliders
+    this.profileSlider = null;
+    this.mapSlider = null;
+    this.footprintSlider = null;
+    this.currentAnimal = null;
 
-    this.reInitImageSliders = function() {
-        if (app.view.imageSwiper) {
-            app.view.imageSwiper.reInit();
+    this.reloadImageSlider = function(slider, element) {
+        var newSlider;
+        if (!slider) {
+            newSlider = element.pgwSlider({
+                    displayList : false,
+                    transitionEffect: 'sliding',
+                    displayControls : true,
+                    autoSlide: false
+
+                });
+        } else {
+            // slider.destroy(true);
+            // slider = element.pgwSlider();
+            slider.destroy(false);
+            newSlider = element.reload({
+//             newSlider = element.pgwSlider({
+                    displayList : false,
+                    transitionEffect: 'sliding',
+                    displayControls : true,
+                    autoSlide: false
+
+                });
+            // slider.show();
+            // element.show();
         }
+        return newSlider;
+//        if (app.view.imageSwiper) {
+//            app.view.imageSwiper.reInit();
+//        }
     };
+
+    this.reloadImageSliders = function() {
+        reloadImageSlider(app.view.profileSlider, $('#profile .image-slider'));
+        reloadImageSlider(app.view.mapSlider, $('#map .image-slider'));
+        reloadImageSlider(app.view.footprintSlider, $('#footprints .image-slider'));
+    }
 
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
                 $("#profile .header .title").html(animal.name);
 
+                if (app.view.profileSlider) {
+                    // app.view.profileSlider.remove();
+                    app.view.profileSlider.destroy(true);
+                    app.view.profileSlider = null;
+                }
                 var imagesHtml = "";
                 for (var i = 0; i < images.length; i++) {
                     imagesHtml += ""
@@ -51,16 +91,7 @@ function View() {
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
                 $(".animal-weight").html(weightHtml);
 
-
-
-                    var pgwSlider = $('#profile .image-slider').pgwSlider();
-                    pgwSlider.reload({
-                        displayList : false,
-                        transitionEffect: 'sliding',
-                        displayControls : true,
-                        autoSlide: false
-
-                    });
+                app.view.profileSlider = app.view.reloadImageSlider(app.view.profileSlider, $('#profile .image-slider'));
 
 //                    app.view.imageSwiper = $('#profile .swiper-container').swiper({
 //                        // Your options here:
@@ -95,6 +126,7 @@ function View() {
             }
             $("#audio .profile-content").html(audioHtml);
 
+            $('*[id^="track_"]').off();
             $('*[id^="track_"]').on("click",
                 function(event) {
                     var elementID = event.currentTarget.id;
@@ -129,6 +161,12 @@ function View() {
             model.getMaps(animal.animalID, function(maps) {
                 $("#map .header .title").html(animal.name);
 
+                if (app.view.mapSlider) {
+                    // app.view.profileSlider.remove();
+                    app.view.mapSlider.destroy(true);
+                    app.view.mapSlider = null;
+                }
+
                 var imagesHtml = "";
                 for (var i = 0; i < maps.length; i++) {
                     imagesHtml += ""
@@ -153,17 +191,8 @@ function View() {
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
                 $("#map .animal-weight").html(weightHtml);
 
+                app.view.mapSlider = app.view.reloadImageSlider(app.view.mapSlider, $('#map .image-slider'));
 
-
-                $(function(){
-                    var pgwSlider = $('#map .image-slider').pgwSlider();
-                    pgwSlider.reload({
-                        displayList : false,
-                        transitionEffect: 'sliding',
-                        displayControls : true,
-                        autoSlide: false
-
-                    });
 //                    var mySwiper = $('#profile .swiper-container').swiper({
 //                        //Your options here:
 //                        mode:'horizontal',
@@ -171,7 +200,6 @@ function View() {
 //                        centeredSlides: true
 //                        //etc..
 //                    });
-                });
 
                 if (onComplete) {
                     onComplete();
@@ -184,6 +212,12 @@ function View() {
         model.getProfile(animal.animalID, function(profile) {
             model.getFootprints(animal.animalID, function(footprints) {
                 $("#footprints .header .title").html(animal.name);
+
+                if (app.view.footprintSlider) {
+                    // app.view.profileSlider.remove();
+                    app.view.footprintSlider.destroy(true);
+                    app.view.footprintSlider = null;
+                }
 
                 var imagesHtml = "";
                 for (var i = 0; i < footprints.length; i++) {
@@ -209,17 +243,8 @@ function View() {
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
                 $("#footprints .animal-weight").html(weightHtml);
 
+                app.view.footprintSlider = app.view.reloadImageSlider(app.view.footprintSlider, $('#footprints .image-slider'));
 
-
-                $(function(){
-                    var pgwSlider = $('#footprints .image-slider').pgwSlider();
-                    pgwSlider.reload({
-                        displayList : false,
-                        transitionEffect: 'sliding',
-                        displayControls : true,
-                        autoSlide: false
-
-                    });
 //                    var mySwiper = $('#profile .swiper-container').swiper({
 //                        //Your options here:
 //                        mode:'horizontal',
@@ -227,7 +252,6 @@ function View() {
 //                        centeredSlides: true
 //                        //etc..
 //                    });
-                });
 
                 if (onComplete) {
                     onComplete();
@@ -304,22 +328,25 @@ function View() {
                 $("#animal-grid").html(animalGridHtml);
 
                 // Listeners ---------------------------------------------------
+                $("#minLength").off();
                 $("#minLength").on("keyup", function() {
                     _filterWeights();
                 });
+                $("#maxLength").off();
                 $("#maxLength").on("keyup", function() {
                     _filterWeights();
                 });
-
+                $(".category-option").off();
                 $(".category-option").on("click", function(event) {
                     $("#search-by-category").toggle();
                 });
-
+                $(".letter-option").off();
                 $(".letter-option").on("click", function(event) {
                     $("#search-by-letter").toggle();
                 });
 
                 $('.category-option').each(function() {
+                    $(this).off();
                     $(this).on("click", function(event) {
                         var category = event.target.id;
 
@@ -338,6 +365,7 @@ function View() {
                 });
 
                 $('.letter-option').each(function() {
+                    $(this).off();
                     $(this).on("click", function(event) {
                         var letter = event.target.id;
 
@@ -355,6 +383,7 @@ function View() {
                     });
                 });
 
+                $('*[id^="animalID_"]').off();
                 $('*[id^="animalID_"]').on(
                         "click",
                         function(event) {
@@ -540,65 +569,77 @@ function View() {
 
     this.initializeProfileLinks = function(animalID) {
         model.getAnimal(animalID, function(animal) {
+            $("* .animal-profile").off();
             $("* .animal-profile").on("click", function(event) {
                 app.view.animal_loadProfile(animal, function() {
-                    app.view.profile_alignOptions("profile");
-                    app.view.reInitImageSliders();
+                    // app.view.profile_alignOptions("profile");
+                    // app.view.reloadImageSlider(app.view.profileSlider, $('#profile .image-slider'));
                     location.href = "#profile";
                 });
             });
+            $("* .animal-audio").off();
             $("* .animal-audio").on("click", function(event) {
                 app.view.animal_loadAudio(animal, function() {
-                    app.view.profile_alignOptions("audio");
+//                    app.view.profile_alignOptions("audio");
                     location.href = "#audio";
                 });
             });
+            $("* .animal-map").off();
             $("* .animal-map").on("click", function(event) {
                 app.view.animal_loadMap(animal, function() {
-                    app.view.profile_alignOptions("map");
-                    app.view.reInitImageSliders();
+//                    app.view.profile_alignOptions("map");
+//                    app.view.reloadImageSliders();
                     location.href = "#map";
                 });
             });
+            $("* .animal-footprints").off();
             $("* .animal-footprints").on("click", function(event) {
                 app.view.animal_loadFootprints(animal, function() {
-                    app.view.profile_alignOptions("footprints");
-                    app.view.reInitImageSliders();
+//                    app.view.profile_alignOptions("footprints");
+//                    app.view.reloadImageSliders();
                     location.href = "#footprints";
                 });
             });
+            $("* .animal-question").off();
             $("* .animal-question").on("click", function(event) {
-                app.view.profile_alignOptions("question");
+//                app.view.profile_alignOptions("question");
                 location.href = "#question";
             });
+            $("* .animal-donate").off();
             $("* .animal-donate").on("click", function(event) {
-                app.view.profile_alignOptions("donate");
+//                app.view.profile_alignOptions("donate");
                 location.href = "#donate";
             });
         });
     };
 
     this.initializeAboutLinks = function() {
+        $("* .about-founder").off();
         $("* .about-founder").on("click", function(event) {
             app.view.about_alignOptions("founder");
             location.href = "#founder";
         });
+        $("* .about-founder").off();
         $("* .about-partners").on("click", function(event) {
             app.view.about_alignOptions("partners");
             location.href = "#partners";
         });
+        $("* .about-board").off();
         $("* .about-board").on("click", function(event) {
             app.view.about_alignOptions("board");
             location.href = "#board";
         });
+        $("* .about-sounds").off();
         $("* .about-sounds").on("click", function(event) {
             app.view.about_alignOptions("sounds");
             location.href = "#sounds";
         });
+        $("* .about-photographers").off();
         $("* .about-photographers").on("click", function(event) {
             app.view.about_alignOptions("photographers");
             location.href = "#photographers";
         });
+        $("* .about-sources").off();
         $("* .about-sources").on("click", function(event) {
             app.view.about_alignOptions("sources");
             location.href = "#sources";

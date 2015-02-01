@@ -173,6 +173,7 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+            mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
 
             mdl.addAudio(animal_counter, '01 The troop centre of baboon society',
                     100, resourcesPrefix + name.toLowerCase() + '/01 The troop centre of baboon society.mp3');
@@ -191,8 +192,8 @@ function Model() {
 
             mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
 
-            mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/Baboon back.png');
-            mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/Baboon front.png');
+            mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+            mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
 
             if (animal_counter === totalAnimals) {
                 if (onCompleted) {
