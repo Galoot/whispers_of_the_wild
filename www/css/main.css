@@ -2,6 +2,16 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
+// font-family:'Corbel'; // HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+ @font-face {
+    font-family: 'Corbel';
+    src: url('../resources/fonts/corbel.woff') format('woff'), /* Modern Browsers */
+         url('../resources/fonts/corbel.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../resources/fonts/corbel.svg#Corbel') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+    }
+
 [data-role="page"] {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -19,8 +29,6 @@
         color-stop(0.51, #2f2d33)
     );
     background-attachment:fixed;
-
-    font-family:'Corbel'; // HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:16px;
     color: #fff;
     text-shadow: none;
@@ -49,26 +57,26 @@ h3 {line-height: 34px;
     text-shadow: 1px 1px 2px #000;
     text-align: center;
     font-size: 18px;
-font-family:'Corbel';}
+}
 h4 {line-height: 34px;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
     text-align: center;
     font-size: 16px;
-font-family:'Corbel';}
+}
 
 b {line-height: 24px;
     //text-shadow: 1px 1px 2px #000;
     //text-align: center;
     font-size: 16px;
-font-family:'Corbel';}
+}
 
 p {line-height: 18px;
     color: #fff;
     //text-shadow: 1px 1px 2px #000;
     //text-align: center;
     font-size: 16px;
-font-family:'Corbel';}
+}
 
 #intro {
     display: none;
@@ -113,12 +121,9 @@ font-family:'Corbel';}
 
 #toggleIntro {
     display: block;
-
     position: absolute;
     bottom: 240px;
-
     background-image: url('../resources/buttons/front_page/play.png');
-
     height: 90px;
     width: 90px;
     left: 50%; /* centre div */
@@ -139,7 +144,6 @@ font-family:'Corbel';}
 .splashtitle {
     background-image: url('../resources/buttons/front_page/splashtitle.jpg');
     background-position: center;
-
     position: absolute;
     bottom: 0px;
     height: 60px;
@@ -149,10 +153,8 @@ font-family:'Corbel';}
 #enter {
     display: block;
     text-transform: uppercase;
-
     position: absolute;
     bottom: 75px;
-
     width: 200px;
     left: 50%; /* centre div */
     margin-left:-100px; /* half of the width */
@@ -207,7 +209,7 @@ footer-controls {
 }
 
 .audio-play-pause {
-    //background-image: url('../resources/buttons/media_player/play.png');
+    background-image: url('../resources/buttons/media_player/play.png');
     height: 22px;
     width: 20px;
     background-repeat: no-repeat;
@@ -254,20 +256,22 @@ footer-controls {
     width: 540px;
     height: 50px;
     display: block;
-    margin-top:15px;
     margin-right: 50px;
     padding-left: 20px;
     //border: 1px solid black;
+    padding-top: 10px;
 }
 
 .listen-to {
     width: 260px;
     float: left;
     height: 50px;
+    margin-top: 10px;
     position: relative;
     //border: 1px solid red;
     line-height: 34px;
-    }
+    margin-top: 10px;
+}
 
 .listenicon {
     background-image: url('../resources/buttons/other/audio_animal_profile.png');
@@ -275,18 +279,18 @@ footer-controls {
     float: left;
     min-width: 47px;
     min-height: 50px;
-    margin-right:15px;
     //border: 1px solid red;
-    }
+    margin-top: 1px;
+}
 
 .caution {
-    width: 270px;
+    width: auto;
     line-height: 10px;
     height: 50px;
     //padding-left: 50px;
     //border: 1px solid blue;
     float: right;
-    }
+}
 
 .cautionicon {
     background-image: url('../resources/buttons/other/safety_warning.png');
@@ -294,10 +298,12 @@ footer-controls {
     float: left;
     min-width: 47px;
     min-height: 50px;
-    margin-right:15px;
     //border: 1px solid red;
     }
-
+    
+    .image-slider-container {
+        margin-right: 115px;
+    }
     .copywrap {
        padding: 20px 100px 20px 20px;
        margin-right: 50px;
@@ -324,7 +330,8 @@ footer-controls {
     width: 128px;
     //min-height: 138px;
     background-repeat: no-repeat;
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: none;
+    font-weight: bold;
     text-align: center;
     color: #272521;
     text-transform: uppercase;
@@ -787,16 +794,16 @@ height: 100%;
 }
 .search-by-letter {
     overflow: auto;
-    padding: 0 10px 0 10px;
 
     position: absolute;
     top: 150px;
     right: 44px;
-    max-height: 300px;
+    width: 331px;
 
     //background-color: lightgray;
-    //border: black solid thin;
-    width: 331px;
+    border: none;
+    padding: 0 10px 0 10px;
+    background-color: #68666a;
 
     display: none; // hide by default, must be last style
 }
@@ -825,6 +832,9 @@ height: 100%;
 }
 .search-by-size {
     overflow: auto;
+    width: 600px;
+    margin: 0 auto;
+    height: 100px;
 
     position: absolute;
     bottom: 150px;
@@ -834,13 +844,30 @@ height: 100%;
     border: black solid thin;
 }
 
+.minLength {
+    width: 250px;
+}
+
+.maxLength {
+    width: 250px;
+}
+
 .audio-track {
     padding-left: 10px;
-    padding-top: 25px;
+    //padding-top: 25px;
     //background-color: lightgray;
-    border: black solid thin;
+    background: url('../resources/buttons/navigation/soundbg.png');
+    background-repeat: repeat-x;
+    height: 60px;
 
     vertical-align: middle;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    line-height: 55px;
+}
+
+.question {
+    width: 650px;
 }
 
 // Game styling ================================================================
@@ -908,7 +935,7 @@ height: 100%;
     margin-top:15px;}
 
 .listen-to {
-    position: absolute;
+    /* position: absolute; */
     margin-left: auto;
     margin-right: auto;
     width: 100%;
