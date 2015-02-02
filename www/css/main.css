@@ -41,6 +41,16 @@
     margin:0px;
     padding:0px;
 }
+
+.modal-title {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.modal-content {
+    font-size: 16px;
+}
+
 h1 {line-height: 34px;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
@@ -300,7 +310,7 @@ footer-controls {
     min-height: 50px;
     //border: 1px solid red;
     }
-    
+
     .image-slider-container {
         margin-right: 115px;
     }
@@ -685,13 +695,13 @@ height: 100%;
     left: 50%; /* centre div */
     margin-left:-150px; /* half of the width */}
 
-#share-facebook {
+.share-facebook {
     background-image: url('../resources/buttons/other/facebook_share.png');
     width: 143px;
     height: 46px;
     float: left;}
 
-#share-twitter {
+.share-twitter {
     background-image: url('../resources/buttons/other/twitter_share.png');
     width: 143px;
     height: 46px;

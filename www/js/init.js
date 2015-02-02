@@ -1,4 +1,5 @@
-var app = new Application();
+app = new Application();
+app.mode = app.MODE_FREE;
 
 $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -20,6 +21,13 @@ function getAppPath() {
     };
 
 function Application() {
+    this.MODE_FREE = 0;
+    this.MODE_FREE_UNLOCKED = 1;
+    this.MODE_PAID = 2;
+    this.MODE_CORPORATE = 3;
+
+    this.mode = this.MODE_FREE;
+
     // game
     this.game = new SpotTheGame();
     $('.game-players').ready(function() {
@@ -85,8 +93,8 @@ function Application() {
         };
 
         // ==== Social Share ===================================================
-        $("#share-facebook").off();
-        $("#share-facebook").on("click", function(event) {
+        $(".share-facebook").off();
+        $(".share-facebook").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint(
                         null,
@@ -105,8 +113,8 @@ function Application() {
             }
             // share(SOCIAL_SHARE_FACEBOOK, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
         });
-        $("#share-twitter").off();
-        $("#share-twitter").on("click", function(event) {
+        $(".share-twitter").off();
+        $(".share-twitter").on("click", function(event) {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaTwitter(
                         '@Whispers_Wild\n'
@@ -184,9 +192,9 @@ function Application() {
             }
 
             if (audio_state_play) {
-                $(".audio-play-pause").html("Pause");
+                $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/pause.png')");
             } else {
-                $(".audio-play-pause").html("Resume");
+                $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/play.png')");
             }
         });
 
@@ -205,7 +213,7 @@ function Application() {
 
         $("#howto-size").off();
         $("#howto-size").on("click", function(event) {
-            alert("How does the scale slider work?\nSlides the circles across to eliminate the animals that are shorter and taller (at shoulder height) than the animal you are looking for.");
+            app.view.modal("scaleSliderHowTo");
         });
 
         $(function() {
@@ -225,21 +233,27 @@ function Application() {
         // ==== Profile ========================================================
         $("#profile .content .cautionLink").off();
         $("#profile .content .cautionLink").on("click", function() {
-            var popupContent = "Safety Notice\n"
-                    + $("#profile .content .cautionNotice").html();
-            alert(popupContent);
+
+            $("#cautionNotice .modal-content").html(
+                    $("#profile .content .cautionNotice").html());
+            app.view.modal("cautionNotice");
+
         });
         $("#map .content .cautionLink").off();
         $("#map .content .cautionLink").on("click", function() {
-            var popupContent = "Safety Notice\n"
-                    + $("#map .content .cautionNotice").html();
-            alert(popupContent);
+
+            $("#cautionNotice .modal-content").html(
+                    $("#map .content .cautionNotice").html());
+            app.view.modal("cautionNotice");
+
         });
         $("#footprints .content .cautionLink").off();
         $("#footprints .content .cautionLink").on("click", function() {
-            var popupContent = "Safety Notice\n"
-                    + $("#footprints .content .cautionNotice").html();
-            alert(popupContent);
+
+            $("#cautionNotice .modal-content").html(
+                    $("#footprints .content .cautionNotice").html());
+            app.view.modal("cautionNotice");
+
         });
 
         // Profile tabs

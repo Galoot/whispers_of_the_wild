@@ -1,3 +1,9 @@
+PayStatus = {
+    FREE: 1,
+    EARNED: 2,
+    PAID: 3
+};
+
 function Model() {
     this.data = new Datastore();
     this.data.init();
@@ -90,9 +96,9 @@ function Model() {
     };
 
     this.addAnimal = function(name, iconFilePath, category, cautionNotice, payStatus, score, onCompleted) {
-        var isFree = (payStatus === Model.FREE);
-        var isEarned = (payStatus === Model.EARNED);
-        var isPaid = (payStatus === Model.PAID);
+        var isFree = (payStatus === PayStatus.FREE);
+        var isEarned = (payStatus === PayStatus.EARNED);
+        var isPaid = (payStatus === PayStatus.PAID);
         this.data.dbQuery(_add_animal, [name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
                 function(results) {
                     if (onCompleted) {
@@ -270,12 +276,6 @@ function Model() {
             }
         });
     };
-}
-
-function PayStatus() {
-    this.FREE = 1;
-    this.EARNED = 2;
-    this.PAID = 3;
 }
 
 function Animal() {

@@ -41,7 +41,7 @@ function loanAnimalSelection() {
     $("#player-selecting-next").off('click');
     $("#player-selecting-next").on('click', function(event) {
         if (app.game.players[app.game.animalSelectplayerIndex].selection.length < 3) {
-            alert('Please ensure you have selected three animals.');
+            app.view.modal("gameAnimalSelectMessage");
         } else {
             if (confirm('Player '
                         + app.game.players[app.game.animalSelectplayerIndex].name + ', you have made the following selection\n'

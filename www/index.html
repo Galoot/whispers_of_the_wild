@@ -34,6 +34,11 @@
         <link href="js/libs/pgw-slider/pgwslider.min.css" rel="stylesheet" type="text/css"/>
         <!-- =============================================================== -->
 
+        <!-- PgwModal ====================================================== -->
+        <script src="js/libs/pgw-modal/pgwmodal.js" type="text/javascript"></script>
+        <link href="js/libs/pgw-modal/pgwmodal.css" rel="stylesheet" type="text/css"/>
+        <!-- =============================================================== -->
+
         <!-- local scripts & styling ======================================= -->
         <script type="text/javascript" src="js/datastore.js"></script>
         <script type="text/javascript" src="js/model.js"></script>
@@ -117,8 +122,8 @@
                     <div class="menu_block menu_donate"><div class="main_icon option_donate"></div><h4>Donate</h4></div>
                 </div>
                 <div id="social_container">
-                    <div id="share-facebook" class="share"></div>
-                    <div id="share-twitter" class="share"></div>
+                    <div class="share-facebook share"></div>
+                    <div class="share-twitter" share"></div>
                 </div>
             </div>
             <div class="footer">
@@ -470,8 +475,8 @@
                     <div class="question-par">
                         Find the answers and join this conversation on Twitter
                         @Whispers_Wild or on the Whispers of the Wild Facebook Page.
-                        <div id="share-facebook" class="share" onClick="openPage('https://facebook.com/whispersofthewild');"></div>
-                        <div id="share-twitter" class="share" onClick="openPage('https://twitter.com/Whispers_Wild');"></div>
+                        <div class="share-facebook share" onClick="openPage('https://facebook.com/whispersofthewild');"></div>
+                        <div class="share-twitter share" onClick="openPage('https://twitter.com/Whispers_Wild');"></div>
                     </div>
                 </div>
             </div>
@@ -894,5 +899,63 @@
                 </div>
             </div>
         </div>
+
+        <div style="display:none;">
+
+            <div id="scaleSliderHowTo">
+                <div style="text-align: center;">
+                    <div class="modal-title">How does the scale slider work?</div>
+                    <br/>
+                    <div class="modal-content">
+                        Slide the circles across to eliminate the animals<br/>
+                        that are shorter and taller (at shoulder height) than<br/>
+                        the animal you are looking for.
+                    </div>
+                    <br/>
+                    <span>[image goes here]</span>
+                </div>
+            </div>
+
+            <div id="cautionNotice">
+                <div style="text-align: center;">
+                    <div class="modal-title">Safety Notice</div>
+                    <br/>
+                    <div class="modal-content">
+                        <!--content to be inserted using js -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="gameAnimalSelectMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Game</div>
+                    <br/>
+                    <div class="modal-content">
+                        Please ensure you have selected three animals.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="limitedAccessMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Limited Access</div>
+                    <br/>
+                    <div class="modal-content">
+                        Purchase the full version to get unlimited access to all animals
+                        <div class="purchaseButton">[Purchase Button]</div>
+                        <br/>
+                        Share and unlock 5 free animals
+                        <br/>
+                        <div class="share-facebook share"></div>
+                        <div class="share-twitter share"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </body>
 </html>

@@ -14,6 +14,17 @@ function View() {
     this.footprintSlider = null;
     this.currentAnimal = null;
 
+    this.modal = function(divID) {
+        $.pgwModal({
+            // target: '#modalContent',
+            // content: htmlMessage,
+            target: ("#" + divID),
+            titleBar: false
+            // title: title
+            // maxWidth: 800
+        });
+    };
+
     this.reloadImageSlider = function(slider, element) {
         var newSlider;
         if (!slider) {
@@ -136,7 +147,8 @@ function View() {
 
                     pauseAudio();
                     $(".footer-trackName").html(trackName);
-                    $(".audio-play-pause").html("Pause");
+                    $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/pause.png')");
+
                     playAudio(src, dur,
                         function(position, duration) {
                             var progress = Math.round(position ? (position / duration * 100) : 0);
@@ -392,9 +404,15 @@ function View() {
 
                             app.view.initializeProfileLinks(animalID);
                             model.getAnimal(animalID, function(animal) {
-                                app.view.animal_loadProfile(animal, function() {
-                                    location.href = "#profile";
-                                });
+                                var freeApp = (app.mode === app.MODE_FREE);
+                                var nonFreeAnimal = (animal.isEarned === "true" || animal.isPaid === "true");
+                                if (freeApp && nonFreeAnimal) {
+                                    app.view.modal("limitedAccessMessage");
+                                } else {
+                                    app.view.animal_loadProfile(animal, function() {
+                                        location.href = "#profile";
+                                    });
+                                }
                             });
                         }
                 );
