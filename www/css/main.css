@@ -238,6 +238,63 @@ footer-controls {
 .right {
     float: right;
 }
+// Slide Filter Style
+
+.is_clickable {
+  cursor: hand;
+  cursor: pointer;
+}
+.nstSlider {
+  cursor: hand;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  width: 500px;
+  height: 5px;
+  background: #000;
+}
+.nstSlider .leftGrip.gripHighlighted {
+  background: #113344;
+}
+.nstSlider .rightGrip.gripHighlighted {
+  background: #113344;
+}
+.nstSlider .rightGrip,
+.nstSlider .leftGrip {
+  position: absolute;
+ // -webkit-border-radius: 10px;
+ // -moz-border-radius: 10px;
+ // border-radius: 10px;
+ // background-color: deeppink;
+  width: 15px;
+  height: 15px;
+  margin-top: -5px;
+  background-image: url('../resources/buttons/scale_slider/slider.png');
+}
+.nstSlider .bar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  background: #94825c;
+  height: 5px;
+}
+.nstSlider .highlightPanel {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background: #e87722;
+  height: 8px;
+  top: 0;
+} 
 
 .profile-content {
     position: absolute;
