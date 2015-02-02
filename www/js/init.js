@@ -1,7 +1,7 @@
 app = new Application();
 app.mode = app.MODE_FREE;
 
-$(document).ready(function() {
+$(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
 
     //Only to run when testing in Chrome Browser
@@ -15,10 +15,11 @@ function onDeviceReady() {
 }
 
 function getAppPath() {
-        var path = window.location.pathname;
-        var appPath = path.substring(0, path.lastIndexOf('/') + 1);
-        return appPath;
-    };
+    var path = window.location.pathname;
+    var appPath = path.substring(0, path.lastIndexOf('/') + 1);
+    return appPath;
+}
+;
 
 function Application() {
     this.MODE_FREE = 0;
@@ -30,7 +31,7 @@ function Application() {
 
     // game
     this.game = new SpotTheGame();
-    $('.game-players').ready(function() {
+    $('.game-players').ready(function () {
         resetPlayers();
     });
 
@@ -38,17 +39,17 @@ function Application() {
     this.view = new View();
 
     // database connection
-    this.getDB = function() {
+    this.getDB = function () {
         return app.view.model.data.getDB();
     };
 
-    this.onDeviceReady = function() {
+    this.onDeviceReady = function () {
         $.mobile.defaultPageTransition = 'none';
         $.mobile.defaultDialogTransition = 'none';
         $.mobile.useFastClick = true;
 
         // alert('Path: ' + getAppPath());
-        $(window).bind("pageshow resize orientationchange", function(e) { // resize page if needed
+        $(window).bind("pageshow resize orientationchange", function (e) { // resize page if needed
             // These things get executed whenever teh page resizes
             app.view.app_maxHeight();
             app.view.menu_alignOptions();
@@ -57,7 +58,7 @@ function Application() {
             app.view.animals_alignGrid();
 
             // game related ----------------------------------------------------
-            app.view.animal_animalGrid('game-select-', function(animalGridHtml) {
+            app.view.animal_animalGrid('game-select-', function (animalGridHtml) {
                 $("#game-animal-grid").html(animalGridHtml);
                 loanAnimalSelection();
             });
@@ -68,17 +69,17 @@ function Application() {
         initialiseListeners();
     };
 
-    var initialiseListeners = function() {
+    var initialiseListeners = function () {
         // ==== Splash =========================================================
         $("#enter").off();
-        $("#enter").on("click", function(event) {
+        $("#enter").on("click", function (event) {
             // playAudio("resources/audio/intro.mp3");
             location.href = "#menu";
         });
 
         var video = $("#introVid").get(0);
         $("#toggleIntro").off();
-        $("#toggleIntro").on("click", function(event) {
+        $("#toggleIntro").on("click", function (event) {
             $("#intro").toggle();
             if ($("#intro").css("display") != "none") {
                 video.currentTime = 0;
@@ -88,7 +89,7 @@ function Application() {
                 video.pause();
             }
         });
-        video.onended = function(e) {
+        video.onended = function (e) {
             $("#intro").toggle();
         };
 
@@ -100,13 +101,13 @@ function Application() {
                         null,
                         null, //'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
                         'https://www.facebook.com/whispersofthewild',
-                        function() {
+                        function () {
                             console.log('share ok')
 //                            app.view.model.unlockLimited(function() {
 //                                console.log('unlocked ok')
 //                            });
                         },
-                        function(errormsg) {
+                        function (errormsg) {
                             alert(errormsg)
                         }
                 );
@@ -118,17 +119,17 @@ function Application() {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaTwitter(
                         '@Whispers_Wild\n'
-                                + 'https://www.facebook.com/whispersofthewild\n'
-                                + 'I just love this site!',
+                        + 'https://www.facebook.com/whispersofthewild\n'
+                        + 'I just love this site!',
                         'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
                         null, //'https://www.facebook.com/whispersofthewild',
-                        function() {
+                        function () {
                             console.log('share ok')
 //                            app.view.model.unlockLimited(function() {
 //                                console.log('unlocked ok')
 //                            });
                         },
-                        function(errormsg) {
+                        function (errormsg) {
                             alert(errormsg)
                         }
                 );
@@ -140,22 +141,22 @@ function Application() {
 
         // ==== Question Submit ================================================
         $("#question-submit").off();
-        $("#question-submit").on("click", function(event) {
+        $("#question-submit").on("click", function (event) {
             if (window.plugins && window.plugins.socialsharing) {
                 window.plugins.socialsharing.shareViaTwitter(
                         '@Whispers_Wild\n'
-                                + 'Name & Surname: ' + $("#question-name").val() + '\n'
-                                + 'Question: ' + $("#question-desc").val() + '\n'
-                                + 'Tags: ' + $("#question-hashtags").val(),
+                        + 'Name & Surname: ' + $("#question-name").val() + '\n'
+                        + 'Question: ' + $("#question-desc").val() + '\n'
+                        + 'Tags: ' + $("#question-hashtags").val(),
                         'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
                         null, //'https://www.facebook.com/whispersofthewild',
-                        function() {
+                        function () {
                             console.log('share ok')
                             $("#question-name").val('');
                             $("#question-desc").val('');
                             $("#question-hashtags").val('');
                         },
-                        function(errormsg) {
+                        function (errormsg) {
                             alert(errormsg)
                         }
                 );
@@ -167,23 +168,23 @@ function Application() {
 
         // ==== Header =========================================================
         $("div .action-home").off();
-        $("div .action-home").on("click", function(event) {
+        $("div .action-home").on("click", function (event) {
             location.href = "#menu";
         });
         $(".forward").off();
-        $(".forward").on("click", function(event) {
+        $(".forward").on("click", function (event) {
             event.preventDefault();
             history.go(1);
         });
         $(".back").off();
-        $(".back").on("click", function(event) {
+        $(".back").on("click", function (event) {
             event.preventDefault();
             history.go(-1);
         });
 
         // ==== Footer =========================================================
         $(".audio-play-pause").off();
-        $(".audio-play-pause").on("click", function(event) {
+        $(".audio-play-pause").on("click", function (event) {
             // check audio state
             if (audio_state_play) {
                 pauseAudio();
@@ -202,12 +203,12 @@ function Application() {
 
         // ==== Animals ========================================================
         $(".category-label").off();
-        $(".category-label").on("click", function(event) {
+        $(".category-label").on("click", function (event) {
             $("#search-by-category").toggle();
         });
 
         $(".letter-label").off();
-        $(".letter-label").on("click", function(event) {
+        $(".letter-label").on("click", function (event) {
             $("#search-by-letter").toggle();
         });
 
@@ -216,20 +217,19 @@ function Application() {
             app.view.modal("scaleSliderHowTo");
         });
 
-        $(function() {
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 500,
-                values: [ 75, 300 ],
-                slide: function( event, ui ) {
-                  $("#minLength").val(ui.values[0]);
-                  $("#maxLength").val(ui.values[1]);
-                }
-            });
-            $("#minLength").val($("#slider-range").slider("values", 0));
-            $("#maxLength").val($("#slider-range").slider("values", 1));
+// Range Slider & Play Button 
+        $('.nstSlider').nstSlider({
+            "crossable_handles": false,
+            "left_grip_selector": ".leftGrip",
+            "right_grip_selector": ".rightGrip",
+            "value_bar_selector": ".bar",
+            "value_changed_callback": function (cause, leftValue, rightValue) {
+                $(this).parent().find('.leftLabel').text(leftValue);
+                $(this).parent().find('.rightLabel').text(rightValue);
+            }
         });
+
+
         // ==== Profile ========================================================
         $("#profile .content .cautionLink").off();
         $("#profile .content .cautionLink").on("click", function() {
@@ -273,40 +273,40 @@ function Application() {
         $("#sources .content .profile-tabs").html(app.view.get_about_tabs("sources"));
 
         $(".menu_animals").off();
-        $(".menu_animals").on("click", function(event) {
-            app.view.animal_loadAnimals(function() {
+        $(".menu_animals").on("click", function (event) {
+            app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").show();
                 location.href = "#animals";
             });
         });
 
         $(".menu_donate").off();
-        $(".menu_donate").on("click", function(event) {
-            app.view.animal_loadAnimals(function() {
+        $(".menu_donate").on("click", function (event) {
+            app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").hide();
                 location.href = "#donate";
             });
         });
 
         $(".menu_question").off();
-        $(".menu_question").on("click", function(event) {
+        $(".menu_question").on("click", function (event) {
             $(".profile-tabs").hide();
             location.href = "#question";
         });
 
         $(".option_game").off();
-        $(".option_game").on("click", function(event) {
+        $(".option_game").on("click", function (event) {
             location.href = "#game";
         });
 
         $(".game-start-label").off();
-        $(".game-start-label").on("click", function(event) {
+        $(".game-start-label").on("click", function (event) {
             resetPlayers();
             location.href = "#players";
         });
 
         $(".menu_about").off();
-        $(".menu_about").on("click", function(event) {
+        $(".menu_about").on("click", function (event) {
             app.view.initializeAboutLinks();
             $(".profile-tabs").show();
             location.href = "#founder";
@@ -314,14 +314,14 @@ function Application() {
 
         // ==== Game ========================================================
         $(".game-players-next").off();
-        $(".game-players-next").on("click", function(event) {
-            app.view.animal_animalGrid('game-select-', function(animalGridHtml) {
+        $(".game-players-next").on("click", function (event) {
+            app.view.animal_animalGrid('game-select-', function (animalGridHtml) {
                 $("#game-animal-grid").html(animalGridHtml);
                 // save any name that was in edit mode
                 saveNames();
 
                 // clear any previous selections
-                $.each(app.game.players, function(index, player) {
+                $.each(app.game.players, function (index, player) {
                     player.selection = [];
                 });
                 validatePlayerNames();
@@ -333,12 +333,12 @@ function Application() {
         });
 
         $(".game-link-spot").off();
-        $(".game-link-spot").on("click", function(event) {
+        $(".game-link-spot").on("click", function (event) {
             location.href = "#game-animal-spot";
         });
 
         $(".game-link-next").off();
-        $(".game-link-next").on("click", function(event) {
+        $(".game-link-next").on("click", function (event) {
             // same player, keep scores, select different animals
             location.href = "#game-animal-select";
             app.game.animalSelectplayerIndex = 0;
@@ -348,12 +348,12 @@ function Application() {
         });
 
         $(".game-link-scoreboard").off();
-        $(".game-link-scoreboard").on("click", function(event) {
+        $(".game-link-scoreboard").on("click", function (event) {
             location.href = "#game-animal-scoreboard";
         });
 
         $(".game-link-finish").off();
-        $(".game-link-finish").on("click", function(event) {
+        $(".game-link-finish").on("click", function (event) {
             resetPlayers();
             location.href = "#game";
         });

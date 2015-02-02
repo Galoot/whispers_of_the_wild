@@ -33,6 +33,10 @@
         <script src="js/libs/pgw-slider/pgwslider.js" type="text/javascript"></script>
         <link href="js/libs/pgw-slider/pgwslider.min.css" rel="stylesheet" type="text/css"/>
         <!-- =============================================================== -->
+        
+        <!-- Range Slider ===================================================== -->
+        <script src="js/libs/rangeslider/jquery.nstSlider.min.js" type="text/javascript"></script>
+        <!-- =============================================================== -->
 
         <!-- PgwModal ====================================================== -->
         <script src="js/libs/pgw-modal/pgwmodal.js" type="text/javascript"></script>
@@ -168,9 +172,23 @@
 
                 <div class="search-by-size" id="search-by-size">
                     <span id="howto-size">How does this work?</span>
-                    <label for="minLength">Min Size</label><input type="text" name="minLength" id="minLength" value="0" size="5"/>
-                    <label for="maxLength">Max Size</label><input type="text" name="maxLength" id="maxLength" value="100" size="5"/>
+<!--                    <label for="minLength">Min Size</label><input type="text" name="minLength" id="minLength" value="0" size="5"/>
+                    <label for="maxLength">Max Size</label><input type="text" name="maxLength" id="maxLength" value="100" size="5"/>-->
+
+                    <div class="nstSlider" data-range_min="1" data-range_max="10" data-cur_min="1"    data-cur_max="10">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                        <div class="rightGrip"></div>
+                    </div>
+                    <div class="leftLabel"></div>
+                    <div class="rightLabel"></div>
+
+                    <!-- These two are actually exernal to the plugin, but you are likely to need them... the plugin
+                         does the math, but it's up to you to update the content of these two elements. -->
+                    <div class="leftLabel"></div>
+                    <div class="rightLabel"></div>
                 </div>
+                
                 <div class="size-label"><b>NARROW IT DOWN BY SIZE</b></div>
             </div>
             <div class="footer">
