@@ -77,6 +77,13 @@ function Application() {
             location.href = "#menu";
         });
 
+        $("#toggleIntro").off();
+        $("#toggleIntro").on("click", function (event) {
+            $("#toggleIntro").toggle();
+            app.view.playIntroTrack();
+        });
+
+        /*
         var video = $("#introVid").get(0);
         $("#toggleIntro").off();
         $("#toggleIntro").on("click", function (event) {
@@ -92,6 +99,7 @@ function Application() {
         video.onended = function (e) {
             $("#intro").toggle();
         };
+        */
 
         // ==== Social Share ===================================================
         $(".share-facebook").off();

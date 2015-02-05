@@ -126,6 +126,28 @@ function View() {
         });
     };
 
+    this.playAudioTrack = function(src, dur, trackName) {
+        pauseAudio();
+        $(".footer-trackName").html(trackName);
+        $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/pause.png')");
+
+        playAudio(src, dur, function(position, duration) {
+                var progress = Math.round(position ? (position / duration * 100) : 0);
+
+                var current = Math.ceil(position);
+                var total = duration ? Math.round(duration) : 0;
+
+                var currentStr = Math.floor(current / 60) + ":" + zeroLeftPad("" + (current % 60), 2);
+                var totalStr = Math.floor(total / 60) + ":" + zeroLeftPad("" + (total % 60), 2);
+                $(".footer-progress").html(currentStr + " / " + totalStr);
+            });
+    };
+
+    this.playIntroTrack = function() {
+        app.view.playAudioTrack("resources/intro.mp3", 100, "Intro");
+        location.href = "#menu";
+    };
+
     this.animal_loadAudio = function(animal, onComplete) {
         model.getAudio(animal.animalID, function(tracks) {
             $("#audio .header .title").html(animal.name);
@@ -145,21 +167,9 @@ function View() {
                     var dur = $("#" + elementID).attr("duration");
                     var trackName = $("#" + elementID).html();
 
-                    pauseAudio();
-                    $(".footer-trackName").html(trackName);
-                    $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/pause.png')");
 
-                    playAudio(src, dur,
-                        function(position, duration) {
-                            var progress = Math.round(position ? (position / duration * 100) : 0);
 
-                            var current = Math.ceil(position);
-                            var total = duration ? Math.round(duration) : 0;
-
-                            var currentStr = Math.floor(current / 60) + ":" + zeroLeftPad("" + (current % 60), 2);
-                            var totalStr = Math.floor(total / 60) + ":" + zeroLeftPad("" + (total % 60), 2);
-                            $(".footer-progress").html(currentStr + " / " + totalStr);
-                        });
+                    app.view.playAudioTrack(src, dur, trackName);
                 });
         });
 
