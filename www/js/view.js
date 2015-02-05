@@ -340,14 +340,6 @@ function View() {
                 $("#animal-grid").html(animalGridHtml);
 
                 // Listeners ---------------------------------------------------
-                $("#minLength").off();
-                $("#minLength").on("keyup", function() {
-                    _filterWeights();
-                });
-                $("#maxLength").off();
-                $("#maxLength").on("keyup", function() {
-                    _filterWeights();
-                });
                 $(".category-option").off();
                 $(".category-option").on("click", function(event) {
                     $("#search-by-category").toggle();
@@ -432,17 +424,12 @@ function View() {
         }
     };
 
-    _filterWeights = function() {
-        var min = parseFloat($("#minLength").val());
-        var max = parseFloat($("#maxLength").val());
-
-        // $("#minLengthTxt").val(min);
-        // $("#maxLengthTxt").val(max);
+    this.filterWeights = function(minLength, maxLength) {
 
         $(".animal-block").each(function() {
             var animalMin = parseFloat($(this).attr("minLength"));
             var animalMax = parseFloat($(this).attr("maxLength"));
-            if (min < animalMin && max > animalMax) {
+            if (minLength <= animalMin && maxLength >= animalMax) {
                 $(this).show();
             } else {
                 $(this).hide();

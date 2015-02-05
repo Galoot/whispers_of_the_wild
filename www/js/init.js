@@ -217,7 +217,7 @@ function Application() {
             app.view.modal("scaleSliderHowTo");
         });
 
-// Range Slider & Play Button 
+// Range Slider & Play Button
         $('.nstSlider').nstSlider({
             "crossable_handles": false,
             "left_grip_selector": ".leftGrip",
@@ -226,6 +226,7 @@ function Application() {
             "value_changed_callback": function (cause, leftValue, rightValue) {
                 $(this).parent().find('.leftLabel').text(leftValue);
                 $(this).parent().find('.rightLabel').text(rightValue);
+                app.view.filterWeights(leftValue, rightValue);
             }
         });
 
