@@ -367,6 +367,8 @@ function Application() {
             location.href = "#game";
         });
 
+        initSlider('.profile-tabs', 'left');
+        initSlider('.footer', 'bottom');
         // =====================================================================
     };
 }

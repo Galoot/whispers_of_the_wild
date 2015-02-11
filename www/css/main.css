@@ -170,6 +170,10 @@ p {line-height: 18px;
     margin-left:-100px; /* half of the width */
 }
 
+#profile, #map, #footprints, #menu, #audio, #donate, #question {
+    overflow-y: hidden;
+}
+
 .footer {
     background-image: url('../resources/buttons/media_player/mediabg.jpg');
     background-repeat: repeat-x;
@@ -177,7 +181,14 @@ p {line-height: 18px;
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 0px;
+
+    bottom: -100px;
+    -webkit-transition: bottom 0.2s ease-in;
+    transition: bottom 0.2s ease-in;
+}
+
+.footer.bottom {
+    bottom: 0px !important;
 }
 
 .footer-trackName {
@@ -304,7 +315,7 @@ footer-controls {
   background: #e87722;
   height: 8px;
   top: 0;
-} 
+}
 
 .profile-content {
     position: absolute;
@@ -317,6 +328,16 @@ footer-controls {
     //padding: 20px 0 20px 20px;
     margin-left: 20px;
     /*right: 100px;*/
+
+    left: -128px; /* This is used for the panel slider */
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+}
+
+.profile-content.left {
+    left: 0px !important;
 }
 
 .animal-top {
@@ -390,6 +411,14 @@ footer-controls {
     //vertical-align: middle;
     //display:inline-block;
     //margin: 15px;
+
+    left: -128px;
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+}
+
+.profile-tabs.left {
+    left: 0px !important;
 }
 
 .profile-tab-selected {
