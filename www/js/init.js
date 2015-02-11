@@ -366,7 +366,8 @@ function Application() {
             resetPlayers();
             location.href = "#game";
         });
-
+        
+        $('img').retina();
         // =====================================================================
     };
 }
