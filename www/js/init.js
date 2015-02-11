@@ -369,6 +369,8 @@ function Application() {
 
         initSlider('.profile-tabs', 'left');
         initSlider('.footer', 'bottom');
+        
+        $('img').retina();
         // =====================================================================
     };
 }
