@@ -213,11 +213,13 @@ function Application() {
         $(".category-label").off();
         $(".category-label").on("click", function (event) {
             $("#search-by-category").toggle();
+            $("#search-by-letter").hide();
         });
 
         $(".letter-label").off();
         $(".letter-label").on("click", function (event) {
             $("#search-by-letter").toggle();
+            $("#search-by-category").hide();
         });
 
         $("#howto-size").off();
