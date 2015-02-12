@@ -225,8 +225,8 @@ function Application() {
             app.view.modal("scaleSliderHowTo");
         });
 
-// Range Slider & Play Button
-        $('.nstSlider').nstSlider({
+        // Range Slider & Play Button
+        $('#animalSizeSlider').nstSlider({
             "crossable_handles": false,
             "left_grip_selector": ".leftGrip",
             "right_grip_selector": ".rightGrip",
@@ -238,6 +238,15 @@ function Application() {
             }
         });
 
+        // Progress bar for audio track
+        $('.audioProgress').each(function() {
+            $(this).nstSlider({
+                "left_grip_selector": ".leftGrip",
+                "value_bar_selector": ".bar",
+                "value_changed_callback": function (cause, leftValue, rightValue) {
+                }
+            });
+        });
 
         // ==== Profile ========================================================
         $("#profile .content .cautionLink").off();
@@ -369,7 +378,7 @@ function Application() {
 
         initSlider('.profile-tabs', 'left');
         initSlider('.footer', 'bottom');
-        
+
         $('img').retina();
         // =====================================================================
     };
