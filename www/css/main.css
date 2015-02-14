@@ -272,7 +272,7 @@ footer-controls {
     -moz-border-radius: 5px;
     border-radius: 5px;
     position: relative;
-    width: 500px;
+    width: 90%;
     height: 5px;
     background: #000;
 }
@@ -837,86 +837,85 @@ footer-controls {
 
 /* Category styling */
 .category-label {
-    position: absolute;
-    top: 120px;
-    left: 28px;
-    border: none;
+    /*position: absolute;
+     top: 120px;
+    left: 28px; */
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    text-shadow: 1px 1px 2px #000;
     padding: 10px 10px 1px 10px;
     border-radius: 5px;
-    width: 298px;
-    height: 34px;
+    min-width: 298px;
+    height: 28px;
     background-color: #68666a;
 }
 .search-by-category {
-    overflow: auto;
-
+    padding: 10px;
     position: absolute;
-    top: 150px;
-    left: 28px;
-    max-height: 298px;
-
+    z-index: 3000;
+    overflow: hidden;
+    max-width: 298px;
     //background-color: lightgray;
     border: none;
-    padding: 0 10px 0 10px;
+    margin: 0px 0 0 10px;
     width: 298px;
-    background-color: #68666a;
-
+    background-color: rgba(47, 44, 50, 0.9);
     display: none; // hide by default, must be last style
 }
 .category-option {
     margin-left: 10px;
+    /* padding: 6px 0px 0px 1px; */
 }
 .search-by-category hr {
-    margin-top: 5px;
-    margin-bottom: 5px;
 
     //height: 1px;
     width: 298px;
+    /* min-height: 10px; */
     border-top: 1px solid black;
     //box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
 }
 
 /* Letter styling */
 .letter-label {
-    position: absolute;
-    top: 120px;
-    right: 44px;
-
+    display: inline-block;
     border: none;
-    padding: 10px 10px 0 10px;
+    margin: 10px 10px 0 10px;
+    padding: 10px 10px 1px 10px;
     border-radius: 5px;
-    width: 331px;
-    height: 34px;
+    min-width: 331px;
+    height: 28px;
     background-color: #68666a;
+    float: right;
+    text-shadow: 1px 1px 2px #000;
 }
 .search-by-letter {
-    overflow: auto;
-
+    padding: 10px;
     position: absolute;
-    top: 150px;
-    right: 44px;
-    width: 331px;
-
+    z-index: 3001;
+    overflow: hidden;
+    max-width: 331px;
+    
     //background-color: lightgray;
     border: none;
-    padding: 0 10px 0 10px;
-    background-color: #68666a;
-
+    width: 331px;
+    background-color: rgba(47, 44, 50, 0.9);
     display: none; // hide by default, must be last style
 }
 .letter-heading {
     float: left;
+    text-shadow: 1px 1px 2px #000;
 }
 .letter-option {
     margin-left: 30px;
 }
 .search-by-letter hr {
-    margin-top: 2px;
-    margin-bottom: 2px;
-
-    height: 5px;
-    border: 0;
-    box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
+    //height: 1px;
+    width: 298px;
+    /* min-height: 10px; */
+    border-top: 1px solid black;
+    //box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);
 }
 /* Category styling */
 .size-label {
@@ -1465,6 +1464,25 @@ footer-controls {
         //border: 1px solid blue;
         //float: right;
     }
+    
+    .category-label {
+    min-width: 95%;
+    margin: 0 auto;
+    max-height: 15px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+    
+}
+    
+    .letter-label {
+    float: none;
+    min-width: 95%;
+    margin: 0 auto;
+    max-height: 15px;
+    font-size: 12px;
+    
+}
 
 }
 
@@ -1779,4 +1797,3 @@ footer-controls {
     -webkit-animation:fade 3000ms infinite;
 }
 
-.test {}
