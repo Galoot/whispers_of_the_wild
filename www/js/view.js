@@ -137,9 +137,14 @@ function View() {
                 var current = Math.ceil(position);
                 var total = duration ? Math.round(duration) : 0;
 
-                var currentStr = Math.floor(current / 60) + ":" + zeroLeftPad("" + (current % 60), 2);
-                var totalStr = Math.floor(total / 60) + ":" + zeroLeftPad("" + (total % 60), 2);
-                $(".footer-progress").html(currentStr + " / " + totalStr);
+//                var currentStr = Math.floor(current / 60) + ":" + zeroLeftPad("" + (current % 60), 2);
+//                var totalStr = Math.floor(total / 60) + ":" + zeroLeftPad("" + (total % 60), 2);
+//                 $(".footer-progress").html(currentStr + " / " + totalStr);
+
+                var percProgress = (current / total * 100);
+                $('.audioProgress').each(function() {
+                    $(this).nstSlider('set_position', percProgress);
+                });
             });
     };
 

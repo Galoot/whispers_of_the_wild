@@ -265,6 +265,7 @@ footer-controls {
     cursor: hand;
     cursor: pointer;
 }
+
 .nstSlider {
     cursor: hand;
     cursor: pointer;
@@ -272,16 +273,27 @@ footer-controls {
     -moz-border-radius: 5px;
     border-radius: 5px;
     position: relative;
-    width: 90%;
+    // width: 500px;
     height: 5px;
     background: #000;
 }
+
+#animalSizeSlider.nstSlider {
+    width: 500px;
+}
+
+#audioProgress.nstSlider {
+    width: 500px;
+}
+
 .nstSlider .leftGrip.gripHighlighted {
     background: #113344;
 }
+
 .nstSlider .rightGrip.gripHighlighted {
     background: #113344;
 }
+
 .nstSlider .rightGrip,
 .nstSlider .leftGrip {
     position: absolute;
@@ -301,6 +313,7 @@ footer-controls {
     position: absolute;
     background: #94825c;
     height: 5px;
+    margin-left: -7px;
 }
 .nstSlider .highlightPanel {
     -webkit-transition: all 500ms ease-in-out;
