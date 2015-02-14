@@ -10,8 +10,6 @@
         font-size: 16px;
     }
 
-    .listen-to {color: yellow;}
-    
     h1 {line-height: 24px;
         color: #fff;
         text-shadow: 1px 1px 2px #000;
@@ -354,6 +352,8 @@
         text-align: center;
         position: absolute;
         bottom: 0px;
+
+        bottom: -50px;
     }
 
     .footer-trackName {
@@ -435,7 +435,6 @@
         height: 50px;
     }
 
-
     .caution {
         width:100%;
         position: relative;
@@ -446,6 +445,9 @@
         //float: right;*/
     }
 
+    .profile-content {
+        left: -80px; /* This is used for the panel slider */
+    }
 
     .profile-tabs {
 /*        //background-image: url('../resources/buttons/navigation/navigation_bar.png');
@@ -458,6 +460,8 @@
         text-align: center;
         text-transform: uppercase;
         font-size: 13px;
+
+        left: -80px;
 /*        //vertical-align: middle;
         //display:inline-block;
         //margin: 15px;*/
