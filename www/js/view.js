@@ -7,7 +7,8 @@ function View() {
     });
 
     this.animal = new Animal();
-
+    this.percProgress = 0;
+    
     // image sliders
     this.profileSlider = null;
     this.mapSlider = null;
@@ -158,6 +159,13 @@ function View() {
         });
     };
 
+    this.updateProgressBars = function() {
+        // Progress bar for audio track
+        $('.audioProgress').each(function() {
+            $(this).nstSlider('set_position', app.view.percProgress);
+        });
+    };
+
     this.playAudioTrack = function(src, dur, trackName) {
         pauseAudio();
         $(".footer-trackName").html(trackName);
@@ -174,6 +182,7 @@ function View() {
 //                 $(".footer-progress").html(currentStr + " / " + totalStr);
 
                 var percProgress = (current / total * 100);
+                app.view.percProgress = Math.round(percProgress);
                 $('.audioProgress').each(function() {
                     $(this).nstSlider('set_position', percProgress);
                 });
@@ -455,6 +464,9 @@ function View() {
                                 if ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal)) {
                                     app.view.modal("limitedAccessMessage");
                                 } else {
+                                    app.view.animal_loadFootprints(animal, function() {});
+                                    app.view.animal_loadMap(animal, function() {});
+                                    app.view.animal_loadAudio(animal, function() {});
                                     app.view.animal_loadProfile(animal, function() {
                                         location.href = "#profile";
                                     });
@@ -630,43 +642,26 @@ function View() {
         model.getAnimal(animalID, function(animal) {
             $("* .animal-profile").off();
             $("* .animal-profile").on("click", function(event) {
-                app.view.animal_loadProfile(animal, function() {
-                    // app.view.profile_alignOptions("profile");
-                    // app.view.reloadImageSlider(app.view.profileSlider, $('#profile .image-slider'));
-                    location.href = "#profile";
-                });
+                location.href = "#profile";
             });
             $("* .animal-audio").off();
             $("* .animal-audio").on("click", function(event) {
-                app.view.animal_loadAudio(animal, function() {
-//                    app.view.profile_alignOptions("audio");
-                    location.href = "#audio";
-                });
+                location.href = "#audio";
             });
             $("* .animal-map").off();
             $("* .animal-map").on("click", function(event) {
-                app.view.animal_loadMap(animal, function() {
-//                    app.view.profile_alignOptions("map");
-//                    app.view.reloadImageSliders();
-                    location.href = "#map";
-                });
+                location.href = "#map";
             });
             $("* .animal-footprints").off();
             $("* .animal-footprints").on("click", function(event) {
-                app.view.animal_loadFootprints(animal, function() {
-//                    app.view.profile_alignOptions("footprints");
-//                    app.view.reloadImageSliders();
-                    location.href = "#footprints";
-                });
+                location.href = "#footprints";
             });
             $("* .animal-question").off();
             $("* .animal-question").on("click", function(event) {
-//                app.view.profile_alignOptions("question");
                 location.href = "#question";
             });
             $("* .animal-donate").off();
             $("* .animal-donate").on("click", function(event) {
-//                app.view.profile_alignOptions("donate");
                 location.href = "#donate";
             });
         });
