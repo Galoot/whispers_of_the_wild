@@ -91,12 +91,9 @@ function Datastore() {
     };
 
     this.init = function () {
-        console.log('Re-creating database...');
         this.getDB().transaction(
                 function (tx) {
-//                    tx.executeSql("DELETE FROM ANM_Animal");
-
-                    // tx.executeSql("DROP TABLE IF EXISTS SYS_Property");
+                    // tx.executeSql("DROP TABLE IF EXISTS SYS_Property"); /* Dont drop or we will losing the app mode */
                     tx.executeSql("CREATE TABLE IF NOT EXISTS SYS_Property "
                             + "(propertyID INTEGER PRIMARY KEY UNIQUE, "
                             + "property TEXT, "
@@ -155,7 +152,7 @@ function Datastore() {
                             + "footprintName TEXT, filePath TEXT)");
                 },
                 function(error) {
-                    alert("SQL Error Creating Tables: " + error.code + ", " + error.message);
+                    console.log("SQL Error Creating Tables: " + error.code + ", " + error.message);
                 },
                 function() {
                     // do nothing

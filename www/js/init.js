@@ -55,22 +55,22 @@ function Application() {
                 app.mode = parseInt(dbMode);
             }
 
-            console.log('Mode in database: ' + dbMode);
+//            console.log('Mode in database: ' + dbMode);
 
             if (app.MODE_FREE == dbMode) {
-                console.log('Mode: FREE');
+//                console.log('Mode: FREE');
             } else if (app.MODE_FREE_UNLOCKED == dbMode) {
-                console.log('Mode: FREE UNLOCKED');
+//                console.log('Mode: FREE UNLOCKED');
             } else if (app.MODE_PAID == dbMode) {
-                console.log('Mode: PAID');
+//                console.log('Mode: PAID');
             } else if (app.MODE_CORPORATE == dbMode) {
-                console.log('Mode: CORPORATE');
+//                console.log('Mode: CORPORATE');
             } else if (dbMode === -1) {
-                console.log('Create default property inserts');
+//                console.log('Create default property inserts');
                 app.view.setDefaultProperties();
             }
 
-            console.log('Mode in Memory: ' + app.mode);
+//            console.log('Mode in Memory: ' + app.mode);
         });
 //    });
 
@@ -161,13 +161,13 @@ function Application() {
                         'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
                         null, //'https://www.facebook.com/whispersofthewild',
                         function () {
-                            console.log('share ok')
+//                            console.log('share ok')
                             $("#question-name").val('');
                             $("#question-desc").val('');
                             $("#question-hashtags").val('');
                         },
                         function (errormsg) {
-                            alert(errormsg)
+                            console.log('Error sharing via twitter: ' + errormsg);
                         }
                 );
             } else {

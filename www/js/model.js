@@ -42,8 +42,9 @@ function Model() {
     this.setProperty = function(property, value, onComplete) {
         this.data.dbQuery(_set_property, [value, property],
                 function(results) {
-                    console.log('sql;' + _set_property + ", [" + value + "], [" + property + "]");
-                    onComplete();
+                    if (onComplete) {
+                        onComplete();
+                    }
                 });
     };
 

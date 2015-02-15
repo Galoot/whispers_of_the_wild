@@ -67,7 +67,7 @@ function playAudio(src, duration, setPosition) {
                         }
                     }
                 }
-            }, 20);
+            }, 1000);
         }
     }
 }

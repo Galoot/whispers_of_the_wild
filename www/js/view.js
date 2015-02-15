@@ -25,7 +25,7 @@ function View() {
             if (currentMode == app.MODE_FREE) {
                 app.mode = app.MODE_FREE_UNLOCKED;
                 app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
-                    console.log('unlocked ok');
+//                    console.log('unlocked ok');
                     if (onComplete) {
                         onComplete();
                     }
@@ -445,13 +445,13 @@ function View() {
                             model.getAnimal(animalID, function(animal) {
                                 var freeApp = (app.mode === app.MODE_FREE);
                                 var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
-                                console.log('freeApp: ' + freeApp);
-                                console.log('unlockedApp: ' + unlockedApp);
+//                                console.log('freeApp: ' + freeApp);
+//                                console.log('unlockedApp: ' + unlockedApp);
                                 var earnedAnimal = (animal.isEarned === "true");
                                 var paidAnimal = (animal.isPaid === "true");
                                 var nonFreeAnimal = (earnedAnimal || paidAnimal);
 
-                                console.log('earnedAnimal: ' + earnedAnimal);
+//                                console.log('earnedAnimal: ' + earnedAnimal);
                                 if ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal)) {
                                     app.view.modal("limitedAccessMessage");
                                 } else {
