@@ -285,25 +285,29 @@
         text-transform: uppercase;
 
         position: absolute;
-        bottom: 70px;
-
-        width: 150px;
+        padding-top: 5px;
+        width: 335px;
         left: 50%; /* centre div */
-        margin-left:-75px; /* half of the width */}
+        margin-left:-170px; /* half of the width */}
 
     .share-facebook {
         background-image: url('../resources/buttons/other/facebook_share.png');
-        background-size: auto 23px ;
-        width: 72px;
-        height: 23px;
-        float: left;}
+        background-size: auto 30px;
+        height: 30px;
+        width: 93px;
+        float: left;
+        margin-left: 60px;
+        margin-top: 5px;
+    }
 
     .share-twitter {
         background-image: url('../resources/buttons/other/twitter_share.png');
-        background-size: auto 23px ;
-        width: 72px;
-        height: 23px;
+        background-size: auto 30px;
+        height: 30px;
+        width: 93px;
         float: right;
+        margin-right: 60px;
+        margin-top: 5px;
     }
 
     #visit-facebook {
@@ -319,6 +323,98 @@
         width: 72px;
         height: 23px;
         float: right;
+    }
+    
+    .category-label {
+    /*position: absolute;
+     top: 120px;
+    left: 28px; */
+    padding-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+    text-align: center;
+    /* margin-top: 6px; */
+    /* margin-top: 6px; */
+    width: 320px;
+    height: 18px;
+    background-color: #68666a;
+    
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    
+    width: 320px;
+    left: 50%; /* centre div */
+    margin-left:0px;
+    }
+    .search-by-category {
+        padding: 6px;
+        position: absolute;
+        z-index: 3002;
+        overflow: hidden;
+        max-width: 298px;
+    /*    //background-color: lightgray;*/
+        border: none;
+        margin: 0px 0 0 30px;
+        width: 298px;
+        background-color: rgba(47, 44, 50, 0.9);
+       display: none; /* // hide by default, must be last style*/
+    }
+    .category-option {
+        margin-left: 30px;
+        /* padding: 6px 0px 0px 1px; */
+    }
+    .search-by-category hr {
+
+    /*    //height: 1px;*/
+        width: 298px;
+        /* min-height: 10px; */
+        border-top: 1px solid black;
+    /*    //box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);*/
+    }
+
+    /* Letter styling */
+    .letter-label {
+        display: inline-block;
+        z-index: 3001;
+        position: relative;
+        border: none;
+        margin: 10px 30px 0 10px;
+        padding: 10px 10px 1px 10px;
+        border-radius: 5px;
+        min-width: 331px;
+        height: 28px;
+        background-color: #68666a;
+        float: right;
+        text-shadow: 1px 1px 2px #000;
+    }
+    .search-by-letter {
+        padding: 10px;
+        position: absolute;
+        z-index: 3000;
+        overflow: hidden;
+        max-width: 298px;
+        width: 298px;
+        right: 30px;
+    /*    //background-color: lightgray;*/
+        border: none;
+        margin: 0px 30px 0 0;
+        background-color: rgba(47, 44, 50, 0.9);
+       display: none;
+    }
+    .letter-heading {
+        float: left;
+        text-shadow: 1px 1px 2px #000;
+    }
+    .letter-option {
+        margin-left: 30px;
+    }
+    .search-by-letter hr {
+    /*    //height: 1px;*/
+        width: 298px;
+        /* min-height: 10px; */
+        border-top: 1px solid black;
+    /*    //box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);*/
     }
 
     #animals .content {
@@ -367,8 +463,9 @@
     .footer-button {
         display: inline;
         font-size: 12px;
-        padding: 5px;
+/*        padding: 5px;*/
         min-height: 11px;
+        padding-top: 5px;
 /*        // line-height: 45px;
         //vertical-align: middle;*/
     }
@@ -388,26 +485,23 @@
 
     .audio-prev {
         background-image: url('../resources/buttons/media_player/previous.png');
-        background-size: auto 14px ;
-        height: 14px;
+        background-size: auto 16px ;
         background-repeat: no-repeat;
-        padding-right: 10px;
+        padding-right: 16px;
     }
 
     .audio-play-pause {
         background-image: url('../resources/buttons/media_player/play.png');
-        background-size: auto 14px ;
-        height: 14px;
+        background-size: auto 16px ;
         background-repeat: no-repeat;
         margin: 0 17px 0 17px;
     }
 
     .audio-next {
         background-image: url('../resources/buttons/media_player/next.png');
-        background-size: auto 14px ;
-        height: 14px;
+        background-size: auto 16px ;
         background-repeat: no-repeat;
-        padding-left: 10px;
+        padding-left: 16px;
     }
 
     .header-button {
