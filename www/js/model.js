@@ -8,6 +8,10 @@ function Model() {
     this.data = new Datastore();
     this.data.init();
 
+    var _set_property = "UPDATE SYS_Property SET value = ? WHERE property = ?";
+
+    var _get_property = "SELECT value FROM SYS_Property WHERE property = ?";
+
     var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
 
     var _get_animals = "SELECT a.animalID, idPointers, name, score, iconFilePath, category, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
@@ -35,8 +39,19 @@ function Model() {
     var _add_footprint = "INSERT INTO ANM_Footprint (animalID, footprintName, filePath) VALUES (?, ?, ?)";
     var _get_footprints = "SELECT footprintID, footprintName, filePath FROM ANM_Footprint WHERE animalID = ?";
 
-    this.unlockLimited = function(onComplete) {
-        console.log('Unlocked...');
+    this.setProperty = function(property, value, onComplete) {
+        this.data.dbQuery(_set_property, [value, property],
+                function(results) {
+                    console.log('sql;' + _set_property + ", [" + value + "], [" + property + "]");
+                    onComplete();
+                });
+    };
+
+    this.getProperty = function(property, onResults) {
+        this.data.dbQuery(_get_property, [property],
+                function(results) {
+                    onResults(jQuery.parseJSON(results).results);
+                });
     };
 
     this.getCategories = function(onResults) {
@@ -211,7 +226,7 @@ function Model() {
         // Zebra
         animalName = 'Zebra';
         mdl.addAnimal(animalName, resourcesPrefix + animalName.toLowerCase()
-                + '/icon.jpg', 'Other Herbivores', 'They kick very hard!', PayStatus.PAID, 20, function(name) {
+                + '/icon.jpg', 'Other Herbivores', 'They kick very hard!', PayStatus.EARNED, 20, function(name) {
             animal_counter++;
             mdl.addProfile(animal_counter, 'A little bit larger than a donkey...', '', '', '', '', 3.2, 3.6, 3, 3.2, 45, 65, 32, 40);
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');

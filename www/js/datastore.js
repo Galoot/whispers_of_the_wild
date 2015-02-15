@@ -6,7 +6,7 @@ function Datastore() {
 
     var database = null;
 
-    this.getDB = function() {
+    this.getDB = function () {
         if (!database) {
             database = window.openDatabase(
                     db_name, db_version, db_desc, db_size);
@@ -17,13 +17,13 @@ function Datastore() {
     var _getSQLCols = function(sql) {
         var cols = sql
                 .substring(
-                    (sql.indexOf("DISTINCT") === -1) ? 7 : 16,
-                sql.indexOf(" FROM"))
+                        (sql.indexOf("DISTINCT") === -1) ? 7 : 16,
+                        sql.indexOf(" FROM"))
                 .replace(/ /g, '')
                 .split(",");
         for (var x = 0; x < cols.length; x++) {
             if (cols[x].indexOf('.') !== -1) {
-                cols[x] = cols[x].substring(cols[x].indexOf('.')+1);
+                cols[x] = cols[x].substring(cols[x].indexOf('.') + 1);
             }
         }
         return cols;
@@ -40,7 +40,7 @@ function Datastore() {
                                     cols = [];
                                 }
                                 var ret = "{\"results\":[";
-                                for (var i = 0; i < results.rows.length; i++){
+                                for (var i = 0; i < results.rows.length; i++) {
                                     var row = results.rows.item(i);
 
                                     if (i > 0) {
@@ -75,10 +75,32 @@ function Datastore() {
         );
     };
 
-    this.init = function() {
+    this.createDefaultProperties = function() {
         this.getDB().transaction(
-                function(tx) {
+                function (tx) {
+                    tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('unlocked', 'false')");
+                    tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('mode', '" + app.mode + "')");
+                },
+                function (error) {
+                    alert("SQL Error Inserting into tables: " + error.code + ", " + error.message);
+                },
+                function () {
+                    // do nothing
+                }
+        );
+    };
+
+    this.init = function () {
+        console.log('Re-creating database...');
+        this.getDB().transaction(
+                function (tx) {
 //                    tx.executeSql("DELETE FROM ANM_Animal");
+
+                    // tx.executeSql("DROP TABLE IF EXISTS SYS_Property");
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS SYS_Property "
+                            + "(propertyID INTEGER PRIMARY KEY UNIQUE, "
+                            + "property TEXT, "
+                            + "value TEXT)");
 
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Animal");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Animal "

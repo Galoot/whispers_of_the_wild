@@ -38,6 +38,44 @@ function Application() {
     // applicatiom view
     this.view = new View();
 
+//    this.view.unlockFreeApp(function() {
+//        console.log('App unlocked...');
+
+        this.view.getProperty('mode', function(results) {
+            var dbMode = app.mode;
+
+            if (results && results[0] && results[0].value) {
+                dbMode = results[0].value;
+            } else {
+                dbMode = -1;
+            }
+
+            if (dbMode !== -1) {
+                // retrive last mode set in database
+                app.mode = parseInt(dbMode);
+            }
+
+            console.log('Mode in database: ' + dbMode);
+
+            if (app.MODE_FREE == dbMode) {
+                console.log('Mode: FREE');
+            } else if (app.MODE_FREE_UNLOCKED == dbMode) {
+                console.log('Mode: FREE UNLOCKED');
+            } else if (app.MODE_PAID == dbMode) {
+                console.log('Mode: PAID');
+            } else if (app.MODE_CORPORATE == dbMode) {
+                console.log('Mode: CORPORATE');
+            } else if (dbMode === -1) {
+                console.log('Create default property inserts');
+                app.view.setDefaultProperties();
+            }
+
+            console.log('Mode in Memory: ' + app.mode);
+        });
+//    });
+
+
+
     // database connection
     this.getDB = function () {
         return app.view.model.data.getDB();
@@ -104,47 +142,11 @@ function Application() {
         // ==== Social Share ===================================================
         $(".share-facebook").off();
         $(".share-facebook").on("click", function(event) {
-            if (window.plugins && window.plugins.socialsharing) {
-                window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint(
-                        null,
-                        null, //'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
-                        'https://www.facebook.com/whispersofthewild',
-                        function () {
-                            console.log('share ok')
-//                            app.view.model.unlockLimited(function() {
-//                                console.log('unlocked ok')
-//                            });
-                        },
-                        function (errormsg) {
-                            alert(errormsg)
-                        }
-                );
-            }
-            // share(SOCIAL_SHARE_FACEBOOK, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
+            shareFacebook();
         });
         $(".share-twitter").off();
         $(".share-twitter").on("click", function(event) {
-            if (window.plugins && window.plugins.socialsharing) {
-                window.plugins.socialsharing.shareViaTwitter(
-                        '@Whispers_Wild\n'
-                        + 'https://www.facebook.com/whispersofthewild\n'
-                        + 'I just love this site!',
-                        'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
-                        null, //'https://www.facebook.com/whispersofthewild',
-                        function () {
-                            console.log('share ok')
-//                            app.view.model.unlockLimited(function() {
-//                                console.log('unlocked ok')
-//                            });
-                        },
-                        function (errormsg) {
-                            alert(errormsg)
-                        }
-                );
-            } else {
-                console.log("Could not find scoialsharing plugin");
-            }
-            // share(SOCIAL_SHARE_TWITTER, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
+            shareTwiter();
         });
 
         // ==== Question Submit ================================================

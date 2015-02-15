@@ -14,6 +14,38 @@ function View() {
     this.footprintSlider = null;
     this.currentAnimal = null;
 
+    /**
+     * Will change the mode from FREE to FREE_UNLOCKED.
+     * If the current mode is not FREE, then this operation will do nothing.
+     * @returns {undefined}
+     */
+    this.unlockFreeApp = function(onComplete) {
+        this.getProperty('mode', function(results) {
+            var currentMode = results[0].value;
+            if (currentMode == app.MODE_FREE) {
+                app.mode = app.MODE_FREE_UNLOCKED;
+                app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
+                    console.log('unlocked ok');
+                    if (onComplete) {
+                        onComplete();
+                    }
+                });
+            }
+        });
+    };
+
+    this.setDefaultProperties = function() {
+        model.data.createDefaultProperties();
+    };
+
+    this.setProperty = function(property, value, onComplete) {
+        model.setProperty(property, value, onComplete);
+    };
+
+    this.getProperty = function(property, onResult) {
+        model.getProperty(property, onResult);
+    };
+
     this.modal = function(divID) {
         $.pgwModal({
             // target: '#modalContent',
@@ -412,8 +444,15 @@ function View() {
                             app.view.initializeProfileLinks(animalID);
                             model.getAnimal(animalID, function(animal) {
                                 var freeApp = (app.mode === app.MODE_FREE);
-                                var nonFreeAnimal = (animal.isEarned === "true" || animal.isPaid === "true");
-                                if (freeApp && nonFreeAnimal) {
+                                var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
+                                console.log('freeApp: ' + freeApp);
+                                console.log('unlockedApp: ' + unlockedApp);
+                                var earnedAnimal = (animal.isEarned === "true");
+                                var paidAnimal = (animal.isPaid === "true");
+                                var nonFreeAnimal = (earnedAnimal || paidAnimal);
+
+                                console.log('earnedAnimal: ' + earnedAnimal);
+                                if ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal)) {
                                     app.view.modal("limitedAccessMessage");
                                 } else {
                                     app.view.animal_loadProfile(animal, function() {

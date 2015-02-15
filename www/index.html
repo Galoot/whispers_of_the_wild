@@ -54,6 +54,7 @@
         <!-- local scripts & styling ======================================= -->
         <script type="text/javascript" src="js/panel-slider.js"></script>
         <script type="text/javascript" src="js/datastore.js"></script>
+        <script type="text/javascript" src="js/social.js"></script>
         <script type="text/javascript" src="js/model.js"></script>
         <script type="text/javascript" src="js/view.js"></script>
 
@@ -1028,8 +1029,8 @@
                         <br/>
                         Share and unlock 5 free animals
                         <br/>
-                        <div class="share-facebook share"></div>
-                        <div class="share-twitter share"></div>
+                        <div class="share-facebook share" onClick="shareFacebook(); $.pgwModal('close');"></div>
+                        <div class="share-twitter share" onClick="shareTwitter(); $.pgwModal('close');"></div>
                     </div>
 
                 </div>
