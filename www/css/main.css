@@ -811,7 +811,7 @@ footer-controls {
     position: absolute;
     border: 2px solid #ffffff;
     border-radius: 5px;
-    
+
     width: 555px;
     left: 50%; /* centre div */
     margin-left:-280px; /* half of the width */
