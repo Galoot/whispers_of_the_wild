@@ -810,7 +810,7 @@ footer-controls {
     position: absolute;
     border: 2px solid #ffffff;
     border-radius: 5px;
-    
+
     width: 555px;
     left: 50%; /* centre div */
     margin-left:-280px; /* half of the width */
@@ -967,7 +967,7 @@ footer-controls {
     position: absolute;
     bottom: 120px;
     left: 20px;
-    
+
     border: black solid thin;
     width: 200px;
 }

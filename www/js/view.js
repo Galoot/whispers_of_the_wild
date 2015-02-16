@@ -6,9 +6,10 @@ function View() {
         });
     });
 
+    this.sliderDisplayDelay = 0;
     this.animal = new Animal();
     this.percProgress = 0;
-    
+
     // image sliders
     this.profileSlider = null;
     this.mapSlider = null;
@@ -59,63 +60,50 @@ function View() {
     };
 
     this.reloadImageSlider = function(slider, element) {
-        var newSlider;
-        if (!slider) {
-            newSlider = element.pgwSlider({
+        return element.pgwSlider({
                     displayList : false,
                     transitionEffect: 'sliding',
                     displayControls : true,
                     autoSlide: false
-
                 });
-        } else {
-            // slider.destroy(true);
-            // slider = element.pgwSlider();
+    };
+
+    this.destroySlider = function(slider) {
+        if (slider) {
             slider.destroy(false);
-            newSlider = element.reload({
-//             newSlider = element.pgwSlider({
-                    displayList : false,
-                    transitionEffect: 'sliding',
-                    displayControls : true,
-                    autoSlide: false
-
-                });
-            // slider.show();
-            // element.show();
         }
-        return newSlider;
-//        if (app.view.imageSwiper) {
-//            app.view.imageSwiper.reInit();
-//        }
+        return slider;
+    };
+
+    this.destroySliders = function() {
+
+        app.view.profileSlider = app.view.destroySlider(app.view.profileSlider);
+        app.view.mapSlider = app.view.destroySlider(app.view.mapSlider);
+        app.view.footprintSlider = app.view.destroySlider(app.view.footprintSlider);
+
     };
 
     this.reloadImageSliders = function() {
-        reloadImageSlider(app.view.profileSlider, $('#profile .image-slider'));
-        reloadImageSlider(app.view.mapSlider, $('#map .image-slider'));
-        reloadImageSlider(app.view.footprintSlider, $('#footprints .image-slider'));
-    }
+        window.setTimeout(function() {
+            app.view.profileSlider = app.view.reloadImageSlider(app.view.profileSlider, $('#image-slider-profile'));
+            app.view.mapSlider = app.view.reloadImageSlider(app.view.mapSlider, $('#image-slider-map'));
+            app.view.footprintSlider = app.view.reloadImageSlider(app.view.footprintSlider, $('#image-slider-footprints'));
+        }, app.view.sliderDisplayDelay);
+    };
 
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
                 $("#profile .header .title").html(animal.name);
 
-                if (app.view.profileSlider) {
-                    // app.view.profileSlider.remove();
-                    app.view.profileSlider.destroy(true);
-                    app.view.profileSlider = null;
-                }
                 var imagesHtml = "";
                 for (var i = 0; i < images.length; i++) {
                     imagesHtml += ""
-//                            + "         <div class=\"swiper-slide\"> "
                             + "         <li> "
                             + "             <img src=\"" + images[i].filePath + "\"/>"
                             + "         </li>";
-//                            + "         </div>";
                 }
-                $("#profile .image-slider").html(imagesHtml);
-//                $(".bjqs").html(imagesHtml);
+                $("#image-slider-profile").html(imagesHtml);
 
                 $(".animal-name").html(animal.name);
                 $(".cautionNotice").html(animal.cautionNotice);
@@ -134,23 +122,6 @@ function View() {
                         "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
                 $(".animal-weight").html(weightHtml);
-
-                app.view.profileSlider = app.view.reloadImageSlider(app.view.profileSlider, $('#profile .image-slider'));
-
-//                    app.view.imageSwiper = $('#profile .swiper-container').swiper({
-//                        // Your options here:
-//                        pagination: '.pagination',
-//                        paginationClickable: true,
-//                        grabCursor: true,
-//
-//                        resizeReInit: true,
-//                        loop: true,
-//                        visibilityFullFit: true,
-//                        calculateHeight: true,
-//                        // centeredSlides: true
-//                        //etc..
-//                    });
-
 
                 if (onComplete) {
                     onComplete();
@@ -229,12 +200,6 @@ function View() {
             model.getMaps(animal.animalID, function(maps) {
                 $("#map .header .title").html(animal.name);
 
-                if (app.view.mapSlider) {
-                    // app.view.profileSlider.remove();
-                    app.view.mapSlider.destroy(true);
-                    app.view.mapSlider = null;
-                }
-
                 var imagesHtml = "";
                 for (var i = 0; i < maps.length; i++) {
                     imagesHtml += ""
@@ -242,7 +207,7 @@ function View() {
                             + "             <img src=\"" + maps[i].filePath + "\"/>"
                             + "         </li>";
                 }
-                $("#map .image-slider").html(imagesHtml);
+                $("#image-slider-map").html(imagesHtml);
 
 
                 $("#map .animal-name").html(animal.name);
@@ -259,16 +224,6 @@ function View() {
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
                 $("#map .animal-weight").html(weightHtml);
 
-                app.view.mapSlider = app.view.reloadImageSlider(app.view.mapSlider, $('#map .image-slider'));
-
-//                    var mySwiper = $('#profile .swiper-container').swiper({
-//                        //Your options here:
-//                        mode:'horizontal',
-//                        loop: true,
-//                        centeredSlides: true
-//                        //etc..
-//                    });
-
                 if (onComplete) {
                     onComplete();
                 }
@@ -281,12 +236,6 @@ function View() {
             model.getFootprints(animal.animalID, function(footprints) {
                 $("#footprints .header .title").html(animal.name);
 
-                if (app.view.footprintSlider) {
-                    // app.view.profileSlider.remove();
-                    app.view.footprintSlider.destroy(true);
-                    app.view.footprintSlider = null;
-                }
-
                 var imagesHtml = "";
                 for (var i = 0; i < footprints.length; i++) {
                     imagesHtml += ""
@@ -294,7 +243,7 @@ function View() {
                             + "             <img src=\"" + footprints[i].filePath + "\"/>"
                             + "         </li>";
                 }
-                $("#footprints .image-slider").html(imagesHtml);
+                $("#image-slider-footprints").html(imagesHtml);
 
 
                 $("#footprints .animal-name").html(animal.name);
@@ -310,16 +259,6 @@ function View() {
                         "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
                         + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
                 $("#footprints .animal-weight").html(weightHtml);
-
-                app.view.footprintSlider = app.view.reloadImageSlider(app.view.footprintSlider, $('#footprints .image-slider'));
-
-//                    var mySwiper = $('#profile .swiper-container').swiper({
-//                        //Your options here:
-//                        mode:'horizontal',
-//                        loop: true,
-//                        centeredSlides: true
-//                        //etc..
-//                    });
 
                 if (onComplete) {
                     onComplete();
@@ -454,22 +393,28 @@ function View() {
                             model.getAnimal(animalID, function(animal) {
                                 var freeApp = (app.mode === app.MODE_FREE);
                                 var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
-//                                console.log('freeApp: ' + freeApp);
-//                                console.log('unlockedApp: ' + unlockedApp);
                                 var earnedAnimal = (animal.isEarned === "true");
                                 var paidAnimal = (animal.isPaid === "true");
                                 var nonFreeAnimal = (earnedAnimal || paidAnimal);
 
-//                                console.log('earnedAnimal: ' + earnedAnimal);
                                 if ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal)) {
                                     app.view.modal("limitedAccessMessage");
                                 } else {
-                                    app.view.animal_loadFootprints(animal, function() {});
-                                    app.view.animal_loadMap(animal, function() {});
-                                    app.view.animal_loadAudio(animal, function() {});
+                                    app.view.destroySliders();
+
                                     app.view.animal_loadProfile(animal, function() {
-                                        location.href = "#profile";
+                                        app.view.animal_loadMap(animal, function() {
+                                            app.view.animal_loadFootprints(animal, function() {
+                                                app.view.animal_loadAudio(animal, function() {
+
+                                                    location.href = "#profile";
+                                                    app.view.reloadImageSliders();
+
+                                                });
+                                            });
+                                        });
                                     });
+
                                 }
                             });
                         }
@@ -642,7 +587,9 @@ function View() {
         model.getAnimal(animalID, function(animal) {
             $("* .animal-profile").off();
             $("* .animal-profile").on("click", function(event) {
+                app.view.destroySliders();
                 location.href = "#profile";
+                app.view.reloadImageSliders();
             });
             $("* .animal-audio").off();
             $("* .animal-audio").on("click", function(event) {
@@ -650,11 +597,15 @@ function View() {
             });
             $("* .animal-map").off();
             $("* .animal-map").on("click", function(event) {
+                app.view.destroySliders();
                 location.href = "#map";
+                app.view.reloadImageSliders();
             });
             $("* .animal-footprints").off();
             $("* .animal-footprints").on("click", function(event) {
+                app.view.destroySliders();
                 location.href = "#footprints";
+                app.view.reloadImageSliders();
             });
             $("* .animal-question").off();
             $("* .animal-question").on("click", function(event) {

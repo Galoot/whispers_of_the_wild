@@ -251,6 +251,11 @@ function Model() {
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
 
+            mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
+
+            mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+            mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
+            
             if (animal_counter === totalAnimals) {
                 if (onCompleted) {
                     onCompleted();
