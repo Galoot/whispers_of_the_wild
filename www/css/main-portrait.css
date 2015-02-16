@@ -242,42 +242,42 @@
         background-image: url('../resources/buttons/index_page/animals.png');
         background-size: auto 32px ;
         width: 104px;
-        margin: 15px 0px 1px 17px;
+        margin: 23px 0px 1px 25px;
     }
 
     .option_game {
         background-image: url('../resources/buttons/index_page/game.png');
         background-size: auto 32px ;
         width: 84px;
-        margin: 15px 0px 1px 20px;
+        margin: 23px 0px 1px 31px;
     }
 
     .option_question {
         background-image: url('../resources/buttons/index_page/question.png');
-        background-size: auto 32px ;
+        background-size: auto 28px ;
         width: 42px;
-        margin: 15px 0px 1px 30px;
+        margin: 22px 0px -12px 42px;
     }
 
     .option_about {
         background-image: url('../resources/buttons/index_page/about.png');
         background-size: auto 32px ;
         width: 64px;
-        margin: 15px 0px 1px 22px;
+        margin: 23px 0px 1px 34px;
     }
 
     .option_safety {
         background-image: url('../resources/buttons/index_page/safety.png');
         background-size: auto 32px ;
         width: 68px;
-        margin: 15px 0px 1px 22px;
+        margin: 23px 0px 1px 32px;
     }
 
     .option_donate {
         background-image: url('../resources/buttons/index_page/donate.png');
         background-size: auto 32px ;
         width: 74px;
-        margin: 15px 0px 1px 22px;
+        margin: 23px 0px 1px 32px;
     }
 
     #social_container {
@@ -285,10 +285,12 @@
         text-transform: uppercase;
 
         position: absolute;
-        padding-top: 5px;
+        padding-top: 10px;
         width: 335px;
         left: 50%; /* centre div */
-        margin-left:-170px; /* half of the width */}
+        margin-left:-170px; /* half of the width */
+        margin-top: 6px
+    }
 
     .share-facebook {
         background-image: url('../resources/buttons/other/facebook_share.png');
@@ -329,8 +331,7 @@
     /*position: absolute;
      top: 120px;
     left: 28px; */
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding: 5px 0 5px 0;
     display: inline-block;
     text-align: center;
     /* margin-top: 6px; */
@@ -338,25 +339,21 @@
     width: 320px;
     height: 18px;
     background-color: #68666a;
-    
-    display: block;
-    position: absolute;
+    /*position: absolute;*/
     border-radius: 5px;
-    
-    width: 320px;
-    left: 50%; /* centre div */
-    margin-left:0px;
+    margin-left: 5%;
     }
     .search-by-category {
         padding: 6px;
         position: absolute;
         z-index: 3002;
         overflow: hidden;
-        max-width: 298px;
+        width: 309px;
+        max-width: 309px;
+        min-width: 309px;
     /*    //background-color: lightgray;*/
         border: none;
-        margin: 0px 0 0 30px;
-        width: 298px;
+        margin: 0px 0 0 18px;
         background-color: rgba(47, 44, 50, 0.9);
        display: none; /* // hide by default, must be last style*/
     }
@@ -367,7 +364,7 @@
     .search-by-category hr {
 
     /*    //height: 1px;*/
-        width: 298px;
+        width: 320px;
         /* min-height: 10px; */
         border-top: 1px solid black;
     /*    //box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.5);*/
@@ -375,32 +372,39 @@
 
     /* Letter styling */
     .letter-label {
-        display: inline-block;
-        z-index: 3001;
+        padding: 5px 0 5px 0;
+        margin: 10px 0 0 5%;
+        left: none;
+        display: block;
         position: relative;
-        border: none;
-        margin: 10px 30px 0 10px;
-        padding: 10px 10px 1px 10px;
-        border-radius: 5px;
-        min-width: 331px;
-        height: 28px;
+        text-align: center;
+        float: left;
+        /* margin-top: 6px; */
+        /* margin-top: 6px; */
+        width: 309px;
+        max-width: 320px;
+        min-width: 320px;
+        height: 18px;
         background-color: #68666a;
-        float: right;
-        text-shadow: 1px 1px 2px #000;
+        /*position: absolute;*/
+        border-radius: 5px;
     }
     .search-by-letter {
-        padding: 10px;
-        position: absolute;
-        z-index: 3000;
+        padding: 6px;
+        z-index: 3001;
         overflow: hidden;
-        max-width: 298px;
-        width: 298px;
-        right: 30px;
+        max-width: 309px;
+        width: 309px;
+        min-width: 309;
+        /* margin-top: 36px; */
     /*    //background-color: lightgray;*/
         border: none;
-        margin: 0px 30px 0 0;
         background-color: rgba(47, 44, 50, 0.9);
-       display: none;
+        position: fixed;
+        left: 18px;
+        display: block;
+        margin: 40px 0 0 0px;
+        /* float: left; */
     }
     .letter-heading {
         float: left;
