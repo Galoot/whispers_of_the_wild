@@ -70,7 +70,7 @@ function Datastore() {
                     );
                 },
                 function(tx, error) {
-                    alert("SQL Tx Error: " + error + ", " + error);
+                    alert("SQL Tx Error: " + error + ", " + error + ", SQL: " + sql + ", Params: " + params);
                 }
         );
     };
@@ -103,10 +103,16 @@ function Datastore() {
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Animal "
                             + "(animalID INTEGER PRIMARY KEY UNIQUE, "
                             + "category TEXT, "
-                            + "name TEXT, cautionNotice TEXT, "
+                            + "name TEXT, thumbName TEXT, cautionNotice TEXT, "
                             + "iconFilePath TEXT, "
                             + "isFree BOOLEAN, isEarned BOOLEAN, "
                             + "isPaid BOOLEAN, score INT)");
+
+                    tx.executeSql("DROP TABLE IF EXISTS ANM_Name");
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Name "
+                            + "(nameID INTEGER PRIMARY KEY UNIQUE, "
+                            + "animalID INTEGER, "
+                            + "name TEXT)");
 
 //                    tx.executeSql("DELETE FROM ANM_Image");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Image");
@@ -121,14 +127,19 @@ function Datastore() {
                             + "(profileID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "idPointers TEXT, "
+                            + "confusedWith TEXT, "
+                            + "activityPeriod TEXT, "
                             + "gestation TEXT, "
                             + "lifespan TEXT, "
                             + "diet TEXT, "
+                            + "predators TEXT, "
                             + "habitat TEXT, "
-                            + "lengthMaleMin DOUBLE, lengthMaleMax DOUBLE, "
-                            + "lengthFemaleMin DOUBLE, lengthFemaleMax DOUBLE, "
-                            + "weightMaleMin DOUBLE, weightMaleMax DOUBLE, "
-                            + "weightFemaleMin DOUBLE, weightFemaleMax DOUBLE)");
+                            + "redListStatus TEXT, "
+                            + "population TEXT, "
+                            + "threats TEXT, "
+                            + "lengthMin DOUBLE, lengthMax DOUBLE, "
+                            + "heightMin DOUBLE, heightMax DOUBLE, "
+                            + "weightMin DOUBLE, weightMax DOUBLE)");
 
 //                    tx.executeSql("DELETE FROM ANM_Audio");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Audio");

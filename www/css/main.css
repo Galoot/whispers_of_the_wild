@@ -487,6 +487,37 @@ footer-controls {
 /*    // line-height: 55px;*/
 }
 
+.panel-slider-left-handle {
+    position: absolute;
+    width: 20px;
+    border: 1px red solid;
+    z-index: 999;
+
+    left: -128px;
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+}
+
+.panel-slider-left-handle.left {
+    left: 0px !important;
+}
+
+.panel-slider-bottom-handle {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    border: 1px red solid;
+    z-index: 999;
+
+    bottom: 0px;
+    -webkit-transition: bottom 0.2s ease-in;
+    transition: bottom 0.2s ease-in;
+}
+
+.panel-slider-bottom-handle.bottom {
+    bottom: 100px !important;
+}
+
 .profile-option-image {
     width: 82px;
     height: 75px;
@@ -494,8 +525,7 @@ footer-controls {
     margin-top: 14px;
 }
 
-.profile-option-text
-{
+.profile-option-text {
     margin: 5px 5px 5px 0;
 }
 

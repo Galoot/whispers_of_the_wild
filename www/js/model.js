@@ -14,18 +14,28 @@ function Model() {
 
     var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
 
-    var _get_animals = "SELECT a.animalID, idPointers, name, score, iconFilePath, category, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
+    var _get_animals = "SELECT a.animalID, idPointers, name, thumbName, score, iconFilePath, category, weightMin, weightMax FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
 
-    var _add_animal = "INSERT INTO ANM_Animal (\n\
-            name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) \n\
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    var _get_animal = "SELECT animalID, name, iconFilePath, cautionNotice, isFree, isEarned, isPaid, score FROM ANM_Animal WHERE animalID = ?";
+    var _add_animal = "INSERT INTO ANM_Animal ("
+            + "name, thumbName, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    var _get_animal = "SELECT animalID, name, thumbName, iconFilePath, cautionNotice, isFree, isEarned, isPaid, score FROM ANM_Animal WHERE animalID = ?";
+
+    var _add_name = "INSERT INTO ANM_Name (\n\
+            animalID, name) \n\
+            VALUES (?, ?)";
+    var _get_names = "SELECT nameID, animalID, name FROM ANM_Name WHERE animalID = ?";
 
     var _add_profile = "INSERT INTO ANM_Profile (\n\
-            animalID, idPointers, gestation, lifespan, diet, habitat, lengthMaleMin, lengthMaleMax, lengthFemaleMin, \n\
-            lengthFemaleMax, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax) \n\
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    var _get_profile = "SELECT profileID, idPointers, gestation, lifespan, diet, habitat, lengthMaleMin, lengthMaleMax, lengthFemaleMin, lengthFemaleMax, weightMaleMin, weightMaleMax, weightFemaleMin, weightFemaleMax FROM ANM_Profile WHERE animalID = ?";
+            animalID, idPointers, confusedWith, activityPeriod, gestation, "
+            + "lifespan, diet, predators, habitat, redListStatus, population, "
+            + "threats, lengthMin, lengthMax, heightMin, heightMax, weightMin, weightMax) "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    var _get_profile = "SELECT profileID, idPointers, confusedWith, activityPeriod, "
+            + "gestation, lifespan, diet, predators, habitat, redListStatus, population, "
+            + "threats, lengthMin, lengthMax, heightMin, heightMax, weightMin, weightMax "
+            + "FROM ANM_Profile WHERE animalID = ?";
 
     var _add_image = "INSERT INTO ANM_Image (animalID, imageName, filePath) VALUES (?, ?, ?)";
     var _get_images = "SELECT imageID, imageName, filePath FROM ANM_Image WHERE animalID = ?";
@@ -76,6 +86,13 @@ function Model() {
                 });
     };
 
+    this.getNames = function(animalID, onResults) {
+        this.data.dbQuery(_get_names, [animalID],
+                function(results) {
+                    onResults(jQuery.parseJSON(results).results);
+                });
+    };
+
     this.getProfile = function(animalID, onResults) {
         this.data.dbQuery(_get_profile, [animalID],
                 function(results) {
@@ -111,11 +128,11 @@ function Model() {
                 });
     };
 
-    this.addAnimal = function(name, iconFilePath, category, cautionNotice, payStatus, score, onCompleted) {
+    this.addAnimal = function(name, thumbName, iconFilePath, category, cautionNotice, payStatus, score, onCompleted) {
         var isFree = (payStatus === PayStatus.FREE);
         var isEarned = (payStatus === PayStatus.EARNED);
         var isPaid = (payStatus === PayStatus.PAID);
-        this.data.dbQuery(_add_animal, [name, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
+        this.data.dbQuery(_add_animal, [name, thumbName, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
                 function(results) {
                     if (onCompleted) {
                         onCompleted(name);
@@ -123,13 +140,21 @@ function Model() {
                 });
     };
 
-    this.addProfile = function(animalID, idPointers, gestation, lifespan, diet, habitat,
-            lengthMaleMin, lengthMaleMax, lengthFemaleMin, lengthFemaleMax, weightMaleMin,
-            weightMaleMax, weightFemaleMin, weightFemaleMax, onCompleted) {
-        this.data.dbQuery(_add_profile, [animalID, idPointers, gestation,
-                lifespan, diet, habitat, lengthMaleMin, lengthMaleMax,
-                lengthFemaleMin, lengthFemaleMax, weightMaleMin,
-                weightMaleMax, weightFemaleMin, weightFemaleMax],
+    this.addName = function(animalID, name, onCompleted) {
+        this.data.dbQuery(_add_name, [animalID, name],
+                function(results) {
+                    if (onCompleted) {
+                        onCompleted();
+                    }
+                });
+    };
+
+    this.addProfile = function(animalID, idPointers, confusedWith, activityPeriod,
+            gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
+            lengthMin, lengthMax, heightMin, heightMax, weightMin, weightMax, onCompleted) {
+        this.data.dbQuery(_add_profile, [animalID, idPointers, confusedWith, activityPeriod,
+                gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
+                lengthMin, lengthMax, heightMin, heightMax, weightMin, weightMax],
                 function(results) {
                     if (onCompleted) {
                         onCompleted();
@@ -180,18 +205,41 @@ function Model() {
         var animalName;
 
         // should indicate the total number of animals loaded here
-        var totalAnimals = 5;
+        var totalAnimals = 1;
 
         // Baboon
-        animalName = 'Baboon';
-        mdl.addAnimal(animalName, resourcesPrefix + animalName.toLowerCase()
-                + '/Adult-male-southern-chacma-baboon-portrait.jpg', 'Primate', 'They bite!', PayStatus.FREE, 10, function(name) {
+        animalName = 'Baboon'; // Animal Name & Folder name under 'animals'
+        mdl.addAnimal(animalName,
+                'Baboon', // Thumbnail Name
+                resourcesPrefix + animalName.toLowerCase() + '/Adult-male-southern-chacma-baboon-portrait.jpg', // Icon
+                'Primate', // Category
+                'They bite!', // Safety Advise
+                PayStatus.FREE, // Animal Status
+                10, // Game Score
+                function(name) {
             animal_counter++;
+
+            // Names
+            mdl.addName(animal_counter, 'Gorilla');
+            mdl.addName(animal_counter, 'Ape');
+            mdl.addName(animal_counter, 'Chimapzee');
+
             mdl.addProfile(animal_counter,
-                    'Monkey-like appearance; dog-like, black face; coarse dark-grey to olive brown fur; long tail which points up from the rump then bends downward.',
-                    '6 months', '20 – 30 years', 'omnivorous, highly varied – fruits, seeds, grass, invertebrates, birds, young mammals, shellfish',
-                    'omnivorous, highly varied – fruits, seeds, grass, invertebrates, birds, young mammals, shellfish',
-                    1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
+                    'Monkey-like appearance; dog-like, black face; coarse dark-grey to olive brown fur; long tail which points up from the rump then bends downward.', // Identification Pointer
+                    'Humans', // Confused With
+                    'Nocturnal', // Activity Period
+                    '6 months', // Gestation Period
+                    '20 – 30 years', // Lifespan
+                    'omnivorous, highly varied – fruits, seeds, grass, invertebrates, birds, young mammals, shellfish', // Diet
+                    'Larger baboons eat smaller baboons', // Predators
+                    'Trees, Forests', // Habitat
+                    'Least Concern', // Red List Status
+                    'Unknown', // Population
+                    'Hungry humans', // Threats
+                    1.2, 1.6, // Length Min & Max
+                    1, 1.2, // Height Min & Max
+                    25, 45 // Weight Min & Max
+                    );
             mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
             mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
             mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
@@ -223,103 +271,36 @@ function Model() {
                 }
             }
         });
-
-        // Zebra
-        animalName = 'Zebra';
-        mdl.addAnimal(animalName, resourcesPrefix + animalName.toLowerCase()
-                + '/icon.jpg', 'Other Herbivores', 'They kick very hard!', PayStatus.EARNED, 20, function(name) {
-            animal_counter++;
-            mdl.addProfile(animal_counter, 'A little bit larger than a donkey...', '', '', '', '', 3.2, 3.6, 3, 3.2, 45, 65, 32, 40);
-            mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
-            mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
-            mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
-
-            if (animal_counter === totalAnimals) {
-                if (onCompleted) {
-                    onCompleted();
-                }
-            }
-        });
-
-        // Bat-eared-fox
-        animalName = 'Bat-Eared-Fox';
-        mdl.addAnimal(animalName, resourcesPrefix + animalName.toLowerCase()
-                + '/icon.jpg', 'Small Predator', 'They bite less than lion!', PayStatus.FREE, 30, function(name) {
-            animal_counter++;
-            mdl.addProfile(animal_counter, 'Smaller than lion like...', '', '', '', '', 1.2, 1.6, 1, 1.2, 25, 45, 12, 20);
-            mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
-            mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
-            mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
-
-            mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
-
-            mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-            mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
-            
-            if (animal_counter === totalAnimals) {
-                if (onCompleted) {
-                    onCompleted();
-                }
-            }
-        });
-
-        // Lion
-        animalName = 'Lion';
-        mdl.addAnimal(animalName, resourcesPrefix + animalName.toLowerCase()
-                + '/icon.jpg', 'Large Predator', 'They bite even more!', PayStatus.PAID, 80, function(name) {
-            animal_counter++;
-            mdl.addProfile(animal_counter, 'A little bit larger than a house cat...', '', '', '', '', 3.2, 3.6, 3, 3.2, 45, 65, 32, 40);
-            mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
-            mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
-            mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
-
-            if (animal_counter === totalAnimals) {
-                if (onCompleted) {
-                    onCompleted();
-                }
-            }
-        });
-
-        // Springbok
-        animalName = 'Springbok';
-        mdl.addAnimal(animalName, resourcesPrefix + animalName.toLowerCase()
-                + '/icon.jpg', 'Other Herbivores', 'They jusp very high!', PayStatus.PAID, 5, function(name) {
-            animal_counter++;
-            mdl.addProfile(animal_counter, 'A little bit smaller than a zebra...', '', '', '', '', 3.2, 3.6, 3, 3.2, 45, 65, 32, 40);
-            mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
-            mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
-            mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
-
-            if (animal_counter === totalAnimals) {
-                if (onCompleted) {
-                    onCompleted();
-                }
-            }
-        });
+        console.log('Animals loaded...');
     };
 }
 
 function Animal() {
     this.animalID;
     this.name;
+    this.thumbName;
     this.cautionNotice;
     this.isFree;
     this.isEarned;
     this.isPaid;
 }
 
+function Name() {
+    this.animalID;
+    this.name;
+}
+
 function Profile() {
     this.profileID;
     this.animalID;
     this.idPointers;
-    this.lengthMaleMin;
-    this.lengthMaleMax;
-    this.lengthFemaleMin;
-    this.lengthFemaleMax;
-    this.weightMaleMin;
-    this.weightMaleMax;
-    this.weightFemaleMin;
-    this.weightFemaleMax;
+
+    this.lengthMin;
+    this.lengthMax;
+    this.heightMin;
+    this.heightMax;
+    this.weightMin;
+    this.weightMax;
 }
 
 function Audio() {

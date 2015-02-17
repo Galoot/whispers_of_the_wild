@@ -113,14 +113,13 @@ function View() {
                 $(".animal-diet").html(profile.diet);
                 $(".animal-habitat").html(profile.habitat);
 
-                var lengthHtml =
-                        "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
-                        + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
+                var lengthHtml = profile.lengthMin + "m - " + profile.lengthMax + "m";
                 $(".animal-length").html(lengthHtml);
 
-                var weightHtml =
-                        "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
-                        + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
+                var heightHtml = profile.heightMin + "m - " + profile.heightMax + "m";
+                $(".animal-height").html(heightHtml);
+
+                var weightHtml = profile.weightMin + "kg - " + profile.weightMax + "kg";
                 $(".animal-weight").html(weightHtml);
 
                 if (onComplete) {
@@ -214,15 +213,14 @@ function View() {
                 $("#map .cautionNotice").html(animal.cautionNotice);
                 $("#map .identification-pointers").html(profile.idPointers);
 
-                var lengthHtml =
-                        "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
-                        + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
-                $("#map .animal-length").html(lengthHtml);
+                var lengthHtml = profile.lengthMin + "m - " + profile.lengthMax + "m";
+                $(".animal-length").html(lengthHtml);
 
-                var weightHtml =
-                        "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
-                        + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
-                $("#map .animal-weight").html(weightHtml);
+                var heightHtml = profile.heightMin + "m - " + profile.heightMax + "m";
+                $(".animal-height").html(heightHtml);
+
+                var weightHtml = profile.weightMin + "kg - " + profile.weightMax + "kg";
+                $(".animal-weight").html(weightHtml);
 
                 if (onComplete) {
                     onComplete();
@@ -250,15 +248,14 @@ function View() {
                 $("#footprints .cautionNotice").html(animal.cautionNotice);
                 $("#footprints .identification-pointers").html(profile.idPointers);
 
-                var lengthHtml =
-                        "Males: " + profile.lengthMaleMin + "m - " + profile.lengthMaleMax + "m; "
-                        + "Females: " + profile.lengthFemaleMin + "m - " + profile.lengthFemaleMax + "m";
-                $("#footprints .animal-length").html(lengthHtml);
+                var lengthHtml = profile.lengthMin + "m - " + profile.lengthMax + "m";
+                $(".animal-length").html(lengthHtml);
 
-                var weightHtml =
-                        "Males: " + profile.weightMaleMin + "kg - " + profile.weightMaleMax + "kg; "
-                        + "Females: " + profile.weightFemaleMin + "kg - " + profile.weightFemaleMax + "kg";
-                $("#footprints .animal-weight").html(weightHtml);
+                var heightHtml = profile.heightMin + "m - " + profile.heightMax + "m";
+                $(".animal-height").html(heightHtml);
+
+                var weightHtml = profile.weightMin + "kg - " + profile.weightMax + "kg";
+                $(".animal-weight").html(weightHtml);
 
                 if (onComplete) {
                     onComplete();
@@ -278,8 +275,7 @@ function View() {
                 animalGridHtml += "<div id=\"" + idPrefix + "animalID_" + animals[x].animalID + "\" "
                         + "class=\"" + idPrefix + "animal-block\" "
                         + "category=\"" + animals[x].category + "\" "
-                        + "minLength=\"" + animals[x].weightFemaleMin + "\" "
-                        + "maxLength=\"" + animals[x].weightMaleMax + "\">";
+                        + "animalSize=\"" + animals[x].animalID + "\">";
                 animalGridHtml += "<img class=\"" + idPrefix + "animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
                 animalGridHtml += "</div>";
             }
@@ -326,8 +322,7 @@ function View() {
                     animalGridHtml += "<div id=\"animalID_" + animals[x].animalID + "\" "
                             + "class=\"animal-block\" "
                             + "category=\"" + animals[x].category + "\" "
-                            + "minLength=\"" + animals[x].weightFemaleMin + "\" "
-                            + "maxLength=\"" + animals[x].weightMaleMax + "\">";
+                            + "animalSize=\"" + animals[x].animalID + "\">";
                     animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
                     animalGridHtml += "</div>";
                 }
@@ -438,9 +433,8 @@ function View() {
     this.filterWeights = function(minLength, maxLength) {
 
         $(".animal-block").each(function() {
-            var animalMin = parseFloat($(this).attr("minLength"));
-            var animalMax = parseFloat($(this).attr("maxLength"));
-            if (minLength <= animalMin && maxLength >= animalMax) {
+            var animalSize = parseFloat($(this).attr("animalSize"));
+            if (animalSize >= minLength && animalSize <= maxLength) {
                 $(this).show();
             } else {
                 $(this).hide();
@@ -488,7 +482,9 @@ function View() {
         var option_height = 50; // width and height of the option boxes (squares)
         var option_padding = 0; // space between option boxes
         var top_margin_start = 0; // from the top of the content div
-
+        var left_handle_width = $(page + " .panel-slider-left-handle").width();
+        var footer_height = 100;
+        var bottom_handle_height = $(page + " .panel-slider-bottom-handle").height();
         var option_count = 0;
         var contentHeight = $(page + " .content").height();
         var option_height = contentHeight / 6;
@@ -512,8 +508,19 @@ function View() {
 
         var left_margin_centre = 0; // from the centre of the content div
 
+        $(page + " .content .panel-slider-left-handle").css("height", (contentHeight + footer_height) + "px");
+        $(page + " .content .panel-slider-left-handle").css("margin-top", (-1) + "px");
+        $(page + " .content .panel-slider-left-handle").css("margin-left", (option_width + left_margin_centre) + "px");
+
+        $(page + " .content .panel-slider-bottom-handle").css("margin-top", (contentHeight - bottom_handle_height) + "px");
+        $(page + " .content .panel-slider-bottom-handle").css("margin-left", (left_margin_centre) + "px");
+
         $(page + " .content .profile-content").css("margin-top", (-1) + "px");
         $(page + " .content .profile-content").css("margin-left", (option_width + left_margin_centre) + "px");
+
+        $(page + " .content .profile-content.bottom").css("height", (contentHeight) + "px");
+        $(page + " .content .profile-content").css("margin-left", (contentHeight + footer_height) + "px");
+
     };
 
     this.get_about_tabs = function(page) {
@@ -681,11 +688,11 @@ function View() {
     this.app_maxHeight = function() {
         var header = $(".header");
         var header_oh = header.height() > 0 ? header.outerHeight(true) : 0;
-//        console.log("header height: " + header_oh);
+        console.log("header height: " + header_oh);
 
         var footer = $(".footer");
         var footer_oh = footer.height() > 0 ? footer.outerHeight(true) : 0;
-//        console.log("footer height: " + footer_oh);
+        console.log("footer height: " + footer_oh);
 
         var content = $(".content");
 
@@ -696,18 +703,7 @@ function View() {
 
         var c_new = window_h - header_oh - footer_oh - content_oh + content_h + 56;
 
-
         content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
-
-        // resize height of slider container to keep 16:9
-        $(".swiper-container").css("height", ($(".swiper-container").width() / 16 * 9) + "px");
-
-    //        var total = header_oh + footer_oh + content_oh;
-    //        if (content_h < content.get(0).scrollHeight) {
-    //            content.height(content.get(0).scrollHeight);
-    //        } else {
-    //            content.height(c_new);
-    //        }
     };
 };
