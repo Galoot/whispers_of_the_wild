@@ -400,9 +400,9 @@
     /*    //background-color: lightgray;*/
         border: none;
         background-color: rgba(47, 44, 50, 0.9);
-        position: fixed;
+        position: absolute;
         left: 18px;
-        display: block;
+        display: none;
         margin: 40px 0 0 0px;
         /* float: left; */
     }
