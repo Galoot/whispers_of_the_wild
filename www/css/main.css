@@ -510,10 +510,15 @@ footer-controls {
 
 .panel-slider-bottom-handle {
     position: absolute;
+    padding-left: -50px;
     height: 20px;
-    width: 100%;
-    border: 1px red solid;
     z-index: 999;
+    background-image: url('../resources/buttons/media_player/bottom-handle-c.png');
+    background-repeat: no-repeat;
+    background-size: auto 20px;
+    width: 110px;
+    right: 50%;
+    margin-right: -55px;
 
     bottom: 0px;
     -webkit-transition: bottom 0.2s ease-in;
