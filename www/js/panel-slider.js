@@ -54,8 +54,6 @@ var initSlider = function (panelClass, actionClass) {
 
     }
 
-    app.view.footerCollapsed = false;
-
     function slide() {
 
         $(panelClass).toggleClass(actionClass);

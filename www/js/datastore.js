@@ -103,7 +103,7 @@ function Datastore() {
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Animal "
                             + "(animalID INTEGER PRIMARY KEY UNIQUE, "
                             + "category TEXT, "
-                            + "name TEXT, thumbName TEXT, cautionNotice TEXT, "
+                            + "name TEXT, thumbName TEXT, commonNames TEXT, cautionNotice TEXT, "
                             + "iconFilePath TEXT, "
                             + "isFree BOOLEAN, isEarned BOOLEAN, "
                             + "isPaid BOOLEAN, score INT)");
@@ -137,9 +137,9 @@ function Datastore() {
                             + "redListStatus TEXT, "
                             + "population TEXT, "
                             + "threats TEXT, "
-                            + "lengthMin DOUBLE, lengthMax DOUBLE, "
-                            + "heightMin DOUBLE, heightMax DOUBLE, "
-                            + "weightMin DOUBLE, weightMax DOUBLE)");
+                            + "length TEXT, "
+                            + "height TEXT, "
+                            + "weight TEXT)");
 
 //                    tx.executeSql("DELETE FROM ANM_Audio");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Audio");

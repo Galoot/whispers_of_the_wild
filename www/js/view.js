@@ -10,13 +10,19 @@ function View() {
     this.animal = new Animal();
     this.percProgress = 0;
 
+    // audio track array for track navigation
+    this.audioTrack = [];
+
     // image sliders
     this.profileSlider = null;
     this.mapSlider = null;
     this.footprintSlider = null;
+
+    // current animal profile being viewed
     this.currentAnimal = null;
 
-    this.footerCollapsed = false;
+    // state of footer being collapsed or not
+    this.footerCollapsed = true;
     /**
      * Will change the mode from FREE to FREE_UNLOCKED.
      * If the current mode is not FREE, then this operation will do nothing.
@@ -107,21 +113,22 @@ function View() {
                 $("#image-slider-profile").html(imagesHtml);
 
                 $(".animal-name").html(animal.name);
+                $(".common-names").html(animal.commonNames);
+                $(".confused-with").html(profile.confusedWith);
+                $(".activity-period").html(profile.activityPeriod);
+                $(".predators").html(profile.predators);
+                $(".red-list-status").html(profile.redListStatus);
+                $(".population").html(profile.population);
+                $(".threats").html(profile.threats);
                 $(".cautionNotice").html(animal.cautionNotice);
                 $(".identification-pointers").html(profile.idPointers);
                 $(".animal-gestation").html(profile.gestation);
                 $(".animal-lifespan").html(profile.lifespan);
                 $(".animal-diet").html(profile.diet);
                 $(".animal-habitat").html(profile.habitat);
-
-                var lengthHtml = profile.lengthMin + "m - " + profile.lengthMax + "m";
-                $(".animal-length").html(lengthHtml);
-
-                var heightHtml = profile.heightMin + "m - " + profile.heightMax + "m";
-                $(".animal-height").html(heightHtml);
-
-                var weightHtml = profile.weightMin + "kg - " + profile.weightMax + "kg";
-                $(".animal-weight").html(weightHtml);
+                $(".animal-length").html(profile.length);
+                $(".animal-height").html(profile.height);
+                $(".animal-weight").html(profile.weight);
 
                 if (onComplete) {
                     onComplete();
@@ -210,18 +217,13 @@ function View() {
                 $("#image-slider-map").html(imagesHtml);
 
 
-                $("#map .animal-name").html(animal.name);
-                $("#map .cautionNotice").html(animal.cautionNotice);
-                $("#map .identification-pointers").html(profile.idPointers);
-
-                var lengthHtml = profile.lengthMin + "m - " + profile.lengthMax + "m";
-                $(".animal-length").html(lengthHtml);
-
-                var heightHtml = profile.heightMin + "m - " + profile.heightMax + "m";
-                $(".animal-height").html(heightHtml);
-
-                var weightHtml = profile.weightMin + "kg - " + profile.weightMax + "kg";
-                $(".animal-weight").html(weightHtml);
+//                $("#map .animal-name").html(animal.name);
+//                $("#map .cautionNotice").html(animal.cautionNotice);
+//                $("#map .identification-pointers").html(profile.idPointers);
+//
+//                $(".animal-length").html(profile.length);
+//                $(".animal-height").html(profile.height);
+//                $(".animal-weight").html(profile.weight);
 
                 if (onComplete) {
                     onComplete();
@@ -245,18 +247,13 @@ function View() {
                 $("#image-slider-footprints").html(imagesHtml);
 
 
-                $("#footprints .animal-name").html(animal.name);
-                $("#footprints .cautionNotice").html(animal.cautionNotice);
-                $("#footprints .identification-pointers").html(profile.idPointers);
-
-                var lengthHtml = profile.lengthMin + "m - " + profile.lengthMax + "m";
-                $(".animal-length").html(lengthHtml);
-
-                var heightHtml = profile.heightMin + "m - " + profile.heightMax + "m";
-                $(".animal-height").html(heightHtml);
-
-                var weightHtml = profile.weightMin + "kg - " + profile.weightMax + "kg";
-                $(".animal-weight").html(weightHtml);
+//                $("#footprints .animal-name").html(animal.name);
+//                $("#footprints .cautionNotice").html(animal.cautionNotice);
+//                $("#footprints .identification-pointers").html(profile.idPointers);
+//
+//                $(".animal-length").html(profile.length);
+//                $(".animal-height").html(profile.height);
+//                $(".animal-weight").html(profile.weight);
 
                 if (onComplete) {
                     onComplete();
@@ -306,14 +303,14 @@ function View() {
                 var lastLetter = '';
                 lettersHtml += "<div id=\"all\" class=\"letter-option\">All</div>";
                 for (var x = 0; x < animals.length; x++) {
-                    var firstLetter = animals[x].name.charAt(0);
+                    var firstLetter = animals[x].thumbName.charAt(0);
                     if (firstLetter !== lastLetter) {
                         lettersHtml += "<hr/><div id=\"" + firstLetter + "\" class=\"letter-heading\">"
                                 + "<b>" + firstLetter + "</b></div>";
                         lastLetter = firstLetter;
                     }
                     lettersHtml += "<div id=\"" + animals[x].animalID + "\" class=\"letter-option\">"
-                            + animals[x].name + "</div>";
+                            + animals[x].thumbName + "</div>";
                 }
                 $("#search-by-letter").html(lettersHtml);
 
@@ -470,7 +467,7 @@ function View() {
                 + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">Donate to a Conservation</div>"
                 + "</div>";
-
+        html += "<div class=\"profile-option-spacer\"></div>"
         return html;
     };
 
@@ -506,6 +503,8 @@ function View() {
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
         $(page + " .content .animal-donate")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
+
+        $(page + ".profile-option-spacer").css("height", footer_height);
 
         var left_margin_centre = 0; // from the centre of the content div
 

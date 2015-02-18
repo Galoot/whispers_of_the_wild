@@ -74,7 +74,7 @@ h4 {line-height: 34px;
     text-shadow: 1px 1px 2px #000;
     text-align: center;
     font-size: 16px;
-    
+
 }
 
 b {line-height: 24px;
@@ -487,6 +487,10 @@ footer-controls {
 /*    //min-height: 138px;*/
     vertical-align: bottom;
 /*    // line-height: 55px;*/
+}
+
+.profile-option-spacer {
+    border: 1px red solid;
 }
 
 .panel-slider-left-handle {
