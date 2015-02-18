@@ -71,6 +71,7 @@ var initSlider = function (panelClass, actionClass) {
             if (app.view.footerCollapsed) {
                 $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
             } else {
+                // since the slider goes upwards, the content needs to first wait for the slider to complete before decreasing the content height.
                 window.setTimeout(function() {
                         $("* .content .profile-content").css("height", (contentHeight - footerHeight) + "px");
                     }, 500);
