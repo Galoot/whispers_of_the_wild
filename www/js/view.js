@@ -16,6 +16,7 @@ function View() {
     this.footprintSlider = null;
     this.currentAnimal = null;
 
+    this.footerCollapsed = false;
     /**
      * Will change the mode from FREE to FREE_UNLOCKED.
      * If the current mode is not FREE, then this operation will do nothing.
@@ -565,6 +566,14 @@ function View() {
 
         var option_count = 0;
         var contentHeight = $(page + " .content").height();
+
+        // If the footer is collapsed, dont have the options take up the space.
+        var footer = $(".footer");
+        var footer_oh = footer.height() > 0 ? footer.outerHeight(true) : 0;
+//        if (app.view.footerCollapsed) {
+//            contentHeight -= footer_oh;
+//        }
+
         var option_height = contentHeight / 6;
 
         $(page + " .profile-option")
@@ -703,6 +712,9 @@ function View() {
 
         var c_new = window_h - header_oh - footer_oh - content_oh + content_h + 56;
 
+        if (app.view.footerCollapsed) {
+            c_new += footer_oh;
+        }
         content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
     };

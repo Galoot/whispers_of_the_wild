@@ -54,10 +54,9 @@ var initSlider = function (panelClass, actionClass) {
 
     }
 
-    var footerCollapsed = false;
+    app.view.footerCollapsed = false;
 
-    $(".panel-slider-" + actionClass + "-handle")[0].addEventListener('touchend', function (e) {
-        footerCollapsed = !footerCollapsed;
+    function slide() {
 
         $(panelClass).toggleClass(actionClass);
         $('.profile-content').toggleClass(actionClass);
@@ -66,29 +65,24 @@ var initSlider = function (panelClass, actionClass) {
         var contentHeight = $("* .content .profile-content").height();
         var footerHeight = $(".footer").height();
 
-        if (footerCollapsed && actionClass == 'bottom') {
-            $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
+        if (actionClass == 'bottom') {
+            app.view.footerCollapsed = !app.view.footerCollapsed;
+
+            if (app.view.footerCollapsed) {
+                $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
+            } else {
+                window.setTimeout(function() {
+                        $("* .content .profile-content").css("height", (contentHeight - footerHeight) + "px");
+                    }, 500);
+            }
         }
-        if (!footerCollapsed) {
-            $("* .content .profile-content").css("height", (contentHeight - footerHeight) + "px");
-        }
+    }
+
+    $(".panel-slider-" + actionClass + "-handle")[0].addEventListener('touchend', function (e) {
+        slide();
     });
 
     $(".panel-slider-" + actionClass + "-handle").click(function () {
-        footerCollapsed = !footerCollapsed;
-
-        $(panelClass).toggleClass(actionClass);
-        $('.profile-content').toggleClass(actionClass);
-        $('.panel-slider-' + actionClass + '-handle').toggleClass(actionClass);
-
-        var contentHeight = $("* .content .profile-content").height();
-        var footerHeight = $(".footer").height();
-
-        if (footerCollapsed && actionClass == 'bottom') {
-            $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
-        }
-        if (!footerCollapsed) {
-            $("* .content .profile-content").css("height", (contentHeight - footerHeight) + "px");
-        }
+        slide();
     });
 };
