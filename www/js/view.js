@@ -23,6 +23,7 @@ function View() {
 
     // state of footer being collapsed or not
     this.footerCollapsed = true;
+    this.navigationCollapsed = false;
     /**
      * Will change the mode from FREE to FREE_UNLOCKED.
      * If the current mode is not FREE, then this operation will do nothing.
@@ -481,11 +482,18 @@ function View() {
         var option_padding = 0; // space between option boxes
         var top_margin_start = 0; // from the top of the content div
         var left_handle_width = $(page + " .panel-slider-left-handle").width();
-        var footer_height = 100;
+        var footer_height = $(page + ".footer").height();
         var bottom_handle_height = $(page + " .panel-slider-bottom-handle").height();
         var option_count = 0;
         var contentHeight = $(page + " .content").height();
-        var option_height = contentHeight / 6;
+
+        // Make provision for the spacing for teh foooter
+        var optionsContentHeight = 0;
+        if (app.view.footerCollapsed) {
+            optionsContentHeight = contentHeight - footer_height;
+        }
+
+        var option_height = optionsContentHeight / 6;
 
         $(page + " .profile-option")
                 .css("margin-left", (0) + "px")
@@ -503,10 +511,13 @@ function View() {
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
         $(page + " .content .animal-donate")
                 .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
-
-        $(page + ".profile-option-spacer").css("height", footer_height);
+        $(page + " .profile-option-spacer")
+                .css("margin-top", (top_margin_start + (option_padding*option_count) + (option_height*option_count++)) + "px");
 
         var left_margin_centre = 0; // from the centre of the content div
+
+        var leftHandleTopPos = (contentHeight / 2) - (110 / 2);
+        $(page + " .content .panel-slider-left-handle").css("background-position", (0 + "px " + leftHandleTopPos + "px"));
 
         $(page + " .content .panel-slider-left-handle").css("height", (contentHeight + footer_height) + "px");
         $(page + " .content .panel-slider-left-handle").css("margin-top", (-1) + "px");
@@ -549,7 +560,7 @@ function View() {
                 + "<div class=\"profile-option-image\"></div>"
                 + "<div class=\"profile-option-text\">SOURCES</div>"
                 + "</div>";
-
+        html += "<div class=\"profile-option-spacer\"></div>"
         return html;
     };
 
@@ -562,7 +573,9 @@ function View() {
         var option_height = 50; // width and height of the option boxes (squares)
         var option_padding = 0; // space between option boxes
         var top_margin_start = 0; // from the top of the content div
-
+        var left_handle_width = $(page + " .panel-slider-left-handle").width();
+        var footer_height = $(page + ".footer").height();
+        var bottom_handle_height = $(page + " .panel-slider-bottom-handle").height();
         var option_count = 0;
         var contentHeight = $(page + " .content").height();
 
@@ -573,7 +586,13 @@ function View() {
 //            contentHeight -= footer_oh;
 //        }
 
-        var option_height = contentHeight / 6;
+        // Make provision for the spacing for teh foooter
+        var optionsContentHeight = 0;
+        if (app.view.footerCollapsed) {
+            optionsContentHeight = contentHeight - footer_height;
+        }
+
+        var option_height = optionsContentHeight / 6;
 
         $(page + " .profile-option")
                 .css("margin-left", (0) + "px")
@@ -716,5 +735,7 @@ function View() {
         }
         content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
+
+        this.profile_alignOptions("");
     };
 };

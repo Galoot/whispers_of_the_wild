@@ -63,12 +63,21 @@ var initSlider = function (panelClass, actionClass) {
         var contentHeight = $("* .content .profile-content").height();
         var footerHeight = $(".footer").height();
 
-        if (actionClass == 'bottom') {
+        if (actionClass == 'left') {
+            app.view.navigationCollapsed = !app.view.navigationCollapsed;
+            if (app.view.navigationCollapsed) {
+                $(".panel-slider-left-handle").css("background-image", "url('resources/buttons/navigation/left-handle-o.png')");
+            } else {
+                $(".panel-slider-left-handle").css("background-image", "url('resources/buttons/navigation/left-handle-c.png')");
+            }
+        } else if (actionClass == 'bottom') {
             app.view.footerCollapsed = !app.view.footerCollapsed;
 
             if (app.view.footerCollapsed) {
+                $(".panel-slider-bottom-handle").css("background-image", "url('resources/buttons/media_player/bottom-handle-o.png')");
                 $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
             } else {
+                $(".panel-slider-bottom-handle").css("background-image", "url('resources/buttons/media_player/bottom-handle-c.png')");
                 // since the slider goes upwards, the content needs to first wait for the slider to complete before decreasing the content height.
                 window.setTimeout(function() {
                         $("* .content .profile-content").css("height", (contentHeight - footerHeight) + "px");

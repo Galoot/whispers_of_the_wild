@@ -326,7 +326,7 @@
         height: 23px;
         float: right;
     }
-    
+
     .category-label {
     /*position: absolute;
      top: 120px;
@@ -541,6 +541,14 @@
         //padding-left: 50px;
         //border: 1px solid blue;
         //float: right;*/
+    }
+
+    .panel-slider-bottom-handle.bottom {
+        bottom: 50px !important;
+    }
+
+    .panel-slider-left-handle {
+        left: -80px; /* This is used for the panel slider */
     }
 
     .profile-content {
