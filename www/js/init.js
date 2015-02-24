@@ -209,6 +209,16 @@ function Application() {
             }
         });
 
+        $(".audio-prev").off();
+        $(".audio-prev").on("click", function (event) {
+            app.view.playPrevAudioTrack();
+        });
+
+        $(".audio-next").off();
+        $(".audio-next").on("click", function (event) {
+            app.view.playNextAudioTrack();
+        });
+
         // $(".footer-progress").html("<input class=\"audio-progress\"/>");
 
         // ==== Animals ========================================================

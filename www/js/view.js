@@ -1,3 +1,9 @@
+function AudioTrack(src, duration, name) {
+    this.trackName = name;
+    this.trackPath = src;
+    this.seconds = duration;
+}
+
 function View() {
     model = new Model();
     model.load_data(function() {
@@ -12,6 +18,7 @@ function View() {
 
     // audio track array for track navigation
     this.audioTrack = [];
+    this.currentAudioTrackIndex = -1;
 
     // image sliders
     this.profileSlider = null;
@@ -145,7 +152,12 @@ function View() {
         });
     };
 
-    this.playAudioTrack = function(src, dur, trackName) {
+    this.playAudioTrack = function(src, dur, trackName, existingTrack) {
+        if (!existingTrack) {
+            app.view.audioTrack.push(new AudioTrack(src, dur, trackName));
+            app.view.currentAudioTrackIndex = app.view.audioTrack.length - 1;
+        }
+
         pauseAudio();
         $(".footer-trackName").html(trackName);
         $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/pause.png')");
@@ -166,6 +178,18 @@ function View() {
                     $(this).nstSlider('set_position', percProgress);
                 });
             });
+    };
+
+    this.playPrevAudioTrack = function() {
+        app.view.currentAudioTrackIndex += (app.view.currentAudioTrackIndex > 0) ? -1 : 0;
+        var track = app.view.audioTrack[app.view.currentAudioTrackIndex];
+        this.playAudioTrack(track.trackPath, track.seconds, track.trackName, true);
+    };
+
+    this.playNextAudioTrack = function() {
+        app.view.currentAudioTrackIndex += (app.view.currentAudioTrackIndex < (app.view.audioTrack.length - 1)) ? 1 : 0;
+        var track = app.view.audioTrack[app.view.currentAudioTrackIndex];
+        this.playAudioTrack(track.trackPath, track.seconds, track.trackName, true);
     };
 
     this.playIntroTrack = function() {
@@ -488,14 +512,14 @@ function View() {
         var contentHeight = $(page + " .content").height();
 
         // Make provision for the spacing for teh foooter
-        var optionsContentHeight = 0;
+        var optionsContentHeight = contentHeight;
         if (app.view.footerCollapsed) {
             optionsContentHeight = contentHeight - footer_height;
         }
 
         var option_height = optionsContentHeight / 6;
 
-        $(page + " .profile-option")
+            $(page + " .profile-option")
                 .css("margin-left", (0) + "px")
                 .css("height", (option_height) + "px");
 
@@ -587,7 +611,7 @@ function View() {
 //        }
 
         // Make provision for the spacing for teh foooter
-        var optionsContentHeight = 0;
+        var optionsContentHeight = contentHeight;
         if (app.view.footerCollapsed) {
             optionsContentHeight = contentHeight - footer_height;
         }
@@ -713,29 +737,37 @@ function View() {
 
 
     this.app_maxHeight = function() {
+//        console.log("=====================================");
         var header = $(".header");
         var header_oh = header.height() > 0 ? header.outerHeight(true) : 0;
-        console.log("header height: " + header_oh);
+//        console.log("header height: " + header_oh);
 
         var footer = $(".footer");
         var footer_oh = footer.height() > 0 ? footer.outerHeight(true) : 0;
-        console.log("footer height: " + footer_oh);
+//        console.log("footer height: " + footer_oh);
 
         var content = $(".content");
 
         var window_h = $(window).height();
-
+//        console.log("window height: " + window_h);
         var content_h = content.height();
         var content_oh = content_h > 0 ? content.outerHeight(true) : 0;
+//        console.log("current content h: " + (content_h));
+//        console.log("current content oh: " + (content_oh));
 
-        var c_new = window_h - header_oh - footer_oh - content_oh + content_h + 56;
+        var x_factor = 56;
+        // check if in portrait mode
+        if (header_oh < 100) {
+            x_factor = 20;
+        }
+
+        var c_new = window_h - header_oh - footer_oh - content_oh + content_h + x_factor;
 
         if (app.view.footerCollapsed) {
             c_new += footer_oh;
         }
+//        console.log("new content height: " + c_new);
         content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
-
-        this.profile_alignOptions("");
     };
 };
