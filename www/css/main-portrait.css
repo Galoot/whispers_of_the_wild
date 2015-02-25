@@ -135,7 +135,7 @@
         height: 50px;
         width: 100%;
         text-align: center;
-        margin-top: 19px;
+        /* margin-top: 19px;*/
     }
 
     .content {
@@ -571,22 +571,6 @@
 /*        //vertical-align: middle;
         //display:inline-block;
         //margin: 15px;*/
-    }
-
-    .profile-tab-selected {
-        background-color: #9a9080;
-        width: 80px;
-/*        //min-height: 138px;*/
-        background-repeat: no-repeat;
-        text-shadow: none;
-        font-weight: bold;
-        text-align: center;
-        color: #272521;
-        text-transform: uppercase;
-        font-size: 13px;
-        -webkit-box-shadow: inset -2px -2px 5px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: inset -2px -2px 5px 0px rgba(0,0,0,0.75);
-        box-shadow: inset -2px -2px 5px 0px rgba(0,0,0,0.75);
     }
 
     .profile-option {
