@@ -326,16 +326,38 @@ function View() {
                 // Letters -----------------------------------------------------
                 var lettersHtml = "";
                 var lastLetter = '';
-                lettersHtml += "<div id=\"all\" class=\"letter-option\">All</div>";
+
+                var sortedAnimals = [];
                 for (var x = 0; x < animals.length; x++) {
-                    var firstLetter = animals[x].thumbName.charAt(0);
+                    sortedAnimals[x] = animals[x];
+                }
+                
+                var tempAnimal = null;
+
+                var allSorted = false;
+                while (!allSorted) {
+                    allSorted = true;
+                    for (var x = 0; x < sortedAnimals.length-1; x++) {
+                        if (sortedAnimals[x].thumbName > sortedAnimals[x+1].thumbName) {
+                            tempAnimal = sortedAnimals[x];
+                            sortedAnimals[x] = sortedAnimals[x+1];
+                            sortedAnimals[x+1] = tempAnimal;
+                            allSorted = false;
+                            break;
+                        }
+                    }
+                }
+
+                lettersHtml += "<div id=\"all\" class=\"letter-option\">All</div>";
+                for (var x = 0; x < sortedAnimals.length; x++) {
+                    var firstLetter = sortedAnimals[x].thumbName.charAt(0);
                     if (firstLetter !== lastLetter) {
                         lettersHtml += "<hr/><div id=\"" + firstLetter + "\" class=\"letter-heading\">"
                                 + "<b>" + firstLetter + "</b></div>";
                         lastLetter = firstLetter;
                     }
-                    lettersHtml += "<div id=\"" + animals[x].animalID + "\" class=\"letter-option\">"
-                            + animals[x].thumbName + "</div>";
+                    lettersHtml += "<div id=\"" + sortedAnimals[x].animalID + "\" class=\"letter-option\">"
+                            + sortedAnimals[x].thumbName + "</div>";
                 }
                 $("#search-by-letter").html(lettersHtml);
 
