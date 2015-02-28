@@ -433,7 +433,7 @@
 
     .animal-block {
         width: 70px;
-        height: 70px;
+        min-height: 70px;
         margin: 13px;
         display: inline-block;
     }

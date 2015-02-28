@@ -907,16 +907,22 @@ footer-controls {
 }
 
 .animal-block {
+    /*border: 1px red solid;*/
     width: 145px;
-    height: 145px;
+    min-height: 145px;
     margin: 13px;
     display: inline-block;
+    text-align: center;
 }
 
 .animal-icon {
     height: 145px;
     width: 145px;
     border-radius: 5px;
+}
+
+.animal-text {
+
 }
 
 .cautionNotice {

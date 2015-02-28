@@ -331,7 +331,7 @@ function View() {
                 for (var x = 0; x < animals.length; x++) {
                     sortedAnimals[x] = animals[x];
                 }
-                
+
                 var tempAnimal = null;
 
                 var allSorted = false;
@@ -369,6 +369,7 @@ function View() {
                             + "category=\"" + animals[x].category + "\" "
                             + "animalSize=\"" + animals[x].animalID + "\">";
                     animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                    animalGridHtml += "<div class=\"animal-text\">" + animals[x].thumbName + "</div>";
                     animalGridHtml += "</div>";
                 }
                 this.animal_animalGrid
