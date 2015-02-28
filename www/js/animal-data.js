@@ -54,33 +54,33 @@ load_animal_data = function(model, onCompleted) {
                 '40-70kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardvark 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Solitary termite hunters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardvark 2- Solitary termite hunters.mp3');
         mdl.addAudio(animal_counter, '03 The ultimate diggers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardvark 3- The ultimate diggers.mp3');
         mdl.addAudio(animal_counter, '04 Tongue and digestive system',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardvark 4- Tongue and digestive system.mp3');
         mdl.addAudio(animal_counter, '05 Relationship with humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardvark 5- Relationship with humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     // Aardwolf ==================================================================
     animalName = 'Aardwolf'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Aardwolf (Proteles cristatus)',
@@ -128,29 +128,29 @@ load_animal_data = function(model, onCompleted) {
                 '6-11kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardwolf 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Built to hunt termites',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardwolf 2- Built to hunt termites.mp3');
         mdl.addAudio(animal_counter, '03 A lifestyle shaped by termites',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardwolf 3- A lifestyle shaped by termites.mp3');
         mdl.addAudio(animal_counter, '04 Aardwolves and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Aardwolf 4- Aardwolves and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
-    // ========================================================================= 
-    
+    // =========================================================================
+
     // African Wildcat ==================================================================
     animalName = 'African Wildcat'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('African wildcat (Felis silvestris cafra)',
@@ -198,25 +198,25 @@ load_animal_data = function(model, onCompleted) {
                 '2.5-6kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/African Wild Cat 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Wild ancestors of the domestic cat',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/African Wild Cat 2- Wild ancestors of the domestic cat.mp3');
         mdl.addAudio(animal_counter, '03 Adaptable lifestyle and diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/African Wild Cat 3- Adaptable lifestyle and diet.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -267,40 +267,40 @@ load_animal_data = function(model, onCompleted) {
                 'Males: 25 – 45kg; Females: 12 – 20kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 The troop centre of baboon society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/01 The troop centre of baboon society.mp3');
         mdl.addAudio(animal_counter, '02 Grooming and communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/02 Grooming and communication 1.mp3');
         mdl.addAudio(animal_counter, '03 Baboon godfathers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/03 Baboon godfathers.mp3');
         mdl.addAudio(animal_counter, '04 Baboon males - defence and dominance',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/04 Baboon males - defence and dominance.mp3');
         mdl.addAudio(animal_counter, '05 Colour communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/05 Colour communication.mp3');
         mdl.addAudio(animal_counter, '06 Baby baboons the centre of attention',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/06 Baby baboons the centre of attention.mp3');
         mdl.addAudio(animal_counter, '07 Education and innovation on  the troop',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/07 Education and innovation on  the troop.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     // Bats ==================================================================
     animalName = 'Bats'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bats of the savannah',
@@ -348,32 +348,32 @@ load_animal_data = function(model, onCompleted) {
                 '5-300g' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Myth and reality',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bats 1- Myth and reality.mp3');
         mdl.addAudio(animal_counter, '02 The flying mammal',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bats 2- The flying mammal.mp3');
         mdl.addAudio(animal_counter, '03 Seeing the world through sound',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bats 3- Seeing the world through sound.mp3');
         mdl.addAudio(animal_counter, '04 Not as blind as you think',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bats 4- Not as blind as you think.mp3');
         mdl.addAudio(animal_counter, '05 Bats and society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bats 5- Bats and society.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
      // Black-footed cat  ==================================================================
     animalName = 'Black-footed cat'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Black-footed cat (Felis nigripes)',
@@ -421,24 +421,24 @@ load_animal_data = function(model, onCompleted) {
                 '1-2Kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Ferocious predators',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Black-Footed Cat 1- Ferocious predators.mp3');
         mdl.addAudio(animal_counter, '02 Defense strategies and social interactions',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Black-Footed Cat 2- Defense strategies and social interactions.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     // Blesbok and Bontebok   ==================================================================
     animalName = 'Blesbok and Bontebok'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Blesbok and Bontebok (Damaliscus pygargus)',
@@ -486,20 +486,20 @@ load_animal_data = function(model, onCompleted) {
                 '60-70Kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Blesbok and Bontebok',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Blesbok 1- Blesbok and Bontebok.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     // Buffalo ==================================================================
     animalName = 'Buffalo'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('African buffalo (Cycerus caffer)',
@@ -546,39 +546,39 @@ load_animal_data = function(model, onCompleted) {
                 '550-700kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Fearsome foes',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Buffalo 1- Fearsome foes.mp3');
         mdl.addAudio(animal_counter, '02 The herd- a complex society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Buffalo 2- The herd- a complex society.mp3');
         mdl.addAudio(animal_counter, '03 Bovine democracy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Buffalo 3- Bovine democracy.mp3');
         mdl.addAudio(animal_counter, '04 Defensive strategy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Buffalo 4- Defensive strategy.mp3');
         mdl.addAudio(animal_counter, '05 Buffalo bulls, a battle for dominance',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Buffalo 5- Buffalo bulls, a battle for dominance.mp3');
         mdl.addAudio(animal_counter, '06 Daga boys- grumpy old men',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Buffalo 6- Daga boys- grumpy old men.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Bushbabies ==================================================================
     animalName = 'Bushbaby or Galago'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bushbabies or Galago',
@@ -625,30 +625,30 @@ load_animal_data = function(model, onCompleted) {
                 'Lesser:120-210g, Thick-tailed:1-1.5kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Nocturnal, tree dweling primates',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 2- Nocturnal, tree dweling primates.mp3');
         mdl.addAudio(animal_counter, '03 Diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 3- Diet.mp3');
         mdl.addAudio(animal_counter, '04 Social interactions and communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 4- Social interactions and communication.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Bushbuck ==================================================================
     animalName = 'Bushbuck'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bushbuck (Tragelaphus scriptus)',
@@ -695,22 +695,22 @@ load_animal_data = function(model, onCompleted) {
                 '30-45kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Physical description',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Buck 1- Physical description.mp3');
         mdl.addAudio(animal_counter, '02 Placing your hind feet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Buck 2- Placing your hind feet.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
     });
     // =========================================================================
-    
+
     //Bushpig ==================================================================
     animalName = 'Bushpig'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bushpig (Potomochoerus larvatus)',
@@ -757,26 +757,26 @@ load_animal_data = function(model, onCompleted) {
                 '60-110kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Pig 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Adaptable diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Pig 2- Adaptable diet.mp3');
         mdl.addAudio(animal_counter, '02 Social structures',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Pig 3- Social structures.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Caracal ==================================================================
     animalName = 'Caracal'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Caracal (Caracal caracal)',
@@ -823,33 +823,33 @@ load_animal_data = function(model, onCompleted) {
                 '7-19kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + 'Caracal 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Ear tufts',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 2- Ear tufts.mp3');
         mdl.addAudio(animal_counter, '02 Incredible athleticism',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 3- Incredible athleticism.mp3');
         mdl.addAudio(animal_counter, '02 Adaptable hunters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 4- Adaptable hunters.mp3');
         mdl.addAudio(animal_counter, '05 Agricultural pests',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 5- Agricultural pests.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Cheetah ==================================================================
     animalName = 'Cheetah'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Cheetah (Ocinonyx jubatus)',
@@ -896,36 +896,36 @@ load_animal_data = function(model, onCompleted) {
                 '40-60kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Poorly equipped to compete',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + 'Cheetah 1- Poorly equipped to compete.mp3');
         mdl.addAudio(animal_counter, '02 Vulnerable from birth',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Cheetah 2- Vulnerable from birth.mp3');
         mdl.addAudio(animal_counter, '03 Social males, solitary females',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Cheetah 3- Social males, solitary females.mp3');
         mdl.addAudio(animal_counter, '04 Avoiding competition - daylight hunters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Cheetah 4- Avoiding competition - daylight hunters.mp3');
         mdl.addAudio(animal_counter, '05 Cheetahs and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Cheetah 5- Cheetahs and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Civet ==================================================================
     animalName = 'Civet'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Civet (Civettictus civetta)',
@@ -972,35 +972,35 @@ load_animal_data = function(model, onCompleted) {
                 '8-16kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Poorly equipped to compete',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + 'Civit 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Scent communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 2- Scent communication.mp3');
         mdl.addAudio(animal_counter, '03 Social males, solitary females',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 3- Scent communication.mp3');
         mdl.addAudio(animal_counter, '04 Civits in the perfume industry',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 4- Civits in the perfume industry.mp3');
         mdl.addAudio(animal_counter, '05 Poisonous diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 5- Poisonous diet.mp3');
         mdl.addAudio(animal_counter, '05 Role in the ecosystem.mp3',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 6- Role in the ecosystem.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     // Duiker ==================================================================
     animalName = 'Duiker (common)'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Common duiker (Sylvicapra grimmia)',
@@ -1047,24 +1047,24 @@ load_animal_data = function(model, onCompleted) {
                 '18-22kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Ancient and intelligent antelope',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Common Duiker 1- Ancient and intelligent antelope.mp3');
         mdl.addAudio(animal_counter, '02 The herd- a complex society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Common Duiker 2- The herd- a complex society.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Eland  ==================================================================
     animalName = 'Eland'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Eland (Tragelaphus oryx)',
@@ -1111,33 +1111,33 @@ load_animal_data = function(model, onCompleted) {
                 '450-900kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Eland 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Social interactions',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Eland 2- Social interactions.mp3');
         mdl.addAudio(animal_counter, '03 Defensive strategy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Eland 3- Defensive strategy.mp3');
         mdl.addAudio(animal_counter, '04 Bad mothers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Eland 4- Bad mothers.mp3');
         mdl.addAudio(animal_counter, '05 Importance to hunter gatherers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Eland 5- Importance to hunter gatherers.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Elephant  ==================================================================
     animalName = 'Elephant'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Elephant (Loxadonta Africana)',
@@ -1191,69 +1191,69 @@ load_animal_data = function(model, onCompleted) {
                 '2 600-6 000kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Unfussy eaters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 2- Unfussy eaters.mp3');
         mdl.addAudio(animal_counter, '03 Intelligence',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 3- Intelligence.mp3');
         mdl.addAudio(animal_counter, '04 The herd - education institutions',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 4-  The herd - education institutions.mp3');
         mdl.addAudio(animal_counter, '05 Elephant bulls in musth',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 5- Elephant bulls in musth.mp3');
         mdl.addAudio(animal_counter, '06 The most bizarre body on the planet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 6- The most bizarre body on the planet.mp3');
         mdl.addAudio(animal_counter, '07 Multifunctional ears',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 7- Multifunctional ears.mp3');
         mdl.addAudio(animal_counter, '08 The trunk - the most useful body part of all',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 8- The trunk - the most useful body part of all.mp3');
         mdl.addAudio(animal_counter, '09 Tusks - teeth with a difference',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 9- Tusks - teeth with a difference.mp3');
         mdl.addAudio(animal_counter, '10 Hearing through their feet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 10- Hearing through their feet.mp3');
         mdl.addAudio(animal_counter, '11 Elephants, makers and destroyers of habitats',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 11- Elephants, makers and destroyers of habitats.mp3');
         mdl.addAudio(animal_counter, '12 Creative destruction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 12- Creative destruction.mp3');
         mdl.addAudio(animal_counter, '13 Elephant poo as food',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 13- Elephant poo as food.mp3');
         mdl.addAudio(animal_counter, '14 Elephants influencing water dynamics',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 14- Elephants influencing water dynamics.mp3');
         mdl.addAudio(animal_counter, '15 Culling and population control',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 15- Culling and population control.mp3');
         mdl.addAudio(animal_counter, '16 Elephants and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 16- Elephants and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Gemsbok ==================================================================
     animalName = 'Gemsbok'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Gemsbok (Oryx gazella)',
@@ -1300,34 +1300,34 @@ load_animal_data = function(model, onCompleted) {
                 '210-240kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Magical arid specialists',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + 'Gemsbok 1- Magical arid specialists.mp3');
         mdl.addAudio(animal_counter, '02 Attaining water in the desert',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Gemsbok 2- Attaining water in the desert.mp3');
         mdl.addAudio(animal_counter, '03 Water retention',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Gemsbok 3- Water retention.mp3');
         mdl.addAudio(animal_counter, '04 Temperature regulation',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Gemsbok 4- Temperature regulation.mp3');
         mdl.addAudio(animal_counter, '05 Gemsbok and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Gemsbok 5- Gemsbok and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
      //Genet ==================================================================
     animalName = 'Genet'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Genet (Genetta genetta & Genetta tigrina)',
@@ -1374,28 +1374,28 @@ load_animal_data = function(model, onCompleted) {
                 '1.5-3.2kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Genet 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Nocturnal Hunters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Genet 2- Nocturnal Hunters.mp3');
         mdl.addAudio(animal_counter, '03 Social Interactions',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Genet 3- Social Interactions.mp3');
         mdl.addAudio(animal_counter, '04 Genets and Humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Genet 4- Genets and Humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Giraffe ==================================================================
     animalName = 'Giraffe'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Giraffe (Giraffa camelopardalis)',
@@ -1442,40 +1442,40 @@ load_animal_data = function(model, onCompleted) {
                 '700-1400kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
-        mdl.addImage(animal_counter, 'Image 7', resourcesPrefix + animalName.toLowerCase() + '/image7.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
+        mdl.addImage(animal_counter, 'Image 7', resourcesPrefix + name.toLowerCase() + '/image7.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Birth from above',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 2- Birth from above.mp3');
         mdl.addAudio(animal_counter, '03 Social structures',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 3- Social structures.mp3');
         mdl.addAudio(animal_counter, '04 Telling males and females apart',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 4- Telling males and females apart.mp3');
         mdl.addAudio(animal_counter, '04 Predation',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 5- Predation.mp3');
         mdl.addAudio(animal_counter, '04 Eating old bones',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 6- Eating old bones.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
      //Hares and rabbits ==================================================================
     animalName = 'Hares and rabbits'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Genet (Genetta genetta & Genetta tigrina)',
@@ -1522,29 +1522,29 @@ load_animal_data = function(model, onCompleted) {
                 '1.5-3.2kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Difference - body shape',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hares and rabbits 1- Difference - body shape.mp3');
         mdl.addAudio(animal_counter, '02 Difference - reproduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hares and rabbits 2- Difference - reproduction.mp3');
         mdl.addAudio(animal_counter, '03 Neglectful parents',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hares and rabbits 3- Neglectful parents.mp3');
         mdl.addAudio(animal_counter, '04 Disgusting habits',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hares and rabbits 4- Disgusting habits.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Hippo ==================================================================
     animalName = 'Hippo'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Hippopotamus (Hippopotamus amphibius)',
@@ -1591,41 +1591,41 @@ load_animal_data = function(model, onCompleted) {
                 '1000-2000kg' // Weight
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction - unusual relations',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 1- Introduction - unusual relations.mp3');
         mdl.addAudio(animal_counter, '02 Why live in water',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 2- Why live in water.mp3');
         mdl.addAudio(animal_counter, '03 Red sweat and pink milk',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 3- Red sweat and pink milk.mp3');
         mdl.addAudio(animal_counter, '04 Can hippos swim',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 4- Can hippos swim_.mp3');
         mdl.addAudio(animal_counter, '05 A male dominated society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 5- A male dominated society.mp3');
         mdl.addAudio(animal_counter, '06 Watery love- hippo mating',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 6- Watery love- hippo mating.mp3');
         mdl.addAudio(animal_counter, '07 Impact on the natural environment',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 7- Impact on the natural environment.mp3');
         mdl.addAudio(animal_counter, '08 Hippos and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 8- Hippos and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
     

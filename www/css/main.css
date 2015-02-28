@@ -1065,9 +1065,9 @@ footer-controls {
 }
 
 .leftLabel {
-    width: 20px;
+    width: 35px;
     height: 20px;
-    float: left;
+    /*float: left;*/
     text-align: left;
     overflow: hidden;
     margin-top: 10px;
@@ -1075,7 +1075,7 @@ footer-controls {
 }
 
 .rightLabel {
-    width: 20px;
+    width: 35px;
     height: 20px;
     float: right;
     text-align: right;

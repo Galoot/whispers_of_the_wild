@@ -14,7 +14,7 @@ function Model() {
 
     var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
 
-    var _get_animals = "SELECT a.animalID, idPointers, name, thumbName, commonNames, score, iconFilePath, category FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY name ASC";
+    var _get_animals = "SELECT a.animalID, idPointers, name, thumbName, commonNames, score, iconFilePath, category FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
 
     var _add_animal = "INSERT INTO ANM_Animal ("
             + "name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) "
