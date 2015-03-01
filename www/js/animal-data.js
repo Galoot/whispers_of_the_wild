@@ -440,8 +440,8 @@ load_animal_data = function(model, onCompleted) {
                 '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
