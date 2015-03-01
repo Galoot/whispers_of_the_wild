@@ -11,9 +11,10 @@ load_animal_data = function(model, onCompleted) {
     animalName = 'Bats'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bats of the savannah',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            '', // Common Names
+            'Bats', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -78,6 +79,7 @@ load_animal_data = function(model, onCompleted) {
             'Lesser bushbaby, southern lesser bushbaby, lesser galago; thick-tailed bushbaby, greater galago, thick-tailed galago', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -140,6 +142,7 @@ load_animal_data = function(model, onCompleted) {
             'Ground squirrel, tree squirrel', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
+            'safe', // Safety Advise
            
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -341,6 +344,7 @@ load_animal_data = function(model, onCompleted) {
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -397,6 +401,7 @@ load_animal_data = function(model, onCompleted) {
             'Small-spotted genet, common genet, large-spotted genet, ', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -457,6 +462,7 @@ load_animal_data = function(model, onCompleted) {
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -518,6 +524,7 @@ load_animal_data = function(model, onCompleted) {
             'Dassie, rock dassie, tree dassie', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -585,6 +592,7 @@ load_animal_data = function(model, onCompleted) {
             'honey badger, ratel', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -652,6 +660,7 @@ load_animal_data = function(model, onCompleted) {
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -789,6 +798,7 @@ load_animal_data = function(model, onCompleted) {
             'Ground pangolin, scaly anteater, cape pangolin, South African pangolin', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -855,6 +865,7 @@ load_animal_data = function(model, onCompleted) {
             'Jackals, BLACK-BACKED JACKAL, SIDE-STRIPED JACKAL', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -935,6 +946,7 @@ load_animal_data = function(model, onCompleted) {
             'Cape clawless otter, Spotted-necked otter', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1001,6 +1013,7 @@ load_animal_data = function(model, onCompleted) {
             'Genet', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1068,6 +1081,7 @@ load_animal_data = function(model, onCompleted) {
             'caracal, desert lynx', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1133,6 +1147,7 @@ load_animal_data = function(model, onCompleted) {
             'Aardwolf', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1194,6 +1209,7 @@ load_animal_data = function(model, onCompleted) {
             'Steenbok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1250,6 +1266,7 @@ load_animal_data = function(model, onCompleted) {
             'crested porcupine, cape porcupine', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1313,6 +1330,7 @@ load_animal_data = function(model, onCompleted) {
             'Common duiker, grey duiker', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1369,6 +1387,7 @@ load_animal_data = function(model, onCompleted) {
             'Aardvark, ant bear', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1434,6 +1453,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
+            'safe', // Safety Advise
            
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1499,7 +1519,7 @@ load_animal_data = function(model, onCompleted) {
     animalName = 'Baboon'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Baboon (Papio cynocephalus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            '', // Common Names
+            'Baboon', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
             '<b>Baboon Safety Advice</b>'
@@ -1730,6 +1750,7 @@ load_animal_data = function(model, onCompleted) {
             'Bushpig', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1788,6 +1809,7 @@ load_animal_data = function(model, onCompleted) {
             'wild dog, painted dog, African hunting dog', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1869,6 +1891,7 @@ load_animal_data = function(model, onCompleted) {
             'Bushbuck', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1923,6 +1946,7 @@ load_animal_data = function(model, onCompleted) {
             'Springbok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1987,6 +2011,7 @@ load_animal_data = function(model, onCompleted) {
             'Brown hyaena', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2054,6 +2079,7 @@ load_animal_data = function(model, onCompleted) {
             'Cheetah', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2209,6 +2235,7 @@ load_animal_data = function(model, onCompleted) {
             'Impala', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2290,6 +2317,7 @@ load_animal_data = function(model, onCompleted) {
             'Blesbok, bontebok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2442,6 +2470,7 @@ load_animal_data = function(model, onCompleted) {
             'Tsessebe, topi, tiang', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2504,6 +2533,7 @@ load_animal_data = function(model, onCompleted) {
             'Gemsbok, oryx, East African Oryx', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2570,6 +2600,7 @@ load_animal_data = function(model, onCompleted) {
             'Sable antelope, giant sable antelope', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2699,6 +2730,7 @@ load_animal_data = function(model, onCompleted) {
             'blue wildebeest, common wildebeest, brindled gnu', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2846,6 +2878,7 @@ load_animal_data = function(model, onCompleted) {
             'Roan antelope', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2908,6 +2941,7 @@ load_animal_data = function(model, onCompleted) {
             'Kudu, greater kudu', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -3146,6 +3180,7 @@ load_animal_data = function(model, onCompleted) {
             'Eland, common eland, giant eland', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -3205,12 +3240,13 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
     
     //Zebra ==================================================================
-    animalName = 'Plains zebra (Equus burchellii)'; // Thumbnail Name & Folder name under 'animals'
-    mdl.addAnimal('Zebra',
+    animalName = 'Zebra'; // Thumbnail Name & Folder name under 'animals'
+    mdl.addAnimal('Plains zebra (Equus burchellii)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'wild dog, painted dog, African hunting dog', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant herbivores (>300kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -3282,6 +3318,7 @@ load_animal_data = function(model, onCompleted) {
             'Giraffe', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant herbivores (>300kg)', // Category
+            'safe', // Safety Advise
             
             PayStatus.FREE, // Animal Status
             10, // Game Score
