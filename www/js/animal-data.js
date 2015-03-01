@@ -151,7 +151,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Springbok');
+        mdl.addName(animal_counter, 'Ground squirrel, tree squirrel');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -205,7 +205,7 @@ load_animal_data = function(model, onCompleted) {
     
     // Social Mongoose ==================================================================
     animalName = 'Social mongoose'; // Thumbnail Name & Folder name under 'animals'
-    mdl.addAnimal('Serval (Leptailurus serval)',
+    mdl.addAnimal('Social mongooses',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Banded mongoose, meerkat, suricate, dwarf mongoose', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
@@ -410,7 +410,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'caracal, desert lynx');
+        mdl.addName(animal_counter, 'Small-spotted genet, common genet, large-spotted genet');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -457,7 +457,7 @@ load_animal_data = function(model, onCompleted) {
     
      //Hares and rabbits ==================================================================
     animalName = 'Hares and rabbits'; // Thumbnail Name & Folder name under 'animals'
-    mdl.addAnimal('Genet (Genetta genetta & Genetta tigrina)',
+    mdl.addAnimal('Hares and rabbits',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
@@ -601,7 +601,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Honey badger');
+        mdl.addName(animal_counter, 'honey badger, ratel');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -906,31 +906,16 @@ load_animal_data = function(model, onCompleted) {
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
                 100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 1- Introduction.mp3');
-        mdl.addAudio(animal_counter, '02 Grooming to control ticks',
+                + '/Jackals 1- Introduction.mp3');
+        mdl.addAudio(animal_counter, '02 Jackal society',
                 100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 2- Grooming to control ticks.mp3');
-        mdl.addAudio(animal_counter, '03 Camouflage',
+                + '/Jackals 2- Jackal society.mp3');
+        mdl.addAudio(animal_counter, '03 Cunning and adaptability',
                 100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 3- Camouflage.mp3');
-        mdl.addAudio(animal_counter, '04 Unique amongst antelope',
+                + '/Jackals 3- Cunning and adaptability.mp3');
+        mdl.addAudio(animal_counter, '04 Jackals and humans',
                 100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 4- Unique amongst antelope.mp3');
-        mdl.addAudio(animal_counter, '05 The most successful antelope in Africa',
-                100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 5- The most successful antelope in Africa.mp3');
-        mdl.addAudio(animal_counter, '06 Secret to success 1- be a generalist',
-                100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 6- Secret to success 1- be a generalist.mp3');
-        mdl.addAudio(animal_counter, '07 Secret to success 2- be social',
-                100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 7- Secret to success 2- be social.mp3');
-        mdl.addAudio(animal_counter, '08 Secret to success 3- mass breeding, mass birth',
-                100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 8- Secret to success 3- mass breeding, mass birth.mp3');
-        mdl.addAudio(animal_counter, '09 Stay one step ahead',
-                100, resourcesPrefix + animalName.toLowerCase()
-                + '/Impala 9- Secret to success 4- stay one step ahead.mp3');
+                + '/Jackals 4- Jackals and humans.mp3');
         // Maps(s)
         mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
         // Footprints
@@ -1339,7 +1324,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'African buffalo, Cape buffalo');
+        mdl.addName(animal_counter, 'Common duiker, grey duiker');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -1396,7 +1381,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Aardvark');
+        mdl.addName(animal_counter, 'Aardvark, ant bear');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -1519,7 +1504,7 @@ load_animal_data = function(model, onCompleted) {
     animalName = 'Baboon'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Baboon (Papio cynocephalus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            'Baboon', // Common Names
+            'CHACMA BABOON, OLIVE BABOON, SAVANNAH BABOON', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
             '<b>Baboon Safety Advice</b>'
@@ -1539,7 +1524,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Baboon');
+        mdl.addName(animal_counter, 'CHACMA BABOON, OLIVE BABOON, SAVANNAH BABOON');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -2542,7 +2527,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'caracal, desert lynx');
+        mdl.addName(animal_counter, 'Gemsbok, oryx, East African Oryx');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -2739,7 +2724,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'wild dog, painted dog, African hunting dog');
+        mdl.addName(animal_counter, 'blue wildebeest, common wildebeest, brindled gnu');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -2887,7 +2872,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Ground pangolin, scaly anteater, cape pangolin, South African pangolin');
+        mdl.addName(animal_counter, 'Roan antelope');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -3105,7 +3090,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Ground pangolin, scaly anteater, cape pangolin, South African pangolin');
+        mdl.addName(animal_counter, 'White rhino, square-lipped rhino, black rhino, hooked-lipped rhino');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -3243,7 +3228,7 @@ load_animal_data = function(model, onCompleted) {
     animalName = 'Zebra'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Plains zebra (Equus burchellii)',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            'wild dog, painted dog, African hunting dog', // Common Names
+            'Zebra', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant herbivores (>300kg)', // Category
             'safe', // Safety Advise
@@ -3255,7 +3240,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'wild dog, painted dog, African hunting dog');
+        mdl.addName(animal_counter, 'Zebra');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -3327,7 +3312,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'caracal, desert lynx');
+        mdl.addName(animal_counter, 'Giraffe');
 
         // Profile Information
         mdl.addProfile(animal_counter,
@@ -3414,7 +3399,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animal_counter, 'Eland, common eland, giant eland');
+        mdl.addName(animal_counter, 'Elephant');
 
         // Profile Information
         mdl.addProfile(animal_counter,
