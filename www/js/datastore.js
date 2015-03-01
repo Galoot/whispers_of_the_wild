@@ -139,7 +139,9 @@ function Datastore() {
                             + "threats TEXT, "
                             + "length TEXT, "
                             + "height TEXT, "
-                            + "weight TEXT)");
+                            + "weight TEXT, "
+                            + "soundPath TEXT, "
+                            + "soundDuration INTEGER)");
 
 //                    tx.executeSql("DELETE FROM ANM_Audio");
                     tx.executeSql("DROP TABLE IF EXISTS ANM_Audio");

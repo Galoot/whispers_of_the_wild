@@ -29,12 +29,12 @@ function Model() {
     var _add_profile = "INSERT INTO ANM_Profile (\n\
             animalID, idPointers, confusedWith, activityPeriod, gestation, "
             + "lifespan, diet, predators, habitat, redListStatus, population, "
-            + "threats, length, height, weight) "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            + "threats, length, height, weight, soundPath, soundDuration) "
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     var _get_profile = "SELECT profileID, idPointers, confusedWith, activityPeriod, "
             + "gestation, lifespan, diet, predators, habitat, redListStatus, population, "
-            + "threats, length, height, weight "
+            + "threats, length, height, weight, soundPath, soundDuration "
             + "FROM ANM_Profile WHERE animalID = ?";
 
     var _add_image = "INSERT INTO ANM_Image (animalID, imageName, filePath) VALUES (?, ?, ?)";
@@ -151,10 +151,10 @@ function Model() {
 
     this.addProfile = function(animalID, idPointers, confusedWith, activityPeriod,
             gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
-            length, height, weight, onCompleted) {
+            length, height, weight, soundPath, soundDuration, onCompleted) {
         this.data.dbQuery(_add_profile, [animalID, idPointers, confusedWith, activityPeriod,
                 gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
-                length, height, weight],
+                length, height, weight, soundPath, soundDuration],
                 function(results) {
                     if (onCompleted) {
                         onCompleted();

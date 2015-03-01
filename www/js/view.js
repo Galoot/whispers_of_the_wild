@@ -128,7 +128,9 @@ function View() {
                 $(".red-list-status").html(profile.redListStatus);
                 $(".population").html(profile.population);
                 $(".threats").html(profile.threats);
+
                 $(".cautionNotice").html(animal.cautionNotice);
+
                 $(".identification-pointers").html(profile.idPointers);
                 $(".animal-gestation").html(profile.gestation);
                 $(".animal-lifespan").html(profile.lifespan);
