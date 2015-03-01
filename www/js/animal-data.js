@@ -436,6 +436,7 @@ load_animal_data = function(model, onCompleted) {
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
