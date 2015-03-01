@@ -39,7 +39,10 @@ function Datastore() {
                                 if (cols == null) {
                                     cols = [];
                                 }
-                                var ret = "{\"results\":[";
+
+                                var insert = (sql.indexOf("INSERT") != -1);
+                                var ret = "{" + (insert ? "\"insertId\":\"" + results.insertId + "\", " : "")
+                                        + "\"results\":[";
                                 for (var i = 0; i < results.rows.length; i++) {
                                     var row = results.rows.item(i);
 
