@@ -6,7 +6,7 @@ load_animal_data = function(model, onCompleted) {
 
     // should indicate the total number of animals loaded here
     var totalAnimals = 44;
-    
+
     // Aardvark ==================================================================
     animalName = 'Aardvark'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Aardvark (Orycteropus afer)',
@@ -51,7 +51,8 @@ load_animal_data = function(model, onCompleted) {
                 'Habitat loss to agriculture, hunting for meat and traditional medicine', // Threats
                 '1.4-1.8m', // Length
                 '0.4-0.5m', // Height
-                '40-70kg' // Weight
+                '40-70kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -125,7 +126,8 @@ load_animal_data = function(model, onCompleted) {
                 'Road collisions, habitat loss, mistakenly killed by farmers as vermin, despite not being capable of killing livestock.', // Threats
                 '80-100cm', // Length
                 '50cm', // Height
-                '6-11kg' // Weight
+                '6-11kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -195,7 +197,8 @@ load_animal_data = function(model, onCompleted) {
                 'Hybridization with domestic cats pollutes the gene pool, makes pure wildcats more rare; road kill; persecution by farmers', // Threats
                 '85-100cm', // Length
                 '35cm', // Height
-                '2.5-6kg' // Weight
+                '2.5-6kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -264,7 +267,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threat, occasionally killed as vermin, or for traditional medicine.', // Threats
                 'Males: 1.2 - 1.6m; Females: 1 - 1.2m', // Length
                 'Males: 70-75cm; females: 55-65cm', // Height
-                'Males: 25 – 45kg; Females: 12 – 20kg' // Weight
+                'Males: 25 – 45kg; Females: 12 – 20kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -345,7 +349,8 @@ load_animal_data = function(model, onCompleted) {
                 'Light and noise pollution, pesticides, human expansion.', // Threats
                 '15-60cm', // Length
                 '7-15cm', // Height
-                '5-300g' // Weight
+                '5-300g', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -418,7 +423,8 @@ load_animal_data = function(model, onCompleted) {
                 'Habitat degradation, indiscriminate pest control methods like poisoning and leg traps', // Threats
                 '50-60cm', // Length
                 '25cm', // Height
-                '1-2Kg' // Weight
+                '1-2Kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -483,7 +489,8 @@ load_animal_data = function(model, onCompleted) {
                 'No substantial threats, distinct bontebok subspecies under threat of hybridisation when introduced onto farms with more common blesbok', // Threats
                 '130-150', // Length
                 '90-95cm', // Height
-                '60-70Kg' // Weight
+                '60-70Kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -543,7 +550,8 @@ load_animal_data = function(model, onCompleted) {
                 'Habitat loss through competition with herders, poaching for bush meat, susceptible to disease and drought.', // Threats
                 '2.5m', // Length
                 '1.4m', // Height
-                '550-700kg' // Weight
+                '550-700kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -622,7 +630,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, but habitat loss and fire can have local impacts', // Threats
                 'Lesser:30-40cm, Thick-tailed:70-80cm', // Length
                 '', // Height
-                'Lesser:120-210g, Thick-tailed:1-1.5kg' // Weight
+                'Lesser:120-210g, Thick-tailed:1-1.5kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -692,7 +701,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, increased aridity due to climate change and desertification may have an effect, but range is spreading where human activity is opening up forests', // Threats
                 '130-150cm', // Length
                 '70-80cm', // Height
-                '30-45kg' // Weight
+                '30-45kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -754,7 +764,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, hunting and habitat loss could have localised effects. Subject to population control measures to reduce crop damage', // Threats
                 '140cm', // Length
                 '55-90cm', // Height
-                '60-110kg' // Weight
+                '60-110kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -820,7 +831,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, subject to persecution for livestock killings, habitat destruction a greater risk in Central, West and North Africa', // Threats
                 '70-110cm', // Length
                 '40-45cm', // Height
-                '7-19kg' // Weight
+                '7-19kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -893,7 +905,8 @@ load_animal_data = function(model, onCompleted) {
                 'Cheetah require huge areas to support a viable populations, habitat loss is causing isolation and extinction of populations. Depletion of their wild prey, particularly in North Africa, is a major problem. Conflict with farmers and herders a major threat in Southern Africa, despite them posing little threat to livestock. Indiscriminate predator control methods like leg traps and poison are a major threat. ', // Threats
                 '1.8-2.2cm', // Length
                 '80cm', // Height
-                '40-60kg' // Weight
+                '40-60kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -969,7 +982,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, popularly caught for bushmeat and fur trade, excretions from anal glands used in perfume industry.', // Threats
                 '120-140cm', // Length
                 '40-50cm', // Height
-                '8-16kg' // Weight
+                '8-16kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1044,7 +1058,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, but localised declines have been recorded, can survive in human altered landscapes, are extensively hunted for meat but can withstand relatively high hunting pressure.', // Threats
                 '±100cm', // Length
                 '40-50cm', // Height
-                '18-22kg' // Weight
+                '18-22kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1108,7 +1123,8 @@ load_animal_data = function(model, onCompleted) {
                 'Habitat loss, hunting and poaching for meat', // Threats
                 '2.4-2.8m', // Length
                 '1.5-1.7m', // Height
-                '450-900kg' // Weight
+                '450-900kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1188,7 +1204,8 @@ load_animal_data = function(model, onCompleted) {
                 'Poaching for ivory is exploding, habitat fragmentation, human-elephant conflict owing to raids and human attacks', // Threats
                 '5-7m', // Length
                 '2.5-4m', // Height
-                '2 600-6 000kg' // Weight
+                '2 600-6 000kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1297,7 +1314,8 @@ load_animal_data = function(model, onCompleted) {
                 'Hunting and poaching for meat, skins and horns, encroachment by livestock farmers and herders', // Threats
                 '190-240cm', // Length
                 '120cm', // Height
-                '210-240kg' // Weight
+                '210-240kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1371,7 +1389,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, sometimes killed by poultry farmers. Occasionally eaten as bush meat, and used for traditional medicine. Their fur is used for decorative purposes.', // Threats
                 '80-110cm', // Length
                 '25-35cm', // Height
-                '1.5-3.2kg' // Weight
+                '1.5-3.2kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1439,7 +1458,8 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, sometimes killed by poultry farmers. Occasionally eaten as bush meat, and used for traditional medicine. Their fur is used for decorative purposes. Habitat degradation and poaching are the main threats. Desertification from overgrazing also a problem. Increased aridity from climate change may also become a major threat.', // Threats
                 '3.5-5m (including neck and head)', // Length
                 '2-3.5m', // Height
-                '700-1400kg' // Weight
+                '700-1400kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1519,7 +1539,8 @@ load_animal_data = function(model, onCompleted) {
                 'Habitat fragmentation is the major threat to these animals. They are also hunted for their meat or for sport, and many are killed in collisions with cars.', // Threats
                 '80-110cm', // Length
                 '25-35cm', // Height
-                '1.5-3.2kg' // Weight
+                '1.5-3.2kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1588,7 +1609,8 @@ load_animal_data = function(model, onCompleted) {
                 'Hunting for meat and ivory is the major threat, particularly in areas of civil unrest. Pollution of waterways and disruption of water flow, as well as overgrazing have a major adverse effect. Expansion of human populations along waterways is also adversely affecting hippo populations. They are often killed in revenge for destroying crops or attacking humans.', // Threats
                 '3.1m', // Length
                 '1.4-1.7m', // Height
-                '1000-2000kg' // Weight
+                '1000-2000kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1628,7 +1650,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Honey badger ==================================================================
     animalName = 'Honey badger'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Honey badger (Mellivora capensis)',
@@ -1672,38 +1694,39 @@ load_animal_data = function(model, onCompleted) {
                 'persecuted by beekeepers and small livestock farmers; body parts used in traditional medicine to endow the taker with bravery and tenacity.', // Threats
                 '90-100cm ', // Length
                 '30cm', // Height
-                '8-14kg' // Weight
+                '8-14kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction - unusual relations',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 1- The most hardcore animal.mp3');
         mdl.addAudio(animal_counter, '02 Why live in water',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 2- Hardcore diet.mp3');
         mdl.addAudio(animal_counter, '03 Red sweat and pink milk',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 3- A taste for honey.mp3');
         mdl.addAudio(animal_counter, '04 Can hippos swim',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 4- Attack as a defense.mp3');
         mdl.addAudio(animal_counter, '05 A male dominated society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 5- Aggressive mating.mp3');
         mdl.addAudio(animal_counter, '06 Watery love- hippo mating',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 6- Honey badgers and people.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Brown hyaena ==================================================================
     animalName = 'Hyaena (Brown)'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Brown hyaena (Hyaena brunnea)',
@@ -1747,38 +1770,39 @@ load_animal_data = function(model, onCompleted) {
                 'Shot, poisoned and trapped by farmers in predator control programmes ', // Threats
                 '1.3-1.6m ', // Length
                 '80cm', // Height
-                '42-47kg' // Weight
+                '42-47kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Brown Hyaena 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Misunderstood carnivores',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Brown Hyaena 2- Misunderstood carnivores.mp3');
         mdl.addAudio(animal_counter, '03 Scavengers extrodinaire',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Brown Hyaena 3- Scavengers extrodinaire.mp3');
         mdl.addAudio(animal_counter, '04 Adaptable diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Brown Hyaena 4- Adaptable diet.mp3');
         mdl.addAudio(animal_counter, '05 Caring in the clan',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Brown Hyaena 5- Caring in the clan.mp3');
         mdl.addAudio(animal_counter, '06 Sent communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Brown Hyaena 5- Sent communication.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Spotted hyaena ==================================================================
     animalName = 'Hyaena (spotted)'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Spotted hyaena (Crocuta crocuta)',
@@ -1822,50 +1846,51 @@ load_animal_data = function(model, onCompleted) {
                 'Often shot, poisoned or trapped by livestock farmers, particularly outside of protected areas. Habitat destruction and fragmentation is having a negative effect on them. Their prey base is being depleted across their range, and their body parts are used in traditional medicine.', // Threats
                 '120-180cm', // Length
                 '70-90cm', // Height
-                '60-85kg' // Weight
+                '60-85kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Female dominated societies',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 2- Female dominated societies.mp3');
         mdl.addAudio(animal_counter, '03 Are they hermaphrodites',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 3- Are they hermaphrodites_.mp3');
         mdl.addAudio(animal_counter, '04 Dangerous siblings',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 4- Dangerous siblings.mp3');
         mdl.addAudio(animal_counter, '05 Territoriality and communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 5- Territoriality and communication.mp3');
         mdl.addAudio(animal_counter, '06 Hunting with stamina',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 6- Hunting with stamina.mp3');
         mdl.addAudio(animal_counter, '06 Master scavengers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 7- Master scavengers.mp3');
         mdl.addAudio(animal_counter, '06 Hyaenas, lions and other carnivores',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 8- Hyaenas, lions and other carnivores.mp3');
         mdl.addAudio(animal_counter, '06 Hyaenas and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 9- Hyaenas and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Hyrax (Procavia capensus) ==================================================================
     animalName = 'Hyrax'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Hyrax (Procavia capensus)',
@@ -1909,38 +1934,39 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, hunted locally and can become a pest', // Threats
                 '40-60cm', // Length
                 '25cm', // Height
-                '2.5-5kg' // Weight
+                '2.5-5kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animal_counter, '01 Influencing history',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hyrax 1- Influencing history.mp3');
         mdl.addAudio(animal_counter, '02 Unlikely relations',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hyrax 2- Unlikely relations.mp3');
         mdl.addAudio(animal_counter, '03 Strange body design',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hyrax 3- Strange body design.mp3');
         mdl.addAudio(animal_counter, '04 Body heat regulation',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hyrax 4- Body heat regulation.mp3');
         mdl.addAudio(animal_counter, '05 Social interaction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hyrax 5- Social interaction.mp3');
         mdl.addAudio(animal_counter, '06 Hyraxes and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Hyrax 6- Hyraxes and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Impala ==================================================================
     animalName = 'Impala'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Impala (Aepyceros melampus)',
@@ -1984,52 +2010,53 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, regularly killed for food, popular with sport hunters.', // Threats
                 '140cm', // Length
                 '80-90cm', // Height
-                '40-50kg' // Weight
+                '40-50kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Grooming to control ticks',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 2- Grooming to control ticks.mp3');
         mdl.addAudio(animal_counter, '03 Camouflage',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 3- Camouflage.mp3');
         mdl.addAudio(animal_counter, '04 Unique amongst antelope',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 4- Unique amongst antelope.mp3');
         mdl.addAudio(animal_counter, '05 The most successful antelope in Africa',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 5- The most successful antelope in Africa.mp3');
         mdl.addAudio(animal_counter, '06 Secret to success 1- be a generalist',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 6- Secret to success 1- be a generalist.mp3');
         mdl.addAudio(animal_counter, '07 Secret to success 2- be social',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 7- Secret to success 2- be social.mp3');
         mdl.addAudio(animal_counter, '08 Secret to success 3- mass breeding, mass birth',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 8- Secret to success 3- mass breeding, mass birth.mp3');
         mdl.addAudio(animal_counter, '09 Stay one step ahead',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 9- Secret to success 4- stay one step ahead.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Jackals (black-backed and side-striped) ==================================================================
     animalName = 'Jackals (black-backed and side-striped)'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Black-backed Jackal (Canis mesomelas) and Side-striped jackal (Canis adustus)',
@@ -2073,51 +2100,52 @@ load_animal_data = function(model, onCompleted) {
                 'Disease, particularly rabies can affect local populations, widely persecuted for killing livestock.', // Threats
                 '96-120cm', // Length
                 '40cm', // Height
-                '6-12kg' // Weight
+                '6-12kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Grooming to control ticks',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 2- Grooming to control ticks.mp3');
         mdl.addAudio(animal_counter, '03 Camouflage',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 3- Camouflage.mp3');
         mdl.addAudio(animal_counter, '04 Unique amongst antelope',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 4- Unique amongst antelope.mp3');
         mdl.addAudio(animal_counter, '05 The most successful antelope in Africa',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 5- The most successful antelope in Africa.mp3');
         mdl.addAudio(animal_counter, '06 Secret to success 1- be a generalist',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 6- Secret to success 1- be a generalist.mp3');
         mdl.addAudio(animal_counter, '07 Secret to success 2- be social',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 7- Secret to success 2- be social.mp3');
         mdl.addAudio(animal_counter, '08 Secret to success 3- mass breeding, mass birth',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 8- Secret to success 3- mass breeding, mass birth.mp3');
         mdl.addAudio(animal_counter, '09 Stay one step ahead',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 9- Secret to success 4- stay one step ahead.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Kudu (Tragelaphus strepsiceros) ==================================================================
     animalName = 'Kudu'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Kudu (Tragelaphus strepsiceros)',
@@ -2161,33 +2189,34 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, regularly killed for food, popular with sport hunters; habitat loss is also a problem, especially in the northern part of its range.', // Threats
                 '190-210cm ', // Length
                 '140-155cm', // Height
-                '180-250kg' // Weight
+                '180-250kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Kudu 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Horns in kudu society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Kudu 2- Horns in kudu society.mp3');
         mdl.addAudio(animal_counter, '03 Defensive strategy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Kudu 3- Defensive strategy.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Leopard ==================================================================
     animalName = 'Leopard'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Leopard (Panthera pardus)',
@@ -2230,43 +2259,44 @@ load_animal_data = function(model, onCompleted) {
                 'Widely persecuted by livestock and wildlife farmers for real or perceived livestock killing. They often fall victim to shooting, poisoning and leg traps. Habitat loss is also a problem, but leopards can often survive in close proximity to people. Their body parts are used in traditional medicine, and their skins are used in traditional ceremonial dress.', // Threats
                 '180cm', // Length
                 '60-80cm', // Height
-                '20-90kg' // Weight
+                '20-90kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image7.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image7.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 Adaptability - key to leopard success',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 2- Adaptability - key to leopard success.mp3');
         mdl.addAudio(animal_counter, '03 Opportunistic hunters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 3- Opportunistic hunters.mp3');
         mdl.addAudio(animal_counter, '04 Masters of surprise',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 4- Masters of surprise.mp3');
         mdl.addAudio(animal_counter, '05 Scary weaponry',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 5- Scary weaponry.mp3');
         mdl.addAudio(animal_counter, '06 Hoisting kills into trees',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 6- Hoisting kills into trees.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Lion ==================================================================
     animalName = 'Lion'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Lion (Panthera leo)',
@@ -2309,61 +2339,62 @@ load_animal_data = function(model, onCompleted) {
                 'Habitat fragmentation and isolation of populations within protected areas is a major risk. Lions are often persecuted by livestock farmers for killing livestock. Lions are popular with trophy hunters. Lion body parts are used for traditional medicine in Africa and Asia, and there is a growing market for lion meat in the bush meat trade. Over-hunting of their prey base is also having a detrimental effect.', // Threats
                 '250-320cm ', // Length
                 '110-120cm', // Height
-                '110-250kg' // Weight
+                '110-250kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image7.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image7.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, 'Special- Who is really the king of the jungle_.mp3',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lion special- Who is really the king of the jungle_.mp3');
         mdl.addAudio(animal_counter, '02 Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02 The social cats',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 2- The social cats.mp3');
         mdl.addAudio(animal_counter, '04 Scent communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 3- Scent communication.mp3');
         mdl.addAudio(animal_counter, '04 What&#39;s in a roar',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 4- What&#39;s in a roar_.mp3');
         mdl.addAudio(animal_counter, '05 Vulnerable at birth',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 5- Vulnerable at birth.mp3');
         mdl.addAudio(animal_counter, '06 Male lions - a battle for supremacy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 6- Male lions - a battle for supremacy.mp3');
         mdl.addAudio(animal_counter, '06 Male lions - serial cub killers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 7- Male lions - serial cub killers.mp3');
         mdl.addAudio(animal_counter, '08 Male lions - serial cub killers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 8- Male lions - serial cub killers.mp3');
         mdl.addAudio(animal_counter, '09 Built to kill',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 9- Built to kill.mp3');
         mdl.addAudio(animal_counter, '10 Hunting alone',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 10- Hunting alone.mp3');
         mdl.addAudio(animal_counter, '11 Cooperative hunters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 11- Cooperative hunters.mp3');
         mdl.addAudio(animal_counter, '12 Serious appetites',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 12- Serious appetites.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -2410,39 +2441,40 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, considered as an agricultural pest in many fruit growing areas, often killed as problem animals in reserves and lodges.', // Threats
                 '90-130cm', // Length
                 '0.4-0.5cm', // Height
-                '2-8.5kg' // Weight
+                '2-8.5kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, '01- Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Life in the trees',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 2- Life in the trees.mp3');
         mdl.addAudio(animal_counter, '03- Heirarchies in the troop',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 3- Heirarchies in the troop.mp3');
         mdl.addAudio(animal_counter, '04- Communication- expressive faces, colour communication',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 4- Communication- expressive faces, colour communication.mp3');
         mdl.addAudio(animal_counter, '05- Vocalisations and defensive strategy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 5- Vocalisations and defensive strategy.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Otter ==================================================================
     animalName = 'Otter'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Otters (Aonyx capensis &Lutra maculicollis )',
@@ -2486,37 +2518,38 @@ load_animal_data = function(model, onCompleted) {
                 'Alteration and degradation of freshwater and riparian habitats, reduction of water quality and clarity from pollution and soil erosion reducing hunting success, particularly for spotted necked otter. They are accidentally caught in fishing nets, or killed by fisherman in retaliation for steeling fish and damaging nets.', // Threats
                 'Cape Clawless otter: 110-160cm | Spotted-necked otter: 90-100cm ', // Length
                 'Cape Clawless otter: 0.4cm | Spotted-necked otter: 0.3cm', // Height
-                'Cape Clawless otter: 10-19kg | Spotted-necked otter: 3.5kg' // Weight
+                'Cape Clawless otter: 10-19kg | Spotted-necked otter: 3.5kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, '01- Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Otter fur- safe from cold',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 2- Otter fur- safe from cold.mp3');
         mdl.addAudio(animal_counter, '03- Expert fishermen',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 3- Expert fishermen.mp3');
         mdl.addAudio(animal_counter, '04- Otters and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 4- Otters and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
-         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot3.jpg');
-          mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot4.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
+         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot3.jpg');
+          mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot4.jpg');
     });
     // =========================================================================
-    
+
     //Pangolin ==================================================================
     animalName = 'Pangolin'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Pangolin (Manis temminckii)',
@@ -2560,36 +2593,37 @@ load_animal_data = function(model, onCompleted) {
                 'Pangolin meat is considered a delicacy in some Asian countries and they are increasingly being hunted for this purpose. Pangolin scales are used for a variety of medicinal purposes in Africa and Asia. Poaching is on the increase, mostly to supply the Asian market. In South Africa, electric fences kill between 2 and 13% of the South African population each year.', // Threats
                 '70-100cm ', // Length
                 '0.4cm', // Height
-                '5-15kg' // Weight
+                '5-15kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, '01- Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Ecosystem engineers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 2- Ecosystem engineers.mp3');
         mdl.addAudio(animal_counter, '03- Awkward reproduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 3- Awkward reproduction.mp3');
         mdl.addAudio(animal_counter, '04- Prickly defenses',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 4- Prickly defenses.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
-         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot3.jpg');
-          mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot4.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
+         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot3.jpg');
+          mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot4.jpg');
     });
     // =========================================================================
-    
+
     //Porcupine ==================================================================
     animalName = 'Porcupine'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Porcupine (Hystrix africaeaustralis)',
@@ -2633,36 +2667,37 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, can live in human altered habitats and in close proximity to human habitation. Can damage crops, in particular root crops, and is sometimes considered an agricultural pest.', // Threats
                 '75-100cm', // Length
                 '50-70cm', // Height
-                '10-24kg' // Weight
+                '10-24kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, '01- Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Ecosystem engineers',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 2- Ecosystem engineers.mp3');
         mdl.addAudio(animal_counter, '03- Awkward reproduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 3- Awkward reproduction.mp3');
         mdl.addAudio(animal_counter, '04- Prickly defenses',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 4- Prickly defenses.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
-         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot3.jpg');
-          mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot4.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
+         mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot3.jpg');
+          mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot4.jpg');
     });
     // =========================================================================
-    
+
     //Rhinoceros ==================================================================
     animalName = 'Rhino'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Rhinoceros (Ceratotherium simum and Diceros bicornis)',
@@ -2707,54 +2742,55 @@ load_animal_data = function(model, onCompleted) {
                 'Poaching for their horn has increased alarmingly since 2007, with over 1000 cases in 2013. This has been stimulated by demand for traditional medicines in Asian countries such as Vietnam and China. It is believed that the number of animals killed may now outnumber the number of births each year.', // Threats
                 'White rhino: 3.5m | Black rhino: 3.3m ', // Length
                 'White rhino: 1.5-1.7m | Black rhino: 1.6-1.8m', // Height
-                'White rhino: 1400-2300kg | Black rhino: 800-1200kg' // Weight
+                'White rhino: 1400-2300kg | Black rhino: 800-1200kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Rhino special- Rhino poaching - the history and reality.mp3',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhino special- Rhino poaching - the history and reality.mp3');
         mdl.addAudio(animal_counter, '01- Distinguising white and black rhinos',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 1- Distinguising white and black rhinos.mp3');
         mdl.addAudio(animal_counter, '02- Rhino ancient history',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 2- Rhino ancient history.mp3');
         mdl.addAudio(animal_counter, '03- White rhino diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 3- White rhino diet.mp3');
         mdl.addAudio(animal_counter, '04- Black rhino diet',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 4- Black rhino diet.mp3.mp3');
         mdl.addAudio(animal_counter, '05- Rhino social structures',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 5- Rhino social structures.mp3');
         mdl.addAudio(animal_counter, '06- Male rhinos territories',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 6- Male rhinos territories.mp3');
         mdl.addAudio(animal_counter, '07- Using the horn to socialise',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 7- Using the horn to socialise.mp3');
         mdl.addAudio(animal_counter, '08- Rhino horn - a formidable weapon',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 8- Rhino horn - a formidable weapon.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + animalName.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Roan ==================================================================
     animalName = 'Roan'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Roan antelope (Hippotragus equinus)',
@@ -2799,33 +2835,34 @@ load_animal_data = function(model, onCompleted) {
                 'Poaching and habitat loss have eliminated roan from much of their former range, but they still persist in many countries, including healthy populations in west Africa.', // Threats
                 '2.2-2.4m', // Length
                 '1.1-1.5m', // Height
-                '210-300kg' // Weight
+                '210-300kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Roan 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '01- Social behaviour.mp3',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Roan 2- Social behaviour.mp3');
         mdl.addAudio(animal_counter, '023 Roan and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Roan 3- Roan and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + animalName.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Sable ==================================================================
     animalName = 'Sable'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Sable antelope (Hippotragus niger)',
@@ -2870,37 +2907,38 @@ load_animal_data = function(model, onCompleted) {
                 'Sable have disappeared from much of their former range because of habitat loss and poaching for meat. They are stable in other parts of their range, and are popular with sport hunters.', // Threats
                 '2.1-2.3m', // Length
                 '1.3-1.4m', // Height
-                '180-270kg' // Weight
+                '180-270kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Fussy eaters',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 2- Fussy eaters.mp3');
         mdl.addAudio(animal_counter, '03 Social structures and predator defence',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 3- Social structures and predator defence.mp3');
          mdl.addAudio(animal_counter, '04 Glorious males',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 4- Glorious males.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + animalName.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Serval ==================================================================
     animalName = 'Serval'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Serval (Leptailurus serval)',
@@ -2945,39 +2983,40 @@ load_animal_data = function(model, onCompleted) {
                 'degradation and destruction of their wetland and grassland habitats is the main threat to this species. Their skins are used for ceremonial outfits, particularly in west Africa.', // Threats
                 '90-120cm', // Length
                 '50-65m', // Height
-                '8-13kg' // Weight
+                '8-13kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Built to catch rodents',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 2- Built to catch rodents.mp3');
         mdl.addAudio(animal_counter, '03 Solitary loners',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 3- Solitary loners.mp3');
          mdl.addAudio(animal_counter, '04 A life of danger',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 4- A life of danger.mp3');
          mdl.addAudio(animal_counter, '04 Servals and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 5- Servals and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + animalName.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Serval ==================================================================
     animalName = 'Social mongoose'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Serval (Leptailurus serval)',
@@ -3022,40 +3061,41 @@ load_animal_data = function(model, onCompleted) {
                 'There are no major threats to these species, habitat loss is probably their greatest threat.', // Threats
                 'Dwarf mongoose: 30-40cm<br/>Meerkat: 45-55cm<br/>Banded mongoose: 45-65cm', // Length
                 'Dwarf mongoose: 7-10cm<br/>Meerkat: 15cm<br/>Banded mongoose: 20cm', // Height
-                'Dwarf mongoose: 200-500g<br/>Meerkat: 600-1000g<br/>Banded mongoose: 1-1.6kg' // Weight
+                'Dwarf mongoose: 200-500g<br/>Meerkat: 600-1000g<br/>Banded mongoose: 1-1.6kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + animalName.toLowerCase() + '/image6.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+        mdl.addImage(animal_counter, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Cooperative defence and hunting',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 2- Cooperative defence and hunting.mp3');
         mdl.addAudio(animal_counter, '03 Cooperative breeding',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 3- Cooperative breeding.mp3');
          mdl.addAudio(animal_counter, '04 Dwarf mongooses and birds - unexpected relationships',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 4- Dwarf mongooses and birds - unexpected relationships.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + animalName.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot3.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot3.jpg');
     });
     // =========================================================================
-    
+
     //Serval ==================================================================
     animalName = 'Solitary mongoose'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Solitary mongooses',
@@ -3100,38 +3140,39 @@ load_animal_data = function(model, onCompleted) {
                 'There are no major threats to these species, habitat loss is probably their greatest threat.', // Threats
                 'Slender mongoose: 45-65cm<br/>Yellow mongoose: 40-60cm <br/>White-tailed mongoose: 90-150cm<br/>Egyptian mongoose: 95-110cm ', // Length
                 'Slender mongoose: 10-12cm<br/>Yellow mongoose: 15cm <br/>White-tailed mongoose: 30cm<br/>Egyptian mongoose: 30cm', // Height
-                'Slender mongoose: 400-800g<br/>Yellow mongoose: 400-900g<br/>White-tailed mongoose: 3-5kg<br/>Egyptian mongoose: 2.5-5kg' // Weight
+                'Slender mongoose: 400-800g<br/>Yellow mongoose: 400-900g<br/>White-tailed mongoose: 3-5kg<br/>Egyptian mongoose: 2.5-5kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + animalName.toLowerCase() + '/image5.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+        mdl.addImage(animal_counter, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Solitary Mongooses 1- Introduction.mp3');
         mdl.addAudio(animal_counter, '02- Why be solitary',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Solitary Mongooses 2- Why be solitary_.mp3');
         mdl.addAudio(animal_counter, '03 Social habits',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Solitary Mongooses 3- Social habits.mp3');
          mdl.addAudio(animal_counter, '04 Feeding habits and relationships with humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Solitary Mongooses 4- Feeding habits and relationships with humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + animalName.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
+        mdl.addMap(animal_counter, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Springbok ==================================================================
     animalName = 'Springbok'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Springbok (Antidorcas marsulialis)',
@@ -3176,35 +3217,36 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats. Fences, disease and automatic riffles put a stop to the great springbok migrations in the early 20th century.', // Threats
                 '120-140m ', // Length
                 '70-80cm', // Height
-                '35-45kg' // Weight
+                '35-45kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Springbok 1- Why is the springbok South Africa\'s national animal_.mp3');
         mdl.addAudio(animal_counter, '02- Survivors',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Springbok 2- Survivors.mp3');
         mdl.addAudio(animal_counter, '03 The great springbok migration',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Springbok 3- The great springbok migration.mp3');
         mdl.addAudio(animal_counter, '04 Why are they called springbok',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Springbok 4- why are they called springbok.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Squirrels ==================================================================
     animalName = 'Squirrels'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Squirrels (Xerus inauris & Paraxerus cepapi)',
@@ -3249,38 +3291,39 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, ground squirrels sometimes considered an agricultural pest.', // Threats
                 'Ground Squirrel: 40-50cm<br/>Tree Squirrel: 35cm', // Length
                 'Ground Squirrel: 25cm<br/>Tree Squirrel: 20cm', // Height
-                'Ground Squirrel: 500-1000g<br/>Tree Squirrel: 100-300g' // Weight
+                'Ground Squirrel: 500-1000g<br/>Tree Squirrel: 100-300g', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, 'Introduction- difference between tree and ground squirrels',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 1- Introduction- difference between tree and ground squirrels.mp3');
         mdl.addAudio(animal_counter, '02- Hoarding behaviour',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 2- The great springbok migration.mp3');
         mdl.addAudio(animal_counter, '03 Tree squirrel society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 3- Tree squirrel society.mp3');
         mdl.addAudio(animal_counter, '04 Ground squirrel society',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 4- Ground squirrel society.mp3');
         mdl.addAudio(animal_counter, '04 Predator defense',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 5- Predator defense.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Steenbok ==================================================================
     animalName = 'Steenbok'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Steenbok',
@@ -3325,27 +3368,28 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats. Locally threatened by overhunting and predation by domestic dogs that discover their helpless lambs lying out.', // Threats
                 '0.7-0.9m', // Length
                 '50-55cm', // Height
-                '8-11kg' // Weight
+                '8-11kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Secretive habits',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Steenbok 1- Secretive habits.mp3');
         mdl.addAudio(animal_counter, '02 Defensive strategy',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Steenbok 2- Defensive strategy.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //Steenbok ==================================================================
     animalName = 'Tsessebe'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Tsessebe (Damaliscus lunatus)',
@@ -3390,33 +3434,34 @@ load_animal_data = function(model, onCompleted) {
                 'Hunting and habitat degradation have eliminated the tsessebe from much of its former range. They are extremely adversely affected by cattle grazing.', // Threats
                 '190cm', // Length
                 '120cm', // Height
-                '120-140kg' // Weight
+                '120-140kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 One of the most abundant antelope in Africa',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Tsessebe 1- One of the most abundant antelope in Africa.mp3');
         mdl.addAudio(animal_counter, '02 The fastest antelope in Africa',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Tsessebe 2- The fastest antelope in Africa.mp3');
         mdl.addAudio(animal_counter, '03 Migrating in search of grass and mating',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Tsessebe 3- Migrating in search of grass and mating.mp3');
         mdl.addAudio(animal_counter, '04 Tsessebe and humans',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Tsessebe 4- Tsessebe and humans.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //warthog ==================================================================
     animalName = 'warthog'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('warthog (Phacochoerus africanus)',
@@ -3455,36 +3500,37 @@ load_animal_data = function(model, onCompleted) {
                 'Hunting and habitat degradation have eliminated the tsessebe from much of its former range. They are extremely adversely affected by cattle grazing.', // Threats
                 '190cm', // Length
                 '120cm', // Height
-                '120-140kg' // Weight
+                '120-140kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Why do they have warts',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Warthog 1- Why do they have warts_.mp3');
         mdl.addAudio(animal_counter, '02 Early lives',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Warthog 2- Early lives.mp3');
         mdl.addAudio(animal_counter, '03 Why do warthogs live in burrows',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Warthog 3- Why do warthogs live in burrows_.mp3');
         mdl.addAudio(animal_counter, '04 Why do warthogs bath in mud',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Warthog 4- Why do warthogs bath in mud_.mp3');
         mdl.addAudio(animal_counter, '05 Diet and feeding habits',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Warthog 5- Diet and feeding habits.mp3');
         // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
-    
+
     //waterbuck ==================================================================
     animalName = 'waterbuck'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('waterbuck',
@@ -3523,28 +3569,29 @@ load_animal_data = function(model, onCompleted) {
                 'No major threats, but is now absent from much of its former range due to over-hunting, destruction and degradation of fresh water habitats.', // Threats
                 '190cm', // Length
                 '1.2-1.4m', // Height
-                '250-280kg' // Weight
+                '250-280kg', // Weight
+                '', 0 // Path to sound clip and duration in seconds
                 );
         // Images
-        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + animalName.toLowerCase() + '/image1.jpg');
-        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + animalName.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + animalName.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + animalName.toLowerCase() + '/image4.jpg');
-        
+        mdl.addImage(animal_counter, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
+        mdl.addImage(animal_counter, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animal_counter, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animal_counter, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
+
         // Audio
         mdl.addAudio(animal_counter, '01 Why have a ring on your bum',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Waterbuck 1- Why have a ring on your bum_.mp3');
         mdl.addAudio(animal_counter, '02 A body adapted to water',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Waterbuck 2- A body adapted to water.mp3');
         mdl.addAudio(animal_counter, '03 Lifestyles shaped by water',
-                100, resourcesPrefix + animalName.toLowerCase()
+                100, resourcesPrefix + name.toLowerCase()
                 + '/Waterbuck 3- Lifestyles shaped by water.mp3'); // Maps(s)
-        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + animalName.toLowerCase() + '/map.jpg');
+        mdl.addMap(animal_counter, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + animalName.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + animalName.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animal_counter, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animal_counter, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
