@@ -135,7 +135,7 @@ function Model() {
         this.data.dbQuery(_add_animal, [name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
                 function(results) {
                     if (onCompleted) {
-                        onCompleted(name);
+                        onCompleted(thumbName);
                     }
                 });
     };
