@@ -172,7 +172,7 @@ p {line-height: 18px;
     margin-left:-100px; /* half of the width */
 }
 
-#profile, #map, #footprints, #menu, #audio, #donate, #question {
+#profile, #map, #footprints, #menu, #animals, #audio, #donate, #question {
     overflow-y: hidden;
 }
 
@@ -897,12 +897,13 @@ footer-controls {
 }
 
 #animals .content {
-    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .animal-grid {
 /*    padding: 50px 25px 50px 15px;*/
     margin: 0 auto;
+    overflow-y: scroll;
 /*    margin-top: 27px;*/
 }
 
@@ -956,7 +957,7 @@ footer-controls {
     margin: 0px 0 0 30px;
     width: 298px;
     background-color: rgba(47, 44, 50, 0.9);
-   display: none; /* // hide by default, must be last style*/
+    display: none; /* // hide by default, must be last style*/
 }
 .category-option {
     margin-left: 30px;
@@ -998,7 +999,7 @@ footer-controls {
     border: none;
     margin: 0px 30px 0 0;
     background-color: rgba(47, 44, 50, 0.9);
-   display: none;
+    display: none;
 }
 .letter-heading {
     float: left;
