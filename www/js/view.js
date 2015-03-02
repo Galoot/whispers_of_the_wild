@@ -794,5 +794,14 @@ function View() {
 //        console.log("new content height: " + c_new);
         content.height(c_new);
         $("* .content .profile-content").css("height", (c_new) + "px");
+
+        var animalsHeight = $("#animals .content").height();
+        var searchBySizeHeight = $("#search-by-size").height();
+        var sliderBottomHandleHeight = $(".panel-slider-bottom-handle").height() + 10;
+
+        $(".animal-grid").css("height",
+            (animalsHeight + footer_oh - searchBySizeHeight - searchBySizeHeight
+            - sliderBottomHandleHeight - $(".category-label").height()) + "px");
+        $("#search-by-size").css("bottom", (0 + 20) + "px");
     };
 };

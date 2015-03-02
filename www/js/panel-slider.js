@@ -60,8 +60,11 @@ var initSlider = function (panelClass, actionClass) {
         $('.profile-content').toggleClass(actionClass);
         $('.panel-slider-' + actionClass + '-handle').toggleClass(actionClass);
 
+        var animalsHeight = $("#animals .content").height();
         var contentHeight = $("* .content .profile-content").height();
         var footerHeight = $(".footer").height();
+        var searchBySizeHeight = $("#search-by-size").height();
+        var sliderBottomHandleHeight = $(".panel-slider-bottom-handle").height() + 10;
 
         if (actionClass == 'left') {
             app.view.navigationCollapsed = !app.view.navigationCollapsed;
@@ -76,12 +79,29 @@ var initSlider = function (panelClass, actionClass) {
             if (app.view.footerCollapsed) {
                 $(".panel-slider-bottom-handle").css("background-image", "url('resources/buttons/media_player/bottom-handle-o.png')");
                 $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
+
+                window.setTimeout(function() {
+                    $(".animal-grid").css("height",
+                        (animalsHeight + footerHeight - searchBySizeHeight - searchBySizeHeight
+                        - sliderBottomHandleHeight - $(".category-label").height()) + "px");
+
+                    $("#search-by-size").css("bottom", (0 + 20) + "px");
+                }, 350);
+
             } else {
                 $(".panel-slider-bottom-handle").css("background-image", "url('resources/buttons/media_player/bottom-handle-c.png')");
                 // since the slider goes upwards, the content needs to first wait for the slider to complete before decreasing the content height.
                 window.setTimeout(function() {
-                        $("* .content .profile-content").css("height", (contentHeight - footerHeight) + "px");
-                    }, 500);
+                        $("* .content .profile-content").css("height",
+                                (contentHeight - footerHeight) + "px");
+
+                        $(".animal-grid").css("height",
+                                (animalsHeight - searchBySizeHeight - searchBySizeHeight
+                                - sliderBottomHandleHeight - $(".category-label").height()) + "px");
+
+                        $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
+
+                    }, 350);
             }
         }
     }
