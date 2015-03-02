@@ -342,7 +342,8 @@
     /*position: absolute;*/
     border-radius: 5px;
     margin-left: 5%;
-    }
+    /* overflow-y: scroll; */
+}
     .search-by-category {
         padding: 6px;
         position: absolute;
@@ -388,13 +389,18 @@
         background-color: #68666a;
         /*position: absolute;*/
         border-radius: 5px;
-    }
+    
+        /* max-height: 400px; */
+        /* overflow-y: scroll; */
+}
     .search-by-letter {
         padding: 6px;
         z-index: 3001;
         overflow: hidden;
         max-width: 309px;
         width: 309px;
+        max-height: 400px;
+        overflow-y:  scroll;
         min-width: 309;
         /* margin-top: 36px; */
     /*    //background-color: lightgray;*/
@@ -404,6 +410,10 @@
         left: 18px;
         display: none;
         margin: 40px 0 0 0px;
+        -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+        position: fixed; /* This means we don't have to worry about overflow issues */
+        -webkit-transition: left 0.2s ease-in;
+        transition: left 0.2s ease-in;
         /* float: left; */
     }
     .letter-heading {
@@ -426,21 +436,23 @@
     }
 
     .animal-grid {
-        padding: 25px 13px 25px 12px;
+        padding: 25px 5px 25px 9px;
         margin: 0 auto;
-        margin-top: 27px;
+        margin-top: 20px;
     }
 
     .animal-block {
-        width: 70px;
-        min-height: 70px;
-        margin: 13px;
+        width: 97px;
+        min-height: 80px;
+        margin: 14px;
+        margin-left: 5px;
+        margin-bottom: 5px;
         display: inline-block;
     }
 
     .animal-icon {
-        height: 70px;
-        width: 70px;
+        height: 95px;
+        width: 95px;
         border-radius: 5px;
     }
 
@@ -565,7 +577,10 @@
         text-shadow: 1px 1px 2px #000;
         text-align: center;
         text-transform: uppercase;
-        font-size: 13px;
+        
+
+
+        font-size: 11px;
 
         left: -80px;
 /*        //vertical-align: middle;
@@ -747,5 +762,24 @@
         font-size: 8px;
 /*        //border: black solid thin;*/
     }
-
+    
+    #animalSizeSlider.nstSlider {
+    width: 100%;
+    margin-top: 33px;
+    /* margin: 0 auto; */
+    }
+    
+    .search-by-size {
+    overflow: hidden;
+    width: 78%;
+    height: 120px;
+    position: absolute;
+    bottom: 120px;
+    left: 20px;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px #000;
+    /* border: black solid thin; */
+    }
+ 
 }

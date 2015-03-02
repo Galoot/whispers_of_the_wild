@@ -11,7 +11,7 @@ load_animal_data = function(model, onCompleted) {
     animalName = 'Bats'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bats of the savannah',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            'Bats', // Common Names
+            'Bats, fruit bats, leaf-nosed bats, sheath-tailed bats, slit-faced bats, horseshoe bats, vesper bats, free-tailed bats', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
             'safe', // Safety Advise
@@ -74,7 +74,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Bushbabies ==================================================================
-    animalName = 'Bushbaby or Galago'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Bush baby'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Bushbabies or Galago',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Lesser bushbaby, southern lesser bushbaby, lesser galago; thick-tailed bushbaby, greater galago, thick-tailed galago', // Common Names
@@ -212,6 +212,8 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Banded mongoose, meerkat, suricate, dwarf mongoose', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            'Small Carnivores', // Category
+            'safe', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -281,6 +283,8 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'slender mongoose, yellow mongoose, white-tailed mongoose, Egyptian mongoose', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            'Small Carnivores', // Category
+            'safe', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -317,8 +321,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
-        mdl.addImage(animalID, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
-
 
         // Audio
         mdl.addAudio(animalID, 'Introduction',
@@ -464,7 +466,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
      //Hares and rabbits ==================================================================
-    animalName = 'Hares and rabbits'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Hares'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Hares and rabbits',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
@@ -665,7 +667,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     // African Wildcat ==================================================================
-    animalName = 'African Wildcat'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Wildcat'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('African wildcat (Felis silvestris cafra)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             '', // Common Names
@@ -706,8 +708,6 @@ load_animal_data = function(model, onCompleted) {
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
-        mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
-        mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         // Audio
         mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
@@ -727,7 +727,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Vervet monkey ==================================================================
-    animalName = 'Monkey (vervet)'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Vervet monkey'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Vervet monkey (Chlorocebus aethiops)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'vervet monkey, green monkey, grivet monkey', // Common Names
@@ -873,7 +873,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Jackals (black-backed and side-striped) ==================================================================
-    animalName = 'Jackals (black-backed and side-striped)'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Jackals'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Black-backed Jackal (Canis mesomelas) and Side-striped jackal (Canis adustus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Jackals, BLACK-BACKED JACKAL, SIDE-STRIPED JACKAL', // Common Names
@@ -1008,10 +1008,10 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Civet ==================================================================
-    animalName = 'Civet'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Civit'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Civet (Civettictus civetta)',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            'Genet', // Common Names
+            'Civit', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
             'safe', // Safety Advise
@@ -1023,7 +1023,7 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Civet');
+        mdl.addName(animalID, 'Civit');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1330,7 +1330,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     // Duiker ==================================================================
-    animalName = 'Duiker (common)'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Duiker'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Common duiker (Sylvicapra grimmia)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Common duiker, grey duiker', // Common Names
@@ -1607,7 +1607,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
 //warthog ==================================================================
-    animalName = 'warthog'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Warthog'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('warthog (Phacochoerus africanus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'warthog', // Common Names
@@ -1816,7 +1816,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //wild dogs ==================================================================
-    animalName = 'Wild dog or painted dog'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Wild dog'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('wild dogs (Lycaon pictus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'wild dog, painted dog, African hunting dog', // Common Names
@@ -2021,7 +2021,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Brown hyaena ==================================================================
-    animalName = 'Hyaena (Brown)'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Brown Hyaena'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Brown hyaena (Hyaena brunnea)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Brown hyaena', // Common Names
@@ -2160,7 +2160,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Spotted hyaena ==================================================================
-    animalName = 'Hyaena (spotted)'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Spotted Hyaena'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Spotted hyaena (Crocuta crocuta)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Spotted hyaena', // Common Names
@@ -2331,7 +2331,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     // Blesbok and Bontebok   ==================================================================
-    animalName = 'Blesbok and Bontebok'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Blesbok'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Blesbok and Bontebok (Damaliscus pygargus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Blesbok, bontebok', // Common Names
@@ -2677,8 +2677,7 @@ load_animal_data = function(model, onCompleted) {
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 4- Glorious males.mp3');
         // Maps(s)
-        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animalID, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
         mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
@@ -2686,7 +2685,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //waterbuck ==================================================================
-    animalName = 'waterbuck'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Waterbuck'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('waterbuck',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'waterbuck', // Common Names
@@ -2750,7 +2749,7 @@ load_animal_data = function(model, onCompleted) {
     // =========================================================================
 
     //Blue wildebeest ==================================================================
-    animalName = 'Wildebeest (blue)'; // Thumbnail Name & Folder name under 'animals'
+    animalName = 'Wildebeest'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Blue wildebeest (Connochaetes taurinus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'blue wildebeest, common wildebeest, brindled gnu', // Common Names
