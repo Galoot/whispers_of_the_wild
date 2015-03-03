@@ -18,7 +18,6 @@ var initSlider = function (panelClass, actionClass) {
     }
 
     sideBarHeight();
-
     var outIn = 'in';
 
     /*
@@ -51,7 +50,6 @@ var initSlider = function (panelClass, actionClass) {
             outIn = 'out';
 
         }
-
     }
 
     function slide() {
@@ -73,6 +71,12 @@ var initSlider = function (panelClass, actionClass) {
             } else {
                 $(".panel-slider-left-handle").css("background-image", "url('resources/buttons/navigation/left-handle-c.png')");
             }
+
+            window.setTimeout(function() {
+                app.view.destroySliders();
+                app.view.reloadImageSliders();
+            }, 220);
+
         } else if (actionClass == 'bottom') {
             app.view.footerCollapsed = !app.view.footerCollapsed;
 

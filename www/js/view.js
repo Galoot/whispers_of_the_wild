@@ -390,6 +390,7 @@ function View() {
                 $('.category-option').each(function() {
                     $(this).off();
                     $(this).on("click", function(event) {
+                        $("#search-by-category").toggle();
                         var category = event.target.id;
 
                         $(".animal-block").each(function() {
@@ -409,6 +410,7 @@ function View() {
                 $('.letter-option').each(function() {
                     $(this).off();
                     $(this).on("click", function(event) {
+                        $("#search-by-letter").toggle();
                         var letter = event.target.id;
 
                         $(".animal-block").each(function() {
