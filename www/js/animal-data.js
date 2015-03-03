@@ -14,7 +14,7 @@ load_animal_data = function(model, onCompleted) {
             'Bats, fruit bats, leaf-nosed bats, sheath-tailed bats, slit-faced bats, horseshoe bats, vesper bats, free-tailed bats', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -80,7 +80,7 @@ load_animal_data = function(model, onCompleted) {
             'Lesser bushbaby, southern lesser bushbaby, lesser galago; thick-tailed bushbaby, greater galago, thick-tailed galago', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -144,7 +144,7 @@ load_animal_data = function(model, onCompleted) {
             'Ground squirrel, tree squirrel', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -213,7 +213,7 @@ load_animal_data = function(model, onCompleted) {
             'Banded mongoose, meerkat, suricate, dwarf mongoose', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -284,7 +284,7 @@ load_animal_data = function(model, onCompleted) {
             'slender mongoose, yellow mongoose, white-tailed mongoose, Egyptian mongoose', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -351,7 +351,7 @@ load_animal_data = function(model, onCompleted) {
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -409,7 +409,7 @@ load_animal_data = function(model, onCompleted) {
             'Small-spotted genet, common genet, large-spotted genet, ', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -472,7 +472,7 @@ load_animal_data = function(model, onCompleted) {
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -535,7 +535,7 @@ load_animal_data = function(model, onCompleted) {
             'Dassie, rock dassie, tree dassie', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -604,7 +604,7 @@ load_animal_data = function(model, onCompleted) {
             'honey badger, ratel', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -673,7 +673,7 @@ load_animal_data = function(model, onCompleted) {
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -771,7 +771,7 @@ load_animal_data = function(model, onCompleted) {
                 '90-130cm', // Length
                 '0.4-0.5cm', // Height
                 '2-8.5kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Vervet monkey.mp3', 19 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -811,7 +811,7 @@ load_animal_data = function(model, onCompleted) {
             'Ground pangolin, scaly anteater, cape pangolin, South African pangolin', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -879,7 +879,7 @@ load_animal_data = function(model, onCompleted) {
             'Jackals, BLACK-BACKED JACKAL, SIDE-STRIPED JACKAL', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -909,7 +909,7 @@ load_animal_data = function(model, onCompleted) {
                 '96-120cm', // Length
                 '40cm', // Height
                 '6-12kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Jackal howl.mp3', 43 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -946,7 +946,7 @@ load_animal_data = function(model, onCompleted) {
             'Cape clawless otter, Spotted-necked otter', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1014,7 +1014,7 @@ load_animal_data = function(model, onCompleted) {
             'Civit', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1083,7 +1083,7 @@ load_animal_data = function(model, onCompleted) {
             'caracal, desert lynx', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1150,7 +1150,7 @@ load_animal_data = function(model, onCompleted) {
             'Aardwolf', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1213,7 +1213,7 @@ load_animal_data = function(model, onCompleted) {
             'Steenbok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1271,7 +1271,7 @@ load_animal_data = function(model, onCompleted) {
             'crested porcupine, cape porcupine', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1336,7 +1336,7 @@ load_animal_data = function(model, onCompleted) {
             'Common duiker, grey duiker', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1394,7 +1394,7 @@ load_animal_data = function(model, onCompleted) {
             'Aardvark, ant bear', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1461,7 +1461,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1569,7 +1569,7 @@ load_animal_data = function(model, onCompleted) {
                 'Males: 1.2 - 1.6m; Females: 1 - 1.2m', // Length
                 'Males: 70-75cm; females: 55-65cm', // Height
                 'Males: 25 – 45kg; Females: 12 – 20kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Baboon sound.mp3', 23 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1718,7 +1718,7 @@ load_animal_data = function(model, onCompleted) {
                 '180cm', // Length
                 '60-80cm', // Height
                 '20-90kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Leopard roar.mp3', 22 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1762,7 +1762,7 @@ load_animal_data = function(model, onCompleted) {
             'Bushpig', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1822,7 +1822,7 @@ load_animal_data = function(model, onCompleted) {
             'wild dog, painted dog, African hunting dog', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1852,7 +1852,7 @@ load_animal_data = function(model, onCompleted) {
                 '110-150m', // Length
                 '60-80m', // Height
                 '20-30kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Wild dog.mp3', 47 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -1905,7 +1905,7 @@ load_animal_data = function(model, onCompleted) {
             'Bushbuck', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -1961,7 +1961,7 @@ load_animal_data = function(model, onCompleted) {
             'Springbok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2027,7 +2027,7 @@ load_animal_data = function(model, onCompleted) {
             'Brown hyaena', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2096,7 +2096,7 @@ load_animal_data = function(model, onCompleted) {
             'Cheetah', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2126,7 +2126,7 @@ load_animal_data = function(model, onCompleted) {
                 '1.8-2.2cm', // Length
                 '80cm', // Height
                 '40-60kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Cheetah.mp3', 28 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -2203,7 +2203,7 @@ load_animal_data = function(model, onCompleted) {
                 '120-180cm', // Length
                 '70-90cm', // Height
                 '60-85kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Hyaena noise.mp3', 46 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -2254,7 +2254,7 @@ load_animal_data = function(model, onCompleted) {
             'Impala', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2284,7 +2284,7 @@ load_animal_data = function(model, onCompleted) {
                 '140cm', // Length
                 '80-90cm', // Height
                 '40-50kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Impala call.mp3', 32 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -2337,7 +2337,7 @@ load_animal_data = function(model, onCompleted) {
             'Blesbok, bontebok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2427,7 +2427,7 @@ load_animal_data = function(model, onCompleted) {
                 '250-320cm ', // Length
                 '110-120cm', // Height
                 '110-250kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Lion roar.mp3', 31 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -2492,7 +2492,7 @@ load_animal_data = function(model, onCompleted) {
             'Tsessebe, topi, tiang', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2556,7 +2556,7 @@ load_animal_data = function(model, onCompleted) {
             'Gemsbok, oryx, East African Oryx', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2624,7 +2624,7 @@ load_animal_data = function(model, onCompleted) {
             'Sable antelope, giant sable antelope', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2755,7 +2755,7 @@ load_animal_data = function(model, onCompleted) {
             'blue wildebeest, common wildebeest, brindled gnu', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2785,7 +2785,7 @@ load_animal_data = function(model, onCompleted) {
                 '2m', // Length
                 '1.3-1.5m', // Height
                 '180-250kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Wildebeest noise.mp3', 11 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -2905,7 +2905,7 @@ load_animal_data = function(model, onCompleted) {
             'Roan antelope', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2969,7 +2969,7 @@ load_animal_data = function(model, onCompleted) {
             'Kudu, greater kudu', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -2999,7 +2999,7 @@ load_animal_data = function(model, onCompleted) {
                 '190-210cm ', // Length
                 '140-155cm', // Height
                 '180-250kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Kudu call.mp3', 22 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -3070,7 +3070,7 @@ load_animal_data = function(model, onCompleted) {
                 '3.1m', // Length
                 '1.4-1.7m', // Height
                 '1000-2000kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Hippo noise.mp3', 34 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -3156,7 +3156,7 @@ load_animal_data = function(model, onCompleted) {
                 'White rhino: 3.5m | Black rhino: 3.3m ', // Length
                 'White rhino: 1.5-1.7m | Black rhino: 1.6-1.8m', // Height
                 'White rhino: 1400-2300kg | Black rhino: 800-1200kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Rhino noise.mp3', 28 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -3211,7 +3211,7 @@ load_animal_data = function(model, onCompleted) {
             'Eland, common eland, giant eland', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -3278,7 +3278,7 @@ load_animal_data = function(model, onCompleted) {
             'Zebra', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant herbivores (>300kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -3308,7 +3308,7 @@ load_animal_data = function(model, onCompleted) {
                 '2.2-2.4m ', // Length
                 '1.2.-1.4m', // Height
                 '280-350kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Zebra.mp3', 23 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
@@ -3351,7 +3351,7 @@ load_animal_data = function(model, onCompleted) {
             'Giraffe', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant herbivores (>300kg)', // Category
-            'safe', // Safety Advise
+            '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
@@ -3469,7 +3469,7 @@ load_animal_data = function(model, onCompleted) {
                 '5-7m', // Length
                 '2.5-4m', // Height
                 '2 600-6 000kg', // Weight
-                '', 0 // Path to sound clip and duration in seconds
+                resourcesPrefix + name.toLowerCase() + '/Elephant sounds.mp3', 47 // Path to sound clip and duration in seconds
                 );
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');

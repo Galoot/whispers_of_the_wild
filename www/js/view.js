@@ -75,17 +75,21 @@ function View() {
     };
 
     this.reloadImageSlider = function(slider, element) {
-        return element.pgwSlider({
-                    displayList : false,
-                    transitionEffect: 'sliding',
-                    displayControls : true,
-                    autoSlide: false
-                });
+        try {
+            return element.pgwSlider({
+                        displayList : false,
+                        transitionEffect: 'sliding',
+                        displayControls : true,
+                        autoSlide: false
+                    });
+        } catch (err) {}
     };
 
     this.destroySlider = function(slider) {
         if (slider) {
-            slider.destroy(false);
+            try {
+                slider.destroy(false);
+            } catch (err) {}
         }
         return slider;
     };
@@ -104,54 +108,6 @@ function View() {
             app.view.mapSlider = app.view.reloadImageSlider(app.view.mapSlider, $('#image-slider-map'));
             app.view.footprintSlider = app.view.reloadImageSlider(app.view.footprintSlider, $('#image-slider-footprints'));
         }, app.view.sliderDisplayDelay);
-    };
-
-    this.animal_loadProfile = function(animal, onComplete) {
-        model.getProfile(animal.animalID, function(profile) {
-            model.getImages(animal.animalID, function(images) {
-                $("#profile .header .title").html(animal.name);
-
-                var imagesHtml = "";
-                for (var i = 0; i < images.length; i++) {
-                    imagesHtml += ""
-                            + "         <li> "
-                            + "             <img src=\"" + images[i].filePath + "\"/>"
-                            + "         </li>";
-                }
-                $("#image-slider-profile").html(imagesHtml);
-
-                $(".animal-name").html(animal.name);
-                $(".common-names").html(animal.commonNames);
-                $(".confused-with").html(profile.confusedWith);
-                $(".activity-period").html(profile.activityPeriod);
-                $(".predators").html(profile.predators);
-                $(".red-list-status").html(profile.redListStatus);
-                $(".population").html(profile.population);
-                $(".threats").html(profile.threats);
-
-                $(".cautionNotice").html(animal.cautionNotice);
-
-                $(".identification-pointers").html(profile.idPointers);
-                $(".animal-gestation").html(profile.gestation);
-                $(".animal-lifespan").html(profile.lifespan);
-                $(".animal-diet").html(profile.diet);
-                $(".animal-habitat").html(profile.habitat);
-                $(".animal-length").html(profile.length);
-                $(".animal-height").html(profile.height);
-                $(".animal-weight").html(profile.weight);
-
-                if (onComplete) {
-                    onComplete();
-                }
-            });
-        });
-    };
-
-    this.updateProgressBars = function() {
-        // Progress bar for audio track
-        $('.audioProgress').each(function() {
-            $(this).nstSlider('set_position', app.view.percProgress);
-        });
     };
 
     this.playAudioTrack = function(src, dur, trackName, existingTrack) {
@@ -197,6 +153,70 @@ function View() {
     this.playIntroTrack = function() {
         app.view.playAudioTrack("resources/intro.mp3", 100, "Intro");
         location.href = "#menu";
+    };
+
+    this.animal_loadProfile = function(animal, onComplete) {
+        model.getProfile(animal.animalID, function(profile) {
+            model.getImages(animal.animalID, function(images) {
+                $("#profile .header .title").html(animal.thumbName);
+
+                var imagesHtml = "";
+                for (var i = 0; i < images.length; i++) {
+                    imagesHtml += ""
+                            + "         <li> "
+                            + "             <img src=\"" + images[i].filePath + "\"/>"
+                            + "         </li>";
+                }
+                $("#image-slider-profile").html(imagesHtml);
+
+                if (profile.soundPath && profile.soundPath.trim() != '') {
+                    $(".listen-to").show();
+
+                    $(".listen-to").off();
+                    $(".listen-to").on("click",
+                        function(event) {
+                            app.view.playAudioTrack(profile.soundPath, profile.soundDuration, ('Listen to a ' + animal.name));
+                        });
+                } else {
+                    $(".listen-to").hide();
+                }
+                $(".animal-name").html(animal.name);
+                $(".common-names").html(animal.commonNames);
+                $(".confused-with").html(profile.confusedWith);
+                $(".activity-period").html(profile.activityPeriod);
+                $(".predators").html(profile.predators);
+                $(".red-list-status").html(profile.redListStatus);
+                $(".population").html(profile.population);
+                $(".threats").html(profile.threats);
+
+                if (animal.cautionNotice && animal.cautionNotice.trim() != '') {
+                    $(".caution").show();
+                    $(".cautionNotice").html(animal.cautionNotice);
+                } else {
+                    $(".caution").hide();
+                }
+
+                $(".identification-pointers").html(profile.idPointers);
+                $(".animal-gestation").html(profile.gestation);
+                $(".animal-lifespan").html(profile.lifespan);
+                $(".animal-diet").html(profile.diet);
+                $(".animal-habitat").html(profile.habitat);
+                $(".animal-length").html(profile.length);
+                $(".animal-height").html(profile.height);
+                $(".animal-weight").html(profile.weight);
+
+                if (onComplete) {
+                    onComplete();
+                }
+            });
+        });
+    };
+
+    this.updateProgressBars = function() {
+        // Progress bar for audio track
+        $('.audioProgress').each(function() {
+            $(this).nstSlider('set_position', app.view.percProgress);
+        });
     };
 
     this.animal_loadAudio = function(animal, onComplete) {
