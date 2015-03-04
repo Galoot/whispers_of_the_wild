@@ -51,19 +51,19 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
         mdl.addAudio(animalID, '01 Myth and reality',
-                100, resourcesPrefix + name.toLowerCase()
+                54, resourcesPrefix + name.toLowerCase()
                 + '/Bats 1- Myth and reality.mp3');
         mdl.addAudio(animalID, '02 The flying mammal',
-                100, resourcesPrefix + name.toLowerCase()
+                38, resourcesPrefix + name.toLowerCase()
                 + '/Bats 2- The flying mammal.mp3');
         mdl.addAudio(animalID, '03 Seeing the world through sound',
-                100, resourcesPrefix + name.toLowerCase()
+                121, resourcesPrefix + name.toLowerCase()
                 + '/Bats 3- Seeing the world through sound.mp3');
         mdl.addAudio(animalID, '04 Not as blind as you think',
-                100, resourcesPrefix + name.toLowerCase()
+                97, resourcesPrefix + name.toLowerCase()
                 + '/Bats 4- Not as blind as you think.mp3');
         mdl.addAudio(animalID, '05 Bats and society',
-                100, resourcesPrefix + name.toLowerCase()
+                31, resourcesPrefix + name.toLowerCase()
                 + '/Bats 5- Bats and society.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
@@ -118,16 +118,16 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         // Audio
         mdl.addAudio(animalID, '01 Introduction',
-                100, resourcesPrefix + name.toLowerCase()
+                52, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 1- Introduction.mp3');
         mdl.addAudio(animalID, '02 Nocturnal, tree dweling primates',
-                100, resourcesPrefix + name.toLowerCase()
+                69, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 2- Nocturnal, tree dweling primates.mp3');
         mdl.addAudio(animalID, '03 Diet',
-                100, resourcesPrefix + name.toLowerCase()
+                28, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 3- Diet.mp3');
         mdl.addAudio(animalID, '04 Social interactions and communication',
-                100, resourcesPrefix + name.toLowerCase()
+                70, resourcesPrefix + name.toLowerCase()
                 + '/Bush Babies 4- Social interactions and communication.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');

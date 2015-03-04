@@ -135,6 +135,12 @@ function View() {
                 $('.audioProgress').each(function() {
                     $(this).nstSlider('set_position', percProgress);
                 });
+            }, function() {
+                if (app.view.currentAudioTrackIndex < (app.view.audioTrack.length - 1)) {
+                    app.view.playNextAudioTrack();
+                } else {
+//                    console.log("Last tracked reached...");
+                }
             });
     };
 
@@ -158,7 +164,7 @@ function View() {
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
-                $("#profile .header .title").html(animal.thumbName);
+                $(".header .title").html(animal.thumbName);
 
                 var imagesHtml = "";
                 for (var i = 0; i < images.length; i++) {
@@ -175,12 +181,13 @@ function View() {
                     $(".listen-to").off();
                     $(".listen-to").on("click",
                         function(event) {
-                            app.view.playAudioTrack(profile.soundPath, profile.soundDuration, ('Listen to a ' + animal.name));
+                            app.view.playAudioTrack(profile.soundPath, profile.soundDuration, ('Listen to a ' + animal.thumbName));
                         });
                 } else {
                     $(".listen-to").hide();
                 }
-                $(".animal-name").html(animal.name);
+                $(".animal-name").html(animal.thumbName);
+                $(".full-names").html(animal.name);
                 $(".common-names").html(animal.commonNames);
                 $(".confused-with").html(profile.confusedWith);
                 $(".activity-period").html(profile.activityPeriod);
@@ -221,26 +228,30 @@ function View() {
 
     this.animal_loadAudio = function(animal, onComplete) {
         model.getAudio(animal.animalID, function(tracks) {
-            $("#audio .header .title").html(animal.name);
-
             var audioHtml = "";
 
             for (var i = 0; i < tracks.length; i++) {
-                audioHtml += "<div duration=\"" + tracks[i].duration + "\" path=\"" + tracks[i].filePath + "\" id=\"track_" + i + "\" class=\"audio-track\">" + tracks[i].trackName + "</div>";
+                audioHtml += "<div trackIndex=\"" + i + "\" duration=\"" + tracks[i].duration + "\" path=\"" + tracks[i].filePath + "\" id=\"track_" + i + "\" class=\"audio-track\">" + tracks[i].trackName + "</div>";
             }
+
             $("#audio .profile-content").html(audioHtml);
 
             $('*[id^="track_"]').off();
             $('*[id^="track_"]').on("click",
                 function(event) {
                     var elementID = event.currentTarget.id;
+                    var index = parseInt($("#" + elementID).attr("trackIndex"));
                     var src = $("#" + elementID).attr("path");
                     var dur = $("#" + elementID).attr("duration");
                     var trackName = $("#" + elementID).html();
 
+                    var previousTrackLength = app.view.audioTrack.length;
+                    for (var i = 0; i < tracks.length; i++) {
+                        app.view.audioTrack.push(new AudioTrack(tracks[i].filePath, tracks[i].duration, tracks[i].trackName));
+                    }
+                    app.view.currentAudioTrackIndex = previousTrackLength + index;
 
-
-                    app.view.playAudioTrack(src, dur, trackName);
+                    app.view.playAudioTrack(src, dur, trackName, true);
                 });
         });
 
@@ -252,7 +263,6 @@ function View() {
     this.animal_loadMap = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getMaps(animal.animalID, function(maps) {
-                $("#map .header .title").html(animal.name);
 
                 var imagesHtml = "";
                 for (var i = 0; i < maps.length; i++) {
@@ -282,7 +292,6 @@ function View() {
     this.animal_loadFootprints = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getFootprints(animal.animalID, function(footprints) {
-                $("#footprints .header .title").html(animal.name);
 
                 var imagesHtml = "";
                 for (var i = 0; i < footprints.length; i++) {

@@ -9,7 +9,8 @@ var useHtml5 = !isMobile.Android() && !isMobile.iOS();                       // 
 var audio_state_play = false;
 // Play audio
 //
-function playAudio(src, duration, setPosition) {
+function playAudio(src, duration, setPosition, onTrackCompleted) {
+    // duration = duration + 3;
     if (!src && !setPosition) {
         src = lastSrc;
         setPosition = lastSetPosition;
@@ -48,8 +49,12 @@ function playAudio(src, duration, setPosition) {
                         // success callback
                         function(position) {
                             // report("DEBUG", "Audio (Media) position: " + position);
-                            if (setPosition && position > -1) {
-                                setPosition(position, duration);
+                            if (setPosition && position >= 0) {
+                                setPosition(position, lastDuration);
+                            } else {
+                                if (onTrackCompleted) {
+                                    onTrackCompleted();
+                                }
                             }
                         },
                         // error callback
@@ -60,6 +65,12 @@ function playAudio(src, duration, setPosition) {
                 } else {
                     if (setPosition) {
                         // report("DEBUG", "Audio (HTML5) position: " + my_media.currentTime);
+                        if (my_media.currentTime < 0) {
+                            if (onTrackCompleted) {
+                                onTrackCompleted();
+                            }
+                        }
+
                         if (parseInt(my_media.duration)) {
                             setPosition(my_media.currentTime, my_media.duration);
                         } else {
@@ -110,6 +121,5 @@ function onSuccess() {
 // onError Callback
 //
 function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
+    console.error('Error - Code [' + error.code + '], Message [' + error.message + ']');
 }

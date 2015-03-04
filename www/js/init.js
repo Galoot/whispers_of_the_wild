@@ -146,7 +146,7 @@ function Application() {
         });
         $(".share-twitter").off();
         $(".share-twitter").on("click", function(event) {
-            shareTwiter();
+            shareTwitter();
         });
 
         // ==== Question Submit ================================================
