@@ -37,7 +37,7 @@
     b {line-height: 24px;
 /*       //text-shadow: 1px 1px 2px #000;
        //text-align: center;*/
-       font-size: 16px;
+       font-size: 14px;
     }
 
     p {line-height: 18px;
@@ -760,63 +760,76 @@
 /*        //border: black solid thin;*/
     }
     
-    #animalSizeSlider.nstSlider {
-    width: 70%;
-    margin-top: 33px;
-    margin: 0 auto;
-    }
     
-    .search-by-size {
-    overflow: hidden;
-    width: 85%;
-    height: 65px;
-    position: absolute;
-    bottom: 400px;
-    left: 10px;
+    
+    #howto-size {
     text-align: center;
+    /* margin-bottom: 500px; */
+    width: 40%;
     margin: 0 auto;
-    text-shadow: 1px 1px 2px #000;
-    /* border: black solid thin; */
-    }
-    
-    #scaleSmall{
+    /* margin-top: 20px; */
+}
+
+#scaleSmall{
     display: block;
     width: 25px;
-    height: 30px;
-    min-height: 30px;
+    height: 25px;
+    min-height: 25px;
     min-width: 30px;
     float: left;
     overflow: hidden;
     background-image: url('../resources/buttons/scale_slider/mouse.png');
     background-size: auto 25px;
     background-repeat: no-repeat;
-    margin-bottom: 0px;
+    margin-bottom: 1px;
 }
 
-    #scaleBig {
+#scaleBig {
     display: block;
-    width: 53px;
-    height: 30px;
+    width: 45px;
+    height: 37px;
     float: right;
     text-align: right;
     overflow: visible;
     background-image: url('../resources/buttons/scale_slider/elephant.png');
     background-size: auto 30px;
     background-repeat: no-repeat;
+    margin-top: -6px;
+    overflow: visible;
 }
 
-    .size-label {
+.size-label {
     /*position: absolute;*/
     bottom: 120px;
-    margin-top: -20px;
-    width: 430px;
-    /* left: 60px; */
+    margin-top: -21px;
+    /*left: 20px;*/
     text-align: center;
     text-shadow: 1px 1px 2px #000;
+    width: 60%;
+    left: 60%;
+    margin-left: 20%;
+    font-size: 15px;
+}
+.search-by-size {
+    overflow: visible;
+    width: 80%;
+    height: 70px;
+    position: absolute;
+    bottom: auto;
+    left: 20px;
+    text-align: center;
+    left: 50%;
+    margin-left: -40%;
+    text-shadow: 1px 1px 2px #000;
+
+/*    //background-color: lightgray;*/
+    /*border: black solid thin;*/
 }
 
-.animal-text {
-    font-size: 13px;
+#animalSizeSlider.nstSlider {
+width: 100%;
+margin-top: 15px;
+/* margin: 0 auto; */
 }
 
 .leftLabel {
@@ -825,8 +838,7 @@
     /*float: left;*/
     text-align: left;
     overflow: hidden;
-    margin-top: 10px;
-    margin-left: 0px;
+    margin-top: 7px;
     left: 1px;
 }
 
@@ -836,8 +848,7 @@
     float: right;
     text-align: right;
     overflow: hidden;
-    margin: 10px 1px 0 0;
-    margin-right: -30px;
+    margin: 3px 1px 0 0;
 }
  
 }
