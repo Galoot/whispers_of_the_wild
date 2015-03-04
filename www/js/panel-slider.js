@@ -87,7 +87,7 @@ var initSlider = function (panelClass, actionClass) {
                 window.setTimeout(function() {
                     $(".animal-grid").css("height",
                         (animalsHeight + footerHeight - searchBySizeHeight - searchBySizeHeight
-                        - sliderBottomHandleHeight - $(".category-label").height()) + "px");
+                        - sliderBottomHandleHeight - $(".category-label").height() - 50) + "px");
 
                     $("#search-by-size").css("bottom", (0 + 20) + "px");
                 }, 350);
@@ -101,7 +101,7 @@ var initSlider = function (panelClass, actionClass) {
 
                         $(".animal-grid").css("height",
                                 (animalsHeight - searchBySizeHeight - searchBySizeHeight
-                                - sliderBottomHandleHeight - $(".category-label").height()) + "px");
+                                - sliderBottomHandleHeight - $(".category-label").height()- 50) + "px");
 
                         $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
 
