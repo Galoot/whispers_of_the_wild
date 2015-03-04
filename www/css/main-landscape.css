@@ -67,8 +67,11 @@
         vertical-align: top;
         width: 150px;
         height: 150px;
-        margin: 25px;
-    }
+        margin: 20px;
+    
+        margin-top: 1px;
+        margin-bottom: 40px;
+}
 
     .animal-icon, .game-select-animal-icon, .game-spot-animal-icon, .game-spot-player-icon, .game-winner-player-icon {
         height: 150px;
