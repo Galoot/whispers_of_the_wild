@@ -855,5 +855,16 @@ margin-top: 15px;
     overflow: hidden;
     margin: 3px 1px 0 0;
 }
+
+.audio-track {
+padding-left: 10px;
+background: url('../resources/buttons/navigation/soundbg.png');
+background-repeat: repeat-x;
+height: 60px;
+vertical-align: middle;
+color: #fff;
+text-shadow: 1px 1px 2px #000;
+line-height: 55px;
+}
  
 }
