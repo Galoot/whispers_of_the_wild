@@ -342,6 +342,7 @@ footer-controls {
     position: absolute;
     color: #2e2a2b;
     height: 100%;
+    width: 100%;
     overflow-wrap: normal;
     margin-bottom: 50px;
     overflow-y: auto;

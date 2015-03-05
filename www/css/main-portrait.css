@@ -862,9 +862,10 @@ background: url('../resources/buttons/navigation/soundbg.png');
 background-repeat: repeat-x;
 height: 60px;
 vertical-align: middle;
+font-size: 16px;
 color: #fff;
 text-shadow: 1px 1px 2px #000;
-line-height: 55px;
+/* line-height: 55px; */
 }
  
 }
