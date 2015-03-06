@@ -342,7 +342,7 @@ footer-controls {
     position: absolute;
     color: #2e2a2b;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     overflow-wrap: normal;
     margin-bottom: 50px;
     overflow-y: auto;
@@ -352,6 +352,7 @@ footer-controls {
     /*right: 100px;*/
 
     left: -128px; /* This is used for the panel slider */
+    /* padding-right: 128px; */
     -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
     position: fixed; /* This means we don't have to worry about overflow issues */
     -webkit-transition: left 0.2s ease-in;
@@ -360,7 +361,7 @@ footer-controls {
 }
 
 .profile-content.left {
-    width: 100%;
+    /* width: initial; */
     left: 0px !important;
 }
 
@@ -443,7 +444,10 @@ footer-controls {
 .profile-tabs {
 /*    //background-image: url('../resources/buttons/navigation/navigation_bar.png');
     //border: black thin solid;*/
-    width: 128px;
+    
+
+
+width: 11%;
 /*    //height: 828px;*/
     position: absolute;
     background-repeat: no-repeat;
@@ -1131,6 +1135,9 @@ margin: 20px 0 0 0px;
     text-shadow: 1px 1px 2px #000;
     line-height: 55px;
     /* width: 100%; */
+    /* display: table-cell; */    
+    /* vertical-align: middle; */    
+    /* text-align: center; */
 }
 
 .question {
@@ -1192,7 +1199,7 @@ margin: 20px 0 0 0px;
     // padding:180px 0px 0px 0px;      // image height is 200px (bottom 20px are overlapped with text)
     // margin:-115px 0px 0px -112px;   // offset vertical: half of image height and text area height
     // offset horizontal: half of text area width*/
-    width: auto;
+    width: 100%;
 }
 
 

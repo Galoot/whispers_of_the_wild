@@ -857,15 +857,19 @@ margin-top: 15px;
 }
 
 .audio-track {
-padding-left: 10px;
+/* padding-left: 10px; */
 background: url('../resources/buttons/navigation/soundbg.png');
 background-repeat: repeat-x;
-height: 60px;
+height: 40px;
 vertical-align: middle;
-font-size: 16px;
+font-size: 15px;
 color: #fff;
 text-shadow: 1px 1px 2px #000;
-/* line-height: 55px; */
+line-height: inherit;
+/* padding-top: 15px; */
+/* margin-top: -15px; */
+/* display: table-cell; */        
+/* text-align: center; */
 }
  
 }
