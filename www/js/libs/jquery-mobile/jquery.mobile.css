@@ -963,7 +963,13 @@ html .ui-panel-page-container-a {
 	border-color:	 		#ddd /*{a-body-border}*/;
 	color: 					#333 /*{a-body-color}*/;
 	text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ 	#f3f3f3 /*{a-body-shadow-color}*/;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
 }
+
+.textArea {height: 350px;}
+
 .ui-body-a {
 	border-width: 1px;
 	border-style: solid;
@@ -1010,6 +1016,7 @@ html head + body .ui-btn.ui-btn-a:visited {
 	border-color:	 		#ddd /*{a-bup-border}*/;
 	color: 					#333 /*{a-bup-color}*/;
 	text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #f3f3f3 /*{a-bup-shadow-color}*/;
+	width: 180px; margin: 0 auto; margin-top: 20px;
 }
 /* Button hover */
 .ui-page-theme-a .ui-btn:hover,
@@ -4081,6 +4088,7 @@ textarea.ui-input-text {
 	box-sizing: border-box;
 	outline: 0;
 }
+
 .ui-input-text input,
 .ui-input-search input {
 	margin: 0;
