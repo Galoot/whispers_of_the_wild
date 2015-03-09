@@ -956,8 +956,7 @@ width: 128px;
 /*    padding: 50px 25px 50px 15px;*/
     margin: 0 auto;
     overflow-y: scroll;
-
-margin: 20px 0 0 0px;
+    margin: 25px 0 0 0px;
         -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
         position: fixed; /* This means we don't have to worry about overflow issues */
         -webkit-transition: left 0.2s ease-in;
@@ -969,7 +968,10 @@ margin: 20px 0 0 0px;
     /*border: 1px red solid;*/
     width: 145px;
     min-height: 145px;
-    margin: 13px;
+    /* margin: 13px; */
+    margin-left: 25px;
+    margin-bottom: 25px;
+    margin-right: 10px;
     display: inline-block;
     text-align: center;
 }
