@@ -820,14 +820,14 @@
 }
 .search-by-size {
     overflow: visible;
-    width: 80%;
+    width: 84%;
     height: 70px;
     position: absolute;
     bottom: auto;
     left: 20px;
     text-align: center;
     left: 50%;
-    margin-left: -40%;
+    margin-left: -47%;
     text-shadow: 1px 1px 2px #000;
 
 /*    //background-color: lightgray;*/
