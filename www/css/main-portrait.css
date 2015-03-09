@@ -328,21 +328,22 @@
     }
 
     .category-label {
-    /*position: absolute;
-     top: 120px;
-    left: 28px; */
-    padding: 5px 0 5px 0;
-    display: inline-block;
-    text-align: center;
-    margin: 10px 0 0 15px;
-    width: 90%;
-    height: 18px;
-    background-color: #68666a;
-    /*position: absolute;*/
-    border-radius: 5px;
-    /* margin-left: 5%; */
-    /* overflow-y: scroll; */
-}
+        /*position: absolute;
+         top: 120px;
+        left: 28px; */
+        padding: 5px 0 5px 0;
+        display: inline-block;
+        text-align: center;
+        margin: 10px 0 0 15px;
+        width: 90%;
+        height: 18px;
+        background-color: #68666a;
+        /*position: absolute;*/
+        border-radius: 5px;
+        /* margin-left: 5%; */
+        /* overflow-y: scroll; */
+    }
+
     .search-by-category {
         padding: 6px;
         position: absolute;
@@ -359,7 +360,8 @@
 
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-}
+    }
+
     .category-option {
         margin-left: 30px;
         /* padding: 6px 0px 0px 1px; */
@@ -394,7 +396,8 @@
 
         /* max-height: 400px; */
         /* overflow-y: scroll; */
-}
+    }
+
     .search-by-letter {
         padding: 6px;
         z-index: 3001;
@@ -419,7 +422,8 @@
         /* float: left; */
 
         background-color: rgba(71, 68, 73, 0.9); display: none; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;
-}
+    }
+
     .letter-heading {
         float: left;
         text-shadow: 1px 1px 2px #000;
@@ -494,7 +498,7 @@
         width: 90%;
         text-align: center;
         vertical-align: middle;
-    
+
         margin: 0 auto;
         margin-top: 4px;
 }
@@ -503,7 +507,7 @@
         text-align: center;
         height: auto;
         min-width: 11px;
-    
+
         margin-top: -12px;
 }
 
@@ -566,6 +570,11 @@
 
     .panel-slider-left-handle {
         left: -80px; /* This is used for the panel slider */
+    }
+
+    .header-options-popup {
+        right: 9px;
+        top: 37px;
     }
 
     .profile-content {
@@ -872,7 +881,7 @@ line-height: inherit;
 min-width: 400px !important;
 /* padding-top: 15px; */
 /* margin-top: -15px; */
-/* display: table-cell; */        
+/* display: table-cell; */
 /* text-align: center; */
 }
 

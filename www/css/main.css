@@ -384,7 +384,23 @@ footer-controls {
     /* padding-bottom: 40px; */
 }
 
+.header-options-popup {
+    padding: 10px;
+    position: absolute;
 
+    right: 61px;
+    top: 73px;
+
+    z-index: 3002;
+    overflow: hidden;
+    /* max-width: 298px; */
+/*    //background-color: lightgray;*/
+    border: none;
+    margin: 0px 0 0 25px;
+    width: 40%;
+    background-color: rgba(47, 44, 50, 0.9);
+    display: none; /* // hide by default, must be last style*/
+}
 
 .profile-content.left {
     /* width: initial; */
@@ -470,7 +486,7 @@ footer-controls {
 .profile-tabs {
 /*    //background-image: url('../resources/buttons/navigation/navigation_bar.png');
     //border: black thin solid;*/
-    
+
 
 
 width: 128px;
@@ -940,7 +956,7 @@ width: 128px;
 /*    padding: 50px 25px 50px 15px;*/
     margin: 0 auto;
     overflow-y: scroll;
-     
+
 margin: 20px 0 0 0px;
         -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
         position: fixed; /* This means we don't have to worry about overflow issues */
@@ -1162,8 +1178,8 @@ margin: 20px 0 0 0px;
     line-height: 55px;
     min-width: 900px !important;
     min-width: 100%;
-    /* display: table-cell; */    
-    /* vertical-align: middle; */    
+    /* display: table-cell; */
+    /* vertical-align: middle; */
     /* text-align: center; */
 }
 

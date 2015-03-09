@@ -221,6 +221,20 @@ function Application() {
 
         // $(".footer-progress").html("<input class=\"audio-progress\"/>");
 
+        // ==== Options ========================================================
+        $(".header-options-popup").html(
+                "<hr/><div id=\"header-option animals\" class=\"header-option header-option-animals\">Animals</div>"
+                + "<hr/><div id=\"header-option games\" class=\"header-option header-option-game\">Games</div>"
+                + "<hr/><div id=\"header-option question\" class=\"header-option header-option-question\">Ask a Question</div>"
+                + "<hr/><div id=\"header-option aboutus\" class=\"header-option header-option-about\">About Us</div>"
+                + "<hr/><div id=\"header-option advice\" class=\"header-option header-option-safety\">Safety Advice</div>"
+                + "<hr/><div id=\"header-option donate\" class=\"header-option header-option-donate\">Donate</div>"
+                );
+        $(".options").off();
+        $(".options").on("click", function (event) {
+            $(".header-options-popup").toggle();
+        });
+
         // ==== Animals ========================================================
         $(".category-label").off();
         $(".category-label").on("click", function (event) {
@@ -304,44 +318,55 @@ function Application() {
         $("#photographers .content .profile-tabs").html(app.view.get_about_tabs("photographers"));
         $("#sources .content .profile-tabs").html(app.view.get_about_tabs("sources"));
 
-        $(".menu_animals").off();
-        $(".menu_animals").on("click", function (event) {
+        $(".menu_animals, .header-option-animals").off();
+        $(".menu_animals, .header-option-animals").on("click", function (event) {
             app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").show();
+                $(".header-options-popup").hide();
                 location.href = "#animals";
             });
         });
 
-        $(".menu_donate").off();
-        $(".menu_donate").on("click", function (event) {
+        $(".menu_donate, .header-option-donate").off();
+        $(".menu_donate, .header-option-donate").on("click", function (event) {
             app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").hide();
+                $(".header-options-popup").hide();
                 location.href = "#donate";
             });
         });
 
-        $(".menu_question").off();
-        $(".menu_question").on("click", function (event) {
+        $(".menu_question, .header-option-question").off();
+        $(".menu_question, .header-option-question").on("click", function (event) {
             $(".profile-tabs").hide();
+            $(".header-options-popup").hide();
             location.href = "#question";
         });
 
-        $(".option_game").off();
-        $(".option_game").on("click", function (event) {
+        $(".option_game, .header-option-game").off();
+        $(".option_game, .header-option-game").on("click", function (event) {
+            $(".header-options-popup").hide();
             location.href = "#game";
         });
 
         $(".game-start-label").off();
         $(".game-start-label").on("click", function (event) {
+            $(".header-options-popup").hide();
             resetPlayers();
             location.href = "#players";
         });
 
-        $(".menu_about").off();
-        $(".menu_about").on("click", function (event) {
+        $(".menu_about, .header-option-about").off();
+        $(".menu_about, .header-option-about").on("click", function (event) {
             app.view.initializeAboutLinks();
+            $(".header-options-popup").hide();
             $(".profile-tabs").show();
             location.href = "#founder";
+        });
+
+        $(".option_safety, .header-option-safety").off();
+        $(".option_safety, .header-option-safety").on("click", function (event) {
+            $(".header-options-popup").hide();
         });
 
         // ==== Game ========================================================
