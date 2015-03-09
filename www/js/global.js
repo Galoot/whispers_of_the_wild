@@ -254,3 +254,15 @@ function openPage(url) {
         window.open(url);
     }
 }
+
+function startsWithVowel(sentence) {
+    var firstChar = sentence.charAt(0);
+    switch (firstChar) {
+        case 'A' : return true;
+        case 'E' : return true;
+        case 'O' : return true;
+        case 'I' : return true;
+        case 'U' : return true;
+    }
+    return false;
+}

@@ -191,7 +191,7 @@ function View() {
                 } else {
                     $(".listen-to").hide();
                 }
-                $(".animal-name").html("Listen to a " + animal.thumbName);
+                $(".animal-name").html("Listen to " + (startsWithVowel(animal.thumbName) ? "an" : "a") + " " + animal.thumbName);
                 $(".full-names").html(animal.name);
                 $(".common-names").html(animal.commonNames);
                 $(".confused-with").html(profile.confusedWith);
