@@ -2438,10 +2438,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image7.jpg');
 
         // Audio
-        mdl.addAudio(animalID, 'Special- Who is really the king of the jungle_.mp3',
-                100, resourcesPrefix + name.toLowerCase()
-                + '/Lion special- Who is really the king of the jungle_.mp3');
-        mdl.addAudio(animalID, '02 Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 1- Introduction.mp3');
         mdl.addAudio(animalID, '02 The social cats',
