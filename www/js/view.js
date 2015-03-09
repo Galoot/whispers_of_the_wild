@@ -164,7 +164,12 @@ function View() {
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
-                $(".header .title").html(animal.thumbName);
+                $("#profile .header .title").html(animal.thumbName);
+                $("#audio .header .title").html(animal.thumbName);
+                $("#map .header .title").html(animal.thumbName);
+                $("#footprints .header .title").html(animal.thumbName);
+                $("#question .header .title").html(animal.thumbName);
+                $("#donate .header .title").html(animal.thumbName);
 
                 var imagesHtml = "";
                 for (var i = 0; i < images.length; i++) {
