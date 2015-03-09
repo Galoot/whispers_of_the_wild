@@ -191,7 +191,7 @@ function View() {
                 } else {
                     $(".listen-to").hide();
                 }
-                $(".animal-name").html(animal.thumbName);
+                $(".animal-name").html("Listen to a " + animal.thumbName);
                 $(".full-names").html(animal.name);
                 $(".common-names").html(animal.commonNames);
                 $(".confused-with").html(profile.confusedWith);

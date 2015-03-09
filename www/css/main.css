@@ -419,6 +419,7 @@ footer-controls {
 }
 
 .listen-to {
+    width: 45%;
     vertical-align: top;
     text-align: left;
     float: left;
@@ -433,6 +434,7 @@ footer-controls {
 }
 
 .listenicon {
+    margin-left: 22px;
     display: inline-block;
     background-image: url('../resources/buttons/other/audio_animal_profile.png');
     background-repeat: no-repeat;
@@ -442,7 +444,13 @@ footer-controls {
 /*    // margin-top: 1px;*/
 }
 
+.animal-name {
+    position: relative;
+    margin-left: 50px;
+}
+
 .caution {
+    width: 55%;
     vertical-align: top;
     text-align: left;
     float: right;
@@ -455,6 +463,8 @@ footer-controls {
 }
 
 .cautionicon {
+    margin-left: 22px;
+
     display: inline-block;
     background-image: url('../resources/buttons/other/safety_warning.png');
     background-repeat: no-repeat;
@@ -469,6 +479,7 @@ footer-controls {
 
 .cautionLink {
     float:left;
+    margin-left: 50px;
 }
 
 .image-slider-container {
@@ -546,7 +557,7 @@ width: 128px;
 }
 
 .profile-option-spacer {
-    border: 1px red solid;
+    /*border: 1px red solid;*/
     width: 128px;
     height: auto;
 }
