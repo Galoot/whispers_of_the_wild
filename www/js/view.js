@@ -752,7 +752,7 @@ function View() {
             app.view.about_alignOptions("founder");
             location.href = "#founder";
         });
-        $("* .about-founder").off();
+        $("* .about-partners").off();
         $("* .about-partners").on("click", function(event) {
             app.view.about_alignOptions("partners");
             location.href = "#partners";
