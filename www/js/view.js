@@ -494,7 +494,7 @@ function View() {
                                         app.view.animal_loadMap(animal, function() {
                                             app.view.animal_loadFootprints(animal, function() {
                                                 app.view.animal_loadAudio(animal, function() {
-
+                                                    ga_storage._trackPageview('/index.html#profile?animal=' + animal.thumbName);
                                                     location.href = "#profile";
                                                     app.view.reloadImageSliders();
 
@@ -716,31 +716,37 @@ function View() {
             $("* .animal-profile").off();
             $("* .animal-profile").on("click", function(event) {
                 app.view.destroySliders();
+                ga_storage._trackPageview('/index.html#profile?animal=' + animal.thumbName);
                 location.href = "#profile";
                 app.view.reloadImageSliders();
             });
             $("* .animal-audio").off();
             $("* .animal-audio").on("click", function(event) {
+                ga_storage._trackPageview('/index.html#audio?animal=' + animal.thumbName);
                 location.href = "#audio";
             });
             $("* .animal-map").off();
             $("* .animal-map").on("click", function(event) {
                 app.view.destroySliders();
+                ga_storage._trackPageview('/index.html#map?animal=' + animal.thumbName);
                 location.href = "#map";
                 app.view.reloadImageSliders();
             });
             $("* .animal-footprints").off();
             $("* .animal-footprints").on("click", function(event) {
                 app.view.destroySliders();
+                ga_storage._trackPageview('/index.html#footprints?animal=' + animal.thumbName);
                 location.href = "#footprints";
                 app.view.reloadImageSliders();
             });
             $("* .animal-question").off();
             $("* .animal-question").on("click", function(event) {
+                ga_storage._trackPageview('/index.html#question?animal=' + animal.thumbName);
                 location.href = "#question";
             });
             $("* .animal-donate").off();
             $("* .animal-donate").on("click", function(event) {
+                ga_storage._trackPageview('/index.html#donate?animal=' + animal.thumbName);
                 location.href = "#donate";
             });
         });
@@ -750,31 +756,37 @@ function View() {
         $("* .about-founder").off();
         $("* .about-founder").on("click", function(event) {
             app.view.about_alignOptions("founder");
+            ga_storage._trackPageview('/index.html#founder');
             location.href = "#founder";
         });
         $("* .about-partners").off();
         $("* .about-partners").on("click", function(event) {
             app.view.about_alignOptions("partners");
+            ga_storage._trackPageview('/index.html#partners');
             location.href = "#partners";
         });
         $("* .about-board").off();
         $("* .about-board").on("click", function(event) {
             app.view.about_alignOptions("board");
+            ga_storage._trackPageview('/index.html#board');
             location.href = "#board";
         });
         $("* .about-sounds").off();
         $("* .about-sounds").on("click", function(event) {
             app.view.about_alignOptions("sounds");
+            ga_storage._trackPageview('/index.html#sounds');
             location.href = "#sounds";
         });
         $("* .about-photographers").off();
         $("* .about-photographers").on("click", function(event) {
             app.view.about_alignOptions("photographers");
+            ga_storage._trackPageview('/index.html#photographers');
             location.href = "#photographers";
         });
         $("* .about-sources").off();
         $("* .about-sources").on("click", function(event) {
             app.view.about_alignOptions("sources");
+            ga_storage._trackPageview('/index.html#sources');
             location.href = "#sources";
         });
     };
