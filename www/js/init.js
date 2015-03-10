@@ -332,6 +332,7 @@ function Application() {
             app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").hide();
                 $(".header-options-popup").hide();
+                $("#donate .title").html('Donate');
                 location.href = "#donate";
             });
         });
@@ -340,6 +341,7 @@ function Application() {
         $(".menu_question, .header-option-question").on("click", function (event) {
             $(".profile-tabs").hide();
             $(".header-options-popup").hide();
+            $("#question .title").html('Ask a Question');
             location.href = "#question";
         });
 
