@@ -85,9 +85,8 @@ var initSlider = function (panelClass, actionClass) {
                 $("* .content .profile-content").css("height", (contentHeight + footerHeight) + "px");
 
                 window.setTimeout(function() {
-                    $(".animal-grid").css("height",
-                        (animalsHeight + footerHeight - searchBySizeHeight - searchBySizeHeight
-                        - sliderBottomHandleHeight - $(".category-label").height() - 60) + "px");
+                    var current_height = $(".animal-grid").outerHeight(false);
+                    $(".animal-grid").css("height", current_height + footerHeight);
 
                     $("#search-by-size").css("bottom", (0 + 20) + "px");
                 }, 350);
@@ -99,9 +98,8 @@ var initSlider = function (panelClass, actionClass) {
                         $("* .content .profile-content").css("height",
                                 (contentHeight - footerHeight) + "px");
 
-                        $(".animal-grid").css("height",
-                                (animalsHeight - searchBySizeHeight - searchBySizeHeight
-                                - sliderBottomHandleHeight - $(".category-label").height()- 60) + "px");
+                        var current_height = $(".animal-grid").outerHeight(false);
+                        $(".animal-grid").css("height", current_height - footerHeight);
 
                         $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
 

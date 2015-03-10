@@ -817,15 +817,21 @@ function View() {
 //        console.log("current content oh: " + (content_oh));
 
         var x_factor = 56;
+        var animal_grid_spacer = 0;
         // check if in portrait mode
         if (header_oh < 100) {
             x_factor = 20;
+            animal_grid_spacer = 10;
         }
 
         var c_new = window_h - header_oh - footer_oh - content_oh + content_h + x_factor;
 
+        var animal_grid_collapsing = 0;
+
         if (app.view.footerCollapsed) {
             c_new += footer_oh;
+        } else {
+            animal_grid_collapsing = footer_oh;
         }
 //        console.log("new content height: " + c_new);
         content.height(c_new);
@@ -837,7 +843,8 @@ function View() {
 
         $(".animal-grid").css("height",
             (animalsHeight + footer_oh - searchBySizeHeight - searchBySizeHeight
-            - sliderBottomHandleHeight - $(".category-label").height() - 60) + "px");
-        $("#search-by-size").css("bottom", (0 + 20) + "px");
+            - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
+
+        $("#search-by-size").css("bottom", ((app.view.footerCollapsed ? 0 : 0) + 20 + animal_grid_collapsing) + "px");
     };
 };
