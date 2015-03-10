@@ -52,7 +52,7 @@ function playAudio(src, duration, setPosition, onTrackCompleted) {
                             if (setPosition && position >= 0) {
                                 setPosition(position, lastDuration);
                             } else {
-                                if (onTrackCompleted) {
+                                if (onTrackCompleted && audio_state_play) {
                                     onTrackCompleted();
                                 }
                             }
@@ -66,7 +66,7 @@ function playAudio(src, duration, setPosition, onTrackCompleted) {
                     if (setPosition) {
                         // report("DEBUG", "Audio (HTML5) position: " + my_media.currentTime);
                         if (my_media.currentTime < 0) {
-                            if (onTrackCompleted) {
+                            if (onTrackCompleted && audio_state_play) {
                                 onTrackCompleted();
                             }
                         }
