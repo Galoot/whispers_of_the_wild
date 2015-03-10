@@ -23,7 +23,7 @@
 * ga_storage._trackEvent('category', 'action', 'label', 'value');
 */
 (function () {
-var IS_DEBUG = true;
+var IS_DEBUG = false;
 var LocalStorage = function (key, initial_value) {
 if (window.localStorage.getItem(key) == null && initial_value != null) {
 window.localStorage.setItem(key, initial_value);
