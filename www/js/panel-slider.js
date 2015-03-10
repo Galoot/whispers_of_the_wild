@@ -58,12 +58,9 @@ var initSlider = function (panelClass, actionClass) {
         $('.profile-content').toggleClass(actionClass);
         $('.panel-slider-' + actionClass + '-handle').toggleClass(actionClass);
 
-        var animalsHeight = $("#animals .content").height();
         var contentHeight = $("* .content .profile-content").height();
         var footerHeight = $(".footer").height();
-        var searchBySizeHeight = $("#search-by-size").height();
-        var sliderBottomHandleHeight = $(".panel-slider-bottom-handle").height() + 10;
-
+        
         if (actionClass == 'left') {
             app.view.navigationCollapsed = !app.view.navigationCollapsed;
             if (app.view.navigationCollapsed) {

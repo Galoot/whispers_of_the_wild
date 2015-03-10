@@ -172,7 +172,9 @@ p {line-height: 18px;
     margin-left:-100px; /* half of the width */
 }
 
-#profile, #map, #footprints, #menu, #animals, #audio, #donate, #question {
+#profile, #map, #footprints, #menu, #animals, #audio, #donate, #question,
+#founder, #partners, #board, #sounds, #photographers, #sources, #game,
+#players, #game-animal-select, #game-animal-spot, #game-animal-winner {
     overflow-y: hidden;
 }
 
