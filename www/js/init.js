@@ -115,6 +115,11 @@ function Application() {
             location.href = "#menu";
         });
 
+        // Pre-load first track
+        app.view.queueIntroTrack();
+        // app.view.playNextAudioTrack();
+        // pauseAudio();
+
         $("#toggleIntro").off();
         $("#toggleIntro").on("click", function (event) {
             $("#toggleIntro").toggle();
@@ -199,7 +204,9 @@ function Application() {
             if (audio_state_play) {
                 pauseAudio();
             } else {
-                resumeAudio();
+                if (!resumeAudio()) {
+                    app.view.playNextAudioTrack();
+                }
             }
 
             if (audio_state_play) {
@@ -369,6 +376,7 @@ function Application() {
         $(".option_safety, .header-option-safety").off();
         $(".option_safety, .header-option-safety").on("click", function (event) {
             $(".header-options-popup").hide();
+            app.view.playSafetyTrack();
         });
 
         // ==== Game ========================================================
