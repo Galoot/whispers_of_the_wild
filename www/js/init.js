@@ -330,6 +330,7 @@ function Application() {
             app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").show();
                 $(".header-options-popup").hide();
+                ga_storage._trackPageview('/index.html#animals');
                 location.href = "#animals";
             });
         });
@@ -340,6 +341,7 @@ function Application() {
                 $(".profile-tabs").hide();
                 $(".header-options-popup").hide();
                 $("#donate .title").html('Donate');
+                ga_storage._trackPageview('/index.html#donate');
                 location.href = "#donate";
             });
         });
@@ -349,12 +351,14 @@ function Application() {
             $(".profile-tabs").hide();
             $(".header-options-popup").hide();
             $("#question .title").html('Ask a Question');
+            ga_storage._trackPageview('/index.html#question');
             location.href = "#question";
         });
 
         $(".option_game, .header-option-game").off();
         $(".option_game, .header-option-game").on("click", function (event) {
             $(".header-options-popup").hide();
+            ga_storage._trackPageview('/index.html#game');
             location.href = "#game";
         });
 
@@ -362,6 +366,7 @@ function Application() {
         $(".game-start-label").on("click", function (event) {
             $(".header-options-popup").hide();
             resetPlayers();
+            ga_storage._trackPageview('/index.html#players');
             location.href = "#players";
         });
 
@@ -370,12 +375,14 @@ function Application() {
             app.view.initializeAboutLinks();
             $(".header-options-popup").hide();
             $(".profile-tabs").show();
+            ga_storage._trackPageview('/index.html#founder');
             location.href = "#founder";
         });
 
         $(".option_safety, .header-option-safety").off();
         $(".option_safety, .header-option-safety").on("click", function (event) {
             $(".header-options-popup").hide();
+            ga_storage._trackPageview('/index.html#safety');
             app.view.playSafetyTrack();
         });
 
