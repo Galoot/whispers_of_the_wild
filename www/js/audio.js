@@ -89,7 +89,9 @@ function resumeAudio() {
     if (my_media) {
         my_media.play();
         audio_state_play = true;
+        return true;
     }
+    return false;
 }
 //
 // Pause audio

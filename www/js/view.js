@@ -156,9 +156,18 @@ function View() {
         this.playAudioTrack(track.trackPath, track.seconds, track.trackName, true);
     };
 
+    this.queueIntroTrack = function() {
+        app.view.audioTrack.push(new AudioTrack("resources/intro.mp3", 100, "Welcome to the African Wilderness"));
+        app.view.currentAudioTrackIndex = app.view.audioTrack.length - 1;
+    };
+
     this.playIntroTrack = function() {
-        app.view.playAudioTrack("resources/intro.mp3", 100, "Intro");
+        app.view.playAudioTrack("resources/intro.mp3", 100, "Welcome to the African Wilderness");
         location.href = "#menu";
+    };
+
+    this.playSafetyTrack = function() {
+        app.view.playAudioTrack("resources/safety.mp3", 100, "Safety Advice");
     };
 
     this.animal_loadProfile = function(animal, onComplete) {
