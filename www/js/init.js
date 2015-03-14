@@ -180,6 +180,31 @@ function Application() {
             }
             // share(SOCIAL_SHARE_TWITTER, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
         });
+        $("#menu-question-submit").off();
+        $("#menu-question-submit").on("click", function (event) {
+            if (window.plugins && window.plugins.socialsharing) {
+                window.plugins.socialsharing.shareViaTwitter(
+                        '@Whispers_Wild\n'
+                        + 'Name & Surname: ' + $("#menu-question-name").val() + '\n'
+                        + 'Question: ' + $("#menu-question-desc").val() + '\n'
+                        + 'Tags: ' + $("#menu-question-hashtags").val(),
+                        'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png',
+                        null, //'https://www.facebook.com/whispersofthewild',
+                        function () {
+//                            console.log('share ok')
+                            $("#menu-question-name").val('');
+                            $("#menu-question-desc").val('');
+                            $("#menu-question-hashtags").val('');
+                        },
+                        function (errormsg) {
+                            console.log('Error sharing via twitter: ' + errormsg);
+                        }
+                );
+            } else {
+                console.log("Could not find scoialsharing plugin");
+            }
+            // share(SOCIAL_SHARE_TWITTER, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
+        });
 
         // ==== Header =========================================================
         $("div .action-home").off();
@@ -338,21 +363,19 @@ function Application() {
         $(".menu_donate, .header-option-donate").off();
         $(".menu_donate, .header-option-donate").on("click", function (event) {
             app.view.animal_loadAnimals(function () {
-                $(".profile-tabs").hide();
                 $(".header-options-popup").hide();
-                $("#donate .title").html('Donate');
-                ga_storage._trackPageview('/index.html#donate');
-                location.href = "#donate";
+                $("#menu-donate .title").html('Donate');
+                ga_storage._trackPageview('/index.html#menu-donate');
+                location.href = "#menu-donate";
             });
         });
 
         $(".menu_question, .header-option-question").off();
         $(".menu_question, .header-option-question").on("click", function (event) {
-            $(".profile-tabs").hide();
             $(".header-options-popup").hide();
-            $("#question .title").html('Ask a Question');
-            ga_storage._trackPageview('/index.html#question');
-            location.href = "#question";
+            $("#menu-question .title").html('Ask a Question');
+            ga_storage._trackPageview('/index.html#menu-question');
+            location.href = "#menu-question";
         });
 
         $(".option_game, .header-option-game").off();
