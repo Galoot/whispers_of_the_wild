@@ -10,28 +10,22 @@
         font-size: 16px;
     }
 
-    h1 {line-height: 24px;
-        color: #fff;
-        text-shadow: 1px 1px 2px #000;
-        text-align: center;
-        font-size: 20px;
-        font-weight: lighter;}
+    h1 {line-height: 34px;
+    text-align: center;
+    text-shadow: none;
+    margin: 0;
+    font-size: 26px;
+    font-weight: lighter;}
     h2 {line-height: 34px;
-        color: #fff;
-        text-shadow: 1px 1px 2px #000;
         text-align: center;
         font-size: 22px;}
     h3 {line-height: 34px;
-        color: #fff;
-        text-shadow: 1px 1px 2px #000;
         text-align: center;
         font-size: 18px;
     }
-    h4 {line-height: 14px;
-        color: #fff;
-        text-shadow: 1px 1px 2px #000;
+    h4 {/* line-height: 34px; */
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     b {line-height: 24px;
@@ -579,6 +573,7 @@
 
     .profile-content {
         left: -80px; /* This is used for the panel slider */
+        background-color: #cbc9c5;
     }
 
     .profile-tabs {
@@ -896,6 +891,36 @@ min-width: 400px !important;
 /* margin-top: -15px; */
 /* display: table-cell; */
 /* text-align: center; */
+}
+
+.about-left {
+    float: none;
+    width:100%;
+}
+
+.about-right{
+   margin-left: 0px; 
+}
+
+.about-profilepic {
+    margin-bottom: 10px;
+}
+
+.copywrap-about h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.copywrap-about h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.copywrap-about h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 18px;
 }
 
 }

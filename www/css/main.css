@@ -65,7 +65,7 @@ h3 {line-height: 34px;
     text-align: left;
     font-size: 18px;
 }
-h4 {line-height: 34px;
+h4 {line-height: 18px;
     text-align: left;
     font-size: 16px;
 }
@@ -357,7 +357,6 @@ footer-controls {
 
 .audiocontent {
     width: auto;
-
     position: absolute;
     color: #2e2a2b;
     height: 100%;
@@ -369,7 +368,6 @@ footer-controls {
     //padding: 20px 0 20px 20px;
     margin-left: 20px;
     /*right: 100px;*/
-
     left: -128px; /* This is used for the panel slider */
     /* padding-right: 128px; */
     -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
@@ -382,10 +380,8 @@ footer-controls {
 .header-options-popup {
     padding: 10px;
     position: absolute;
-
     right: 61px;
     top: 73px;
-
     z-index: 3002;
     overflow: hidden;
     /* max-width: 298px; */
@@ -399,17 +395,16 @@ footer-controls {
 
 .profile-content.left {
     /* width: initial; */
-    left: 0px !important;
+   left: 0px !important;
 }
 
 .animal-top {
     width: auto;
     height: 50px;
     display: block;
-/*    // margin-right: 100px;
+/*  // margin-right: 100px;
     // margin-left: 20px;
     // margin-top: 10px;
-
     // overflow: auto;*/
 }
 
@@ -700,6 +695,24 @@ footer-controls {
     max-width: 100%;
     height: auto;
     margin:0;
+}
+
+.about-left {
+    float: left;
+    width:35%;
+}
+
+.about-profilepic {
+    float: left;
+    width:100%;
+    max-width: 100%;
+    height: auto;
+    margin:0;
+    border-radius: 10px;
+}
+
+.about-right{
+   margin-left: 37%; 
 }
 
 .about-founder .profile-option-image{
