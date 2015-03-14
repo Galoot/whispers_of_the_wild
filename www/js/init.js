@@ -42,10 +42,14 @@ function Application() {
 //        console.log('App unlocked...');
 
         this.view.getProperty('mode', function(results) {
+            var appMode = app.mode;
             var dbMode = app.mode;
 
             if (results && results[0] && results[0].value) {
                 dbMode = results[0].value;
+                if (dbMode < appMode) {
+                    dbMode = appMode;
+                }
             } else {
                 dbMode = -1;
             }
@@ -381,8 +385,12 @@ function Application() {
         $(".option_game, .header-option-game").off();
         $(".option_game, .header-option-game").on("click", function (event) {
             $(".header-options-popup").hide();
-            ga_storage._trackPageview('/index.html#game');
-            location.href = "#game";
+            if (app.mode == app.MODE_FREE || app.mode == app.MODE_FREE_UNLOCKED) {
+                app.view.modal("limitedAccessMessage");
+            } else {
+                ga_storage._trackPageview('/index.html#game');
+                location.href = "#game";
+            }
         });
 
         $(".game-start-label").off();
