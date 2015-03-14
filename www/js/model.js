@@ -6,7 +6,13 @@ PayStatus = {
 
 function Model() {
     this.data = new Datastore();
-    this.data.init();
+    this.data.checkDatabaseExists(
+        function() {
+            console.log("Database exists...");
+        }, function() {
+            console.log("Database does NOT exist...");
+            this.data.init();
+        });
 
     var _set_property = "UPDATE SYS_Property SET value = ? WHERE property = ?";
 
@@ -199,6 +205,16 @@ function Model() {
     };
 
     this.load_data = function(onCompleted) {
-        load_animal_data(this, onCompleted);
+        this.data.checkDatabaseExists(
+            function() {
+                console.log("Database exists...");
+                if (onCompleted) {
+                    onCompleted();
+                }
+            }, function() {
+                console.log("Database does NOT exist...");
+                load_animal_data(this, onCompleted);
+            });
+
     };
 }
