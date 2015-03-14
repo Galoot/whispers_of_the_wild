@@ -124,7 +124,7 @@
                     <div class="menu_block menu_donate"><div class="main_icon option_donate"></div><h4>Donate</h4></div>
                 </div>
                 <div id="social_container">
-                    <h4 style="margin:0; padding: 0px;">Share the app to unlock 5 Animals</h4>
+                    <h4 style="margin:0; padding: 0px; text-align: center;">Share the app to unlock 5 Animals</h4>
                     <div class="share-facebook share"></div>
                     <div class="share-twitter share"></div>
                 </div>
@@ -578,17 +578,23 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
-
+                 <div class="outerwrap">  
+                  <div class="formcontainer">
                     <input type="text" class="question-name" id="question-name" value="" placeholder="TYPE YOUR NAME AND SURNAME HERE"/>
                     <textarea class="question-desc" id="question-desc" placeholder="TYPE YOUR QUESTION HERE"></textarea>
                     <input type="text" class="question-hashtags" id="question-hashtags" value="" placeholder="TYPE IN THE APPROPRIATE HASHTAGS HERE EG. #ELEPHANT #TRUNK"/>
                     <input type="button" id="question-submit" value="SUBMIT"/>
-
-                    <div class="question-par">
-                        Find the answers and join this conversation on Twitter
-                        @Whispers_Wild or on the Whispers of the Wild Facebook Page.
+                  </div>
+                 </div>      
+                    
+                    <div id="question-par">
+                        <h4>Find the answers and join this conversation on Twitter<br/>
+                        @Whispers_Wild or on the Whispers of the Wild Facebook Page.</h4>
+                        <div id="question-social">
+                        <h4>Share the app to unlock 5 animals</h4>
                         <div class="share-facebook share" onClick="openPage('https://facebook.com/whispersofthewild');"></div>
                         <div class="share-twitter share" onClick="openPage('https://twitter.com/Whispers_Wild');"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
@@ -667,16 +673,19 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
-                    <br/><h1>About the Founder</h1>
-                    <h3>Samir Randera-Rees </h3>
-                    <h4>Founder, CEO, voice artist and photographer</h4>
-                    <br/><br/>I grew up in a family with a strong social conscience. Both my parents are doctors who were politically active in the anti-Apartheid struggle, and that desire to make the world a better place is deeply embedded within me. My passions however, lie not in healing the human body, but in healing the planet.
+                    <div><img class="about-topimage" src="resources/about/founder/samir.jpg" alt=""/></div>
+                    
+                    <div class="copywrap-about">
+                    <h1>About the Founder</h1>
+                    <h2>Samir Randera-Rees </h2>
+                    <h3>Founder, CEO, voice artist and photographer</h3>
+                    I grew up in a family with a strong social conscience. Both my parents are doctors who were politically active in the anti-Apartheid struggle, and that desire to make the world a better place is deeply embedded within me. My passions however, lie not in healing the human body, but in healing the planet.
                     <br/><br/>From a young age, I was always fascinated by the natural world. Growing up in Johannesburg, I would explore the deepest recesses of my garden in search of living creatures. Books and nature documentaries transported me into magical worlds, where plants, predators and prey danced in a ruthless struggle for survival. But there was nothing I loved more than escaping to the game reserve, to see this dance first hand.
                     <br/><br/>After school I moved south, to live and study in the shadow of the mountain. I completed my BSc in Environmental Science and Economics at the University of Cape Town. However, learning about nature in a classroom is hollow without first hand knowledge of its wonders, so I then spent time acquiring my first nature guide qualification. I could finally walk through the bush and feel an intimacy with nature that I had never felt before, and it made me want more. I completed two more guiding and tracking courses, before moving to Europe on a scholarship to continue my ecological studies. I was given the opportunity to travel around Europe, studying conservation ecology at different institutions in France, Portugal and England, before returning to the Kruger Park region to complete my thesis on carnivore interactions. Through all this, the most powerful message that I learnt is that you cannot conserve nature without reducing poverty and preserving human dignity.
                     <br/><br/>In between all that studying I took every opportunity to travel, experience new things and meet new people. From training wild donkeys on a farm in Namibia to guiding unruly volunteers in a nature reserves, to learning about sustainable forestry in the Brazilian Amazon, I have seen some incredible sights, and met some fascinating people.
                     <br/><br/>However I am still a child at heart. I love to laugh and joke, I’m a thrill seeker who can often be found doing stupid things like climbing up sheer cliff faces. I’m a huge sport fan, and most days you will find me on a court or field, playing with a ball of some description.  However my family remains the most important thing in my life.
                     <br/><br/>Unfortunately my days of studying and carefree wandering are behind me for now. Today, apart from developing Whispers of the Wild, I am a presenter on the longest running nature show in the world, 50|50. Mine is one of the voices you will hear on the app, and as a keen amateur photographer, I took the liberty of using some of my photos too. Through these activities I hope to convey some of my passion for nature to a wider audience.
-
+                    </div>
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
@@ -710,11 +719,13 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
-                    <br/><h1>About the EWT</h1>
-                    <br/><br/>The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.
+                    <div><img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/></div>
+                    <div class="copywrap-about">
+                    <!--- <h1>About the EWT</h1> -->
+                    The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.
                     <br/><br/>We focus on identifying the key factors threatening biodiversity and develop mitigating measures to reduce these. Through a broad spectrum of partnerships and networks, we develop innovative methodologies and best practice guidelines that help to reduce negative environmental impacts and promote harmonious co-existence and sustainable living for both people and wildlife.
                     <br/><br/>The Endangered Wildlife Trust is dedicated to conserving threatened species and ecosystems in southern Africa to the benefit of all people.
-                    <br/><br/><h4>We fulfill our Mission by:</h4>
+                    <br/><br/><h3>We fulfill our Mission by:</h3>
                     <ul>
                     <li>initiating and implementing conservation research and action programmes;</li>
                     <li>preventing species extinctions and maintaining biodiversity and ecosystem functioning;</li>
@@ -724,7 +735,7 @@
                     </ul>
                     <br/><br/>The Endangered Wildlife Trust was established in 1973 and is registered as a Non-profit Organisation, registration number 015-502 NPO and PBO number 930 001 777. The EWT is 501 (c) (3) compliant, US IRS Reg. EMP98-0586801.
                     <br/><br/>Become a member link: <a href="http://www.ewt.org.za/individualsupport.html">http://www.ewt.org.za/individualsupport.html</a>
-
+                    </div>
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
@@ -758,6 +769,7 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
+                    <div class="copywrap-about">
                     <br/><h1>ADVISORY BOARD</h1>
                     <h3>GAVIN HARTFORD</h3>
                     <h4>Industrial Sociologist holding a BSoc Sci (hons) UCT degree</h4>
@@ -781,7 +793,7 @@
                     
                     <h3>VALLI MOOSA</h3>
                     <br/><br/>Valli Moosa’s is one of the best-known names in conservation in South Africa. He is passionate about the environment, and currently serves as the Chairman of WWF South Africa, and previously held the positions of the South African Minister of Environmental Affairs and Tourism, President of the International Union for the Conservation of Nature (IUCN) and Chairman of the United National Commission on Sustainable Development. He played a key role in the establishment of the first trans-frontier park in Southern Africa, and under his leadership, five new Marine Protected Areas were created. He served on the National Executive Committee of the African National Congress, and was also the Minister of Constitutional Development in Nelson Mandela’s cabinet. Since 2004, he has played various prominent roles in the corporate world. He currently serves on the boards of Sun International, Anglo Platinum, Sanlam, Sappi and Imperial. However he still finds time to escape to the bush, hike and participate in the countries major cycling events.
-                   
+                    </div>
                 </div>  
 
                 <div class="panel-slider-bottom-handle"></div>
@@ -816,6 +828,7 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
+                    <div class="copywrap-about">
                     <br/><h1>VOICES</h1>
                     <h2>Emma Delius</h2>
                     <br/>I recently graduated a BA honours with distinction from the University of Witwatersrand and I am currently enrolled in a Masters program at the London School of Drama. In my degrees I acted, directed and wrote a wide range of plays ranging from Shakespeare to modern playwrighting. There hasn't been a year in my life, despite how busy things get where I haven't been to the bush. Waking up at 6am to be the first one out the gate, spending hours at the waterhole sure that there was a lion  behind the tree only to discover it was a rock and finally just at the end of the day as you are sure all the animals have dissapeared  you see a  male lion wandering along the road as the sunsets. When I was young I always wanted to be David Attenbourgh and who knows this may be the start.
@@ -826,7 +839,7 @@
 
                     <h2>Spyro Haralambous</h2>
                     I‘m a 28 year old sound enthusiast who has a deep love and passion for music and audio. I’m a sound production engineer by trade with a music production qualification. I‘ve always had a interest in audio for as long as I can remember. I eat, breathe, sleep music and I’ve been playing musical instruments from the age of 10. In my spare time I love to write and produce my own material so who knows what’s next from me.
-
+                    </div>
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
@@ -860,6 +873,7 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
+                    <div class="copywrap-about">
                     <br/><h1>PHOTOGRAPHERS</h1>
                     <h4>Andrea Campbell</h4>
                     I work and live in the African bush spending my time tracking and observing the incredible creatures of South Africa’s lowveld. I am currently based in the Sabi Sand Wildtuin working as a field guide and the photographic opportunities are too good to miss. Sometimes things come together and I manage to capture a glimpse of this wondrous natural world. 
@@ -898,7 +912,7 @@
                     
                     <br/><br/><h4>Shivam Trivedi</h4>
                     I am Shivam Trivedi, I have done my bachelors and master's in environmental science. Currently I am working as a Programme Officer at the Institute of Environment Education and Research, Bharati Vidyapeeth University, Pune, India and pursuing my PhD from the same institute on identifying biodiversity rich islands in the Western Ghats (biodiversity hotspot) of the Maharashtra state. I was also a part of the Leadership Training Program on Education for Sustainable Development which was for a duration of 6 months in Berlin, Germany. During this 6 month I got an opportunity to do a 2 month internship with Wildlife and Environment Society of South Africa (WESSA) and had also visited the Kruger National Park. My interest in wildlife is an inherited gift to me from my father.
-                   
+                   </div>
 
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
@@ -933,30 +947,29 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
+                    <div class="copywrap-about">
                     <br/><h1>Copyright © Whispers of the Wild</h1>
                     <h4>Sources</h4>
-                    Every animal on this app was thoroughly researched using a variety of sources including books, websites and scientific papers. All content was developed by Samir Randera-Rees, and he applied the same level of academic rigour to this research as he used in his Masters thesis. A full list of sources would occupy pages and pages of space, but listed below are the main sources used for the information used in the app.
                     
-                    <h4>Content</h4>
+                    <b>Every animal on this app was thoroughly researched using a variety of sources including books, websites and scientific papers. All content was developed by Samir Randera-Rees, and he applied the same level of academic rigour to this research as he used in his Masters thesis. A full list of sources would occupy pages and pages of space, but listed below are the main sources used for the information used in the app.</b>
                     
-                    African Tracker. 2014. www.africantracker.co.za
-Arkive. 2014. www.arkive.org
-Carnaby, T. 2006. Beat About the Bush Mammals. Jacana Publishers. Johannesburg, South Africa.
-Emmett, M & Pattrick, S. 2013. Game Ranger In Your Backpack, All in one interpretive guide to the Lowveld. Briza Publications. Pretoria, South Africa.
-Estes, R.  1991. A Behavioural Guide to African Mammals: Including Hoofed Mammals, Carnivores and Primate.  University of California Press. California, USA.
-Estes, R.  2011. A Behavioural Guide to African Mammals: Including Hoofed Mammals, Carnivores and Primate.  University of California Press. California, USA.
-Hine, G. & Hine, G. 2006. FGASA Level 1 & 2 Learner Manuals. Interactive Wildlife Company. South Africa
-IUCN Red list. 2014. www.iucnredlist.org
-IUCN Red List. 2014. www.iucnredlist.org
-Kingdon, J. 2003. The Kingdon Field Guide to African Mammals. A & C Black Publishers. Princeton, USA.
-Kruger National Park. 2014. www.krugerpark.co.za
-Liebenberg, L. 2008. A Field Guide to the Animal Tracks of Southern Africa. David Philip Publishers. Cape Town, South Africa
-Macdonald, D.W. 2010. Encyclopedia of Mammals. Oxford University Press. Oxford, United Kingdom
-Reardon, M. 2012. Shaping Kruger. Struik Nature. Cape Town, South Africa.
-Stuart, C. & Stuart, T. 2000. Tracks and Signs of Southern and East African Wildlife. Struik Publishers. Cape Town, South Africa
-Stuart, C. & Stuart, T. 2001. Field Guide to the Mammals of Southern Africa. Struik Publishers. Cape Town, South Africa
-Wikipedia. 2014. www.wikipedia.com
-
+                    <br/>African Tracker. 2014. www.africantracker.co.za
+                    <br/><a href="http://www.arkive.org">Arkive. 2014. www.arkive.org</a>
+                    <br/>Carnaby, T. 2006. Beat About the Bush Mammals. Jacana Publishers. Johannesburg, South Africa.
+                    <br/>Emmett, M & Pattrick, S. 2013. Game Ranger In Your Backpack, All in one interpretive guide to the Lowveld. Briza Publications. Pretoria, South Africa.
+                    <br/>Estes, R.  1991. A Behavioural Guide to African Mammals: Including Hoofed Mammals, Carnivores and Primate.  University of California Press. California, USA.
+                    <br/>Estes, R.  2011. A Behavioural Guide to African Mammals: Including Hoofed Mammals, Carnivores and Primate.  University of California Press. California, USA.
+                    <br/>Hine, G. & Hine, G. 2006. FGASA Level 1 & 2 Learner Manuals. Interactive Wildlife Company. South Africa
+                    <br/><a href="http://www.iucnredlist.org">IUCN Red list. 2014. www.iucnredlist.org</a>
+                    <br/>Kingdon, J. 2003. The Kingdon Field Guide to African Mammals. A & C Black Publishers. Princeton, USA.
+                    <br/><a href="http://www.krugerpark.co.za">Kruger National Park. 2014. www.krugerpark.co.za</a>
+                    <br/>Liebenberg, L. 2008. A Field Guide to the Animal Tracks of Southern Africa. David Philip Publishers. Cape Town, South Africa
+                    <br/>Macdonald, D.W. 2010. Encyclopedia of Mammals. Oxford University Press. Oxford, United Kingdom
+                    <br/>Reardon, M. 2012. Shaping Kruger. Struik Nature. Cape Town, South Africa.
+                    <br/>Stuart, C. & Stuart, T. 2000. Tracks and Signs of Southern and East African Wildlife. Struik Publishers. Cape Town, South Africa
+                    <br/>Stuart, C. & Stuart, T. 2001. Field Guide to the Mammals of Southern Africa. Struik Publishers. Cape Town, South Africa
+                    <a href="http://www.wikipedia.com">Wikipedia. 2014. www.wikipedia.com</a>
+                    </div>
 
                 </div>
                 <div class="panel-slider-bottom-handle"></div>

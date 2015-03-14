@@ -61,7 +61,9 @@
         border: 2px solid #ffffff;
         border-radius: 7px;
         text-shadow: 1px 1px 2px #000;
-    }
+    
+        /* text-align: center; */
+}
 
     .animal-block, .game-select-animal-block, .game-spot-animal-block, .game-spot-player-block, .game-winner-player-block, .game-winner-score-block {
         vertical-align: top;
