@@ -9,4 +9,6 @@
     </author>
     <content src="index.html"/>
     <access origin="*"/>
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="orientation" value="portrait" />
 </widget>
