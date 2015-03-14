@@ -6,7 +6,9 @@ function AudioTrack(src, duration, name) {
 
 function View() {
     model = new Model();
+    console.log(getTime() + " - Start loading animals.");
     model.load_data(function() {
+        console.log(getTime() + " - Animals laoded.");
         model.getAnimals(function(animals) {
             app.animals = animals;
         });
