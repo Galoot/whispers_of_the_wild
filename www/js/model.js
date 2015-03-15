@@ -199,6 +199,18 @@ function Model() {
     };
 
     this.load_data = function(onCompleted) {
-        load_animal_data(this, onCompleted);
+
+
+        this.data.checkDatabaseExists(this,
+                function(model) {
+                    console.log('Existing database, NOT inserting data');
+                    if (onCompleted) {
+                        onCompleted();
+                    }
+                }, function(model) {
+                    console.log('New database, inserting data');
+                    load_animal_data(model, onCompleted);
+                });
+//        load_animal_data(this, onCompleted);
     };
 }

@@ -6,8 +6,11 @@ function AudioTrack(src, duration, name) {
 
 function View() {
     model = new Model();
+    console.log("calling model.load_data()...");
     model.load_data(function() {
+        console.log("model.load_data() completed...reaeding animals...");
         model.getAnimals(function(animals) {
+            console.log("Completed loading, found " + animals.length + " animals...");
             app.animals = animals;
         });
     });
