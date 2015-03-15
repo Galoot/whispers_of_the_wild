@@ -104,6 +104,27 @@ function Datastore() {
         );
     };
 
+    this.checkDatabaseExists = function(onExists, onNotExists) {
+        this.getDB().transaction(
+                function (tx) {
+                    tx.executeSql("SELECT value FROM SYS_Property", [],
+                            function(tx, results) {
+                                if (onExists) {
+                                    onExists();
+                                }
+                            });
+                },
+                function (error) {
+                    if (onNotExists) {
+                        onNotExists();
+                    }
+                },
+                function () {
+                    // do nothing
+                }
+        );
+    };
+
     this.createDefaultProperties = function() {
         this.getDB().transaction(
                 function (tx) {

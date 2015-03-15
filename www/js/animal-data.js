@@ -3532,10 +3532,8 @@ load_animal_data = function(model, onCompleted) {
     });
     // =========================================================================
 
-    if (animal_counter === totalAnimals) {
-        if (onCompleted) {
-            onCompleted();
-        }
+    if (onCompleted) {
+        onCompleted();
     }
 };
 

@@ -266,3 +266,10 @@ function startsWithVowel(sentence) {
     }
     return false;
 }
+
+function getTime(dt) {
+    if (!dt) {
+        dt = new Date();
+    }
+    return (dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds());
+}

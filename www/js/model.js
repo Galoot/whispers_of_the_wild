@@ -6,7 +6,13 @@ PayStatus = {
 
 function Model() {
     this.data = new Datastore();
-    this.data.init();
+    this.data.checkDatabaseExists(
+        function() {
+            console.log("Database exists...");
+        }, function() {
+            console.log("Database does NOT exist...");
+            this.data.init();
+        });
 
     var _set_property = "UPDATE SYS_Property SET value = ? WHERE property = ?";
 
