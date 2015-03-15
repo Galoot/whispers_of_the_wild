@@ -160,17 +160,17 @@ function View() {
     };
 
     this.queueIntroTrack = function() {
-        app.view.audioTrack.push(new AudioTrack("resources/intro.mp3", 100, "Welcome to the African Wilderness"));
+        app.view.audioTrack.push(new AudioTrack("resources/intro.mp3", 134, "Welcome to the African Wilderness"));
         app.view.currentAudioTrackIndex = app.view.audioTrack.length - 1;
     };
 
     this.playIntroTrack = function() {
-        app.view.playAudioTrack("resources/intro.mp3", 100, "Welcome to the African Wilderness");
+        app.view.playAudioTrack("resources/intro.mp3", 134, "Welcome to the African Wilderness");
         location.href = "#menu";
     };
 
     this.playSafetyTrack = function() {
-        app.view.playAudioTrack("resources/safety.mp3", 100, "Safety Advice");
+        app.view.playAudioTrack("resources/safety.mp3", 275, "Safety Advice");
     };
 
     this.animal_loadProfile = function(animal, onComplete) {
