@@ -344,7 +344,7 @@ footer-controls {
 
 .profile-content {
     width: auto;
-
+    overflow-x: hidden !important;
     position: absolute;
     color: #2e2a2b;
     height: 100%;
