@@ -10,6 +10,10 @@ $(document).ready(function () {
     }
 });
 
+$(document).on("pagecontainershow", function (e, ui) {
+    $.unblockUI();
+});
+
 function onDeviceReady() {
     app.onDeviceReady();
 }
@@ -360,6 +364,7 @@ function Application() {
                 $(".profile-tabs").show();
                 $(".header-options-popup").hide();
                 ga_storage._trackPageview('/index.html#animals');
+                $.blockUI();
                 location.href = "#animals";
             });
         });
