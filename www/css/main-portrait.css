@@ -915,7 +915,7 @@ color: #fff;
 text-shadow: 1px 1px 2px #000;
 line-height: inherit;
 min-width: 400px !important;
-/* padding-top: 15px; */
+padding-top: 15px;
 /* margin-top: -15px; */
 /* display: table-cell; */
 /* text-align: center; */
