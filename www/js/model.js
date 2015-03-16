@@ -132,12 +132,17 @@ function Model() {
         var isFree = (payStatus === PayStatus.FREE);
         var isEarned = (payStatus === PayStatus.EARNED);
         var isPaid = (payStatus === PayStatus.PAID);
-        this.data.dbQuery(_add_animal, [name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
-                function(results) {
-                    if (onCompleted) {
-                        onCompleted(thumbName, jQuery.parseJSON(results).insertId);
-                    }
-                });
+
+        if (isPaid && (app.mode == app.MODE_FREE || app.mode == app.MODE_FREE_UNLOCKED)) {
+            // if the animal is a paid animal, dont insert...
+        } else {
+            this.data.dbQuery(_add_animal, [name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
+                    function(results) {
+                        if (onCompleted) {
+                            onCompleted(thumbName, jQuery.parseJSON(results).insertId);
+                        }
+                    });
+        }
     };
 
     this.addName = function(animalID, name, onCompleted) {

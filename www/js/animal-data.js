@@ -141,14 +141,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Squirrels (Xerus inauris & Paraxerus cepapi)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Ground squirrel, tree squirrel', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -209,14 +209,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Social mongooses',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Banded mongoose, meerkat, suricate, dwarf mongoose', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -279,14 +279,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Solitary mongooses',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'slender mongoose, yellow mongoose, white-tailed mongoose, Egyptian mongoose', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -466,14 +466,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Hares and rabbits',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -528,14 +528,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Hyrax (Procavia capensus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Dassie, rock dassie, tree dassie', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -803,14 +803,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Pangolin (Manis temminckii)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Ground pangolin, scaly anteater, cape pangolin, South African pangolin', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -1075,14 +1075,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Caracal (Caracal caracal)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'caracal, desert lynx', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -1205,14 +1205,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Steenbok',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Steenbok', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -1262,14 +1262,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Porcupine (Hystrix africaeaustralis)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'crested porcupine, cape porcupine', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -1451,14 +1451,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Serval (Leptailurus serval)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Small Carnivores (<20kg)', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -1946,14 +1946,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Springbok (Antidorcas marsulialis)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Springbok', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -2012,14 +2012,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Brown hyaena (Hyaena brunnea)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Brown hyaena', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -2476,14 +2476,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Tsessebe (Damaliscus lunatus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Tsessebe, topi, tiang', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -2739,14 +2739,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Blue wildebeest (Connochaetes taurinus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'blue wildebeest, common wildebeest, brindled gnu', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -3194,14 +3194,14 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Eland (Tragelaphus oryx)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Eland, common eland, giant eland', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
