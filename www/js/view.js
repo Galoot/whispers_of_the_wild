@@ -6,10 +6,11 @@ function AudioTrack(src, duration, name) {
 
 function View() {
     model = new Model();
-    console.log(getTime() + " - Start loading animals.");
+    console.log("calling model.load_data()...");
     model.load_data(function() {
-        console.log(getTime() + " - Animals laoded.");
+        console.log("model.load_data() completed...reaeding animals...");
         model.getAnimals(function(animals) {
+            console.log("Completed loading, found " + animals.length + " animals...");
             app.animals = animals;
         });
     });
@@ -159,17 +160,17 @@ function View() {
     };
 
     this.queueIntroTrack = function() {
-        app.view.audioTrack.push(new AudioTrack("resources/intro.mp3", 100, "Welcome to the African Wilderness"));
+        app.view.audioTrack.push(new AudioTrack("resources/intro.mp3", 134, "Welcome to the African Wilderness"));
         app.view.currentAudioTrackIndex = app.view.audioTrack.length - 1;
     };
 
     this.playIntroTrack = function() {
-        app.view.playAudioTrack("resources/intro.mp3", 100, "Welcome to the African Wilderness");
+        app.view.playAudioTrack("resources/intro.mp3", 134, "Welcome to the African Wilderness");
         location.href = "#menu";
     };
 
     this.playSafetyTrack = function() {
-        app.view.playAudioTrack("resources/safety.mp3", 100, "Safety Advice");
+        app.view.playAudioTrack("resources/safety.mp3", 275, "Safety Advice");
     };
 
     this.animal_loadProfile = function(animal, onComplete) {
