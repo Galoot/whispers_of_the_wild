@@ -133,7 +133,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -183,26 +182,25 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction- difference between tree and ground squirrels',
+        mdl.addAudio(animalID, '01 Introduction- difference between tree and ground squirrels',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 1- Introduction- difference between tree and ground squirrels.mp3');
-        mdl.addAudio(animalID, '02- Hoarding behaviour',
+        mdl.addAudio(animalID, '02 Hoarding behaviour',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/Squirrels 2- The great springbok migration.mp3');
+                + '/Squirrels 2- Hoarding behaviour.mp3');
         mdl.addAudio(animalID, '03 Tree squirrel society',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 3- Tree squirrel society.mp3');
         mdl.addAudio(animalID, '04 Ground squirrel society',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 4- Ground squirrel society.mp3');
-        mdl.addAudio(animalID, '04 Predator defense',
+        mdl.addAudio(animalID, '05 Predator defense',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Squirrels 5- Predator defense.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -255,10 +253,10 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Cooperative defence and hunting',
+        mdl.addAudio(animalID, '02 Cooperative defence and hunting',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 2- Cooperative defence and hunting.mp3');
         mdl.addAudio(animalID, '03 Cooperative breeding',
@@ -268,8 +266,7 @@ load_animal_data = function(model, onCompleted) {
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Social Mongooses 4- Dwarf mongooses and birds - unexpected relationships.mp3');
         // Maps(s)
-        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animalID, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
         mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
@@ -323,10 +320,10 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Solitary Mongooses 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Why be solitary',
+        mdl.addAudio(animalID, '02 Why be solitary',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Solitary Mongooses 2- Why be solitary_.mp3');
         mdl.addAudio(animalID, '03 Social habits',
@@ -461,7 +458,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -524,7 +520,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -593,7 +588,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -640,22 +634,22 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
-        mdl.addAudio(animalID, '01 Introduction - unusual relations',
+        mdl.addAudio(animalID, '01 The most hardcore animal',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 1- The most hardcore animal.mp3');
-        mdl.addAudio(animalID, '02 Why live in water',
+        mdl.addAudio(animalID, '02 Hardcore diet',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 2- Hardcore diet.mp3');
-        mdl.addAudio(animalID, '03 Red sweat and pink milk',
+        mdl.addAudio(animalID, '03 A taste for honey',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 3- A taste for honey.mp3');
-        mdl.addAudio(animalID, '04 Can hippos swim',
+        mdl.addAudio(animalID, '04 Attack as a defense',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 4- Attack as a defense.mp3');
-        mdl.addAudio(animalID, '05 A male dominated society',
+        mdl.addAudio(animalID, '05 Aggressive mating',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 5- Aggressive mating.mp3');
-        mdl.addAudio(animalID, '06 Watery love- hippo mating',
+        mdl.addAudio(animalID, '06 Honey badgers and people',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Honey Badger 6- Honey badgers and people.mp3');
         // Maps(s)
@@ -781,19 +775,19 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, '01- Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Life in the trees',
+        mdl.addAudio(animalID, '02 Life in the trees',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 2- Life in the trees.mp3');
-        mdl.addAudio(animalID, '03- Heirarchies in the troop',
+        mdl.addAudio(animalID, '03 Heirarchies in the troop',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 3- Heirarchies in the troop.mp3');
-        mdl.addAudio(animalID, '04- Communication- expressive faces, colour communication',
+        mdl.addAudio(animalID, '04 Communication- expressive faces, colour communication',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 4- Communication- expressive faces, colour communication.mp3');
-        mdl.addAudio(animalID, '05- Vocalisations and defensive strategy',
+        mdl.addAudio(animalID, '05 Vocalisations and defensive strategy',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Vervet Monkeys 5- Vocalisations and defensive strategy.mp3');
         // Maps(s)
@@ -849,19 +843,19 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, '01- Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Pangolin 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Armour plated defences',
+        mdl.addAudio(animalID, '02 Armour plated defences',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Pangolin 2- Armour plated defences.mp3');
-        mdl.addAudio(animalID, '03- Veracious predators',
+        mdl.addAudio(animalID, '03 Veracious predators',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Pangolin 3- Veracious predators.mp3');
-        mdl.addAudio(animalID, '04- Caring mothers',
+        mdl.addAudio(animalID, '04 Caring mothers',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Pangolin 4- Caring mothers.mp3');
-        mdl.addAudio(animalID, '04- Pangolins and humans',
+        mdl.addAudio(animalID, '05 Pangolins and humans',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Pangolin 5- Pangolins and humans.mp3');
         // Maps(s)
@@ -985,16 +979,16 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, '01- Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Otter fur- safe from cold',
+        mdl.addAudio(animalID, '02 Otter fur- safe from cold',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 2- Otter fur- safe from cold.mp3');
-        mdl.addAudio(animalID, '03- Expert fishermen',
+        mdl.addAudio(animalID, '03 Expert fishermen',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 3- Expert fishermen.mp3');
-        mdl.addAudio(animalID, '04- Otters and humans',
+        mdl.addAudio(animalID, '04 Otters and humans',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Otters 4- Otters and humans.mp3');
         // Maps(s)
@@ -1050,13 +1044,13 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
         // Audio
-        mdl.addAudio(animalID, '01 Poorly equipped to compete',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
-                + 'Civit 1- Introduction.mp3');
+                + '/Civit 1- Introduction.mp3');
         mdl.addAudio(animalID, '02 Scent communication',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 2- Scent communication.mp3');
-        mdl.addAudio(animalID, '03 Social males, solitary females',
+        mdl.addAudio(animalID, '03 Scent communication',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Civit 3- Scent communication.mp3');
         mdl.addAudio(animalID, '04 Civits in the perfume industry',
@@ -1122,14 +1116,14 @@ load_animal_data = function(model, onCompleted) {
         // Audio
         mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
-                + 'Caracal 1- Introduction.mp3');
+                + '/Caracal 1- Introduction.mp3');
         mdl.addAudio(animalID, '02 Ear tufts',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 2- Ear tufts.mp3');
-        mdl.addAudio(animalID, '02 Incredible athleticism',
+        mdl.addAudio(animalID, '03 Incredible athleticism',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 3- Incredible athleticism.mp3');
-        mdl.addAudio(animalID, '02 Adaptable hunters',
+        mdl.addAudio(animalID, '04 Adaptable hunters',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Caracal 4- Adaptable hunters.mp3');
         mdl.addAudio(animalID, '05 Agricultural pests',
@@ -1260,7 +1254,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -1309,16 +1302,16 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, '01- Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Ecosystem engineers',
+        mdl.addAudio(animalID, '02 Ecosystem engineers',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 2- Ecosystem engineers.mp3');
-        mdl.addAudio(animalID, '03- Awkward reproduction',
+        mdl.addAudio(animalID, '03 Awkward reproduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 3- Awkward reproduction.mp3');
-        mdl.addAudio(animalID, '04- Prickly defenses',
+        mdl.addAudio(animalID, '04 Prickly defenses',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Porcupine 4- Prickly defenses.mp3');
         // Maps(s)
@@ -1376,14 +1369,13 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '01 Ancient and intelligent antelope',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Common Duiker 1- Ancient and intelligent antelope.mp3');
-        mdl.addAudio(animalID, '02 The herd- a complex society',
+        mdl.addAudio(animalID, '02 Relationship with humans',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/Common Duiker 2- The herd- a complex society.mp3');
+                + '/Common Duiker 2- Relationship with humans.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -1500,10 +1492,10 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Built to catch rodents',
+        mdl.addAudio(animalID, '02 Built to catch rodents',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 2- Built to catch rodents.mp3');
         mdl.addAudio(animalID, '03 Solitary loners',
@@ -1512,12 +1504,11 @@ load_animal_data = function(model, onCompleted) {
          mdl.addAudio(animalID, '04 A life of danger',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 4- A life of danger.mp3');
-         mdl.addAudio(animalID, '04 Servals and humans',
+         mdl.addAudio(animalID, '05 Servals and humans',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Serval 5- Servals and humans.mp3');
         // Maps(s)
-        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animalID, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
         mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
@@ -1577,32 +1568,32 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         // Audio
-        mdl.addAudio(animalID, '01 The troop centre of baboon society',
+        mdl.addAudio(animalID, '01 The troop- centre of baboon society',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/01 The troop centre of baboon society.mp3');
+                + '/Baboons 1- The troop- centre of baboon society.mp3');
         mdl.addAudio(animalID, '02 Grooming and communication',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/02 Grooming and communication 1.mp3');
+                + '/Baboons 2- Grooming and communication.mp3');
         mdl.addAudio(animalID, '03 Baboon godfathers',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/03 Baboon godfathers.mp3');
-        mdl.addAudio(animalID, '04 Baboon males - defence and dominance',
+                + '/Baboons 3- Baboon godfathers.mp3');
+        mdl.addAudio(animalID, '04 Baboon males- defence and dominance',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/04 Baboon males - defence and dominance.mp3');
+                + '/Baboons 4- Baboon males- defense and domination.mp3');
         mdl.addAudio(animalID, '05 Colour communication',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/05 Colour communication.mp3');
+                + '/Baboons 5- Colour communication.mp3');
         mdl.addAudio(animalID, '06 Baby baboons the centre of attention',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/06 Baby baboons the centre of attention.mp3');
+                + '/Baboons 6- Baby baboons- the centre of attention.mp3');
         mdl.addAudio(animalID, '07 Education and innovation on  the troop',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/07 Education and innovation on  the troop.mp3');
+                + '/Baboons 7- Education and innovation in the troop.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
-        mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
+        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
+        mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -1671,7 +1662,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -1804,7 +1794,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '02 Adaptable diet',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Pig 2- Adaptable diet.mp3');
-        mdl.addAudio(animalID, '02 Social structures',
+        mdl.addAudio(animalID, '03 Social structures',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Bush Pig 3- Social structures.mp3');
         // Maps(s)
@@ -1863,9 +1853,6 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
 
         // Audio
-        mdl.addAudio(animalID, 'Wild dog',
-                100, resourcesPrefix + name.toLowerCase()
-                + '/Wild dog.mp3');
         mdl.addAudio(animalID, '01 A poorly deserved reputation',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Wild Dog 1- A poorly deserved reputation.mp3');
@@ -2000,10 +1987,10 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction',
+        mdl.addAudio(animalID, '01 Why is the springbok South Africa\'s national animal',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Springbok 1- Why is the springbok South Africa\'s national animal_.mp3');
-        mdl.addAudio(animalID, '02- Survivors',
+        mdl.addAudio(animalID, '02 Survivors',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Springbok 2- Survivors.mp3');
         mdl.addAudio(animalID, '03 The great springbok migration',
@@ -2138,7 +2125,7 @@ load_animal_data = function(model, onCompleted) {
         // Audio
         mdl.addAudio(animalID, '01 Poorly equipped to compete',
                 100, resourcesPrefix + name.toLowerCase()
-                + 'Cheetah 1- Poorly equipped to compete.mp3');
+                + '/Cheetah 1- Poorly equipped to compete.mp3');
         mdl.addAudio(animalID, '02 Vulnerable from birth',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Cheetah 2- Vulnerable from birth.mp3');
@@ -2230,13 +2217,13 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '06 Hunting with stamina',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 6- Hunting with stamina.mp3');
-        mdl.addAudio(animalID, '06 Master scavengers',
+        mdl.addAudio(animalID, '07 Master scavengers',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 7- Master scavengers.mp3');
-        mdl.addAudio(animalID, '06 Hyaenas, lions and other carnivores',
+        mdl.addAudio(animalID, '08 Hyaenas, lions and other carnivores',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 8- Hyaenas, lions and other carnivores.mp3');
-        mdl.addAudio(animalID, '06 Hyaenas and humans',
+        mdl.addAudio(animalID, '09 Hyaenas and humans',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Spotted Hyaena 9- Hyaenas and humans.mp3');
         // Maps(s)
@@ -2319,14 +2306,13 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '08 Secret to success 3- mass breeding, mass birth',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 8- Secret to success 3- mass breeding, mass birth.mp3');
-        mdl.addAudio(animalID, '09 Stay one step ahead',
+        mdl.addAudio(animalID, '09 Secret to success 4- Stay one step ahead',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Impala 9- Secret to success 4- stay one step ahead.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
-        mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
     });
     // =========================================================================
 
@@ -2444,12 +2430,12 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '02 The social cats',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 2- The social cats.mp3');
-        mdl.addAudio(animalID, '04 Scent communication',
+        mdl.addAudio(animalID, '03 Scent communication',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 3- Scent communication.mp3');
-        mdl.addAudio(animalID, '04 What&#39;s in a roar',
+        mdl.addAudio(animalID, '04 What\s in a roar',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/Lions 4- What&#39;s in a roar_.mp3');
+                + '/Lions 4- What\s in a roar_.mp3');
         mdl.addAudio(animalID, '05 Vulnerable at birth',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 5- Vulnerable at birth.mp3');
@@ -2459,9 +2445,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '06 Male lions - serial cub killers',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 7- Male lions - serial cub killers.mp3');
-        mdl.addAudio(animalID, '08 Male lions - serial cub killers',
+        mdl.addAudio(animalID, '08 The tough life of a male lion',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/Lions 8- Male lions - serial cub killers.mp3');
+                + '/Lions 8- The tough life of a male lion.mp3');
         mdl.addAudio(animalID, '09 Built to kill',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Lions 9- Built to kill.mp3');
@@ -2593,7 +2579,7 @@ load_animal_data = function(model, onCompleted) {
         // Audio
         mdl.addAudio(animalID, '01 Magical arid specialists',
                 100, resourcesPrefix + name.toLowerCase()
-                + 'Gemsbok 1- Magical arid specialists.mp3');
+                + '/Gemsbok 1- Magical arid specialists.mp3');
         mdl.addAudio(animalID, '02 Attaining water in the desert',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Gemsbok 2- Attaining water in the desert.mp3');
@@ -2661,10 +2647,10 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 1- Introduction.mp3');
-        mdl.addAudio(animalID, '02- Fussy eaters',
+        mdl.addAudio(animalID, '02 Fussy eaters',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Sable 2- Fussy eaters.mp3');
         mdl.addAudio(animalID, '03 Social structures and predator defence',
@@ -2797,8 +2783,8 @@ load_animal_data = function(model, onCompleted) {
                 + '/Blue Wildebeest 1- Introduction.mp3');
         mdl.addAudio(animalID, '02 The great migration',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/Blue Wildebeest 2 The great migration.mp3');
-        mdl.addAudio(animalID, '03 Wildebeest 3- Mating on the move',
+                + '/Blue Wildebeest 2- The great migration.mp3');
+        mdl.addAudio(animalID, '03 Mating on the move',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Blue Wildebeest 3- Mating on the move.mp3');
         mdl.addAudio(animalID, '04 Ecological effects of the migration',
@@ -2941,18 +2927,17 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, 'Introduction',
+        mdl.addAudio(animalID, '01 Introduction',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Roan 1- Introduction.mp3');
-        mdl.addAudio(animalID, '01- Social behaviour.mp3',
+        mdl.addAudio(animalID, '02 Social behaviour.mp3',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Roan 2- Social behaviour.mp3');
-        mdl.addAudio(animalID, '023 Roan and humans',
+        mdl.addAudio(animalID, '03 Roan and humans',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Roan 3- Roan and humans.mp3');
         // Maps(s)
-        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
-        mdl.addMap(animalID, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
+        mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
         mdl.addFootprint(animalID, 'Back', resourcesPrefix + name.toLowerCase() + '/foot1.jpg');
         mdl.addFootprint(animalID, 'Front', resourcesPrefix + name.toLowerCase() + '/foot2.jpg');
@@ -3165,33 +3150,33 @@ load_animal_data = function(model, onCompleted) {
 
 
         // Audio
-        mdl.addAudio(animalID, 'Rhino special- Rhino poaching - the history and reality.mp3',
-                100, resourcesPrefix + name.toLowerCase()
-                + '/Rhino special- Rhino poaching - the history and reality.mp3');
-        mdl.addAudio(animalID, '01- Distinguising white and black rhinos',
+        mdl.addAudio(animalID, '01 Distinguising white and black rhinos',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 1- Distinguising white and black rhinos.mp3');
-        mdl.addAudio(animalID, '02- Rhino ancient history',
+        mdl.addAudio(animalID, '02 Rhino ancient history',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 2- Rhino ancient history.mp3');
-        mdl.addAudio(animalID, '03- White rhino diet',
+        mdl.addAudio(animalID, '03 White rhino diet',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 3- White rhino diet.mp3');
-        mdl.addAudio(animalID, '04- Black rhino diet',
+        mdl.addAudio(animalID, '04 Black rhino diet',
                 100, resourcesPrefix + name.toLowerCase()
-                + '/Rhinos 4- Black rhino diet.mp3.mp3');
-        mdl.addAudio(animalID, '05- Rhino social structures',
+                + '/Rhinos 4- Black rhino diet.mp3');
+        mdl.addAudio(animalID, '05 Rhino social structures',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 5- Rhino social structures.mp3');
-        mdl.addAudio(animalID, '06- Male rhinos territories',
+        mdl.addAudio(animalID, '06 Male rhinos territories',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 6- Male rhinos territories.mp3');
-        mdl.addAudio(animalID, '07- Using the horn to socialise',
+        mdl.addAudio(animalID, '07 Using the horn to socialise',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 7- Using the horn to socialise.mp3');
-        mdl.addAudio(animalID, '08- Rhino horn - a formidable weapon',
+        mdl.addAudio(animalID, '08 Rhino horn - a formidable weapon',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Rhinos 8- Rhino horn - a formidable weapon.mp3');
+        mdl.addAudio(animalID, 'Rhino special- Rhino poaching - the history and reality',
+                100, resourcesPrefix + name.toLowerCase()
+                + '/Rhino special- Rhino poaching - the history and reality.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map1.jpg');
         mdl.addMap(animalID, 'Map 2', resourcesPrefix + name.toLowerCase() + '/map2.jpg');
@@ -3330,7 +3315,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '05 Breeding and male competition',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Zebra 5- Breeding and male competition.mp3');
-        mdl.addAudio(animalID, '05 Zebra domestication',
+        mdl.addAudio(animalID, '06 Zebra domestication',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Zebra 6- Zebra domestication.mp3');
         // Maps(s)
@@ -3401,12 +3386,18 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '04 Telling males and females apart',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 4- Telling males and females apart.mp3');
-        mdl.addAudio(animalID, '04 Predation',
+        mdl.addAudio(animalID, '05 Predation',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 5- Predation.mp3');
-        mdl.addAudio(animalID, '04 Eating old bones',
+        mdl.addAudio(animalID, '06 Eating old bones',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Giraffe 6- Eating old bones.mp3');
+        mdl.addAudio(animalID, 'Giraffe special 1- why do giraffes have long necks_',
+                100, resourcesPrefix + name.toLowerCase()
+                + '/Giraffe special 1- why do giraffes have long necks_.mp3');
+        mdl.addAudio(animalID, 'Giraffe special 2- Giraffes vs acacias- an evolutionary arms race',
+                100, resourcesPrefix + name.toLowerCase()
+                + '/Giraffe special 2- Giraffes vs acacias- an evolutionary arms race.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
@@ -3524,6 +3515,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '16 Elephants and humans',
                 100, resourcesPrefix + name.toLowerCase()
                 + '/Elephant 16- Elephants and humans.mp3');
+        mdl.addAudio(animalID, 'Elephant Special- Elephant graveyards',
+                100, resourcesPrefix + name.toLowerCase()
+                + '/Elephant Special- Elephant graveyards.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
