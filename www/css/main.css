@@ -169,6 +169,7 @@ p {line-height: 18px;
 #founder, #partners, #board, #sounds, #photographers, #sources, #game,
 #players, #game-animal-select, #game-animal-spot, #game-animal-winner {
     overflow-y: hidden;
+    overflow-x: hidden !important;
 }
 
 .footer {
