@@ -13,6 +13,8 @@ var shareFacebook = function() {
                     console.log('Error with facebook share...' + errormsg);
                 }
         );
+    } else {
+        console.log("Could not find scoialsharing plugin");
     }
 };
 
