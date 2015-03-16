@@ -11,6 +11,9 @@
     <feature name="Media">
         <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
     </feature>
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
     <name>Whispers of the Wild</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -20,7 +23,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <feature name="SocialMessage">
-        <param name="android-package" value="uk.co.ilee.socialmessage.SocialMessage" />
-    </feature>
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="orientation" value="portrait" />
 </widget>
