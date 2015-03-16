@@ -16,7 +16,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -82,7 +82,7 @@ load_animal_data = function(model, onCompleted) {
             'Primate', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -145,7 +145,7 @@ load_animal_data = function(model, onCompleted) {
             'Other Herbivores', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -213,7 +213,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -350,7 +350,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -408,7 +408,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -600,7 +600,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -669,7 +669,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -737,7 +737,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Your body language:</b> If a vervet monkey acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
             + '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -875,7 +875,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -942,7 +942,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1010,7 +1010,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1146,7 +1146,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1331,7 +1331,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Antelope (<100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1388,7 +1388,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1455,7 +1455,7 @@ load_animal_data = function(model, onCompleted) {
             'Primate', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1532,7 +1532,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Your body language:</b> If a baboon acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
             + '<br/><br/><b>Use men as protection:</b> baboons are sexist. They recognise women, and will pick on them. Use large males to protect a group. '
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1608,7 +1608,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be cautious:</b> some lodges have warthogs that walk around the camp during the day. Some of these animals are relatively tame, and may even approach you. Remember that these are still wild animals. Do not feed them, as they may become intimidating when they start to expect food. Do not chase them or act in a threatening manner towards them, as they may react aggressively, and their tusks can be deadly.'
             + '<br/><br/><b>Don’t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1680,7 +1680,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Which individuals to look out for:</b> be particularly respectful of mothers with cubs and wounded leopards'
             + '<br/><br/><b>Leopard body language:</b> a leopard will usually look at you then move off if it feels that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or hiss they are giving you a warning that you need to move away.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1754,7 +1754,7 @@ load_animal_data = function(model, onCompleted) {
             'Other Herbivores', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1814,7 +1814,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Carnivores (>20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -1894,7 +1894,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Antelope (<100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2016,7 +2016,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Carnivores (>20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2085,7 +2085,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Carnivores (>20kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2162,7 +2162,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Don’t leave food lying around:</b> never leave any food lying unguarded at night when hyaenas are around.</b> They will easily chew through cooler boxes or plastic crates to get to something they want, so make sure everything is locked away.'
             + '<br/><br/><b>Be wary of hyaenas in clans:</b> hyaenas are usually quite scared of people, and will run away if you shout and chase them. However, be careful if they are in a group, as this gives them confidence, and they may become aggressive if challenged. '
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2243,7 +2243,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Antelope (<100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2325,7 +2325,7 @@ load_animal_data = function(model, onCompleted) {
             'Small Antelope (<100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2385,7 +2385,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Beware the curious lion:</b>  Lions have been known to chew on cars out of curiosity. It may seem cute at first if a lion shows interest in your car, but it will stop being funny when they pop your tyre or bit off your wing mirror. If a lion starts sniffing around your car, close the windows and try to move away. '
             + '<br/><br/><b>Lion body language:</b> lions will usually look at you then move off if they feel that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or charge at you, they are telling you to get away. Don’t panic, close the windows and make a fast but safe retreat.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2544,7 +2544,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2612,7 +2612,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2681,7 +2681,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be cautious:</b> some lodges have warthogs that walk around the camp during the day. Some of these animals are relatively tame, and may even approach you. Remember that these are still wild animals. Do not feed them, as they may become intimidating when they start to expect food. Do not chase them or act in a threatening manner towards them, as they may react aggressively, and their tusks can be deadly.'
             + '<br/><br/><b>Don’t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2820,7 +2820,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be respectful:</b> never lean out of the vehicle, and never get out of the car when in the presence of buffalo. Do not throw things, shout or tease the buffalo. '
             + '<br/><br/><b>Be wary of old males:</b> The individuals to be most wary of are the big, old males. These guys are notoriously bad tempered, so give them a wide birth.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2893,7 +2893,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -2956,7 +2956,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -3027,7 +3027,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be wary of mothers:</b> mother hippos can be very protective when with their calves. Do not get too close to a mother, and do not make fast or erratic movements.'
             + '<br/><br/><b>Be wary at night:</b> hippos come out onto land at night to feed. Sometimes they may feed on the lawns inside lodges. Ask you lodge if hippos are able to enter the grounds, and ask them to brief you on their safety protocol at night.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -3113,7 +3113,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be wary of mother rhinos:</b> mother rhinos can be aggressive in defending their calves. Give mothers a wide birth, and never get between a mother and her calf. '
 
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -3198,7 +3198,7 @@ load_animal_data = function(model, onCompleted) {
             'Large Antelope (>100kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.EARNED, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -3265,7 +3265,7 @@ load_animal_data = function(model, onCompleted) {
             'Giant herbivores (>300kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -3338,7 +3338,7 @@ load_animal_data = function(model, onCompleted) {
             'Giant herbivores (>300kg)', // Category
             '', // Safety Advise
 
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
@@ -3432,7 +3432,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Stay in your car:</b> do not stand up, make sudden movements, lean out or get out of your car when near an elephant'
             + '<br/><br/><b>Don’t feed the elephants:</b> Do not be tempted to share your food with them. If an elephant develops a taste for human food they can become extremely dangerous.'
             + '', // Safety Advise
-            PayStatus.FREE, // Animal Status
+            PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
 
