@@ -75,10 +75,11 @@ body.pgwModalOpen {
 }
 
 .pgwModal .pm-content {
-    background: #fff;
-    padding: 10px;
+    background: #cbc9c5;
+    padding: 20px;
     border-radius: 5px;
     text-align: left;
+    font-family: Corbel;
 }
 
 .pgwModal .pm-close {

@@ -735,12 +735,12 @@ load_animal_data = function(model, onCompleted) {
             'Primate', // Category
             '<b>Vervet Monkey Safety Advice</b>'
             + '<br/><br/>Vervet monkeys are very intelligent and have the potential to become problem animals when they become too used to humans. They are not very dangerous to people, although they have been known to bite if cornered. They are more of a danger to your food, comfort and possessions.'
-            + '<br/><br/><b>Do not feed the vervet monkeys:<b/> vervet monkeys become problem animals when people feed them. They start to expect food to be given, and when it is not, they will take it by forcefully or guile.'
-            + '<br/><br/><b>Don’t leave windows/doors/tents open:<b/> remember to close your window, doors and tents when you leave. '
-            + '<br/><br/><b>Do not leave goods unattended:<b/> never leave goods, especially food lying around. Put away your rubbish in vervet monkey-proof bins. They have been known to steel phones, wallets and car keys.'
-            + '<br/><br/><b>Don’t fight them:<b/> if a vervet monkey tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
-            + '<br/><br/><b>Vervet monkey body language:<b/> a vervet monkey is showing aggression if it opens its eyes wide showing its white eyelids, bares its teeth, advances imposingly or vocalises. '
-            + '<br/><br/><b>Your body language:<b/> If a vervet monkey acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
+            + '<br/><br/><b>Do not feed the vervet monkeys:</b> vervet monkeys become problem animals when people feed them. They start to expect food to be given, and when it is not, they will take it by forcefully or guile.'
+            + '<br/><br/><b>Don’t leave windows/doors/tents open:</b> remember to close your window, doors and tents when you leave. '
+            + '<br/><br/><b>Do not leave goods unattended:</b> never leave goods, especially food lying around. Put away your rubbish in vervet monkey-proof bins. They have been known to steel phones, wallets and car keys.'
+            + '<br/><br/><b>Don’t fight them:</b> if a vervet monkey tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
+            + '<br/><br/><b>Vervet monkey body language:</b> a vervet monkey is showing aggression if it opens its eyes wide showing its white eyelids, bares its teeth, advances imposingly or vocalises. '
+            + '<br/><br/><b>Your body language:</b> If a vervet monkey acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
             + '', // Safety Advise
 
             PayStatus.FREE, // Animal Status

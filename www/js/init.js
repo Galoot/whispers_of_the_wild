@@ -259,7 +259,7 @@ function Application() {
 
         // ==== Options ========================================================
         $(".header-options-popup").html(
-                "<hr/><div id=\"header-option animals\" class=\"header-option header-option-animals\">Animals</div>"
+                "<div id=\"header-option animals\" class=\"header-option header-option-animals\">Animals</div>"
                 + "<hr/><div id=\"header-option games\" class=\"header-option header-option-game\">Games</div>"
                 + "<hr/><div id=\"header-option question\" class=\"header-option header-option-question\">Ask a Question</div>"
                 + "<hr/><div id=\"header-option aboutus\" class=\"header-option header-option-about\">About Us</div>"

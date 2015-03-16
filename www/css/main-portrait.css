@@ -551,12 +551,40 @@
     .caution {
         width:100%;
         position: relative;
-        /*margin-top: 50px;*/
+        margin-left: 20px;
+        
+        margin-top: 5px;
 /*        //top:50px;
         //padding-left: 50px;
         //border: 1px solid blue;
         //float: right;*/
     }
+    
+    .cautionicon {
+    margin-left: 20px;
+    }
+    
+    hr.style-four {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+    min-width: 100%;
+}
+
+hr.style-five {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+    min-width: 100%;
+}
 
     .panel-slider-bottom-handle.bottom {
         bottom: 65px !important;
@@ -568,7 +596,7 @@
 
     .header-options-popup {
         right: 9px;
-        top: 37px;
+        top: 50px;
     }
 
     .profile-content {
