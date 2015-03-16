@@ -90,6 +90,7 @@ function Application() {
     };
 
     this.onDeviceReady = function () {
+        StatusBar.overlaysWebView(false);
         $.mobile.defaultPageTransition = 'none';
         $.mobile.defaultDialogTransition = 'none';
         $.mobile.useFastClick = true;
