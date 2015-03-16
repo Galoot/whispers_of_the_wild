@@ -10,9 +10,6 @@ $(document).ready(function () {
     }
 });
 
-$(document).on("pagecontainershow", function (e, ui) {
-    $.unblockUI();
-});
 
 function onDeviceReady() {
     app.onDeviceReady();
@@ -361,11 +358,13 @@ function Application() {
 
         $(".menu_animals, .header-option-animals").off();
         $(".menu_animals, .header-option-animals").on("click", function (event) {
+            $.blockUI({ message: $("#loader"), css: { backgroundColor: '#0000', color: '#000', border: 'none'} });
+            console.log("Showing loader...");
             app.view.animal_loadAnimals(function () {
                 $(".profile-tabs").show();
                 $(".header-options-popup").hide();
                 ga_storage._trackPageview('/index.html#animals');
-                $.blockUI();
+                $.unblockUI();
                 location.href = "#animals";
             });
         });
