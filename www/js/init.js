@@ -1,5 +1,5 @@
 app = new Application();
-app.mode = app.MODE_FREE;
+app.mode = app.MODE_PAID;
 
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -288,6 +288,11 @@ function Application() {
         $("#howto-size").off();
         $("#howto-size").on("click", function(event) {
             app.view.modal("scaleSliderHowTo");
+        });
+        
+        $("#howto-game").off();
+        $("#howto-game").on("click", function(event) {
+            app.view.modal("gameHowTo");
         });
 
         // Range Slider & Play Button
