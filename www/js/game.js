@@ -29,10 +29,19 @@ function validatePlayerNames() {
     app.game.players = namedPlayers;
 }
 
+var gamePlayerSelectionFinish = ((playerIndex+1) >= app.game.players.length);
 function loanAnimalSelection() {
     // set player name & color
     var playerIndex = app.game.animalSelectplayerIndex;
     $("#player-selecting").html(app.game.players[playerIndex].name);
+    // remove all player classes
+    for (var pi = 0; pi < 4; pi++) {
+        $("#player-selecting").removeClass("player-" + pi);
+        $(".game-select-animal-icon").removeClass("player-" + pi);
+    }
+    // add the current player class
+    $("#player-selecting").addClass("player-" + playerIndex);
+    $(".game-select-animal-icon").addClass("player-" + playerIndex);
 
     // configure next/finish button
     var finish = ((playerIndex+1) >= app.game.players.length);
@@ -43,16 +52,23 @@ function loanAnimalSelection() {
         if (app.game.players[app.game.animalSelectplayerIndex].selection.length < 3) {
             app.view.modal("gameAnimalSelectMessage");
         } else {
-            if (confirm('Player '
-                        + app.game.players[app.game.animalSelectplayerIndex].name + ', you have made the following selection\n'
-                        + app.game.players[app.game.animalSelectplayerIndex].selection + "\nContinue?")) {
-                if (finish) {
-                    location.href = "#game-animal-spot";
-                } else {
-                    app.game.animalSelectplayerIndex = (playerIndex + 1);
-                    loanAnimalSelection();
-                }
-            }
+            // Update message content
+            $("#gameAnimalConfirmMessage .modal-content .game-message-player-name")
+                    .html(app.game.players[app.game.animalSelectplayerIndex].name);
+            var selection1ImgSrc = $("#game-select-animal-icon-"
+                    + app.game.players[app.game.animalSelectplayerIndex].selection[0].animalID).attr("src");
+            var selection2ImgSrc = $("#game-select-animal-icon-"
+                    + app.game.players[app.game.animalSelectplayerIndex].selection[1].animalID).attr("src");
+            var selection3ImgSrc = $("#game-select-animal-icon-"
+                    + app.game.players[app.game.animalSelectplayerIndex].selection[2].animalID).attr("src");
+
+            $("#game-message-animal-icon1").attr("src", selection1ImgSrc);
+            $("#game-message-animal-icon2").attr("src", selection2ImgSrc);
+            $("#game-message-animal-icon3").attr("src", selection3ImgSrc);
+
+            gamePlayerSelectionFinish = ((playerIndex+1) >= app.game.players.length);
+            // Show modal
+            app.view.modal("gameAnimalConfirmMessage");
         }
     });
 
@@ -62,43 +78,68 @@ function loanAnimalSelection() {
 
         var animalID = animalElementID.substring(21, animalElementID.length);
 
-        if (app.game.players[app.game.animalSelectplayerIndex].selection.length >= 3) {
-            alert('Max selection reached for player '
-                    + app.game.players[app.game.animalSelectplayerIndex].name + '\nSelection:\n'
-                    + app.game.players[app.game.animalSelectplayerIndex].getSelectionHtml());
-        } else {
-            if ($.inArray(animalID, app.game.players[app.game.animalSelectplayerIndex].selection) === -1) {
+        // check for existing animal
+        var duplicateFound = false;
+        for (var sel = 0; sel < app.game.players[app.game.animalSelectplayerIndex].selection.length; sel++) {
+            if (app.game.players[app.game.animalSelectplayerIndex].selection[sel].animalID == animalID) {
+                duplicateFound = true;
+                // Simply de-select the animal
+                app.game.players[app.game.animalSelectplayerIndex].selection.splice(sel, 1);
+                $("#" + animalElementID + " .game-select-animal-icon").toggleClass("icon-selected");
+
+                // Give a wearning message
+//                app.view.modal("gameAnimalDuplicateSelectMessage");
+//                return;
+            }
+        }
+
+        if (!duplicateFound) {
+            $(".game-message-player-name").html(app.game.players[app.game.animalSelectplayerIndex].name);
+
+            if (app.game.players[app.game.animalSelectplayerIndex].selection.length >= 3) {
+                $("#gameAnimalMaxMessage .modal-content .game-message-player-name")
+                        .html(app.game.players[app.game.animalSelectplayerIndex].name);
+                app.view.modal("gameAnimalMaxMessage");
+            } else {
                 app.game.players[app.game.animalSelectplayerIndex].selection.push(new Selection(animalID));
                 $("#" + animalElementID + " .game-select-animal-icon").toggleClass("icon-selected");
-//                alert('selected animalID ' + animalID + ' for player '
-//                        + app.game.players[app.game.animalSelectplayerIndex].name + '\nSelection:\n'
-//                        + app.game.players[app.game.animalSelectplayerIndex].selection);
-            } else {
-                alert('Animal has already been selected. Choose another.');
-            }
 
-            // max selection made
-            if (app.game.players[app.game.animalSelectplayerIndex].selection.length === 3) {
-                if (confirm(app.game.players[app.game.animalSelectplayerIndex].name
-                        + ', you have chosen the following three animals:\n'
-                        + app.game.players[app.game.animalSelectplayerIndex].getSelectionHtml() + "\nContinue?")) {
+                // max selection made
+                if (app.game.players[app.game.animalSelectplayerIndex].selection.length === 3) {
 
-                    if (finish) {
-                        location.href = "#game-animal-spot";
-                    } else {
-                        app.game.animalSelectplayerIndex = (playerIndex + 1);
-                        $(".game-select-animal-icon").removeClass("icon-selected");
-                        loanAnimalSelection();
-                    }
+                    // Update message content
+                    $("#gameAnimalConfirmMessage .modal-content .game-message-player-name")
+                            .html(app.game.players[app.game.animalSelectplayerIndex].name);
+                    var selection1ImgSrc = $("#game-select-animal-icon-"
+                            + app.game.players[app.game.animalSelectplayerIndex].selection[0].animalID).attr("src");
+                    var selection2ImgSrc = $("#game-select-animal-icon-"
+                            + app.game.players[app.game.animalSelectplayerIndex].selection[1].animalID).attr("src");
+                    var selection3ImgSrc = $("#game-select-animal-icon-"
+                            + app.game.players[app.game.animalSelectplayerIndex].selection[2].animalID).attr("src");
 
-                } else {
-                    app.game.players[app.game.animalSelectplayerIndex].selection = [];
-                    $(".game-select-animal-icon").removeClass("icon-selected");
+                    $("#game-message-animal-icon1").attr("src", selection1ImgSrc);
+                    $("#game-message-animal-icon2").attr("src", selection2ImgSrc);
+                    $("#game-message-animal-icon3").attr("src", selection3ImgSrc);
+
+                    gamePlayerSelectionFinish = ((playerIndex+1) >= app.game.players.length);
+                    // Show modal
+                    app.view.modal("gameAnimalConfirmMessage");
                 }
             }
         }
         buildSpotGrid();
     });
+}
+
+function confirmAnimalSelection() {
+    app.view.hideModal();
+    if (gamePlayerSelectionFinish) {
+        location.href = "#game-animal-spot";
+    } else {
+        app.game.animalSelectplayerIndex = (app.game.animalSelectplayerIndex + 1);
+        $(".game-select-animal-icon").removeClass("icon-selected");
+        loanAnimalSelection();
+    }
 }
 
 function buildWinnerGrid() {
@@ -170,17 +211,17 @@ function buildWinnerGrid() {
 function buildSpotGrid() {
     var spotHtml = "";
     for (var x = 0; x < app.game.players.length; x++) {
-        spotHtml += "<div class=\"game-spot-player-block\"><span class=\"game-spot-player-icon\">" + app.game.players[x].name + "</span></div>";
+        spotHtml += "<div class=\"game-spot-player-block player-" + x + "\"><span class=\"game-spot-player-icon player-" + x + "\">"
+                + app.game.players[x].name
+                + "</span></div>";
         if (app.game.players[x].selection) {
             for (var y = 0; y < app.game.players[x].selection.length; y++) {
-
                 spotHtml += "<div "
                             + "id=\"game-spot-animalID_" + x + "_" + y + "\" "
-                            + "class=\"game-spot-animal-block\">"
-                                + "<img class=\"game-spot-animal-icon\" src=\""
+                            + "class=\"game-spot-animal-block player-" + x + "\">"
+                                + "<img id=\"game-spot-animal-" + app.game.players[x].selection[y].animal.animalID + "\" class=\"game-spot-animal-icon\" src=\""
                                         + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
                         + "</div>";
-
                 var lastSelection = (y === app.game.players[x].selection.length - 1);
                 if (lastSelection) {
                     spotHtml += "<br/>";

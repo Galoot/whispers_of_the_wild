@@ -77,6 +77,10 @@ function View() {
         });
     };
 
+    this.hideModal = function() {
+        $.pgwModal('close');
+    }
+
     this.reloadImageSlider = function(slider, element) {
         try {
             return element.pgwSlider({
@@ -348,7 +352,7 @@ function View() {
                         + "class=\"" + idPrefix + "animal-block paid-mode-" + isPaid + "\" "
                         + "category=\"" + animals[x].category + "\" "
                         + "animalSize=\"" + animals[x].animalID + "\">";
-                animalGridHtml += "<img class=\"" + idPrefix + "animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                animalGridHtml += "<img id=\"" + idPrefix + "animal-icon-" + animals[x].animalID + "\" class=\"" + idPrefix + "animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
                 animalGridHtml += "</div>";
             }
 

@@ -276,15 +276,15 @@
                 <div class="header-button right back"></div>
             </div>
             <div class="content">
-                
+
                 <div class="copywrap-about" style="color: #2e2a2b;">
                     <div><img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/></div>
                     <h1>Where does your money go?</h1>
                     The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.The Endangered Wildlife Trust is dedicated to conserving threatened species and ecosystems in southern Africa to the benefit of all people. We focus on identifying the key factors threatening biodiversity and use applied fieldwork, research and direct engagement with stakeholders to reduce these. Your donations will go towards the highest conservation priorities in Southern Africa.
                     </br></br>Learn more button hyperlink: <a href="www.ewt.co.za">www.ewt.org.za</a>
                 </div>
-                
-                
+
+
                 <div class="panel-slider-bottom-handle"></div>
             </div>
             <div class="footer">
@@ -748,14 +748,14 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
-                    
+
                     <div class="copywrap-about" style="color: #2e2a2b;">
                         <div><img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/></div>
                         <h1>Where does your money go?</h1>
                         The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.The Endangered Wildlife Trust is dedicated to conserving threatened species and ecosystems in southern Africa to the benefit of all people. We focus on identifying the key factors threatening biodiversity and use applied fieldwork, research and direct engagement with stakeholders to reduce these. Your donations will go towards the highest conservation priorities in Southern Africa.
                         </br></br>Learn more button hyperlink: <a href="www.ewt.co.za">www.ewt.org.za</a>
                     </div>
-                    
+
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
@@ -835,7 +835,7 @@
                 <span class="profile-tabs left"></span>
                 <div class="panel-slider-left-handle left"></div>
                 <div class="profile-content left bottom">
-                    
+
                     <div class="copywrap-about">
                         <img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/>
                         <hr>
@@ -1370,7 +1370,7 @@
                 </div>
                 -->
                 <div class="game-players-next">
-                    
+
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
@@ -1570,7 +1570,7 @@
                     <span><img style="height: 90px; width: auto; margin: 0 auto;" src="resources/scale-demo.jpg"/></span>
                 </div>
             </div>
-            
+
             <div id="gameHowTo">
                 <div style="text-align: center;">
                     <div class="modal-title">Who is the best spotter in your vehicle?</div>
@@ -1582,7 +1582,7 @@
                         <br/>according to the animal’s scarcity, and bonus points are given
                         <br/>for the winner of each round.
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -1599,10 +1599,40 @@
 
             <div id="gameAnimalSelectMessage">
                 <div style="text-align: center;">
-                    <div class="modal-title">Game</div>
+                    <div class="modal-title">Spot the Game</div>
                     <br/>
                     <div class="modal-content">
                         Please ensure you have selected three animals.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="gameAnimalConfirmMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Spot the Game</div>
+                    <br/>
+                    <div class="modal-content">
+                        <span class="game-message-player-name"></span>, you have chosen the following three animals:
+                        <br/>
+                        <img id="game-message-animal-icon1" class="game-message-animal-icon"/>
+                        <img id="game-message-animal-icon2" class="game-message-animal-icon"/>
+                        <img id="game-message-animal-icon3" class="game-message-animal-icon"/>
+                        <br/>Continue?
+                        <span id="game-message-confirm-yes" onClick="confirmAnimalSelection();">YES</span>
+                        <span id="game-message-confirm-no" onClick="app.view.hideModal();">NO</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="gameAnimalMaxMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Spot the Game</div>
+                    <br/>
+                    <div class="modal-content">
+                        <span class="game-message-player-name"></span>, you may only select three animals.
+                        <br/>Tap an active icon to de-select the animal.
                     </div>
 
                 </div>

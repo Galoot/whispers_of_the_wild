@@ -1406,6 +1406,10 @@ hr.style-five {
 
 /*// Game styling ================================================================*/
 
+.game-message-animal-icon {
+    width: 100px;
+}
+
 #game .content {
     border: none;
 /*    // position: absolute;
