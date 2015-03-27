@@ -29,7 +29,7 @@ function validatePlayerNames() {
     app.game.players = namedPlayers;
 }
 
-var gamePlayerSelectionFinish = ((playerIndex+1) >= app.game.players.length);
+var gamePlayerSelectionFinish = false;
 function loanAnimalSelection() {
     // set player name & color
     var playerIndex = app.game.animalSelectplayerIndex;
@@ -204,7 +204,7 @@ function buildWinnerGrid() {
         }
     }
     $(".game-winner-animal-icon").attr("src", winnerAnimal.iconFilePath);
-    $(".game-winner-animal-info").html(winnerAnimal.idPointers);
+    $(".game-winner-animal-info").html(winnerAnimal.randomFacts);
     $(".game-winning-result").html(winnerhtml);
 }
 

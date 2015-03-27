@@ -33,6 +33,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Microchirptera: flat faces; large ears; small eyes; Megachiroptera: large eyes; pointy, dog-like face.',
+                // Random facts
+                'Random facts anour bats are that...bla bla bla bla',
                 // Confused With
                 'Each other',
                 'Nocturnal', // Activity Period
@@ -99,6 +101,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Lesser bushbaby: long, thin, bushy tail; small body; large ears; huge, amber coloured, forward facing eyes; light grey coat; amazing jumping ability; usually seen in trees; Thick-tailed bushbaby: long, thick, bushy tail; approximately cat-sized; large, forward-facing eyes; dark grey coat',
+                // Random facts
+                '',
                 // Confused With
                 'Each other',
                 'Nocturnal', // Activity Period
@@ -162,6 +166,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Ground squirrel: Light brown to grey coat with white a stripe down each side; tail thick and bushy, sometimes held above head in bright sunlight; always found on the ground; Tree Squirrel: Smaller than ground squirrel; yellowish to reddish-brown coat, uniformly coloured with no distinct markings; tail thin; found in trees and on ground.',
+                // Random facts
+                '',
                 // Confused With
                 'each other, meerkats, mongooses',
                 'Diurnal', // Activity Period
@@ -230,6 +236,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'long, slender bodies; small ears; forward facing eyes; pointed faces; Dwarf mongoose: very small size; fuzzy-looking dark grey to dark brown fur; Meerkat: pale, straw-coloured fur with irregular blotchy stripes across the back; blunt nose; stand in distinctive upright posture; Banded mongoose: Relatively large size, dark grey fur with 10-12 distinct black stripes across the back.',
+                // Random facts
+                '',
                 // Confused With
                 'Other mongooses',
                 'Diurnal', // Activity Period
@@ -300,6 +308,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Small carnivores; long slender bodies, short legs; pointed faces; only seen alone Slender mongoose: thin, black-tipped tail which turns upwards when moving; Yellow mongoose: yellowish body, bushy tail with white-tipped tail; White-tailed mongoose: Large, dark-grey body, bushy white tail; Egyptian mongoose: relatively large size, shaggy grey fur.',
+                // Random facts
+                '',
                 // Confused With
                 'Other mongooses',
                 'Mostly nocturnal with exception of slender and grey mongoose.', // Activity Period
@@ -367,6 +377,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Similar to a house cat; shorter legs and tail; tan body with regular black or brown spots, barred tail and legs',
+                // Random facts
+                '',
                 // Confused With
                 'Domestic cat, African wildcat ',
                 'Nocturnal', // Activity Period
@@ -425,6 +437,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Body long and slender; legs relatively short; tail thick and striped; coat a dull grey, well spotted; face mongoose-like with black and white mask; Small-spotted genet: white-tipped tail, small black spots; Large-spotted genet: black-tipped tail, large russet coloured spots.',
+                // Random facts
+                '',
                 // Confused With
                 'Each other and the African civet',
                 'Early morning, late afternoon and night, rest in the heat of the day', // Activity Period
@@ -487,6 +501,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'small size; upright stance when sitting; soft, brown-grey fur; small, tufty tail; Hares: Long ears, long hind legs; Rabbits: smaller ears, shorter legs. ',
+                // Random facts
+                '',
                 // Confused With
                 'Each other, spring hare',
                 'Nocturnal', // Activity Period
@@ -549,6 +565,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Approximately rabbit sized; stocky build; back rounded to resemble a boulder; ears small and rounded; fur dull grey to dark brown on top, paler below; black eyes with lighter patches around eyebrows and mouth',
+                // Random facts
+                '',
                 // Confused With
                 'each other, rock rabbits',
                 'Rock dwelling species are predominantly diurnal, tree dwelling species mainly nocturnal', // Activity Period
@@ -617,6 +635,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'black underparts and legs, silver-grey fur on top including head and tail; legs very short, body stickily built; tail is very short. ',
+                // Random facts
+                '',
                 // Confused With
                 'striped weasel and striped polecats, but much larger than both',
                 'mostly nocturnal, sometime active in early morning, late afternoon.', // Activity Period
@@ -686,6 +706,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Sexes similar; similar appearance to domestic cat; fur a sandy brown colour; reddish-brown colour on the back of ears; black stripes on legs; longer legs than the average housecat.',
+                // Random facts
+                '',
                 // Confused With
                 'Domestic cats, black footed cat – black footed cat is smaller and stockier, with black spots and a short tail.',
                 'Mostly nocturnal but adaptable', // Activity Period
@@ -754,6 +776,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'medium-sized monkey, silvery-grey coat; black face; long, thin tails; always found in groups; males larger, with large blue scrotum and red penis.',
+                // Random facts
+                '',
                 // Confused With
                 'samango monkey',
                 'diurnal', // Activity Period
@@ -824,6 +848,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable, covered in hard, brown scales, hunched posture.',
+                // Random facts
+                '',
                 // Confused With
                 'Unmistakeable, covered in hard, brown scales, hunched posture.',
                 'Nocturnal', // Activity Period
@@ -892,6 +918,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Slender, dog-like appearance; black-backed: distinct black saddle on its back; reddish-brown sides and face; fairly large, pointed ears; black, bushy tail; side-striped: mostly grey with a light and dark stripe down their sides; white-tipped tail; smaller ears than black-backed jackal.',
+                // Random facts
+                '',
                 // Confused With
                 'Each other, cape fox, bat-eared fox, aardwolf  ',
                 'Mostly nocturnal, but can be active in the mornings and evenings', // Activity Period
@@ -959,6 +987,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Cape clawless otter: relatively large size; dark-brown to black coat; white neck and chin; hunched posture when moving on land; sexes similar; Spotted-necked otter: smaller than spot-necked otter; underparts lighter, pale spots on throat, never far from permanent water.',
+                // Random facts
+                '',
                 // Confused With
                 'each other, and with the water mongoose',
                 'diurnal', // Activity Period
@@ -1027,6 +1057,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Relatively large, approximately the size of a medium sized dog; racoon-like face with black “mask” over eyes; tan to grey coat, heavily marked with black spots; black stripe running the length of the back; short tail; hunched appearance with head held low when walking.',
+                // Random facts
+                '',
                 // Confused With
                 'Genet',
                 'Mainly nocturnal, occasionally active in early morning and late afternoon.', // Activity Period
@@ -1096,6 +1128,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Russet-red coat; pointed black ears with black tufts at the tips; short, powerful legs; hind legs higher than front legs, short tail; face has prominent black and white markings; sexes similar',
+                // Random facts
+                '',
                 // Confused With
                 'Serval, African golden cat',
                 'Nocturnal', // Activity Period
@@ -1163,6 +1197,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Sexes look alike; Hyaena-like appearance; mane of long hair on neck and back; tawny coloured coat with vertical black stripes; black feet, tail and muzzle.',
+                // Random facts
+                '',
                 // Confused With
                 'Brown hyaena, spotted hyaena – aardwolf is much smaller than the other hyaena species',
                 'Active at night and early morning', // Activity Period
@@ -1226,6 +1262,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Small antelope; Coat a uniform reddish-brown on back, sides and head, lighter on the belly; huge ears with black and white stripes; only males have short, straight, pointy horns.',
+                // Random facts
+                '',
                 // Confused With
                 'oribi, grysbok, common duiker, suni, klipspringer',
                 'Early morning and late afternoon', // Activity Period
@@ -1283,6 +1321,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable, entire body covered with long, sharp, black and white quills.',
+                // Random facts
+                '',
                 // Confused With
                 'the southern African hedgehog, which is much smaller',
                 'Nocturnal', // Activity Period
@@ -1348,6 +1388,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Coat a uniform dull grey to reddish-yellow colour on top, paler on the belly; long, narrow face with black running up the nose; have a crest of long black hair between the ears; females slightly larger than males; only the males equipped with short, sharp, straight horns.',
+                // Random facts
+                '',
                 // Confused With
                 'Steenbok, oribi, grysbok, reedbuck, rhebok',
                 'Early morning and late afternoon', // Activity Period
@@ -1405,6 +1447,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Pig-like snout; long, tubular ears; arched back; thick, kangaroo-like tail, yellowish-grey to grey coat. Sexes appear similar.',
+                // Random facts
+                '',
                 // Confused With
                 'Unmistakeable',
                 'Duirnal', // Activity Period
@@ -1472,6 +1516,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Medium sized cat; slightly built with very long legs; straw-yellow fur with numerous black spots;  spots merge to form stripes along the back and head; relatively small head with huge ears; tail short and striped; black and white stripes on the back of ears; sexes similar.',
+                // Random facts
+                '',
                 // Confused With
                 'Cheetah, leopard',
                 'Mainly nocturnal but occasionally active at damn and dusk.', // Activity Period
@@ -1549,6 +1595,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Monkey-like appearance; dog-like, black face; coarse dark-grey to olive brown fur; long tail which points up from the rump then bends downward, males much larger than females, with large canine and mane across shoulders.',
+                // Random facts
+                '',
                 // Confused With
                 'Vervet monkey – baboons are much larger and darker in colour ',
                 'Duirnal', // Activity Period
@@ -1625,6 +1673,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'pig-like appearance; leathery, grey skin covered with sparse, wiry hair; a long mane of wiry brown hair along the neck and back; upward-curving tusks sticking out of the mouth; prominent warts on face; males larger, with two pairs of warts on the face, one under the eyes and one on the sides of the nose, females only have a pair under the eyes.',
+                // Random facts
+                '',
                 // Confused With
                 'bushpig',
                 'Mostly diurnal', // Activity Period
@@ -1697,6 +1747,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large, stickily built cat; fur a russet yellow colour with rosette spots covering the body; lacks the black tear-drop lines of the cheetah; ears rounded; head large and powerful; sexes similar, males larger than females.',
+                // Random facts
+                '',
                 // Confused With
                 'cheetah, serval',
                 'mainly nocturnal, but will occasionally hunt and patrol in the mornings and evenings.', // Activity Period
@@ -1771,6 +1823,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Typical pig-like appearance; body covered in coarse reddish-brown hair; mane longer and paler than body hair; sexes similar; no warts on face; tail held pointing down when running',
+                // Random facts
+                '',
                 // Confused With
                 'Warthog',
                 'Nocturnal but occasionally seen in daylight', // Activity Period
@@ -1831,6 +1885,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'typical dog-like appearance; blotched black, white and tan coat; white tipped-tails; body slender with long legs; large, rounded ears.',
+                // Random facts
+                '',
                 // Confused With
                 'brown hyaena, spotted hyaena',
                 'diurnal', // Activity Period
@@ -1911,6 +1967,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'White spots and stripes along sides; white patch under chin, white stripe on lower neck; colour varies from rich chestnut to dull brown; Males larger than females; only males possess short, almost straight horns',
+                // Random facts
+                '',
                 // Confused With
                 'Nyala, kudu, sitatunga',
                 'Diurnal', // Activity Period
@@ -1967,6 +2025,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'a medium sized antelope;  russet-brown coat on back, distinct black stripe on the sides, white belly; white face with black strip through eye; white patch over rump; horns present on both males and females, turn in at the top.',
+                // Random facts
+                '',
                 // Confused With
                 'impala, various gazelle species',
                 'Diurnal', // Activity Period
@@ -2033,6 +2093,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large, dog-like appearance; back slopes down from shoulders to rump; large head; pointed ears; long, shaggy brown hair; hair on neck slightly lighter than body; sexes similar',
+                // Random facts
+                '',
                 // Confused With
                 'spotted hyaena, aardwolf ',
                 'Nocturnal', // Activity Period
@@ -2102,6 +2164,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Very tall cat with greyhound-like build; long, slender legs; slender build; long, thick tail; black tear marks on face; coat a tan colour with solid, round black spots (unlike the rosettes of a leopard); sexes similar.',
+                // Random facts
+                '',
                 // Confused With
                 'Serval, leopard',
                 'Duirnal', // Activity Period
@@ -2179,6 +2243,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'A large, dog-like carnivore; huge head; round ears; back slopes downwards from shoulders to hips; coat a shaggy brown with irregular black spots.',
+                // Random facts
+                '',
                 // Confused With
                 'Brown hyaen ',
                 'Nocturnal', // Activity Period
@@ -2260,6 +2326,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'long legs; reddish-brown fur on the back, and sides white belly; black tuft of fur on ankles; distinctive black and white “M” on backside; Males larger than females; only males have lyrate horns.',
+                // Random facts
+                '',
                 // Confused With
                 'springbok, lechwe, several gazelle species',
                 'Mainly diurnal', // Activity Period
@@ -2342,6 +2410,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Rich purplish-brown coat, lighter on shoulders and back; white on buttocks, belly face and forehead; sexes indistinct; both sexes have lyre shaped horns',
+                // Random facts
+                '',
                 // Confused With
                 'Hartebeest and Tsessebe',
                 'Diurnal, less active in the heat of the day', // Activity Period
@@ -2402,6 +2472,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Huge, powerful cat; coat uniformly straw-yellow coloured; males larger than females with a mane of long hair around the head and neck.',
+                // Random facts
+                '',
                 // Confused With
                 'unmistakeable',
                 'mainly nocturnal, but will occasionally hunt and patrol in the mornings and evenings.', // Activity Period
@@ -2497,6 +2569,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Back slopes downward from shoulders to hips; reddish brown body that has a scorched appearance; lighter brown “stockings”; long black face; short, slightly twisted horns; sexes similar.',
+                // Random facts
+                '',
                 // Confused With
                 'Hartebeests, blesbok, wildebeest.',
                 'Mostly diurnal', // Activity Period
@@ -2561,6 +2635,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'distinct black and white facial pattern; black and white markings along neck, belly and legs; long, straight, sharp horns; thick neck; horse-like tail; males and females similar, males slightly larger',
+                // Random facts
+                '',
                 // Confused With
                 'Roan, eland',
                 'Early morning, late afternoon and night, rest in the heat of the day', // Activity Period
@@ -2629,6 +2705,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Striking looking antelope; distinctive dark brown to black coat, white belly; face a conspicuous black and white mask; extremely long, ridged horns that curve backwards; females smaller than males with brown coat and smaller horns.',
+                // Random facts
+                '',
                 // Confused With
                 'Roan, gemsbok',
                 'Mostly early morning and late afternoon', // Activity Period
@@ -2698,6 +2776,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large antelope; cshaggy brown coat, long, straggly hair under the neck; distinctive white ring on backside (solid white patch in northern subspecies); extremely large ears; males larger; only males have long, forward curving horns with prominent ridges.',
+                // Random facts
+                '',
                 // Confused With
                 'lechwe, puku, roan, kudu',
                 'diurnal', // Activity Period
@@ -2760,6 +2840,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'downward sloping back; dark grey coat with dark vertical striped down sides; black tail and mane; broad face; sexes similar; males slightly larger; both have horns that grow outwards and upwards from the head',
+                // Random Facts
+                '',
                 // Confused With
                 'black wildebeest, buffalo, ',
                 'Diurnal', // Activity Period
@@ -2837,6 +2919,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large, cow-like appearance; coat dark-brown to black; males larger than females; horns present on males and females; horns grow down and outward, then up and inward; male horns have thick base, called boss.',
+                // Random Facts
+                '',
                 // Confused With
                 ' wildebeest, domestic cattle',
                 'Diurnal, resting in the heat of the day', // Activity Period
@@ -2910,6 +2994,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'A large, horse-like antelope; coat a uniform straw colour; face a conspicuous black and white mask; horns long and ridged and curve backwards; ears very long; sexes similar, males slightly larger with larger horns.',
+                // Random Facts
+                '',
                 // Confused With
                 'Sable, gemsbok, eland, kudu',
                 'Diurnal', // Activity Period
@@ -2973,6 +3059,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'A tall, graceful antelope with long legs; grey-brown fur with six to eight vertical white stripes down the sides; white stripe between eyes; long ears; males larger than females; only males have long, spiralled horns. ',
+                // Random Facts
+                '',
                 // Confused With
                 'nyala, waterbuck, roan, eland',
                 'Mainly diurnal, active in the mornings and evenings', // Activity Period
@@ -3044,6 +3132,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Huge size; skin a dark grey, smooth and hairless with pink tinge around eyes and mouth; small ears; usually in or close to water; short legs, barrel shaped body; huge head, large mouth.',
+                // Random facts
+                '',
                 // Confused With
                 'rhinos when on land',
                 'Nocturnal', // Activity Period
@@ -3130,6 +3220,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable; huge size; two long horns on nose. White rhino: Broad, square lips; huge head that slopes down to the floor, large hump around the shoulders; back concave; tail curls upwards when running; Black rhino: pointed top lip; head held in line with the shoulders; black relatively flat; tail help straight up when running.',
+                // Random facts
+                '',
                 // Confused With
                 'unmistakeable',
                 'Not Listed', // Activity Period
@@ -3215,6 +3307,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Huge, bulky build; slightly cow-like in appearance; almost uniformly coloured tan to blue-grey coat; both sexes have straight, corkscrew shaped horns; Male horns heavier than females; males have hump around shoulders, a dewlap of loose skin under the neck and a tuft of hair between the eyes',
+                // Random facts
+                '',
                 // Confused With
                 'Gemsbok, kudu, roan',
                 'Diurnal', // Activity Period
@@ -3282,6 +3376,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 ' large, horse-like appearance; black and white stripe pattern on the coat; black stripes separated by brown “shadow stripe”, distinguishing this from other zebra species; stripes connect on the belly; no dewlap of loose skin on throat.',
+                // Random facts
+                '',
                 // Confused With
                 'Cape and Hartmann’s mountain zebras',
                 'mainly diurnal but will move and feed at night', // Activity Period
@@ -3355,6 +3451,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable; extremely tall; neck and legs very long; patchwork brown and yellow pattern on coat.',
+                // Random facts
+                '',
                 // Confused With
                 'Unmistakeable',
                 'Active day and night', // Activity Period
@@ -3449,6 +3547,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addProfile(animalID,
                 // Identification Pointer
                 ': Unmistakable; huge size; long trunk that reaches the floor; white ivory tusks protruding from mouth; huge ears; males larger than females; in profile females have a square forehead while a male’s is rounded',
+                // Random facts
+                '',
                 // Confused With
                 'Unmistakeable',
                 'Active day and night, will rest in the heat of the day', // Activity Period

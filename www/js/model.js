@@ -14,7 +14,7 @@ function Model() {
 
     var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
 
-    var _get_animals = "SELECT a.animalID, idPointers, name, thumbName, commonNames, score, iconFilePath, category, isPaid FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
+    var _get_animals = "SELECT a.animalID, idPointers, randomFacts, name, thumbName, commonNames, score, iconFilePath, category, isPaid FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
 
     var _add_animal = "INSERT INTO ANM_Animal ("
             + "name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) "
@@ -27,12 +27,12 @@ function Model() {
     var _get_names = "SELECT nameID, animalID, name FROM ANM_Name WHERE animalID = ?";
 
     var _add_profile = "INSERT INTO ANM_Profile (\n\
-            animalID, idPointers, confusedWith, activityPeriod, gestation, "
+            animalID, idPointers, randomFacts, confusedWith, activityPeriod, gestation, "
             + "lifespan, diet, predators, habitat, redListStatus, population, "
             + "threats, length, height, weight, soundPath, soundDuration) "
-            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-    var _get_profile = "SELECT profileID, idPointers, confusedWith, activityPeriod, "
+    var _get_profile = "SELECT profileID, idPointers, randomFacts, confusedWith, activityPeriod, "
             + "gestation, lifespan, diet, predators, habitat, redListStatus, population, "
             + "threats, length, height, weight, soundPath, soundDuration "
             + "FROM ANM_Profile WHERE animalID = ?";
@@ -150,10 +150,10 @@ function Model() {
                 });
     };
 
-    this.addProfile = function(animalID, idPointers, confusedWith, activityPeriod,
+    this.addProfile = function(animalID, idPointers, randomFacts, confusedWith, activityPeriod,
             gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
             length, height, weight, soundPath, soundDuration, onCompleted) {
-        this.data.dbQuery(_add_profile, [animalID, idPointers, confusedWith, activityPeriod,
+        this.data.dbQuery(_add_profile, [animalID, idPointers, randomFacts, confusedWith, activityPeriod,
                 gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
                 length, height, weight, soundPath, soundDuration],
                 function(results) {

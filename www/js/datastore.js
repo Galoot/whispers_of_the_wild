@@ -157,6 +157,7 @@ function Datastore() {
                             + "(profileID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "idPointers TEXT, "
+                            + "randomFacts TEXT, "
                             + "confusedWith TEXT, "
                             + "activityPeriod TEXT, "
                             + "gestation TEXT, "
