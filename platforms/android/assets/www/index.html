@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- Cordova ======================================================= -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- =============================================================== -->
+
+        <!-- Social Media ================================================== -->
+        <script type="text/javascript" src="js/libs/social-sharing/social.js"></script>
+        <!-- =============================================================== -->
+
+        <!-- jQuery ======================================================== -->
+        <script type="text/javascript" src="js/libs/jquery-1.10.2/jquery.min.js"></script>
+        <!-- mobile -->
+        <script type="text/javascript" src="js/libs/jquery-mobile/jquery.mobile.js"></script>
+        <link rel="stylesheet" href="js/libs/jquery-mobile/jquery.mobile.css" />
+        <!-- =============================================================== -->
+
+        <!-- PgwSlider ===================================================== -->
+        <script src="js/libs/pgw-slider/pgwslider.js" type="text/javascript"></script>
+        <link href="js/libs/pgw-slider/pgwslider.min.css" rel="stylesheet" type="text/css"/>
+        <!-- =============================================================== -->
+
+        <!-- Range Slider ===================================================== -->
+        <script src="js/libs/rangeslider/jquery.nstSlider.min.js" type="text/javascript"></script>
+        <!-- =============================================================== -->
+
+        <!-- PgwModal ====================================================== -->
+        <script src="js/libs/pgw-modal/pgwmodal.js" type="text/javascript"></script>
+        <link href="js/libs/pgw-modal/pgwmodal.css" rel="stylesheet" type="text/css"/>
+        <!-- =============================================================== -->
+
+        <!-- Hammer ====================================================== -->
+        <script src="js/libs/hammer/hammer.js" type="text/javascript"></script>
+        <!-- =============================================================== -->
+
+        <!-- Retina ====================================================== -->
+         <script src="js/libs/jquery-retina/jquery-retina.js" type="text/javascript"></script>
+        <!-- =============================================================== -->
+
+        <!-- JQuery BlockUI ================================================ -->
+        <script src="js/libs/jquery-blockui/jquery.blockUI.min.js" type="text/javascript"></script>
+        <!-- =============================================================== -->
+
+        <!-- local game ========================================================== -->
+        <script type="text/javascript" src="js/game.js"></script>
+
+        <!-- local scripts & styling ======================================= -->
+        <script type="text/javascript" src="js/view.js"></script>
+        <script type="text/javascript" src="js/panel-slider.js"></script>
+        <script type="text/javascript" src="js/datastore.js"></script>
+        <script type="text/javascript" src="js/social.js"></script>
+        <script type="text/javascript" src="js/model.js"></script>
+        <script type="text/javascript" src="js/animal-data.js"></script>
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/audio.js"></script>
+        <script type="text/javascript" src="js/init.js"></script>
+
+        <!-- local styling ======================================= -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/main-landscape.css" />
+        <link rel="stylesheet" type="text/css" href="css/main-portrait.css" />
+        <!-- =============================================================== -->
+
+        <script type="text/javascript" src="js/libs/google-analytics/ga.js"></script>
+        <script>
+            ga_storage._setAccount('UA-60524209-1'); //Replace with your own
+        </script>
+        <script>
+//            $(document).bind("mobileinit", function() {
+//                $.mobile.defaultPageTransition = 'none';
+//                $.mobile.defaultDialogTransition = 'none';
+//                $.mobile.useFastClick = true;
+//            });
+        </script>
+        <title>Whispers of the Wild</title>
+    </head>
+    <body>
+        <audio id="audio-controller" src=""></audio>
+
+        <!-- splash screen -->
+        <div data-dom-cache="false" data-role="page" id="index">
+
+            <div id="splash">
+
+                <div id="splashlogo"></div>
+
+                <div id="toggleIntro"></div>
+
+                <div id="welcome">
+                    <h1 style="text-align: center;">Welcome to the<br/>African Wilderness</h1>
+                </div>
+
+                <div id="enter">
+                    <h4 style="text-align: center;">Touch to Enter</h4>
+                </div>
+
+                <div class="splashtitle"></div>
+
+            </div>
+        </div>
+
+        <!-- main menu -->
+        <div data-dom-cache="false" data-role="page" id="menu">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Index</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="menu_grid">
+                    <div class="menu_block menu_animals"><div class="main_icon option_animals"></div><h4>Animals</h4></div>
+                    <div class="menu_block menu_game"><div class="main_icon option_game"></div><h4>Games</h4></div>
+                    <div class="menu_block menu_question"><div class="main_icon option_question"></div><h4>Ask a Question</div>
+                </div>
+                <div class="menu_grid">
+                    <div class="menu_block menu_about"><div class="main_icon option_about"></div><h4>About Us</h4></div>
+                    <div class="menu_block menu_safety"><div class="main_icon option_safety"></div><h4>Safety Advice</h4></div>
+                    <div class="menu_block menu_donate"><div class="main_icon option_donate"></div><h4>Donate</h4></div>
+                </div>
+                <div id="social_container">
+                    <h4 style="margin:0; padding: 0px; text-align: center;">Share the app to unlock 5 Animals</h4>
+                    <div class="share-facebook share"></div>
+                    <div class="share-twitter share"></div>
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animals search -->
+        <div data-dom-cache="false" data-role="page" id="animals">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Mammals Index</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+
+                <div class="category-label"><strong>SEARCH BY CATEGORY</strong></div>
+                <div class="search-by-category" id="search-by-category">
+                    <div id="all" class="category-option">All</div>
+                    <!-- categories go here once loaded from the database -->
+                </div>
+
+                <div class="letter-label"><strong>SEARCH BY LETTER</strong></div>
+                <div class="search-by-letter" id="search-by-letter">
+                    <div id="all" class="letter-option">All</div>
+                    <!-- letters go here once loaded from the database -->
+                </div>
+
+                <div class="animal-grid" id="animal-grid">
+                    <!-- animal icons go here once loaded from the database -->
+                </div>
+
+
+                <div class="search-by-size" id="search-by-size">
+                    <span id="howto-size">How does this work?</span>
+<!--                    <label for="minLength">Min Size</label><input type="text" name="minLength" id="minLength" value="0" size="5"/>
+                    <label for="maxLength">Max Size</label><input type="text" name="maxLength" id="maxLength" value="100" size="5"/>-->
+                    <div id="scaleSmall"></div>
+                    <div id="scaleBig"></div>
+
+                    <div id="animalSizeSlider" class="nstSlider" data-range_min="1" data-range_max="50" data-cur_min="1"    data-cur_max="50">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                        <div class="rightGrip"></div>
+                    </div>
+
+                    <div class="rightLabel">3.5m</div>
+                    <div class="leftLabel">0.1m</div>
+
+                    <div class="size-label"><b>NARROW IT DOWN BY SIZE</b></div>
+                </div>
+
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- main question -->
+        <div data-dom-cache="false" data-role="page" id="menu-question">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+
+                <div class="outerwrap">
+                    <div class="formcontainer">
+                        <input type="text" class="question-name" id="menu-question-name" value="" placeholder="TYPE YOUR NAME AND SURNAME HERE"/>
+                        <textarea class="question-desc" id="menu-question-desc" placeholder="TYPE YOUR QUESTION HERE"></textarea>
+                        <input type="text" class="question-hashtags" id="menu-question-hashtags" value="" placeholder="TYPE IN THE APPROPRIATE HASHTAGS HERE EG. #ELEPHANT #TRUNK"/>
+                        <input type="button" id="menu-question-submit" value="SUBMIT"/>
+                    </div>
+                </div>
+
+                <div id="question-par">
+                    <h4>Find the answers and join this conversation on Twitter<br/>
+                    @Whispers_Wild or on the Whispers of the Wild Facebook Page.</h4>
+                    <div id="question-social">
+                    <h4>Share the app to unlock 5 animals</h4>
+                    <div class="share-facebook share" onClick="openPage('https://facebook.com/whispersofthewild');"></div>
+                    <div class="share-twitter share" onClick="openPage('https://twitter.com/Whispers_Wild');"></div>
+                    </div>
+                </div>
+
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- menu donate -->
+        <div data-dom-cache="false" data-role="page" id="menu-donate">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                
+                <div class="copywrap-about" style="color: #2e2a2b;">
+                    <div><img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/></div>
+                    <h1>Where does your money go?</h1>
+                    The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.The Endangered Wildlife Trust is dedicated to conserving threatened species and ecosystems in southern Africa to the benefit of all people. We focus on identifying the key factors threatening biodiversity and use applied fieldwork, research and direct engagement with stakeholders to reduce these. Your donations will go towards the highest conservation priorities in Southern Africa.
+                    </br></br>Learn more button hyperlink: <a href="www.ewt.co.za">www.ewt.org.za</a>
+                </div>
+                
+                
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animal profile -->
+        <div data-dom-cache="false" data-role="page" id="profile">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+
+                <div class="profile-content left bottom">
+<!--
+                    <div class="profile-images">
+                        <ul class="bjqs">
+                        </ul>
+                    </div>
+                    -->
+                    <div class="image-slider-container">
+                        <ul id="image-slider-profile" class="image-slider">
+                            <li>LOADING</li>
+                        </ul>
+                    </div>
+
+                    <!-- Animal profile caution and sound --->
+                    <div class="animal-top">
+                        <div class="listen-to">
+                            <div class="listenicon"><div class="animal-name">Listen to a *Animal*</div></div>
+                            <hr class="style-five">
+                        </div>
+                        <div class="caution">
+                            <div class="cautionicon">
+                                <div class="cautionLink">
+                                    <b>Potentially Dangerous Animal</b>
+                                    <br/>Click to view safety advise
+                                </div>
+                            </div>
+                            <div class="cautionNotice"></div>
+                        </div>
+                    </div>
+                    <hr class="style-four">
+
+                    <div class="copywrap">
+                        <b>FULL NAME</b>
+                        <div class="full-names"></div>
+
+                        <br/><b>COMMON NAMES</b>
+                        <div class="common-names"></div>
+
+                        <br/><b>IDENTIFICATION POINTERS</b>
+                        <div class="identification-pointers"></div>
+
+                        <br/><b>CAN BE CONFUSED WITH</b>
+                        <div class="confused-with"></div>
+
+                        <br/><b>ACTIVITY PERIOD</b>
+                        <div class="activity-period"></div>
+
+                        <br/><b>LENGTH</b><br/>
+                        <div class="animal-length"></div>
+
+                        <br/><b>HEIGHT</b><br/>
+                        <div class="animal-height"></div>
+
+                        <br/><b>WEIGHT</b><br/>
+                        <div class="animal-weight"></div>
+
+                        <br/><b>GESTATION PERIOD</b><br/>
+                        <div class="animal-gestation"></div>
+
+                        <br/><b>LIFESPAN</b><br/>
+                        <div class="animal-lifespan"></div>
+
+                        <br/><b>DIET</b><br/>
+                        <div class="animal-diet"></div>
+
+                        <br/><b>PREDATORS</b><br/>
+                        <div class="predators"></div>
+
+                        <br/><b>PREFERRED HABITAT</b><br/>
+                        <div class="animal-habitat"></div>
+
+                        <br/><b>RED LIST STATUS</b><br/>
+                        <div class="red-list-status"></div>
+
+                        <br/><b>POPULATION</b><br/>
+                        <div class="population"></div>
+
+                        <br/><b>THREATS</b><br/>
+                        <div class="threats"></div>
+                    </div>
+                </div>
+                    <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animal audio -->
+        <div data-dom-cache="false" data-role="page" id="audio">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom"></div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animal map -->
+        <div data-dom-cache="false" data-role="page" id="map">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+<!--                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                             The images get loaded here
+                        </div>
+                    </div>-->
+                    <div class="image-slider-container">
+                        <ul id="image-slider-map" class="image-slider"></ul>
+                    </div>
+
+                    <!-- Animal profile caution and sound --->
+                    <div class="animal-top">
+                        <div class="listen-to">
+                            <div class="listenicon"><div class="animal-name">Listen to a *Animal*</div></div>
+                        </div>
+                        <div class="caution">
+                            <div class="cautionicon">
+                                <div class="cautionLink">
+                                    <b>Potentially Dangerous Animal</b>
+                                    <br/>Click to view safety advise
+                                </div>
+                            </div>
+                            <div class="cautionNotice"></div>
+                        </div>
+                    </div>
+
+                    <div class="copywrap">
+                        <b>FULL NAME</b>
+                        <div class="full-names"></div>
+
+                        <br/><b>COMMON NAMES</b>
+                        <div class="common-names"></div>
+
+                        <br/><b>IDENTIFICATION POINTERS</b>
+                        <div class="identification-pointers"></div>
+
+                        <br/><b>CAN BE CONFUSED WITH</b>
+                        <div class="confused-with"></div>
+
+                        <br/><b>ACTIVITY PERIOD</b>
+                        <div class="activity-period"></div>
+
+                        <br/><b>LENGTH</b><br/>
+                        <div class="animal-length"></div>
+
+                        <br/><b>HEIGHT</b><br/>
+                        <div class="animal-height"></div>
+
+                        <br/><b>WEIGHT</b><br/>
+                        <div class="animal-weight"></div>
+
+                        <br/><b>GESTATION PERIOD</b><br/>
+                        <div class="animal-gestation"></div>
+
+                        <br/><b>LIFESPAN</b><br/>
+                        <div class="animal-lifespan"></div>
+
+                        <br/><b>DIET</b><br/>
+                        <div class="animal-diet"></div>
+
+                        <br/><b>PREDATORS</b><br/>
+                        <div class="predators"></div>
+
+                        <br/><b>PREFERRED HABITAT</b><br/>
+                        <div class="animal-habitat"></div>
+
+                        <br/><b>RED LIST STATUS</b><br/>
+                        <div class="red-list-status"></div>
+
+                        <br/><b>POPULATION</b><br/>
+                        <div class="population"></div>
+
+                        <br/><b>THREATS</b><br/>
+                        <div class="threats"></div>
+                    </div>
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animal footprints -->
+        <div data-dom-cache="false" data-role="page" id="footprints">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                    <div class="image-slider-container">
+                        <ul id="image-slider-footprints" class="image-slider"></ul>
+                    </div>
+
+                    <!-- Animal profile caution and sound --->
+                    <div class="animal-top">
+                        <div class="listen-to">
+                            <div class="listenicon"><div class="animal-name">Listen to a *Animal*</div></div>
+                        </div>
+                        <div class="caution">
+                            <div class="cautionicon">
+                                <div class="cautionLink">
+                                    <b>Potentially Dangerous Animal</b>
+                                    <br/>Click to view safety advise
+                                </div>
+                            </div>
+                            <div class="cautionNotice"></div>
+                        </div>
+                    </div>
+
+                    <div class="copywrap">
+                        <b>FULL NAME</b>
+                        <div class="full-names"></div>
+
+                        <br/><b>COMMON NAMES</b>
+                        <div class="common-names"></div>
+
+                        <br/><b>IDENTIFICATION POINTERS</b>
+                        <div class="identification-pointers"></div>
+
+                        <br/><b>CAN BE CONFUSED WITH</b>
+                        <div class="confused-with"></div>
+
+                        <br/><b>ACTIVITY PERIOD</b>
+                        <div class="activity-period"></div>
+
+                        <br/><b>LENGTH</b><br/>
+                        <div class="animal-length"></div>
+
+                        <br/><b>HEIGHT</b><br/>
+                        <div class="animal-height"></div>
+
+                        <br/><b>WEIGHT</b><br/>
+                        <div class="animal-weight"></div>
+
+                        <br/><b>GESTATION PERIOD</b><br/>
+                        <div class="animal-gestation"></div>
+
+                        <br/><b>LIFESPAN</b><br/>
+                        <div class="animal-lifespan"></div>
+
+                        <br/><b>DIET</b><br/>
+                        <div class="animal-diet"></div>
+
+                        <br/><b>PREDATORS</b><br/>
+                        <div class="predators"></div>
+
+                        <br/><b>PREFERRED HABITAT</b><br/>
+                        <div class="animal-habitat"></div>
+
+                        <br/><b>RED LIST STATUS</b><br/>
+                        <div class="red-list-status"></div>
+
+                        <br/><b>POPULATION</b><br/>
+                        <div class="population"></div>
+
+                        <br/><b>THREATS</b><br/>
+                        <div class="threats"></div>
+                    </div>
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animal question -->
+        <div data-dom-cache="false" data-role="page" id="question">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+
+                    <div class="formcontainer">
+                        <input type="text" class="question-name" id="question-name" value="" placeholder="TYPE YOUR NAME AND SURNAME HERE"/>
+                        <textarea class="question-desc" id="question-desc" placeholder="TYPE YOUR QUESTION HERE"></textarea>
+                        <input type="text" class="question-hashtags" id="question-hashtags" value="" placeholder="TYPE IN THE APPROPRIATE HASHTAGS HERE EG. #ELEPHANT #TRUNK"/>
+                        <input type="button" id="question-submit" value="SUBMIT"/>
+                    </div>
+
+                    <div id="question-par">
+                        <h4>Find the answers and join this conversation on Twitter<br/>
+                        @Whispers_Wild or on the Whispers of the Wild Facebook Page.</h4>
+                        <div id="question-social">
+                        <h4>Share the app to unlock 5 animals</h4>
+                        <div class="share-facebook share" onClick="openPage('https://facebook.com/whispersofthewild');"></div>
+                        <div class="share-twitter share" onClick="openPage('https://twitter.com/Whispers_Wild');"></div>
+                        </div>
+                    </div>
+
+                    <span class="question-spacer">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- animal donate -->
+        <div data-dom-cache="false" data-role="page" id="donate">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title"></div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                    
+                    <div class="copywrap-about" style="color: #2e2a2b;">
+                        <div><img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/></div>
+                        <h1>Where does your money go?</h1>
+                        The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.The Endangered Wildlife Trust is dedicated to conserving threatened species and ecosystems in southern Africa to the benefit of all people. We focus on identifying the key factors threatening biodiversity and use applied fieldwork, research and direct engagement with stakeholders to reduce these. Your donations will go towards the highest conservation priorities in Southern Africa.
+                        </br></br>Learn more button hyperlink: <a href="www.ewt.co.za">www.ewt.org.za</a>
+                    </div>
+                    
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about founder -->
+        <div data-dom-cache="false" data-role="page" id="founder">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Founder</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                    <div><img class="about-topimage" src="resources/about/founder/samir.jpg" alt=""/></div>
+
+                    <div class="copywrap-about">
+                    <h1>About the Founder</h1>
+                    <h2>Samir Randera-Rees </h2>
+                    <h3>Founder, CEO, voice artist and photographer</h3>
+                    I grew up in a family with a strong social conscience. Both my parents are doctors who were politically active in the anti-Apartheid struggle, and that desire to make the world a better place is deeply embedded within me. My passions however, lie not in healing the human body, but in healing the planet.
+                    <br/><br/>From a young age, I was always fascinated by the natural world. Growing up in Johannesburg, I would explore the deepest recesses of my garden in search of living creatures. Books and nature documentaries transported me into magical worlds, where plants, predators and prey danced in a ruthless struggle for survival. But there was nothing I loved more than escaping to the game reserve, to see this dance first hand.
+                    <br/><br/>After school I moved south, to live and study in the shadow of the mountain. I completed my BSc in Environmental Science and Economics at the University of Cape Town. However, learning about nature in a classroom is hollow without first hand knowledge of its wonders, so I then spent time acquiring my first nature guide qualification. I could finally walk through the bush and feel an intimacy with nature that I had never felt before, and it made me want more. I completed two more guiding and tracking courses, before moving to Europe on a scholarship to continue my ecological studies. I was given the opportunity to travel around Europe, studying conservation ecology at different institutions in France, Portugal and England, before returning to the Kruger Park region to complete my thesis on carnivore interactions. Through all this, the most powerful message that I learnt is that you cannot conserve nature without reducing poverty and preserving human dignity.
+                    <br/><br/>In between all that studying I took every opportunity to travel, experience new things and meet new people. From training wild donkeys on a farm in Namibia to guiding unruly volunteers in a nature reserves, to learning about sustainable forestry in the Brazilian Amazon, I have seen some incredible sights, and met some fascinating people.
+                    <br/><br/>However I am still a child at heart. I love to laugh and joke, I’m a thrill seeker who can often be found doing stupid things like climbing up sheer cliff faces. I’m a huge sport fan, and most days you will find me on a court or field, playing with a ball of some description.  However my family remains the most important thing in my life.
+                    <br/><br/>Unfortunately my days of studying and carefree wandering are behind me for now. Today, apart from developing Whispers of the Wild, I am a presenter on the longest running nature show in the world, 50|50. Mine is one of the voices you will hear on the app, and as a keen amateur photographer, I took the liberty of using some of my photos too. Through these activities I hope to convey some of my passion for nature to a wider audience.
+                    </div>
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about partners -->
+        <div data-dom-cache="false" data-role="page" id="partners">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Partners</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                    
+                    <div class="copywrap-about">
+                        <img class="about-topimage" src="resources/about/partners/ewt-logo.png" alt=""/>
+                        <hr>
+                        <!--- <h1>About the EWT</h1> -->
+                        <br/>The Endangered Wildlife Trust fills the key niche of on-the-ground conservation action. Our specialist programmes and large team of skilled field staff are deployed throughout southern Africa and focus on applied fieldwork, research and direct engagement with stakeholders. Our work supports the conservation of species and ecosystems, and recognises the role that communities play in successful conservation programmes.
+                        <br/><br/>We focus on identifying the key factors threatening biodiversity and develop mitigating measures to reduce these. Through a broad spectrum of partnerships and networks, we develop innovative methodologies and best practice guidelines that help to reduce negative environmental impacts and promote harmonious co-existence and sustainable living for both people and wildlife.
+                        <br/><br/>The Endangered Wildlife Trust is dedicated to conserving threatened species and ecosystems in southern Africa to the benefit of all people.
+                        <br/><br/><h3>We fulfill our Mission by:</h3>
+                        <ul>
+                        <li>initiating and implementing conservation research and action programmes;</li>
+                        <li>preventing species extinctions and maintaining biodiversity and ecosystem functioning;</li>
+                        <li>supporting sustainable natural resources and management;</li>
+                        <li>communicating the principles of sustainable living and empowering people by capacity building, education and awareness programmes to the broadest possible constituency; and</li>
+                        <li>aking a strong leadership and advocacy role in promoting environmental and social justice.</li>
+                        </ul>
+                        <br/><br/>The Endangered Wildlife Trust was established in 1973 and is registered as a Non-profit Organisation, registration number 015-502 NPO and PBO number 930 001 777. The EWT is 501 (c) (3) compliant, US IRS Reg. EMP98-0586801.
+                        <br/><br/>Become a member link:</br> <a href="http://www.ewt.org.za/individualsupport.html">EWT - Individual support</a>
+                    </div>
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about board -->
+        <div data-dom-cache="false" data-role="page" id="board">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Advisory Board</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <h1>ADVISORY BOARD</h1></div>
+                            <!--- <div class="copywrap-about">
+                            <br/><h1>ADVISORY BOARD</h1>
+                            <h3>GAVIN HARTFORD</h3>
+                            <h4>Industrial Sociologist holding a BSoc Sci (hons) UCT degree</h4>
+                            <h4>57 yrs old</h4>
+
+                            <br/><br/>Gavin worked as a trade unionist and regional ANC office bearer during the anti apartheid struggle years from the early eighties through to the mid nineties, After the democratic transition he was appointed as a national senior CCMA commisioner responsible for mediating industry wide industrial disputes. He then consulted as a strategic transformation professional faciliating change processes in mining and manufacturing in multi stakeholder enviroments. Through this work Gavin founded The Esop Shop to advise labour and corporates on the design and establishment of employee ownership and broad based empowerment schemes for poor communites. He successfully established some of the largest worker ownership schemes in the country.
+                            <br/><br/>He is a Director of the Mjejane Home Owners Association and an owner of a stand in the Mjejane Game Reserve where he spends much of his enviromental leisure time. Gavin is an avid ornithologist and learning to be botanist. Professionally he is a labour analyst, consultant on transformation processes and a writer and public speaker.
+
+                            <h3>MAVUSO MSIMANG</h3>
+                            <h4>OVERVIEW</h4>
+
+                            </br></br>Mavuso Msimang has twenty-six years of executive-level management experience. For sixteen years he was involved in the transformation and restructuring of state-owned entities, namely SA Tourism, South African National Parks (SANParks), the State Information Technology Agency (SITA) as well as the Department of Home Affairs. He also set up the Tourism KZN provincial organisation, which he briefly led as its CEO.
+                            </br></br>Prior to that he worked for fifteen years in international development. This included assignments with UNICEF, World Food Programme and the United Nations Development Programme in Ethiopia, Kenya and Zambia, respectively. He also led international NGO’s: CARE International, CARE Canada and the World University/Canada as their Country Representative in Kenya and Ethiopia, respectively.
+                            <h4>COMPETENCIES AND TRACK RECORD</h4>
+                            <br/><br/>A generalist, Mavuso has during his long career been called upon to work in fields of discipline ranging from international development through tourism, conservation and information technology. He also successfully turned around or stabilized the troubled organisations to which he was assigned. He possesses strong communication skills and is able to liaise with, and persuade, others through skilful negotiation.
+                            <h4>CURRENT OCCUPATION</h4>
+                            <br/><br/>Mavuso is CEO of the Oliver and Adelaide Tambo Foundation and sits on several company boards, for corporate and non-governmental organizations. He also consults in the biodiversity sector.
+                            <h4>QUALIFICATIONS</h4>
+                            <br/>Master of Business Administration (Project Management) -United States International University, San Diego California
+                            <br/>Bachelor of Science (Entomology and Biochemistry) University of Zambia
+
+                            <h3>VALLI MOOSA</h3>
+                            <br/><br/>Valli Moosa’s is one of the best-known names in conservation in South Africa. He is passionate about the environment, and currently serves as the Chairman of WWF South Africa, and previously held the positions of the South African Minister of Environmental Affairs and Tourism, President of the International Union for the Conservation of Nature (IUCN) and Chairman of the United National Commission on Sustainable Development. He played a key role in the establishment of the first trans-frontier park in Southern Africa, and under his leadership, five new Marine Protected Areas were created. He served on the National Executive Committee of the African National Congress, and was also the Minister of Constitutional Development in Nelson Mandela’s cabinet. Since 2004, he has played various prominent roles in the corporate world. He currently serves on the boards of Sun International, Anglo Platinum, Sanlam, Sappi and Imperial. However he still finds time to escape to the bush, hike and participate in the countries major cycling events.
+                            </div> -->
+                      <hr>
+                      <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/advisory/gavin.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>GAVIN HARTFORD</h2>
+                                <h3>Industrial Sociologist holding a BSoc Sci (hons) UCT degree</h3>
+                                <hr>
+                                Gavin worked as a trade unionist and regional ANC office bearer during the anti apartheid struggle years from the early eighties through to the mid nineties, After the democratic transition he was appointed as a national senior CCMA commisioner responsible for mediating industry wide industrial disputes. He then consulted as a strategic transformation professional faciliating change processes in mining and manufacturing in multi stakeholder enviroments. Through this work Gavin founded The Esop Shop to advise labour and corporates on the design and establishment of employee ownership and broad based empowerment schemes for poor communites. He successfully established some of the largest worker ownership schemes in the country.
+                                <br/><br/>He is a Director of the Mjejane Home Owners Association and an owner of a stand in the Mjejane Game Reserve where he spends much of his enviromental leisure time. Gavin is an avid ornithologist and learning to be botanist. Professionally he is a labour analyst, consultant on transformation processes and a writer and public speaker.
+                            </div>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/advisory/vali.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>VALLI MOOSA</h2>
+                                <hr>
+                                Valli Moosa’s is one of the best-known names in conservation in South Africa. He is passionate about the environment, and currently serves as the Chairman of WWF South Africa, and previously held the positions of the South African Minister of Environmental Affairs and Tourism, President of the International Union for the Conservation of Nature (IUCN) and Chairman of the United National Commission on Sustainable Development. He played a key role in the establishment of the first trans-frontier park in Southern Africa, and under his leadership, five new Marine Protected Areas were created. He served on the National Executive Committee of the African National Congress, and was also the Minister of Constitutional Development in Nelson Mandela’s cabinet. Since 2004, he has played various prominent roles in the corporate world. He currently serves on the boards of Sun International, Anglo Platinum, Sanlam, Sappi and Imperial. However he still finds time to escape to the bush, hike and participate in the countries major cycling events.
+                            </div>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/advisory/mavusa.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>MAVUSO MSIMANG</h2>
+                                <hr>
+                                    Mavuso Msimang has twenty-six years of executive-level management experience. For sixteen years he was involved in the transformation and restructuring of state-owned entities, namely SA Tourism, South African National Parks (SANParks), the State Information Technology Agency (SITA) as well as the Department of Home Affairs. He also set up the Tourism KZN provincial organisation, which he briefly led as its CEO.
+                                    </br>Prior to that he worked for fifteen years in international development. This included assignments with UNICEF, World Food Programme and the United Nations Development Programme in Ethiopia, Kenya and Zambia, respectively. He also led international NGO’s: CARE International, CARE Canada and the World University/Canada as their Country Representative in Kenya and Ethiopia, respectively.
+                                    <br/><br/><h4><strong>COMPETENCIES AND TRACK RECORD</strong></h4>
+                                    A generalist, Mavuso has during his long career been called upon to work in fields of discipline ranging from international development through tourism, conservation and information technology. He also successfully turned around or stabilized the troubled organisations to which he was assigned. He possesses strong communication skills and is able to liaise with, and persuade, others through skilful negotiation.
+                                    <br/><br/><h4>CURRENT OCCUPATION</h4>
+                                    Mavuso is CEO of the Oliver and Adelaide Tambo Foundation and sits on several company boards, for corporate and non-governmental organizations. He also consults in the biodiversity sector.
+                                    <br/><br/><h4>QUALIFICATIONS</h4>
+                                    Master of Business Administration (Project Management) -United States International University, San Diego California
+                                    <br/>Bachelor of Science (Entomology and Biochemistry) University of Zambia
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about sounds -->
+        <div data-dom-cache="false" data-role="page" id="sounds">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Voices and Sounds</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                 <div style="margin-top: 20px; margin-left: 20px;">
+                    <h1>Voices and Sound</h1></div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/sound/emma.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Emma Delius</h2>
+                                <br/>I recently graduated a BA honours with distinction from the University of Witwatersrand and I am currently enrolled in a Masters program at the London School of Drama. In my degrees I acted, directed and wrote a wide range of plays ranging from Shakespeare to modern playwrighting. There hasn't been a year in my life, despite how busy things get where I haven't been to the bush. Waking up at 6am to be the first one out the gate, spending hours at the waterhole sure that there was a lion  behind the tree only to discover it was a rock and finally just at the end of the day as you are sure all the animals have dissapeared  you see a  male lion wandering along the road as the sunsets. When I was young I always wanted to be David Attenbourgh and who knows this may be the start.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/sound/malungelo.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Malungelo Booi </h2>
+                                Malungelo Booi is a South Africa journalist based in Johannesburg. He currently works as a Television reporter covering an array of issues. Before moving in to television, he was based in Cape Town where he worked as a Radio journalist.
+                                <br/>He reported for stations including Talk Radio 702, Cape Talk , Kfm and Highveld Stereo. In 2010,  he won the Vodacom Journalist of the Year Award (Western Region) in the Features Category for his investigation into high levels of teenage pregnancy in Khayelitsha. But it was during his time as junior reporter at the Daily Dispatch in the Eastern Cape in Mthatha where he reported extensively on environmental issues including the proposed N2 Toll Road and mining in the Wild Coast.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/sound/spyro.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Spyro Haralambous</h2>
+                                I‘m a 28 year old sound enthusiast who has a deep love and passion for music and audio. I’m a sound production engineer by trade with a music production qualification. I‘ve always had a interest in audio for as long as I can remember. I eat, breathe, sleep music and I’ve been playing musical instruments from the age of 10. In my spare time I love to write and produce my own material so who knows what’s next from me.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---
+                    <h2>Emma Delius</h2>
+                    <br/>I recently graduated a BA honours with distinction from the University of Witwatersrand and I am currently enrolled in a Masters program at the London School of Drama. In my degrees I acted, directed and wrote a wide range of plays ranging from Shakespeare to modern playwrighting. There hasn't been a year in my life, despite how busy things get where I haven't been to the bush. Waking up at 6am to be the first one out the gate, spending hours at the waterhole sure that there was a lion  behind the tree only to discover it was a rock and finally just at the end of the day as you are sure all the animals have dissapeared  you see a  male lion wandering along the road as the sunsets. When I was young I always wanted to be David Attenbourgh and who knows this may be the start.
+
+                    <h2>Malungelo Booi </h2>
+                    Malungelo Booi is a South Africa journalist based in Johannesburg. He currently works as a Television reporter covering an array of issues. Before moving in to television, he was based in Cape Town where he worked as a Radio journalist.
+                    <br/>He reported for stations including Talk Radio 702, Cape Talk , Kfm and Highveld Stereo. In 2010,  he won the Vodacom Journalist of the Year Award (Western Region) in the Features Category for his investigation into high levels of teenage pregnancy in Khayelitsha. But it was during his time as junior reporter at the Daily Dispatch in the Eastern Cape in Mthatha where he reported extensively on environmental issues including the proposed N2 Toll Road and mining in the Wild Coast.
+
+                    <h2>Spyro Haralambous</h2>
+                    I‘m a 28 year old sound enthusiast who has a deep love and passion for music and audio. I’m a sound production engineer by trade with a music production qualification. I‘ve always had a interest in audio for as long as I can remember. I eat, breathe, sleep music and I’ve been playing musical instruments from the age of 10. In my spare time I love to write and produce my own material so who knows what’s next from me.
+                    -->
+
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about photographers -->
+        <div data-dom-cache="false" data-role="page" id="photographers">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Photographers</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <h1>Photographers</h1></div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/andrea.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Andrea Campbell</h2>
+                                I work and live in the African bush spending my time tracking and observing the incredible creatures of South Africa’s lowveld. I am currently based in the Sabi Sand Wildtuin working as a field guide and the photographic opportunities are too good to miss. Sometimes things come together and I manage to capture a glimpse of this wondrous natural world.
+                                <br/>In a world where our biodiversity is threatened, it is truly special to live in an area where there are still a few animals living naturally.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/brett.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Brett Horley</h2>
+                                Brett is a Photographic Safari Guide adventuring all over the continent in search of Africa’s elusive mammals. Being with Mountain Gorillas in Uganda, creeping after Black Serval in Kenya and tracking Leopard in the Sabi Sand are some of the standouts, but each and every time I see a new mammal species I get a real thrill. With an extensive knowledge of Southern Africas’ mammals and greatest wildlife hot-spots, Brett leads Photographic and Natural History Safaris, for those with a keen interest. A passionate conservationist with an intuition and understanding of the natural world.
+                                <a href="http://www.bretthorley.com">www.bretthorley.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/christopher.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Christopher Schoeman</h2>
+                                Christopher Schoeman grew up in Balule Nature Reserve, Greater Kruger National Park. His grandfather, an early conservationist, inspired in him a love and passion for the African bush. Having travelled around the world for over two years, he has found his way back to the Kruger and is a game ranger at a 5* lodge within it. He also studies nature conservation with UNISA and sings terribly in the shower.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/elliot.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Elliot Smith</h2>
+                                New Zealand born, Elliot has spent the last 5 years visiting Africa and has been captivated by its natural beauty and wildlife. This was the genesis of his passion for photography and lists wildlife photography as one of his favourites. <br/><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/gareth.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Gareth Tate</h2>
+                                Gareth Tate was born in Nelspruit, Mpumalanga, and grew up in the small town of White River, South Africa. With the Kruger National Park and Mozambique at his doorstep, he developed a passion for the outdoors, wildlife and the African fauna and flora. Gareth is currently finishing up his PhD degree at the University of Cape Town, specializing in biological sciences. His current research takes him all over southern Africa, where he has been able to document and photograph many unique natural events.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/kyle.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Kyle de Nobrega </h2>
+                                Incredibly passionate and driven, Kyle de Nobrega is a field guide, naturalist and adventurer. The blog is a visual based following on his life in and around the areas he feels so strongly about. From the mother city down south , the Capetonian is constantly on a mission to find and share the fascinating jewels of nature. From taking photo’s of the spoor left behind by a beetle grub to painstakingly lying on a rock waiting for a certain bird to fly by, he thrives on nature and what is has to offer. Currently working as a hide manager and photo guide at Mashatu game reserve in Botswana , his time away form work is focused on exploring and travelling to new game reserves and wilderness areas seeking the enjoyment of life. The blog is a place for you to enjoy the memories and encounters kyle has out there in and amongst the things that he feels so passionate about.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/michael.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                <h2>Michael Fitt </h2>
+                                With a Masters in Environmental & Geographical Sciences, I work in Northern Botswana for Okavango Wilderness Safaris as a part of their Environmental Department. This includes a range of ecological data recording and research throughout the wildlife concessions. This affords me the pleasure of working and living out in the bush for long periods of time where I am able to view wildlife at every turn. One of the most rewarding experiences has been my involvement with reintroducing black and white rhino to the wild of Botswana where they are so far flourishing.
+                                <br/>Michael Fitt Wildlife Photography Facebook Page: (Amateur)
+                                <a href="https://www.facebook.com/pages/Michael-Fitt-Wildlife-Photography/222746944563299?ref=bookmarks ">Facebook.com - Michael Fitt</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/nick.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                               <h2>Nick Fordyce</h2>
+                               From a very young age Nick found himself to be a lover of all things natural. Early years spent in the African bush has moulded him into a person who now spends both his professional time and leisure time submersed in nature. After finishing high school, Nick pursued a career in environmental management by completing his BSc undergrad with majors in zoology and ecology at the University of Cape Town. At the same institution he then went on to complete an honours degree in Botany and then crossed over to the law faculty and completed an MPhil degree in environmental law. He has been working as the project manager for an NGO, the Friends of the Liesbeek, specialising in with urban water management and, in particular, the conservation and restoration of the Liesbeek River in Cape Town. In his spare time he is an amateur wildlife photographer. Initially his photography was aimed at getting “record shots” of what he observed in the field. More recently he has shifted towards trying to capture more technically good photographs. His photography is purely at hobby at this point
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/russel.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                              <h4>Russell Owen MacLaughlin</h4>
+                              Russell is wildlife filmmaker and photographer by profession, a wildlife conservationist and naturalist at heart. He has an extensive knowledge and passion for African fauna and flora. Over the years Russell has filmed numerous documentaries for National Geographic and Animal Planet among other channels and his award winning images have graced the covers and pages of numerous international publications.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/ruth.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                                    <h2>Ruth Nussbaum</h2>
+                                    With an innate love for travel and wildlife my passion for photography was bound to work hand in hand. My photographic career began in the form of Fine Art at Rhodes University and has since adapted and taken on new forms during my many travels over the past few years. Naturally, moving to the bush my subject focus shifted to the wildlife around me. Having spent time working in the Sabi Sands, Kalahari and Botswana I have been able to learn about Africa’s wildlife and all its beauty through the practise of photography.
+                                    <br/>Now based at Mashatu Game Reserve I have the privilege of viewing wildlife from a unique perspective from an underground hide, and to share my everyday interactions with a greater audience with the aim to spread the vital message of conservation and of course my simple love for nature.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="copywrap-about">
+                        <div>
+                            <div class="about-left">
+                                <div><img class="about-profilepic" src="resources/about/photographers/shivam.jpg" alt=""/></div>
+                            </div>
+                            <div class="about-right">
+                               <h2>Shivam Trivedi</h2>
+                               I am Shivam Trivedi, I have done my bachelors and master's in environmental science. Currently I am working as a Programme Officer at the Institute of Environment Education and Research, Bharati Vidyapeeth University, Pune, India and pursuing my PhD from the same institute on identifying biodiversity rich islands in the Western Ghats (biodiversity hotspot) of the Maharashtra state. I was also a part of the Leadership Training Program on Education for Sustainable Development which was for a duration of 6 months in Berlin, Germany. During this 6 month I got an opportunity to do a 2 month internship with Wildlife and Environment Society of South Africa (WESSA) and had also visited the Kruger National Park. My interest in wildlife is an inherited gift to me from my father.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- about sources -->
+        <div data-dom-cache="false" data-role="page" id="sources">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">Sources</div>
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <span class="profile-tabs left"></span>
+                <div class="panel-slider-left-handle left"></div>
+                <div class="profile-content left bottom">
+                    <div class="copywrap-about">
+                    <br/><h1>Copyright © Whispers of the Wild</h1>
+                    <br/><h3>Sources</h3>
+
+                    <b>Every animal on this app was thoroughly researched using a variety of sources including books, websites and scientific papers. All content was developed by Samir Randera-Rees, and he applied the same level of academic rigour to this research as he used in his Masters thesis. A full list of sources would occupy pages and pages of space, but listed below are the main sources used for the information used in the app.</b>
+
+                    <br/><br/>African Tracker. 2014. www.africantracker.co.za
+                    <br/><a href="http://www.arkive.org">Arkive. 2014. www.arkive.org</a>
+                    <br/>Carnaby, T. 2006. Beat About the Bush Mammals. Jacana Publishers. Johannesburg, South Africa.
+                    <br/>Emmett, M & Pattrick, S. 2013. Game Ranger In Your Backpack, All in one interpretive guide to the Lowveld. Briza Publications. Pretoria, South Africa.
+                    <br/>Estes, R.  1991. A Behavioural Guide to African Mammals: Including Hoofed Mammals, Carnivores and Primate.  University of California Press. California, USA.
+                    <br/>Estes, R.  2011. A Behavioural Guide to African Mammals: Including Hoofed Mammals, Carnivores and Primate.  University of California Press. California, USA.
+                    <br/>Hine, G. & Hine, G. 2006. FGASA Level 1 & 2 Learner Manuals. Interactive Wildlife Company. South Africa
+                    <br/><a href="http://www.iucnredlist.org">IUCN Red list. 2014. www.iucnredlist.org</a>
+                    <br/>Kingdon, J. 2003. The Kingdon Field Guide to African Mammals. A & C Black Publishers. Princeton, USA.
+                    <br/><a href="http://www.krugerpark.co.za">Kruger National Park. 2014. www.krugerpark.co.za</a>
+                    <br/>Liebenberg, L. 2008. A Field Guide to the Animal Tracks of Southern Africa. David Philip Publishers. Cape Town, South Africa
+                    <br/>Macdonald, D.W. 2010. Encyclopedia of Mammals. Oxford University Press. Oxford, United Kingdom
+                    <br/>Reardon, M. 2012. Shaping Kruger. Struik Nature. Cape Town, South Africa.
+                    <br/>Stuart, C. & Stuart, T. 2000. Tracks and Signs of Southern and East African Wildlife. Struik Publishers. Cape Town, South Africa
+                    <br/>Stuart, C. & Stuart, T. 2001. Field Guide to the Mammals of Southern Africa. Struik Publishers. Cape Town, South Africa
+                    <a href="http://www.wikipedia.com">Wikipedia. 2014. www.wikipedia.com</a>
+                    </div>
+
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game intro -->
+        <div data-dom-cache="false" data-role="page" id="game">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="game-icon"></div>
+                <div id="howto-game"><h3 style="text-align: center; text-transform: uppercase;">How to play</h3></div>
+
+                <div class="game-start-label"></div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game players -->
+        <div data-dom-cache="false" data-role="page" id="players">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="game-players">
+
+                </div>
+                <!--
+                <div class="game-new-player">
+                    NEW PLAYER
+                </div>
+                -->
+                <div class="game-players-next">
+                    
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game select animals -->
+        <div data-dom-cache="false" data-role="page" id="game-animal-select">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div id="player-selecting"></div>
+                <div id="game-select-instruction">
+                    Select the three animals you think you are most likely to spot first.
+                </div>
+                <div class="game-animal-grid" id="game-animal-grid">
+                    <!-- animal icons go here once loaded from the database -->
+                </div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game spot animals -->
+        <div data-dom-cache="false" data-role="page" id="game-animal-spot">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div id="game-spot-instruction">
+                        Touch the animal once it has been spotted.
+                        The first player to get two animals correct wins the round.
+                        Let's see who spots the game first.
+                </div>
+                <div class="game-spot-grid" id="game-spot-grid">
+                    <!-- animal icons go here once loaded from the database -->
+                </div>
+                <div class="game-link-scoreboard">VIEW LEADERBOARD</div>
+                <div class="game-link-finish">FINISH</div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game spot scoreboard -->
+        <div data-dom-cache="false" data-role="page" id="game-animal-scoreboard">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="game-scoreboard-heading">
+                    SCOREBOARD
+                </div>
+                <br/>
+                <div class="game-scoreboard-result">
+                        <!-- results will go here -->
+                </div>
+                <br/>
+                <div class="game-scoreboard-winner">
+                    ??? WINS
+                </div>
+                <br/>
+                <div class="game-link-spot">GO BACK</div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- game spot winner -->
+        <div data-dom-cache="false" data-role="page" id="game-animal-winner">
+            <div class="header">
+                <div class="header-button left logo"></div>
+                <div class="header-button left title">SPOT THE GAME</div>
+
+                <div class="header-button right options"></div><div class="header-options-popup"></div>
+                <div class="header-button right action-home"></div>
+                <div class="header-button right forward"></div>
+                <div class="header-button right back"></div>
+            </div>
+            <div class="content">
+                <div class="game-winner-animal">
+                    <img class="game-winner-animal-icon game-spot-animal-icon" src="#"/>
+                    <b>Winning Animal</b>
+                    <div class="game-winner-animal-didyouknow"><b>Did you know...</b></div>
+                    <div class="game-winner-animal-info "></div>
+                </div>
+                <br/>
+                <div class="game-winning-result">
+                        <!-- results will go here -->
+                </div>
+                <br/>
+
+                <div class="game-link-spot">GO BACK</div>
+                <div class="game-link-next">NEXT ROUND</div>
+                <div class="game-link-finish">FINISH GAME</div>
+                <div class="panel-slider-bottom-handle"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-trackName">Welcome to the African Wilderness</div>
+                <div class="footer-progress">
+                    <div class="nstSlider audioProgress" data-range_min="0" data-range_max="100" data-cur_min="0">
+                        <div class="bar"></div>
+                        <div class="leftGrip"></div>
+                    </div>
+                </div>
+                <div class="footer-controls">
+                    <div class="footer-button audio-prev"></div>
+                    <div class="footer-button audio-play-pause"></div>
+                    <div class="footer-button audio-next"></div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;">
+
+            <div id="scaleSliderHowTo">
+                <div style="text-align: center;">
+                    <div class="modal-title">How does the scale slider work?</div>
+                    <br/>
+                    <div class="modal-content">
+                        Slide the circles across to eliminate the animals<br/>
+                        that are shorter and taller (at shoulder height) than<br/>
+                        the animal you are looking for.
+                    </div>
+                    <br/>
+                    <span><img style="height: 90px; width: auto; margin: 0 auto;" src="resources/scale-demo.jpg"/></span>
+                </div>
+            </div>
+            
+            <div id="gameHowTo">
+                <div style="text-align: center;">
+                    <div class="modal-title">Who is the best spotter in your vehicle?</div>
+                    <br/>
+                    <div class="modal-content">
+                        Each player chooses the three animals that you think you
+                        <br/>will see next on your drive. The first person to get two out of
+                        <br/>three animals correct wins that round. Points are allocated
+                        <br/>according to the animal’s scarcity, and bonus points are given
+                        <br/>for the winner of each round.
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="cautionNotice">
+                <div>
+                    <div class="modal-title" style="text-align: center;">Safety Notice</div>
+                    <br/>
+                    <div class="modal-content">
+                        <!--content to be inserted using js -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="gameAnimalSelectMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Game</div>
+                    <br/>
+                    <div class="modal-content">
+                        Please ensure you have selected three animals.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="limitedAccessMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Limited Access</div>
+                    <br/>
+                    <div class="modal-content">
+                        Purchase the full version to get unlimited access to the game and all animals
+                        <br/><br/>
+                        <div class="purchaseButton">Available soon...</div>
+                        <br/>
+                        Share and unlock 5 free animals
+                        <br/>
+                        <div class="share-facebook share" onClick="shareFacebook(); $.pgwModal('close');"></div>
+                        <div class="share-twitter share" onClick="shareTwitter(); $.pgwModal('close');"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="loader" style="text-align:center;">
+                <img style="height: 65px; width: 65px; margin: 0 auto;" src="resources/loader.gif"/>
+            </div>
+
+        </div>
+
+    </body>
+</html>

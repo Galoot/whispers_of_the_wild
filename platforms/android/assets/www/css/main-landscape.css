@@ -1,0 +1,93 @@
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    body {
+        font-size:20px;
+    }
+
+    .content {
+/*        // font-size:20px;
+        // background-position:left center;
+        // padding:75px 0px 75px 170px;   // padding-top + padding-bottom + text area = image height
+        // margin:-90px 0px 0px -198px;   // offset vertical: half of image height
+        // offset horizontal: half of image width and text area width*/
+    }
+    #splash {
+        top: 25%;
+        background-image: url('../resources/splashbghor.jpg');
+    }
+
+    .splashtitle {
+        background-image: url('../resources/buttons/front_page/splashtitle2.jpg');
+        background-position: right;
+        background-repeat: no-repeat;
+/*        // -webkit-transform: rotate(270deg);  Chrome, Safari, Opera 
+        // transform: rotate(270deg);*/
+        top: 0px;
+        margin-bottom: auto;
+
+        height: 768px; /* this should be adjusted */
+        width: 92px;
+        /*bottom: 0px;*/
+        right: 0px;
+        background-image: 100%;
+
+    }
+
+    #toggleIntro {
+        bottom: 190px;
+    }
+
+    #welcome {
+        bottom: 100px;
+    }
+
+    #enter {
+        bottom: 25px;
+    }
+
+    #menu .content {
+/*        //padding-top: 25px;*/
+    }
+
+
+    .profile-option {
+        width: 128px;
+        height: 138px;
+    }
+
+    .menu_block {
+        width: 150px;
+        height: 150px;
+        margin:25px;
+        border: 2px solid #ffffff;
+        border-radius: 7px;
+        text-shadow: 1px 1px 2px #000;
+    
+        /* text-align: center; */
+}
+
+    .animal-block, .game-select-animal-block, .game-spot-animal-block, .game-spot-player-block, .game-winner-player-block, .game-winner-score-block {
+        vertical-align: top;
+        width: 150px;
+        height: 150px;
+        /* margin: 20px; */
+    
+        margin-left: 25px;
+        margin-right: 10px;
+        margin-top: 1px;
+        margin-bottom: 40px;
+}
+
+    .animal-icon, .game-select-animal-icon, .game-spot-animal-icon, .game-spot-player-icon, .game-winner-player-icon {
+        height: 150px;
+        width: 150px;
+    }
+    #menu .content {
+        background-image: url('../resources/indexbg2.jpg');
+    }
+
+    .icon-selected {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+    }
+}
