@@ -8,6 +8,7 @@
 
 @implementation SocialSharing {
   UIPopoverController *_popover;
+  NSString *_popupCoordinates;
 }
 
 - (void)pluginInitialize {
@@ -26,7 +27,14 @@
 }
 
 - (NSString*)getIPadPopupCoordinates {
+  if (_popupCoordinates != nil) {
+    return _popupCoordinates;
+  }
   return [self.webView stringByEvaluatingJavaScriptFromString:@"window.plugins.socialsharing.iPadPopupCoordinates();"];
+}
+
+- (void)setIPadPopupCoordinates:(CDVInvokedUrlCommand*)command {
+  _popupCoordinates  = [command.arguments objectAtIndex:0];
 }
 
 - (CGRect)getPopupRectFromIPadPopupCoordinates:(NSArray*)comps {
@@ -52,18 +60,20 @@
   
   NSMutableArray *activityItems = [[NSMutableArray alloc] init];
   [activityItems addObject:message];
-
+  
   NSMutableArray *files = [[NSMutableArray alloc] init];
-  for (NSString* filename in filenames) {
-    NSObject *file = [self getImage:filename];
-    if (file == nil) {
-      file = [self getFile:filename];
+  if (filenames != (id)[NSNull null] && filenames.count > 0) {
+    for (NSString* filename in filenames) {
+      NSObject *file = [self getImage:filename];
+      if (file == nil) {
+        file = [self getFile:filename];
+      }
+      if (file != nil) {
+        [files addObject:file];
+      }
     }
-    if (file != nil) {
-      [files addObject:file];
-    }
+    [activityItems addObjectsFromArray:files];
   }
-  [activityItems addObjectsFromArray:files];
   
   if (urlString != (id)[NSNull null]) {
     [activityItems addObject:[NSURL URLWithString:urlString]];
@@ -81,15 +91,16 @@
     CDVPluginResult * pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:completed];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
   }];
-  
-  // possible future addition: exclude some share targets.. if building locally you may uncomment these lines
-  //    NSArray * excludeActivities = @[UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard];
-  //    activityVC.excludedActivityTypes = excludeActivities;
-  
+
+   NSArray * socialSharingExcludeActivities = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"SocialSharingExcludeActivities"];
+   if (socialSharingExcludeActivities!=nil && [socialSharingExcludeActivities count] > 0) {
+       activityVC.excludedActivityTypes = socialSharingExcludeActivities;
+   }
+
   // iPad on iOS >= 8 needs a different approach
   if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
     NSString* iPadCoords = [self getIPadPopupCoordinates];
-    if (![iPadCoords isEqual:@"-1,-1,-1,-1"]) {
+    if (iPadCoords != nil && ![iPadCoords isEqual:@"-1,-1,-1,-1"]) {
       NSArray *comps = [iPadCoords componentsSeparatedByString:@","];
       CGRect rect = [self getPopupRectFromIPadPopupCoordinates:comps];
       if ([activityVC respondsToSelector:@selector(popoverPresentationController)]) {
@@ -170,6 +181,14 @@
 
 - (bool)isAvailableForSharing:(CDVInvokedUrlCommand*)command
                          type:(NSString *) type {
+  // isAvailableForServiceType returns true if you pass it a type that is not
+  // in the defined constants, this is probably a bug on apples part
+  if(!([type isEqualToString:SLServiceTypeFacebook]
+       || [type isEqualToString:SLServiceTypeTwitter]
+       || [type isEqualToString:SLServiceTypeTencentWeibo]
+       || [type isEqualToString:SLServiceTypeSinaWeibo])) {
+    return false;
+  }
   // wrapped in try-catch, because isAvailableForServiceType may crash if an invalid type is passed
   @try {
     return [SLComposeViewController isAvailableForServiceType:type];
@@ -231,7 +250,7 @@
       [alert show];
       return;
     }
-
+    
     self.globalMailComposer.mailComposeDelegate = self;
     
     if ([command.arguments objectAtIndex:0] != (id)[NSNull null]) {
@@ -263,17 +282,27 @@
         NSURL *file = [self getFile:path];
         NSData* data = [fileManager contentsAtPath:file.path];
         
+        NSString* fileName;
+        NSString* mimeType;
         NSString* basename = [self getBasenameFromAttachmentPath:path];
-        NSString* fileName = [basename pathComponents].lastObject;
-        NSString* mimeType = [self getMimeTypeFromFileExtension:[basename pathExtension]];
-        
+
+        if ([basename hasPrefix:@"data:"]) {
+          mimeType = (NSString*)[[[basename substringFromIndex:5] componentsSeparatedByString: @";"] objectAtIndex:0];
+          fileName = @"attachment.";
+          fileName = [fileName stringByAppendingString:(NSString*)[[mimeType componentsSeparatedByString: @"/"] lastObject]];
+          NSString *base64content = (NSString*)[[basename componentsSeparatedByString: @","] lastObject];
+          data = [NSData dataFromBase64String:base64content];
+        } else {
+          fileName = [basename pathComponents].lastObject;
+          mimeType = [self getMimeTypeFromFileExtension:[basename pathExtension]];
+        }
         [self.globalMailComposer addAttachmentData:data mimeType:mimeType fileName:fileName];
       }
     }
     
     // remember the command, because we need it in the didFinishWithResult method
     _command = command;
-    
+
     [self.commandDelegate runInBackground:^{
       [self.viewController presentViewController:self.globalMailComposer animated:YES completion:nil];
     }];
@@ -300,7 +329,10 @@
   CFStringRef ext = (CFStringRef)CFBridgingRetain(extension);
   CFStringRef type = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, ext, NULL);
   // Converting UTI to a mime type
-  return (NSString*)CFBridgingRelease(UTTypeCopyPreferredTagWithClass(type, kUTTagClassMIMEType));
+  NSString *result = (NSString*)CFBridgingRelease(UTTypeCopyPreferredTagWithClass(type, kUTTagClassMIMEType));
+  CFRelease(ext);
+  CFRelease(type);
+  return result;
 }
 
 /**
@@ -334,7 +366,7 @@
     NSString *message = [options objectForKey:@"message"];
     NSString *subject = [options objectForKey:@"subject"];
     NSString *image = [options objectForKey:@"image"];
-
+    
     MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
     picker.messageComposeDelegate = (id) self;
     if (message != (id)[NSNull null]) {
@@ -352,7 +384,7 @@
         }
       }
     }
-
+    
     if (phonenumbers != (id)[NSNull null]) {
       [picker setRecipients:[phonenumbers componentsSeparatedByString:@","]];
     }

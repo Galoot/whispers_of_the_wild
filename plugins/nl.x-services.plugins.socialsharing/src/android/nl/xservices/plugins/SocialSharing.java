@@ -110,7 +110,8 @@ public class SocialSharing extends CordovaPlugin {
       public void run() {
         final Intent draft = new Intent(Intent.ACTION_SEND_MULTIPLE);
         if (notEmpty(message)) {
-          if (message.matches(".*<[^>]+>.*")) {
+          Pattern htmlPattern = Pattern.compile(".*\\<[^>]+>.*", Pattern.DOTALL);
+          if (htmlPattern.matcher(message).matches()) {
             draft.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml(message));
             draft.setType("text/html");
           } else {
@@ -314,11 +315,13 @@ public class SocialSharing extends CordovaPlugin {
       }
       // the filename needs a valid extension, so it renders correctly in target apps
       final String imgExtension = image.substring(image.indexOf("/") + 1, image.indexOf(";base64"));
-      String fileName = "file." + imgExtension;
+      String fileName;
       // if a subject was passed, use it as the filename
+      // filenames must be unique when passing in multiple files [#158]
       if (notEmpty(subject)) {
-        // filenames must be unique when passing in multiple files [#158]
         fileName = sanitizeFilename(subject) + (nthFile == 0 ? "" : "_" + nthFile) + "." + imgExtension;
+      } else {
+        fileName = "file" + (nthFile == 0 ? "" : "_" + nthFile) + "." + imgExtension;
       }
       saveFile(Base64.decode(encodedImg, Base64.DEFAULT), dir, fileName);
       localImage = "file://" + dir + "/" + fileName;
