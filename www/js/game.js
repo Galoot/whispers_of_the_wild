@@ -33,10 +33,18 @@ function loanAnimalSelection() {
     // set player name & color
     var playerIndex = app.game.animalSelectplayerIndex;
     $("#player-selecting").html(app.game.players[playerIndex].name);
+    // remove all player classes
+    for (var pi = 0; pi < 4; pi++) {
+        $("#player-selecting").removeClass("player-" + pi);
+        $(".game-select-animal-icon").removeClass("player-" + pi);
+    }
+    // add the current player class
+    $("#player-selecting").addClass("player-" + playerIndex);
+    $(".game-select-animal-icon").addClass("player-" + playerIndex);
 
     // configure next/finish button
     var finish = ((playerIndex+1) >= app.game.players.length);
-    $("#player-selecting-next").html(finish ? "Finish" : "Next");
+    // $("#player-selecting-next").html(finish ? "Finish" : "Next");
 
     $("#player-selecting-next").off('click');
     $("#player-selecting-next").on('click', function(event) {
@@ -136,7 +144,7 @@ function buildWinnerGrid() {
                     winnerhtml += "<div "
                                 + "id=\"game-winner-animalID_" + x + "_" + y + "\" "
                                 + "class=\"game-spot-animal-block\">"
-                                    + "<img class=\"game-spot-animal-icon\" src=\""
+                                    + "<img class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                             + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
                             + "</div>";
                     score += parseInt(app.game.players[x].selection[y].animal.score);
@@ -170,17 +178,17 @@ function buildWinnerGrid() {
 function buildSpotGrid() {
     var spotHtml = "";
     for (var x = 0; x < app.game.players.length; x++) {
-        spotHtml += "<div class=\"game-spot-player-block\"><span class=\"game-spot-player-icon\">" + app.game.players[x].name + "</span></div>";
+        spotHtml += "<div class=\"game-spot-player-block player-" + x + "\"><span class=\"game-spot-player-icon player-" + x + "\">"
+                + app.game.players[x].name
+                + "</span></div>";
         if (app.game.players[x].selection) {
             for (var y = 0; y < app.game.players[x].selection.length; y++) {
-
                 spotHtml += "<div "
                             + "id=\"game-spot-animalID_" + x + "_" + y + "\" "
                             + "class=\"game-spot-animal-block\">"
-                                + "<img class=\"game-spot-animal-icon\" src=\""
+                                + "<img class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                         + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
                         + "</div>";
-
                 var lastSelection = (y === app.game.players[x].selection.length - 1);
                 if (lastSelection) {
                     spotHtml += "<br/>";

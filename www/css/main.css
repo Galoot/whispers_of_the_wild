@@ -1534,7 +1534,6 @@ hr.style-five {
 #player-selecting /*.player-0*/{
     overflow: hidden;
     margin-left: 25px;
-    background-color: greenyellow;
     border-radius: 10px;
     font-size: 20px;
     height: 20px;
@@ -1542,7 +1541,22 @@ hr.style-five {
     margin-top: 15px;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     text-shadow: 1px 1px 2px #000;
+}
 
+#player-selecting.player-0 {
+    background-color: greenyellow;
+}
+
+#player-selecting.player-1 {
+    background-color: red;
+}
+
+#player-selecting.player-2 {
+    background-color: deepskyblue;
+}
+
+#player-selecting.player-3 {
+    background-color: #e87722;
 }
 
 #player-selecting-next {
@@ -1555,8 +1569,7 @@ hr.style-five {
     height: 40px;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
-    border-radius: 5px;
-  
+    border-radius: 5px; 
 }
 
 #game-select-instruction {
@@ -1565,8 +1578,7 @@ hr.style-five {
 }
 
 .game-spot-player {
-    display: block;
-     
+    display: block;   
 }
 
 .icon-selected {
@@ -1574,9 +1586,57 @@ hr.style-five {
     opacity: 0.4;
     background-color: #fff;
     filter: alpha(opacity=40);
-    border: 3px solid yellowgreen;
 }
-.game-animal-grid {
+    .game-select-animal-icon.icon-selected.player-0 {
+    border: 3px solid yellowgreen;
+    }
+
+    .game-select-animal-icon.icon-selected.player-1 {
+    border: 3px solid red;
+    }
+
+    .game-select-animal-icon.icon-selected.player-2 {
+    border: 3px solid deepskyblue;
+    }
+
+    .game-select-animal-icon.icon-selected.player-3 {
+    border: 3px solid #e87722;
+    }
+    
+     .game-spot-player-block.player-0 {
+    background-color: greenyellow;
+}
+
+    .game-spot-player-block.player-1 {
+        background-color: red;
+    }
+
+    .game-spot-player-block.player-2 {
+        background-color: deepskyblue;
+    }
+
+    .game-spot-player-block.player-3 {
+        background-color: #e87722;
+    }
+    
+    .game-spot-animal-icon.icon-selected.player-0 {
+    border: 3px solid yellowgreen;
+    }
+
+    .game-spot-animal-icon.icon-selected.player-1 {
+    border: 3px solid red;
+    }
+
+    .game-spot-animal-icon.icon-selected.player-2 {
+    border: 3px solid deepskyblue;
+    }
+
+    .game-spot-animal-icon.icon-selected.player-3 {
+    border: 3px solid #e87722;
+    }
+   
+
+#game-animal-grid {
     /* padding-top: 20px; */
     margin: 0 auto;
     margin-top: 10px;
@@ -1589,6 +1649,21 @@ hr.style-five {
 /*    margin-top: 27px;*/
 }
 
+.game-spot-grid {
+    /* padding-top: 20px; */
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 100%;
+    /* margin-left:25px; */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+/*    margin-top: 27px;*/
+}
+
+
 .game-select-animal-block, .game-spot-animal-block, .game-spot-player-block, .game-winner-player-block, .game-winner-score-block {
     vertical-align: top;
     text-align: center;
@@ -1597,11 +1672,34 @@ hr.style-five {
     margin: 10px;
     margin-left: 25px;
     margin-bottom: 25px;
-    display: inline-block;
-    
+    display: inline-block;  
 }
 
-.game-select-animal-icon, .game-spot-animal-icon, .game-spot-player-icon, .game-winner-player-icon {
+.game-spot-player-block{
+    background-color: yellowgreen;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+.game-spot-player-icon {
+    text-align: center;
+    /* height: 142px; */
+    /* width: 142px; */
+    text-shadow: 1px 1px 2px #000;
+    font-size: 16px;
+    margin-top: 58px;
+    /* position: static; */
+    display: block;
+    /* top: 100px; */
+}
+
+#game-spot-instruction {
+    display: block;
+    margin: 10px 50px 10px 25px;
+    /* width: 100%; */
+}
+
+.game-select-animal-icon, .game-spot-animal-icon, .game-winner-player-icon {
     text-align: center;
     height: 142px;
     width: 142px;
@@ -1619,6 +1717,50 @@ hr.style-five {
     display: inline-block;
     height: 30px;
     width: 20px;
+}
+
+.game-spot-grid-buttons {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.game-link-scoreboard  /*.player-0*/{
+    overflow: hidden;
+    margin-left: 25px;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 20px;
+    /* margin-top: 15px; */
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    text-shadow: 1px 1px 2px #000;
+    background-image: url('../resources/buttons/game/view_leaderboard.png');
+    background-size: auto 40px;
+    height: 40px;
+    width: 230px;
+}
+
+.game-link-finish {
+    float: right;
+    width: 150px;
+    margin-left: 30px;
+    margin-right: 65px;
+    background-image: url('../resources/buttons/game/finish_game.png');
+    background-size: auto 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    border-radius: 5px; 
+}
+
+.game-winner-player-icon {
+    vertical-align: top;   text-align: center;   
+    width: 142px;   
+    height: 142px;   
+    /* margin: 10px; */   
+    /* margin-left: 25px; */   
+    /* margin-bottom: 25px; */   display: inline-block;
+    background-color:  yellowgreen;
 }
 
 @keyframes fade {

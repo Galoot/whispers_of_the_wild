@@ -1,5 +1,7 @@
 app = new Application();
+// Settings for the app
 app.mode = app.MODE_PAID;
+app.useExpansion = isMobile.Android() && false;
 
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -29,6 +31,7 @@ function Application() {
     this.MODE_CORPORATE = 3;
 
     this.mode = this.MODE_FREE;
+    this.useExpansion = false;
 
     // game
     this.game = new SpotTheGame();
@@ -289,7 +292,7 @@ function Application() {
         $("#howto-size").on("click", function(event) {
             app.view.modal("scaleSliderHowTo");
         });
-        
+
         $("#howto-game").off();
         $("#howto-game").on("click", function(event) {
             app.view.modal("gameHowTo");
@@ -314,6 +317,9 @@ function Application() {
                 "left_grip_selector": ".leftGrip",
                 "value_bar_selector": ".bar",
                 "value_changed_callback": function (cause, leftValue, rightValue) {
+//                    if (useHtml5) {
+//                        my_media.currentTime = leftValue;
+//                    }
                 }
             });
         });
