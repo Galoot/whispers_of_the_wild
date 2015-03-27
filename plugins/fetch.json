@@ -1,0 +1,30 @@
+{
+    "org.apache.cordova.media": {
+        "source": {
+            "type": "git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git",
+            "subdir": "."
+        }
+    },
+    "nl.x-services.plugins.socialsharing": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.xapkreader": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/moust/phonegap-xapkreader.git",
+            "subdir": "."
+        }
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "git",
+            "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git",
+            "subdir": "."
+        }
+    }
+}

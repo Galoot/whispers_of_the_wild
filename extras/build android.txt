@@ -1,0 +1,33 @@
+rem # cordova plugin add https://github.com/agamemnus/cordova-plugin-xapkreader.git
+
+rem cordova plugin add https://github.com/moust/phonegap-xapkreader.git --variable MAIN_VERSION=1 --variable PATCH_VERSION=1 --variable FILE_SIZE=49873352
+
+rem android update project -p %ANDROID_HOME%\extras\google\play_apk_expansion\downloader_library --target 1
+ant -buildfile %ANDROID_HOME%\extras\google\play_apk_expansion\downloader_library\build.xml clean
+ant -buildfile %ANDROID_HOME%\extras\google\play_apk_expansion\downloader_library\build.xml release
+rd /s /q %ANDROID_HOME%\extras\google\play_apk_expansion\downloader_library\ant-build
+rename %ANDROID_HOME%\extras\google\play_apk_expansion\downloader_library\bin ant-build
+
+rem android update project -p %ANDROID_HOME%\extras\google\play_apk_expansion\zip_file --target 1
+ant -buildfile %ANDROID_HOME%\extras\google\play_apk_expansion\zip_file\build.xml clean
+ant -buildfile %ANDROID_HOME%\extras\google\play_apk_expansion\zip_file\build.xml release
+rd /s /q %ANDROID_HOME%\extras\google\play_apk_expansion\zip_file\ant-build
+rename %ANDROID_HOME%\extras\google\play_apk_expansion\zip_file\bin ant-build
+
+rem android update project -p %ANDROID_HOME%\extras\google\play_licensing\library --target 1
+ant -buildfile %ANDROID_HOME%\extras\google\play_licensing\library\build.xml clean
+ant -buildfile %ANDROID_HOME%\extras\google\play_licensing\library\build.xml release
+rd /s /q %ANDROID_HOME%\extras\google\play_licensing\library\ant-build
+rename %ANDROID_HOME%\extras\google\play_licensing\library\bin ant-build
+
+rem android update project -p platforms\android --library %ANDROID_HOME%\extras\google\play_apk_expansion\downloader_library
+rem android update project -p platforms\android --library %ANDROID_HOME%\extras\google\play_apk_expansion\zip_file
+rem android update project -p platforms\android --library %ANDROID_HOME%\extras\google\play_licensing\library
+
+rem ant -buildfile platforms/android/build.xml clean
+ant -buildfile platforms/android/build.xml release
+
+del /Q android_dist\za.co.galoot.wotw\WhispersoftheWild-release.apk
+del /Q android_dist\za.co.galoot.wotw\main.2.za.co.galoot.wotw.obb
+copy /Y main_expansion.zip android_dist\za.co.galoot.wotw\main.1.za.co.galoot.wotw.obb
+copy /Y platforms\android\bin\WhispersoftheWild-release.apk android_dist\za.co.galoot.wotw\.

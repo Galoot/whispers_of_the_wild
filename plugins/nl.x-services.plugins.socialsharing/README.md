@@ -43,31 +43,31 @@ This plugin allows you to use the native sharing window of your mobile device.
 ## 2. Screenshots
 iOS 7 (iPhone)
 
-![ScreenShot](screenshot-ios7-share.png)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/master/screenshots/screenshot-ios7-share.png)
 
 Sharing options are based on what has been setup in the device settings
 
-![ScreenShot](screenshots-ios7-shareconfig.png)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/master/screenshots/screenshots-ios7-shareconfig.png)
 
 iOS 7 (iPad) - a popup like this requires [a little more effort](#4c-share-popover-on-ipad)
 
-![ScreenShot](screenshot-ios7-ipad-share.png)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/master/screenshots/screenshot-ios7-ipad-share.png)
 
 iOS 6 (iPhone)
 
-![ScreenShot](screenshot-ios6-share.png)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/master/screenshots/screenshot-ios6-share.png)
 
 Android
 
-![ScreenShot](screenshot-android-share.png)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/master/screenshots/screenshot-android-share.png)
 
 Windows Phone 8
 
-![ScreenShot](screenshot-wp8-share.jpg)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/master/screenshots/screenshot-wp8-share.jpg)
 
 #### Alternative ShareSheet (iOS only, using the [Cordova ActionSheet plugin](https://github.com/EddyVerbruggen/cordova-plugin-actionsheet))
 
-![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/cordova-plugin-actionsheet/master/screenshots/ios-share.png)
+![ScreenShot](https://raw.githubusercontent.com/EddyVerbruggen/cordova-plugin-actionsheet/master/screenshots/ios/ios-share.png)
 
 ## 3. Installation
 
@@ -80,6 +80,10 @@ $ phonegap local plugin add https://github.com/EddyVerbruggen/SocialSharing-Phon
 or
 ```
 $ cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git
+```
+or using the cordova plugin registry
+```
+$ cordova plugin add nl.x-services.plugins.socialsharing
 ```
 run this command afterwards (backup your project first!):
 ```
@@ -131,14 +135,11 @@ Android: Copy `SocialSharing.java` to `platforms/android/src/nl/xservices/plugin
 Window Phone: Copy `SocialSharing.cs` to `platforms/wp8/Plugins/nl.x-services.plugins.socialsharing` (create the folders)
 
 ### PhoneGap Build
-SocialSharing works with PhoneGap build too! Version 3.0 and up of this plugin are compatible with PhoneGap 3.0.0 and up.
-Use an older version of this plugin if you target PhoneGap < 3.0.0.
-
-Just add the following xml to your `config.xml` to always use the latest version of this plugin:
+Just add the following xml to your `config.xml` to always use the latest version of this plugin (which is published to plugins.cordova.io these days):
 ```xml
-<gap:plugin name="nl.x-services.plugins.socialsharing" />
+<gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
 ```
-or to use an exact version:
+or to use an older version, hosted at phonegap build:
 ```xml
 <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.0" />
 ```
@@ -152,11 +153,11 @@ SocialSharing.js is brought in automatically. Make sure though you include a ref
 You can share text, a subject (in case the user selects the email application), (any type and location of) file (like an image), and a link.
 However, what exactly gets shared, depends on the application the user chooses to complete the action. A few examples:
 - Mail: message, subject, file.
-- Twitter: message, image (other filetypes are not supported), link (which is automatically shortened).
+- Twitter: message, image (other filetypes are not supported), link (which is automatically shortened if the Twitter client deems it necessary).
 - Google+ / Hangouts (Android only): message, subject, link
 - Flickr: message, image (an image is required for this option to show up).
 - Facebook iOS: message, image (other filetypes are not supported), link.
-- Facebook Android: sharing a message is not possible. You can share either a link or an image (not both), but a description can not be prefilled. See [this Facebook issue which they won't solve](https://developers.facebook.com/x/bugs/332619626816423/). As an alternative you can use `shareViaFacebookWithPasteMessageHint` since plugin version 4.3.4. See below for details.
+- Facebook Android: sharing a message is not possible. You can share either a link or an image (not both), but a description can not be prefilled. See [this Facebook issue which they won't solve](https://developers.facebook.com/x/bugs/332619626816423/). As an alternative you can use `shareViaFacebookWithPasteMessageHint` since plugin version 4.3.4. See below for details. Also note that sharing a URL on a non standard domain (like .fail) [may not work on Android](https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin/issues/253). Make sure you test this. You can use a [link shortener](https://goo.gl) to workaround this issue.
 
 ### Using the share sheet
 Here are some examples you can copy-paste to test the various combinations:
@@ -319,14 +320,32 @@ When using this plugin in the callback of the Phonegap camera plugin, wrap the c
 The share widget has the same limitation as the alert dialogue [mentioned in the Phonegap documentation](http://docs.phonegap.com/en/2.9.0/cordova_camera_camera.md.html#camera.getPicture_ios_quirks).
 
 #### Excluding some options from the widget
-If you want to exclude (for example) the assign-to-contact and copy-to-pasteboard options, add these lines
-right before the last line of the share() method in SocialSharing.m (see the commented lines in that file):
+If you want to exclude (for example) the assign-to-contact and copy-to-pasteboard options, add this to your main plist file:
+
+```xml
+<key>SocialSharingExcludeActivities</key>
+<array>
+  <string>com.apple.UIKit.activity.AssignToContact</string>
+  <string>com.apple.UIKit.activity.CopyToPasteboard</string>
+</array>
 ```
-NSArray * excludeActivities = @[UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard];
-activityVC.excludedActivityTypes = excludeActivities;
-```
-I'll probably make this configurable via Javascript one day.
-And thanks for the tip, Simon Robichaud!
+
+Here's the list of available activities you can disable :
+
+ - com.apple.UIKit.activity.PostToFacebook
+ - com.apple.UIKit.activity.PostToTwitter
+ - com.apple.UIKit.activity.PostToFlickr
+ - com.apple.UIKit.activity.PostToWeibo
+ - com.apple.UIKit.activity.PostToVimeo
+ - com.apple.UIKit.activity.TencentWeibo
+ - com.apple.UIKit.activity.Message
+ - com.apple.UIKit.activity.Mail
+ - com.apple.UIKit.activity.Print
+ - com.apple.UIKit.activity.CopyToPasteboard
+ - com.apple.UIKit.activity.AssignToContact
+ - com.apple.UIKit.activity.SaveToCameraRoll
+ - com.apple.UIKit.activity.AddToReadingList
+ - com.apple.UIKit.activity.AirDrop
 
 
 ## 4b. Usage on Windows Phone
@@ -377,6 +396,18 @@ window.plugins.socialsharing.iPadPopupCoordinates = function() {
 Note that since iOS 8 this popup is the only way Apple allows you to share stuff, so this plugin has been adjusted to use this plugin as standard for iOS 8 and positions
 the popup at the bottom of the screen (seems like a logical default because that's where it previously was as well).
 You can however override this position in the same way as explained above.
+
+**Note**: when using the [WkWebView polyfill](https://github.com/Telerik-Verified-Plugins/WKWebView) the `iPadPopupCoordinates` overrides [doesn't work](https://github.com/Telerik-Verified-Plugins/WKWebView/issues/77) so you can call the alternative `setIPadPopupCoordinates` method to define the popup position just before you call the `share` method.
+
+example :
+
+```js
+var targetRect = event.targetElement.getBoundingClientRect(),
+    targetBounds = targetRect.left + ',' + targetRect.top + ',' + targetRect.width + ',' + targetRect.height;
+
+window.plugins.socialsharing.setIPadPopupCoordinates(targetBounds);
+window.plugins.socialsharing.share('Hello from iOS :)')
+```
 
 ## 5. Credits ##
 

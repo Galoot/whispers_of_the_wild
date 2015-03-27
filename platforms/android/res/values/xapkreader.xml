@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="please_wait">Please wait while downloading additional resources</string>
+    <string name="downloading_assets">Downloading…</string>
+    <string name="preparing_assets">File processing…</string>
+    <string name="download_failed">Download failed</string>
+    <string name="error">Error</string>
+    <string name="close">Close</string>
+    <integer name="main_version">1</integer>
+    <integer name="patch_version">1</integer>
+    <integer name="file_size">56252326</integer>
+    <string name="xapk_expansion_authority">za.co.galoot.wotw</string>
+    <string name="xapk_google_play_public_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMU+HNQb5ebIFAvnDgh8gli8/pwbG3XdA5AoHGiDjEGHtb+jwry1G9QcxyNpDm7s9z9s6cyazu21Dn2yZ6kMhFH0kDTMLG3VGmECLE95as8r6k1Y+M7fH1s/OdBn8HAGG/ry3qekqjzAvBoGaNJre4enmFoLBOt1USzm7SfbbLz1ZwXNzUodTtK46MiUjFZBbKdFYWZT3rTmNbrPi4VwoYoh1yqVD5m5KApcX0tp58R2E4Ar3qV05f7K2b9yWG9AC4GKVB0n6Ac0MqP2fnIJO2Qldh+nmcFwpq1/cTsZVlo/oxoKylcXpO48pNS+xfyx343OiXYJe468awRUx715YwIDAQAB</string>
+    <integer name="file_size">56252326</integer>
+</resources>

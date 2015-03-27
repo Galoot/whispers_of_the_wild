@@ -60,7 +60,7 @@ var initSlider = function (panelClass, actionClass) {
 
         var contentHeight = $("* .content .profile-content").height();
         var footerHeight = $(".footer").height();
-        
+
         if (actionClass == 'left') {
             app.view.navigationCollapsed = !app.view.navigationCollapsed;
             if (app.view.navigationCollapsed) {
@@ -85,6 +85,12 @@ var initSlider = function (panelClass, actionClass) {
                     var current_height = $(".animal-grid").outerHeight(false);
                     $(".animal-grid").css("height", current_height + footerHeight);
 
+                    current_height = $(".game-animal-grid").outerHeight(false);
+                    $(".game-animal-grid").css("height", current_height + footerHeight);
+
+                    current_height = $(".game-spot-grid").outerHeight(false);
+                    $(".game-spot-grid").css("height", current_height + footerHeight);
+
                     $("#search-by-size").css("bottom", (0 + 20) + "px");
                 }, 350);
 
@@ -97,6 +103,12 @@ var initSlider = function (panelClass, actionClass) {
 
                         var current_height = $(".animal-grid").outerHeight(false);
                         $(".animal-grid").css("height", current_height - footerHeight);
+
+                        current_height = $(".game-animal-grid").outerHeight(false);
+                        $(".game-animal-grid").css("height", current_height - footerHeight);
+
+                        current_height = $(".game-spot-grid").outerHeight(false);
+                        $(".game-spot-grid").css("height", current_height - footerHeight);
 
                         $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
 
