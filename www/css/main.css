@@ -1073,10 +1073,10 @@ hr.style-five {
     margin: 0 auto;
     overflow-y: scroll;
     margin: 25px 0 0 0px;
-        -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
-        position: fixed; /* This means we don't have to worry about overflow issues */
-        -webkit-transition: left 0.2s ease-in;
-        transition: left 0.2s ease-in;
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
 /*    margin-top: 27px;*/
 }
 
@@ -1151,7 +1151,7 @@ hr.style-five {
 .search-by-category hr {
 
 /*    //height: 1px;*/
-    
+
 
 
     width: 100%;
@@ -1437,7 +1437,7 @@ hr.style-five {
     background-position-x: 25px;
     background-position-y: 35px;
     background-size: auto 70px;
-    padding:20px;          
+    padding:20px;
 }
 
 .game-start-label {
@@ -1556,7 +1556,7 @@ hr.style-five {
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     border-radius: 5px;
-  
+
 }
 
 #game-select-instruction {
@@ -1566,7 +1566,7 @@ hr.style-five {
 
 .game-spot-player {
     display: block;
-     
+
 }
 
 .icon-selected {
@@ -1582,10 +1582,24 @@ hr.style-five {
     margin-top: 10px;
     /* margin-left:25px; */
     overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
-        position: fixed; /* This means we don't have to worry about overflow issues */
-        -webkit-transition: left 0.2s ease-in;
-        transition: left 0.2s ease-in;
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+/*    margin-top: 27px;*/
+}
+
+.game-spot-grid {
+    /* padding-top: 20px; */
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 100%;
+    /* margin-left:25px; */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
 /*    margin-top: 27px;*/
 }
 
@@ -1598,7 +1612,7 @@ hr.style-five {
     margin-left: 25px;
     margin-bottom: 25px;
     display: inline-block;
-    
+
 }
 
 .game-select-animal-icon, .game-spot-animal-icon, .game-spot-player-icon, .game-winner-player-icon {
@@ -1639,7 +1653,7 @@ hr.style-five {
 }
 
 @media screen and (min-width: 501px) and (max-width: 700px) {
-    
+
      .listen-to {
         /* position: absolute; */
         margin-left: auto;
@@ -1652,18 +1666,18 @@ hr.style-five {
         width:100%;
         position: relative;
         margin-left: 20px;
-        
+
         margin-top: 5px;
 /*        //top:50px;
         //padding-left: 50px;
         //border: 1px solid blue;
         //float: right;*/
     }
-    
+
     .cautionicon {
     margin-left: 20px;
     }
-    
+
     hr.style-four {
     display: block;
     -webkit-margin-before: 0.5em;
@@ -1685,5 +1699,5 @@ hr.style-five {
         border-width: 1px;
         min-width: 100%;
     }
-    
+
 }
