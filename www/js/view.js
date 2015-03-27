@@ -348,6 +348,17 @@ function View() {
             var animalGridHtml = "";
             for (var x = 0; x < animals.length; x++) {
                 var isPaid = animals[x].isPaid;
+                // console.log("Displaying thumbnail image: [" + animals[x].iconFilePath + "]");
+                //
+//                var filePrefix = 'content://org.apache.cordova.xapkreader/';
+//                var requestFileName = animals[x].iconFilePath.substring(filePrefix.length, animals[x].iconFilePath.length);
+//                XAPKReader.get(requestFileName,
+//                    function(url) { // success
+//                        console.log('Retrieved file from obb file...URL: [' + url + ']');
+//                    }, function(error) {
+//                        console.log('Error retrieving file from obb file...error: [' + error + ']');
+//                    }, 'image/jpeg');
+
                 animalGridHtml += "<div id=\"" + idPrefix + "animalID_" + animals[x].animalID + "\" "
                         + "class=\"" + idPrefix + "animal-block paid-mode-" + isPaid + "\" "
                         + "category=\"" + animals[x].category + "\" "

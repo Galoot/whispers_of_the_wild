@@ -45,7 +45,7 @@ function loanAnimalSelection() {
 
     // configure next/finish button
     var finish = ((playerIndex+1) >= app.game.players.length);
-    $("#player-selecting-next").html(finish ? "Finish" : "Next");
+    // $("#player-selecting-next").html(finish ? "Finish" : "Next");
 
     $("#player-selecting-next").off('click');
     $("#player-selecting-next").on('click', function(event) {
@@ -177,7 +177,7 @@ function buildWinnerGrid() {
                     winnerhtml += "<div "
                                 + "id=\"game-winner-animalID_" + x + "_" + y + "\" "
                                 + "class=\"game-spot-animal-block\">"
-                                    + "<img class=\"game-spot-animal-icon\" src=\""
+                                    + "<img class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                             + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
                             + "</div>";
                     score += parseInt(app.game.players[x].selection[y].animal.score);
