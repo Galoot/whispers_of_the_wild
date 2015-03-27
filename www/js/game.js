@@ -219,7 +219,7 @@ function buildSpotGrid() {
                 spotHtml += "<div "
                             + "id=\"game-spot-animalID_" + x + "_" + y + "\" "
                             + "class=\"game-spot-animal-block player-" + x + "\">"
-                                + "<img id=\"game-spot-animal-" + app.game.players[x].selection[y].animal.animalID + "\" class=\"game-spot-animal-icon\" src=\""
+                                + "<img id=\"game-spot-animal-" + app.game.players[x].selection[y].animal.animalID + "\" class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                         + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
                         + "</div>";
                 var lastSelection = (y === app.game.players[x].selection.length - 1);
