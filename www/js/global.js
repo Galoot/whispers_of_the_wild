@@ -37,7 +37,7 @@ function getFullPath(orignalPath) {
 
 /* --------------------------------------- */
 function fixLocalFilePathsForAndroid(originalPath){
-  if(!isMobile.Android()) return originalPath;
+  if(!isMobile.Android() || originalPath.indexOf('org.apache.cordova.xapkreader') > -1) return originalPath;
   var fixedPath = originalPath;
   try{
       if(

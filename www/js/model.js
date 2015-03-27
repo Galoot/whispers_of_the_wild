@@ -14,7 +14,7 @@ function Model() {
 
     var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
 
-    var _get_animals = "SELECT a.animalID, idPointers, name, thumbName, commonNames, score, iconFilePath, category FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
+    var _get_animals = "SELECT a.animalID, idPointers, name, thumbName, commonNames, score, iconFilePath, category, isPaid FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
 
     var _add_animal = "INSERT INTO ANM_Animal ("
             + "name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) "
@@ -133,16 +133,12 @@ function Model() {
         var isEarned = (payStatus === PayStatus.EARNED);
         var isPaid = (payStatus === PayStatus.PAID);
 
-        if (isPaid && (app.mode == app.MODE_FREE || app.mode == app.MODE_FREE_UNLOCKED)) {
-            // if the animal is a paid animal, dont insert...
-        } else {
-            this.data.dbQuery(_add_animal, [name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
-                    function(results) {
-                        if (onCompleted) {
-                            onCompleted(thumbName, jQuery.parseJSON(results).insertId);
-                        }
-                    });
-        }
+        this.data.dbQuery(_add_animal, [name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score],
+                function(results) {
+                    if (onCompleted) {
+                        onCompleted(thumbName, jQuery.parseJSON(results).insertId);
+                    }
+                });
     };
 
     this.addName = function(animalID, name, onCompleted) {

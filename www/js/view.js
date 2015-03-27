@@ -343,8 +343,9 @@ function View() {
             // Animals -----------------------------------------------------
             var animalGridHtml = "";
             for (var x = 0; x < animals.length; x++) {
+                var isPaid = animals[x].isPaid;
                 animalGridHtml += "<div id=\"" + idPrefix + "animalID_" + animals[x].animalID + "\" "
-                        + "class=\"" + idPrefix + "animal-block\" "
+                        + "class=\"" + idPrefix + "animal-block paid-mode-" + isPaid + "\" "
                         + "category=\"" + animals[x].category + "\" "
                         + "animalSize=\"" + animals[x].animalID + "\">";
                 animalGridHtml += "<img class=\"" + idPrefix + "animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
@@ -867,6 +868,14 @@ function View() {
 
         $(".animal-grid").css("height",
             (animalsHeight + footer_oh - searchBySizeHeight - searchBySizeHeight
+            - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
+
+        $(".game-animal-grid").css("height",
+            (animalsHeight + footer_oh - searchBySizeHeight
+            - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
+
+        $(".game-spot-grid").css("height",
+            (animalsHeight + footer_oh - searchBySizeHeight
             - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
 
         $("#search-by-size").css("bottom", ((app.view.footerCollapsed ? 0 : 0) + 20 + animal_grid_collapsing) + "px");

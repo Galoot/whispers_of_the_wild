@@ -2,6 +2,10 @@ load_animal_data = function(model, onCompleted) {
     var mdl = model;
     var animal_counter = 0;
     var resourcesPrefix = 'resources/animals/';
+    if (app.useExpansion) {
+        resourcesPrefix = 'content://org.apache.cordova.xapkreader/' + resourcesPrefix;
+        console.log("Using Android APK expansion path for animal data: " + resourcesPrefix);
+    }
     var animalName;
 
     // should indicate the total number of animals loaded here
