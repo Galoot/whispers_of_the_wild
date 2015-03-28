@@ -24,7 +24,7 @@ var shareTwitter = function() {
         console.log('Proceeding with twitter share...');
         window.plugins.socialsharing.shareViaTwitter(
                 '@Whispers_Wild\n' + 'https://www.facebook.com/whispersofthewild\n'
-                + 'I just love this site!', /* Text to share goes here */
+                + '', /* Text to share goes here */
                 'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png', /* Image to share goes here */
                 null, //'https://www.facebook.com/whispersofthewild', /* URL to share goes here */
                 function () {

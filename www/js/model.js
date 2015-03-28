@@ -24,7 +24,7 @@ function Model() {
     var _add_name = "INSERT INTO ANM_Name (\n\
             animalID, name) \n\
             VALUES (?, ?)";
-    var _get_names = "SELECT nameID, animalID, name FROM ANM_Name WHERE animalID = ?";
+    var _get_names = "SELECT nameID, animalID, name FROM ANM_Name ORDER BY name";
 
     var _add_profile = "INSERT INTO ANM_Profile (\n\
             animalID, idPointers, randomFacts, confusedWith, activityPeriod, gestation, "
@@ -86,8 +86,8 @@ function Model() {
                 });
     };
 
-    this.getNames = function(animalID, onResults) {
-        this.data.dbQuery(_get_names, [animalID],
+    this.getNames = function(onResults) {
+        this.data.dbQuery(_get_names, null,
                 function(results) {
                     onResults(jQuery.parseJSON(results).results);
                 });

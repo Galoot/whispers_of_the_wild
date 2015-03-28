@@ -378,159 +378,161 @@ function View() {
             app.animals = animals;
 
             model.getCategories(function(categories) {
-                // Categories --------------------------------------------------
-                var categoriesHtml = "";
-                categoriesHtml += "<div id=\"all\" class=\"category-option\">All</div>";
-                for (var x = 0; x < categories.length; x++) {
-                    categoriesHtml += "<hr/><div id=\"" + categories[x].category + "\" class=\"category-option\">"
-                            + categories[x].category + "</div>";
-                }
-                $("#search-by-category").html(categoriesHtml);
+                model.getNames(function(animalNames) {
+                    // Categories --------------------------------------------------
+                    var categoriesHtml = "";
+                    categoriesHtml += "<div id=\"all\" class=\"category-option\">All</div>";
+                    for (var x = 0; x < categories.length; x++) {
+                        categoriesHtml += "<hr/><div id=\"" + categories[x].category + "\" class=\"category-option\">"
+                                + categories[x].category + "</div>";
+                    }
+                    $("#search-by-category").html(categoriesHtml);
 
-                // Letters -----------------------------------------------------
-                var lettersHtml = "";
-                var lastLetter = '';
+                    // Letters -----------------------------------------------------
+                    var lettersHtml = "";
+                    var lastLetter = '';
 
-                var sortedAnimals = [];
-                for (var x = 0; x < animals.length; x++) {
-                    sortedAnimals[x] = animals[x];
-                }
+                    var sortedAnimals = [];
+                    for (var x = 0; x < animalNames.length; x++) {
+                        sortedAnimals[x] = animalNames[x];
+                    }
 
-                var tempAnimal = null;
+                    var tempAnimal = null;
 
-                var allSorted = false;
-                while (!allSorted) {
-                    allSorted = true;
-                    for (var x = 0; x < sortedAnimals.length-1; x++) {
-                        if (sortedAnimals[x].thumbName > sortedAnimals[x+1].thumbName) {
-                            tempAnimal = sortedAnimals[x];
-                            sortedAnimals[x] = sortedAnimals[x+1];
-                            sortedAnimals[x+1] = tempAnimal;
-                            allSorted = false;
-                            break;
+                    var allSorted = false;
+                    while (!allSorted) {
+                        allSorted = true;
+                        for (var x = 0; x < sortedAnimals.length-1; x++) {
+                            if (sortedAnimals[x].name > sortedAnimals[x+1].name) {
+                                tempAnimal = sortedAnimals[x];
+                                sortedAnimals[x] = sortedAnimals[x+1];
+                                sortedAnimals[x+1] = tempAnimal;
+                                allSorted = false;
+                                break;
+                            }
                         }
                     }
-                }
 
-                lettersHtml += "<div id=\"all\" class=\"letter-option\">All</div>";
-                for (var x = 0; x < sortedAnimals.length; x++) {
-                    var firstLetter = sortedAnimals[x].thumbName.charAt(0);
-                    if (firstLetter !== lastLetter) {
-                        lettersHtml += "<hr/><div id=\"" + firstLetter + "\" class=\"letter-heading\">"
-                                + "<b>" + firstLetter + "</b></div>";
-                        lastLetter = firstLetter;
+                    lettersHtml += "<div id=\"all\" class=\"letter-option\">All</div>";
+                    for (var x = 0; x < sortedAnimals.length; x++) {
+                        var firstLetter = sortedAnimals[x].name.charAt(0);
+                        if (firstLetter !== lastLetter) {
+                            lettersHtml += "<hr/><div id=\"" + firstLetter + "\" class=\"letter-heading\">"
+                                    + "<b>" + firstLetter + "</b></div>";
+                            lastLetter = firstLetter;
+                        }
+                        lettersHtml += "<div id=\"" + sortedAnimals[x].animalID + "\" class=\"letter-option\">"
+                                + sortedAnimals[x].name + "</div>";
                     }
-                    lettersHtml += "<div id=\"" + sortedAnimals[x].animalID + "\" class=\"letter-option\">"
-                            + sortedAnimals[x].thumbName + "</div>";
-                }
-                $("#search-by-letter").html(lettersHtml);
+                    $("#search-by-letter").html(lettersHtml);
 
-                // Animals -----------------------------------------------------
-                var animalGridHtml = "";
-                for (var x = 0; x < animals.length; x++) {
-                    animalGridHtml += "<div id=\"animalID_" + animals[x].animalID + "\" "
-                            + "class=\"animal-block\" "
-                            + "category=\"" + animals[x].category + "\" "
-                            + "animalSize=\"" + animals[x].animalID + "\">";
-                    animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
-                    animalGridHtml += "<div class=\"animal-text\">" + animals[x].thumbName + "</div>";
-                    animalGridHtml += "</div>";
-                }
-                this.animal_animalGrid
-                $("#animal-grid").html(animalGridHtml);
+                    // Animals -----------------------------------------------------
+                    var animalGridHtml = "";
+                    for (var x = 0; x < animals.length; x++) {
+                        animalGridHtml += "<div id=\"animalID_" + animals[x].animalID + "\" "
+                                + "class=\"animal-block\" "
+                                + "category=\"" + animals[x].category + "\" "
+                                + "animalSize=\"" + animals[x].animalID + "\">";
+                        animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                        animalGridHtml += "<div class=\"animal-text\">" + animals[x].thumbName + "</div>";
+                        animalGridHtml += "</div>";
+                    }
+                    this.animal_animalGrid
+                    $("#animal-grid").html(animalGridHtml);
 
-                // Listeners ---------------------------------------------------
-                $(".category-option").off();
-                $(".category-option").on("click", function(event) {
-                    $("#search-by-category").toggle();
-                });
-                $(".letter-option").off();
-                $(".letter-option").on("click", function(event) {
-                    $("#search-by-letter").toggle();
-                });
-
-                $('.category-option').each(function() {
-                    $(this).off();
-                    $(this).on("click", function(event) {
+                    // Listeners ---------------------------------------------------
+                    $(".category-option").off();
+                    $(".category-option").on("click", function(event) {
                         $("#search-by-category").toggle();
-                        var category = event.target.id;
-
-                        $(".animal-block").each(function() {
-                            if (category === ("all")) {
-                                $(this).show();
-                            } else if (category == $(this).attr("category")) {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-
-                            }
-                        });
-
                     });
-                });
-
-                $('.letter-option').each(function() {
-                    $(this).off();
-                    $(this).on("click", function(event) {
+                    $(".letter-option").off();
+                    $(".letter-option").on("click", function(event) {
                         $("#search-by-letter").toggle();
-                        var letter = event.target.id;
-
-                        $(".animal-block").each(function() {
-                            if (letter === ("all")) {
-                                $(this).show();
-                            } else if (("animalID_" + letter) == $(this).attr("id")) {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-
-                            }
-                        });
-
                     });
-                });
 
-                $('*[id^="animalID_"]').off();
-                $('*[id^="animalID_"]').on(
-                        "click",
-                        function(event) {
-                            var elementID = event.currentTarget.id;
-                            var animalID = elementID.substring(9);
+                    $('.category-option').each(function() {
+                        $(this).off();
+                        $(this).on("click", function(event) {
+                            $("#search-by-category").toggle();
+                            var category = event.target.id;
 
-                            app.view.initializeProfileLinks(animalID);
-                            model.getAnimal(animalID, function(animal) {
-                                var freeApp = (app.mode === app.MODE_FREE);
-                                var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
-                                var earnedAnimal = (animal.isEarned === "true");
-                                var paidAnimal = (animal.isPaid === "true");
-                                var nonFreeAnimal = (earnedAnimal || paidAnimal);
-
-                                if ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal)) {
-                                    app.view.modal("limitedAccessMessage");
+                            $(".animal-block").each(function() {
+                                if (category === ("all")) {
+                                    $(this).show();
+                                } else if (category == $(this).attr("category")) {
+                                    $(this).show();
                                 } else {
-                                    app.view.destroySliders();
-
-                                    app.view.animal_loadProfile(animal, function() {
-                                        app.view.animal_loadMap(animal, function() {
-                                            app.view.animal_loadFootprints(animal, function() {
-                                                app.view.animal_loadAudio(animal, function() {
-                                                    ga_storage._trackPageview('/index.html#profile?animal=' + animal.thumbName);
-                                                    location.href = "#profile";
-                                                    app.view.reloadImageSliders();
-
-                                                });
-                                            });
-                                        });
-                                    });
+                                    $(this).hide();
 
                                 }
                             });
-                        }
-                );
-                // -------------------------------------------------------------
 
-                if (onComplete) {
-                    onComplete();
-                }
+                        });
+                    });
+
+                    $('.letter-option').each(function() {
+                        $(this).off();
+                        $(this).on("click", function(event) {
+                            $("#search-by-letter").toggle();
+                            var letter = event.target.id;
+
+                            $(".animal-block").each(function() {
+                                if (letter === ("all")) {
+                                    $(this).show();
+                                } else if (("animalID_" + letter) == $(this).attr("id")) {
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+
+                                }
+                            });
+
+                        });
+                    });
+
+                    $('*[id^="animalID_"]').off();
+                    $('*[id^="animalID_"]').on(
+                            "click",
+                            function(event) {
+                                var elementID = event.currentTarget.id;
+                                var animalID = elementID.substring(9);
+
+                                app.view.initializeProfileLinks(animalID);
+                                model.getAnimal(animalID, function(animal) {
+                                    var freeApp = (app.mode === app.MODE_FREE);
+                                    var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
+                                    var earnedAnimal = (animal.isEarned === "true");
+                                    var paidAnimal = (animal.isPaid === "true");
+                                    var nonFreeAnimal = (earnedAnimal || paidAnimal);
+
+                                    if ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal)) {
+                                        app.view.modal("limitedAccessMessage");
+                                    } else {
+                                        app.view.destroySliders();
+
+                                        app.view.animal_loadProfile(animal, function() {
+                                            app.view.animal_loadMap(animal, function() {
+                                                app.view.animal_loadFootprints(animal, function() {
+                                                    app.view.animal_loadAudio(animal, function() {
+                                                        ga_storage._trackPageview('/index.html#profile?animal=' + animal.thumbName);
+                                                        location.href = "#profile";
+                                                        app.view.reloadImageSliders();
+
+                                                    });
+                                                });
+                                            });
+                                        });
+
+                                    }
+                                });
+                            }
+                    );
+                    // -------------------------------------------------------------
+
+                    if (onComplete) {
+                        onComplete();
+                    }
+                });
             });
         });
     };
