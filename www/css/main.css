@@ -116,7 +116,7 @@ p {line-height: 18px;
     background-image: url('../resources/splashbg.jpg');
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 100%;
+    background-size: auto 100%;
 
 
 }
@@ -937,7 +937,7 @@ hr.style-five {
     background-image: url('../resources/indexbg1.jpg');
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 100%;
+    background-size: auto 100%;
 }
 
 .swiper-container {
@@ -1452,7 +1452,7 @@ hr.style-five {
     background-image: url('../resources/game/game-splash.jpg');
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 100%;
+    background-size: auto 100%;
 }
 
 .game-icon {
@@ -1496,7 +1496,7 @@ hr.style-five {
     background-image: url('../resources/game/player_selectbg.jpg');
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 100%;
+    background-size: auto 100%;
 }
 
 
@@ -1754,7 +1754,7 @@ input {
     display: inline-block;  
 }
 
-.game-spot-player-block{
+.game-spot-player-block {
     background-color: yellowgreen;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
@@ -1804,6 +1804,26 @@ input {
     width: 100%;
 }
 
+.game-winner-player-score {
+    height: 30px;
+    background-color: #cbc9c5;
+    display: block;
+    border-radius: 5px;
+    margin-top: 25px;
+    color: #000;
+    padding-top: 15px;
+}
+
+.game-winner-player-bonus {
+    height: 30px;
+    background-color: #cbc9c5;
+    display: block;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #000;
+    padding-top: 15px;
+}
+
 .game-link-scoreboard  /*.player-0*/{
     overflow: hidden;
     margin: 10px;
@@ -1820,7 +1840,7 @@ input {
     float: left;
 }
 
-.game-link-spot{ 
+.game-link-spot { 
     float: left;
     width: 150px;
     margin: 10px;
