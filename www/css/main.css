@@ -1521,22 +1521,22 @@ hr.style-five {
     color: #fff;
 }
 
-input {
-    border: none; 
-    -webkit-box-shadow: none;
-    padding: none;
-    background: rgba(255,255,255,0.5);
-    margin: 0;
-    margin-top: -11px;
+input.game-player-edit {
+background-color: transparent; 
+border: none !important;
+color: #fff;
+    -webkit-user-select: auto !important;
 }
 
-input:focus {
-    border: none;
-    -webkit-box-shadow: none !important;
-    padding: none;
-    background: rgba(255,255,255,0.5);
-    margin: 0;
-    margin-top: -11px;
+textarea:focus, input:focus{
+    outline: 0;
+    background: transparent;
+    margin-top: -14px;
+    color: #fff;
+}
+
+input {
+    color: #fff !important;
 }
 
 .game-players #player-0 {
