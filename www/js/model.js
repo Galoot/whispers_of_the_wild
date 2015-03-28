@@ -32,7 +32,7 @@ function Model() {
             + "threats, length, height, weight, soundPath, soundDuration) "
             + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-    var _get_profile = "SELECT profileID, idPointers, randomFacts, confusedWith, activityPeriod, "
+    var _get_profile = "SELECT animalID, profileID, idPointers, randomFacts, confusedWith, activityPeriod, "
             + "gestation, lifespan, diet, predators, habitat, redListStatus, population, "
             + "threats, length, height, weight, soundPath, soundDuration "
             + "FROM ANM_Profile WHERE animalID = ?";

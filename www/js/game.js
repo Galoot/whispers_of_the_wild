@@ -167,7 +167,7 @@ function buildWinnerGrid() {
         if (x > 0) {
             winnerhtml += "<br/>";
         }
-        winnerhtml += "<div class=\"game-winner-player-block\"><span class=\"game-winner-player-icon\">" + app.game.players[x].name + "</span></div>";
+        winnerhtml += "<div class=\"game-winner-player-block player-" + x + "\"><span class=\"game-winner-player-icon player-" + x + "\">" + app.game.players[x].name + "</span></div>";
         if (app.game.players[x].selection) {
             var score = 0;
             var selectionCount = 0;
@@ -219,7 +219,9 @@ function buildSpotGrid() {
                 spotHtml += "<div "
                             + "id=\"game-spot-animalID_" + x + "_" + y + "\" "
                             + "class=\"game-spot-animal-block player-" + x + "\">"
-                                + "<img id=\"game-spot-animal-" + app.game.players[x].selection[y].animal.animalID + "\" class=\"game-spot-animal-icon player-" + x + "\" src=\""
+                                + "<img id=\"game-spot-animal-"
+                                        + app.game.players[x].selection[y].animal.animalID + "\" "
+                                        + "class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                         + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
                         + "</div>";
                 var lastSelection = (y === app.game.players[x].selection.length - 1);
