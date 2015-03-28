@@ -1451,8 +1451,8 @@
                     <!-- animal icons go here once loaded from the database -->
                 </div>
                 <div class="game-spot-grid-buttons">
-                    <div class="game-link-finish"></div>
                     <div class="game-link-scoreboard"></div>
+                    <div class="game-link-finish"></div>
                 </div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
@@ -1539,9 +1539,9 @@
                 </div>
                 <br/>
 
-                <div class="game-link-spot">GO BACK</div>
-                <div class="game-link-next">NEXT ROUND</div>
-                <div class="game-link-finish">FINISH GAME</div>
+                <div class="game-link-spot"></div>
+                <div class="game-link-next"></div>
+                <div class="game-link-finish"></div>
                 <div class="panel-slider-bottom-handle"></div>
             </div>
             <div class="footer">
@@ -1623,9 +1623,11 @@
                         <img id="game-message-animal-icon1" class="game-message-animal-icon"/>
                         <img id="game-message-animal-icon2" class="game-message-animal-icon"/>
                         <img id="game-message-animal-icon3" class="game-message-animal-icon"/>
-                        <br/>Continue?
-                        <span id="game-message-confirm-yes" onClick="confirmAnimalSelection();">YES</span>
-                        <span id="game-message-confirm-no" onClick="app.view.hideModal();">NO</span>
+                        <br/>
+                        
+                        <div id="game-message-confirm-yes" onClick="confirmAnimalSelection();"></div>
+                        <div id="game-message-confirm-no" onClick="app.view.hideModal();"></div>
+                        
                     </div>
 
                 </div>

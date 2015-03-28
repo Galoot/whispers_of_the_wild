@@ -1,5 +1,5 @@
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    /* -webkit-tap-highlight-color: rgba(0,0,0,0); */ /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 /* // font-family:'Corbel'; // HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
@@ -26,7 +26,7 @@
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 
-    background-color:#302d32;
+    /* background-color:#302d32; */
     background-image:linear-gradient(top, #302d33 0%, #2f2d33 51%);
     background-image:-webkit-linear-gradient(top, #302d33 0%, #2f2d33 51%);
     background-image:-ms-linear-gradient(top, #302d33 0%, #2f2d33 51%);
@@ -1408,6 +1408,32 @@ hr.style-five {
 
 .game-message-animal-icon {
     width: 100px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#game-message-confirm-yes {
+    background-image: url('../resources/buttons/game/continue.png');
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 40px;
+    float: right;
+    margin-right: 80px;
+    /* bottom: 100px; */
+}
+
+#game-message-confirm-no {
+    background-image: url('../resources/buttons/game/edit.png');
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 40px;
+    bottom: 100px;
+    margin-left: 80px;
+    overflow: hidden;
+  
+    margin-left: 80px;
 }
 
 #game .content {
@@ -1474,10 +1500,43 @@ hr.style-five {
 }
 
 
-.game-players {
+.game-player {
     width: 90%;
     margin-left: 28px;
     text-shadow: 1px 1px 2px #000;
+}
+
+.game-player-edit {
+    border-radius: 10px;
+    font-size: 20px;
+    height: 30px;
+    /* box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4); */
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px #000;
+    color: #fff;
+}
+
+input {
+    border: none; 
+    -webkit-box-shadow: none;
+    padding: none;
+    background: rgba(255,255,255,0.5);
+    margin: 0;
+    margin-top: -11px;
+}
+
+input:focus {
+    border: none;
+    -webkit-box-shadow: none !important;
+    padding: none;
+    background: rgba(255,255,255,0.5);
+    margin: 0;
+    margin-top: -11px;
 }
 
 .game-players #player-0 {
@@ -1488,6 +1547,7 @@ hr.style-five {
     padding-top: 10px;
     margin-top: 15px;
     box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4);
+    color: #fff;
 }
 .game-players #player-1 {
     background-color: red;
@@ -1496,6 +1556,7 @@ hr.style-five {
     height: 30px;
     padding-top: 10px;
     margin-top: 15px;
+    box-shadow: none;
     box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4);
 }
 
@@ -1745,7 +1806,7 @@ hr.style-five {
 
 .game-link-scoreboard  /*.player-0*/{
     overflow: hidden;
-    margin-left: 25px;
+    margin: 10px;
     border-radius: 5px;
     font-size: 20px;
     height: 20px;
@@ -1756,13 +1817,36 @@ hr.style-five {
     background-size: auto 40px;
     height: 40px;
     width: 230px;
+    float: left;
 }
+
+.game-link-spot{ 
+    float: left;
+    width: 150px;
+    margin: 10px;
+    background-image: url('../resources/buttons/game/go_back.png');
+    background-size: auto 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    border-radius: 5px; }
+
+.game-link-next {
+    float: left;
+    width: 150px;
+    margin: 10px;
+    background-image: url('../resources/buttons/game/next_round.png');
+    background-size: auto 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    border-radius: 5px; }
 
 .game-link-finish {
     float: right;
     width: 150px;
-    margin-left: 30px;
-    margin-right: 65px;
+    margin: 10px;
+    margin-right: 50px;
     background-image: url('../resources/buttons/game/finish_game.png');
     background-size: auto 40px;
     height: 40px;
@@ -1772,12 +1856,14 @@ hr.style-five {
 }
 
 .game-winner-player-icon {
-    vertical-align: top;   text-align: center;   
+    vertical-align: top;   
+    text-align: center;     
     width: 142px;   
     height: 142px;   
     /* margin: 10px; */   
     /* margin-left: 25px; */   
-    /* margin-bottom: 25px; */   display: inline-block;
+    /* margin-bottom: 25px; */   
+    display: inline-block;
     background-color:  yellowgreen;
 }
 
