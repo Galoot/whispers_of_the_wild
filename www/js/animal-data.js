@@ -21,20 +21,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            7, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Bats, fruit bats, leaf-nosed bats, sheath-tailed bats, slit-faced bats, horseshoe bats, vesper bats, free-tailed bats');
+        mdl.addName(animalID, 'BATS');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Microchirptera: flat faces; large ears; small eyes; Megachiroptera: large eyes; pointy, dog-like face.',
                 // Random facts
-                'Random facts anour bats are that...bla bla bla bla',
+                'Bats have special tendons in their feet that pull the toes inwards when the bat hangs upside down. They can therefore hang without expending any energy.',
                 // Confused With
                 'Each other',
                 'Nocturnal', // Activity Period
@@ -89,20 +89,24 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            15, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Lesser bushbaby, southern lesser bushbaby, lesser galago; thick-tailed bushbaby, greater galago, thick-tailed galago');
+        mdl.addName(animalID, 'BUSH BABY');
+        mdl.addName(animalID, 'LESSER BUSH BABY');
+        mdl.addName(animalID, 'GREATER BUSH BABY');
+        mdl.addName(animalID, 'THICK-TAILED BUSH BABY');
+        mdl.addName(animalID, 'GALAGO');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Lesser bushbaby: long, thin, bushy tail; small body; large ears; huge, amber coloured, forward facing eyes; light grey coat; amazing jumping ability; usually seen in trees; Thick-tailed bushbaby: long, thick, bushy tail; approximately cat-sized; large, forward-facing eyes; dark grey coat',
                 // Random facts
-                '',
+                'Bush babies urinate on their hands as they move through the branches. It is thought that this may improve their grip on the branch, and communicates their movements to other bushbabies.',
                 // Confused With
                 'Each other',
                 'Nocturnal', // Activity Period
@@ -154,20 +158,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
-            10, // Game Score
+            7, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Ground squirrel, tree squirrel');
+        mdl.addName(animalID, 'SQUIRREL');
+        mdl.addName(animalID, 'TREE SQUIRREL');
+        mdl.addName(animalID, 'GROUND SQUIRREL');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Ground squirrel: Light brown to grey coat with white a stripe down each side; tail thick and bushy, sometimes held above head in bright sunlight; always found on the ground; Tree Squirrel: Smaller than ground squirrel; yellowish to reddish-brown coat, uniformly coloured with no distinct markings; tail thin; found in trees and on ground.',
                 // Random facts
-                '',
+                'Ground squirrels are the matadors of the bush. When confronting a snake, they fluff their tails up at their sides, attracting the snake\'s attention, and diverting its strikes away from their bodies.',
                 // Confused With
                 'each other, meerkats, mongooses',
                 'Diurnal', // Activity Period
@@ -214,7 +220,7 @@ load_animal_data = function(model, onCompleted) {
     });
     // =========================================================================
 
-    // Social Mongoose ==================================================================
+    //Social Mongoose ==================================================================
     animalName = 'Social mongoose'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Social mongooses',
             animalName, // Thumbnail Name & Folder name under 'animals'
@@ -224,20 +230,23 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
-            10, // Game Score
+            11, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Banded mongoose, meerkat, suricate, dwarf mongoose');
+        mdl.addName(animalID, 'MONGOOSE');
+        mdl.addName(animalID, 'MEERKAT');
+        mdl.addName(animalID, 'BANDED MONGOOSE');
+        mdl.addName(animalID, 'DWARF MONGOOSE');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'long, slender bodies; small ears; forward facing eyes; pointed faces; Dwarf mongoose: very small size; fuzzy-looking dark grey to dark brown fur; Meerkat: pale, straw-coloured fur with irregular blotchy stripes across the back; blunt nose; stand in distinctive upright posture; Banded mongoose: Relatively large size, dark grey fur with 10-12 distinct black stripes across the back.',
                 // Random facts
-                '',
+                'A group of mongooses is called a business. When two businesses go to war, they charge each other in a line, like humans running into battle in old times.',
                 // Confused With
                 'Other mongooses',
                 'Diurnal', // Activity Period
@@ -296,20 +305,25 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            11, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Banded mongoose, meerkat, suricate, dwarf mongoose');
+        mdl.addName(animalID, 'MONGOOSE');
+        mdl.addName(animalID, 'WATER MONGOOSE');
+        mdl.addName(animalID, 'SELOUS MONGOOSE');
+        mdl.addName(animalID, 'WHITE-TAILED MONGOOSE');
+        mdl.addName(animalID, 'GREY MONGOOSE');
+        mdl.addName(animalID, 'SLENDER MONGOOSE');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Small carnivores; long slender bodies, short legs; pointed faces; only seen alone Slender mongoose: thin, black-tipped tail which turns upwards when moving; Yellow mongoose: yellowish body, bushy tail with white-tipped tail; White-tailed mongoose: Large, dark-grey body, bushy white tail; Egyptian mongoose: relatively large size, shaggy grey fur.',
                 // Random facts
-                '',
+                'Mongooses were kept on ships to control vermin like rats and mice. However, that lead to them being introduced to islands in the Carribean and Hawaii, where they drove some bird species to extinction.',
                 // Confused With
                 'Other mongooses',
                 'Mostly nocturnal with exception of slender and grey mongoose.', // Activity Period
@@ -365,20 +379,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            30, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'black-footed cat, small-spotted cat');
+        mdl.addName(animalID, 'BLACK-FOOTED');
+        mdl.addName(animalID, 'CAT');
+        mdl.addName(animalID, 'SMALL-SPOTTED CAT');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Similar to a house cat; shorter legs and tail; tan body with regular black or brown spots, barred tail and legs',
                 // Random facts
-                '',
+                'When the black-footed cat\'s call is slowed down, it is reported to sound identical to a tiger\'s roar',
                 // Confused With
                 'Domestic cat, African wildcat ',
                 'Nocturnal', // Activity Period
@@ -425,20 +441,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            18, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Small-spotted genet, common genet, large-spotted genet');
+        mdl.addName(animalID, 'GENET');
+        mdl.addName(animalID, 'SMALL-SPOTTED GENET');
+        mdl.addName(animalID, 'LARGE-SPOTTED GENET');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Body long and slender; legs relatively short; tail thick and striped; coat a dull grey, well spotted; face mongoose-like with black and white mask; Small-spotted genet: white-tipped tail, small black spots; Large-spotted genet: black-tipped tail, large russet coloured spots.',
                 // Random facts
-                '',
+                'Genets are wasteful feeders, often eating just the most nutritious part of their prey, and leaving the rest for scavengers.',
                 // Confused With
                 'Each other and the African civet',
                 'Early morning, late afternoon and night, rest in the heat of the day', // Activity Period
@@ -447,7 +465,7 @@ load_animal_data = function(model, onCompleted) {
                 // Diet
                 'Mostly insectivorous, but will also take small mammals, birds, reptiles and amphibians. They will also eat eggs, wild berries and fruits.',
                 'Some larger predators such as leopards and caracal but largely arboreal lifestyle keeps them relatively safe.', // Predators
-                'Both species spend time in the trees so they don’t stray too far from well-wooded areas. The small spotted genet has a wider habitat tolerance, occurring along rivers in semi-deserts. The Large-spotted genet prefers more moist areas.', // Habitat
+                'Both species spend time in the trees so they don\'t stray too far from well-wooded areas. The small spotted genet has a wider habitat tolerance, occurring along rivers in semi-deserts. The Large-spotted genet prefers more moist areas.', // Habitat
                 'Least concern', // Red List Status
                 'Stable', // Population
                 'No major threats, sometimes killed by poultry farmers. Occasionally eaten as bush meat, and used for traditional medicine. Their fur is used for decorative purposes.', // Threats
@@ -489,20 +507,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            8, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits');
+        mdl.addName(animalID, 'HARE');
+        mdl.addName(animalID, 'SCRUB HARE');
+        mdl.addName(animalID, 'RABBIT');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'small size; upright stance when sitting; soft, brown-grey fur; small, tufty tail; Hares: Long ears, long hind legs; Rabbits: smaller ears, shorter legs. ',
                 // Random facts
-                '',
+                'Scrub hares, like all rabbits and hares, eat their own poo on a daily basis. They do this to gain the maximum nutrition out of their food.',
                 // Confused With
                 'Each other, spring hare',
                 'Nocturnal', // Activity Period
@@ -553,20 +573,23 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            8, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Dassie, rock dassie, tree dassie');
+        mdl.addName(animalID, 'DASSIE');
+        mdl.addName(animalID, 'HYRAX');
+        mdl.addName(animalID, 'ROCK HYRAX');
+        mdl.addName(animalID, 'TREE HYRAX');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Approximately rabbit sized; stocky build; back rounded to resemble a boulder; ears small and rounded; fur dull grey to dark brown on top, paler below; black eyes with lighter patches around eyebrows and mouth',
                 // Random facts
-                '',
+                'Spain is named after the ancient Phoenician name for the hyrax, which is Saphan. Hyraxes do not occur in Spain however.',
                 // Confused With
                 'each other, rock rabbits',
                 'Rock dwelling species are predominantly diurnal, tree dwelling species mainly nocturnal', // Activity Period
@@ -623,20 +646,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            30, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'honey badger, ratel');
+        mdl.addName(animalID, 'HONEY BADGER');
+        mdl.addName(animalID, 'RATEL');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'black underparts and legs, silver-grey fur on top including head and tail; legs very short, body stickily built; tail is very short. ',
                 // Random facts
-                '',
+                'Honey badgers are rumoured to protect themselves from larger attackers by getting underneath them and biting their testicles.',
                 // Confused With
                 'striped weasel and striped polecats, but much larger than both',
                 'mostly nocturnal, sometime active in early morning, late afternoon.', // Activity Period
@@ -694,20 +718,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            25, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'African Wildcat');
+        mdl.addName(animalID, 'AFRICAN WILDCAT');
+        mdl.addName(animalID, 'WILDCAT');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Sexes similar; similar appearance to domestic cat; fur a sandy brown colour; reddish-brown colour on the back of ears; black stripes on legs; longer legs than the average housecat.',
                 // Random facts
-                '',
+                'These are the wild ancestors of the domestic cat. South Africa has the most domestic cats in Africa, with approximately 2 million.',
                 // Confused With
                 'Domestic cats, black footed cat – black footed cat is smaller and stockier, with black spots and a short tail.',
                 'Mostly nocturnal but adaptable', // Activity Period
@@ -756,28 +781,29 @@ load_animal_data = function(model, onCompleted) {
             '<b>Vervet Monkey Safety Advice</b>'
             + '<br/><br/>Vervet monkeys are very intelligent and have the potential to become problem animals when they become too used to humans. They are not very dangerous to people, although they have been known to bite if cornered. They are more of a danger to your food, comfort and possessions.'
             + '<br/><br/><b>Do not feed the vervet monkeys:</b> vervet monkeys become problem animals when people feed them. They start to expect food to be given, and when it is not, they will take it by forcefully or guile.'
-            + '<br/><br/><b>Don’t leave windows/doors/tents open:</b> remember to close your window, doors and tents when you leave. '
+            + '<br/><br/><b>Don\'t leave windows/doors/tents open:</b> remember to close your window, doors and tents when you leave. '
             + '<br/><br/><b>Do not leave goods unattended:</b> never leave goods, especially food lying around. Put away your rubbish in vervet monkey-proof bins. They have been known to steel phones, wallets and car keys.'
-            + '<br/><br/><b>Don’t fight them:</b> if a vervet monkey tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
+            + '<br/><br/><b>Don\'t fight them:</b> if a vervet monkey tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
             + '<br/><br/><b>Vervet monkey body language:</b> a vervet monkey is showing aggression if it opens its eyes wide showing its white eyelids, bares its teeth, advances imposingly or vocalises. '
             + '<br/><br/><b>Your body language:</b> If a vervet monkey acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
             + '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            3, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'vervet monkey, green monkey, grivet monkey');
+        mdl.addName(animalID, 'MONKEY');
+        mdl.addName(animalID, 'VERVET MONKEY');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'medium-sized monkey, silvery-grey coat; black face; long, thin tails; always found in groups; males larger, with large blue scrotum and red penis.',
                 // Random facts
-                '',
+                'Male vervets have a blue scrotum and a red penis. This colour gets brighter the more dominant they are, and fades when they lose their position.',
                 // Confused With
                 'samango monkey',
                 'diurnal', // Activity Period
@@ -836,20 +862,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            50, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Ground pangolin, scaly anteater, cape pangolin, South African pangolin');
+        mdl.addName(animalID, 'PANGOLIN');
+        mdl.addName(animalID, 'GROUND PANGOLIN');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable, covered in hard, brown scales, hunched posture.',
                 // Random facts
-                '',
+                'Pangolins have the longest tongues relative to their body of any animal. Their tongues attach in their chests rather than their mouths, and can be up to 70cm long.',
                 // Confused With
                 'Unmistakeable, covered in hard, brown scales, hunched posture.',
                 'Nocturnal', // Activity Period
@@ -906,20 +933,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            12, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Jackals, BLACK-BACKED JACKAL, SIDE-STRIPED JACKAL');
+        mdl.addName(animalID, 'JACKAL');
+        mdl.addName(animalID, 'BLACK-BACKED JACKAL');
+        mdl.addName(animalID, 'SIDE-STRIPED JACKAL');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Slender, dog-like appearance; black-backed: distinct black saddle on its back; reddish-brown sides and face; fairly large, pointed ears; black, bushy tail; side-striped: mostly grey with a light and dark stripe down their sides; white-tipped tail; smaller ears than black-backed jackal.',
                 // Random facts
-                '',
+                'Jackals have played an important role in the mythology of some of the world\'s greatest civilisations. The ancient Egytian God Anubis had a jackal\'s head, and accompanied dead souls to the afterlife.',
                 // Confused With
                 'Each other, cape fox, bat-eared fox, aardwolf  ',
                 'Mostly nocturnal, but can be active in the mornings and evenings', // Activity Period
@@ -975,20 +1004,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            35, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Cape clawless otter, Spotted-necked otter');
+        mdl.addName(animalID, 'OTTER');
+        mdl.addName(animalID, 'CAPE-CLAWLESS OTTER');
+        mdl.addName(animalID, 'SPOTTED-NECKED OTTER');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Cape clawless otter: relatively large size; dark-brown to black coat; white neck and chin; hunched posture when moving on land; sexes similar; Spotted-necked otter: smaller than spot-necked otter; underparts lighter, pale spots on throat, never far from permanent water.',
                 // Random facts
-                '',
+                'A group of otters is called a romp. Otters can eat up to 20% of their body weight each day.',
                 // Confused With
                 'each other, and with the water mongoose',
                 'diurnal', // Activity Period
@@ -1045,20 +1076,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            18, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Civit');
+        mdl.addName(animalID, 'CIVIT');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Relatively large, approximately the size of a medium sized dog; racoon-like face with black “mask” over eyes; tan to grey coat, heavily marked with black spots; black stripe running the length of the back; short tail; hunched appearance with head held low when walking.',
                 // Random facts
-                '',
+                'The excretions from a civit\'s anal glands can retain their smell for up to three months, and have been used in the perfume industry for hundreds of years',
                 // Confused With
                 'Genet',
                 'Mainly nocturnal, occasionally active in early morning and late afternoon.', // Activity Period
@@ -1116,20 +1147,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            25, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'caracal, desert lynx');
+        mdl.addName(animalID, 'CARACAL');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Russet-red coat; pointed black ears with black tufts at the tips; short, powerful legs; hind legs higher than front legs, short tail; face has prominent black and white markings; sexes similar',
                 // Random facts
-                '',
+                'The phrase &quot;to put the cat among the pigeons&quot; refers to the caracal, who were trained as bird hunters at one time in India and Iran',
                 // Confused With
                 'Serval, African golden cat',
                 'Nocturnal', // Activity Period
@@ -1175,7 +1206,7 @@ load_animal_data = function(model, onCompleted) {
     });
     // =========================================================================
 
-    // Aardwolf ==================================================================
+    //Aardwolf ==================================================================
     animalName = 'Aardwolf'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Aardwolf (Proteles cristatus)',
             animalName, // Thumbnail Name & Folder name under 'animals'
@@ -1185,20 +1216,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            30, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Aardwolf');
+        mdl.addName(animalID, 'AARDWOLF');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Sexes look alike; Hyaena-like appearance; mane of long hair on neck and back; tawny coloured coat with vertical black stripes; black feet, tail and muzzle.',
                 // Random facts
-                '',
+                'Aardwolves are one of the few animals that can stomach the toxic chemical defenses of harvester termite soldiers. They can eat2-300 000 harvester termites a night.',
                 // Confused With
                 'Brown hyaena, spotted hyaena – aardwolf is much smaller than the other hyaena species',
                 'Active at night and early morning', // Activity Period
@@ -1250,20 +1281,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            5, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Steenbok');
+        mdl.addName(animalID, 'STEENBOK');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Small antelope; Coat a uniform reddish-brown on back, sides and head, lighter on the belly; huge ears with black and white stripes; only males have short, straight, pointy horns.',
                 // Random facts
-                '',
+                'It is very rare to find steenbok dung, as they bury their dung to mask the scent of their small territories from predators',
                 // Confused With
                 'oribi, grysbok, common duiker, suni, klipspringer',
                 'Early morning and late afternoon', // Activity Period
@@ -1309,20 +1340,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            21, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'crested porcupine, cape porcupine');
+        mdl.addName(animalID, 'PORCUPINE');
+        mdl.addName(animalID, 'CRESTED PORCUPINE');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable, entire body covered with long, sharp, black and white quills.',
                 // Random facts
-                '',
+                'A baby porcupine is called a porcupette. They are born with soft quills so that they don\'t injure their mother in birth.',
                 // Confused With
                 'the southern African hedgehog, which is much smaller',
                 'Nocturnal', // Activity Period
@@ -1376,20 +1408,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            5, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Common duiker, grey duiker');
+        mdl.addName(animalID, 'DUIKER');
+        mdl.addName(animalID, 'COMMON DUIKER');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Coat a uniform dull grey to reddish-yellow colour on top, paler on the belly; long, narrow face with black running up the nose; have a crest of long black hair between the ears; females slightly larger than males; only the males equipped with short, sharp, straight horns.',
                 // Random facts
-                '',
+                'Duik means to dive in Afrikaans. Duikers acquired this name from their habit of diving headlong into the bush as danger approaches.',
                 // Confused With
                 'Steenbok, oribi, grysbok, reedbuck, rhebok',
                 'Early morning and late afternoon', // Activity Period
@@ -1425,7 +1458,7 @@ load_animal_data = function(model, onCompleted) {
     });
     // =========================================================================
 
-    // Aardvark ==================================================================
+    //Aardvark ==================================================================
     animalName = 'Aardvark'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Aardvark (Orycteropus afer)',
             animalName, // Thumbnail Name & Folder name under 'animals'
@@ -1435,20 +1468,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            30, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Aardvark, ant bear');
+        mdl.addName(animalID, 'AARDVARK');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Pig-like snout; long, tubular ears; arched back; thick, kangaroo-like tail, yellowish-grey to grey coat. Sexes appear similar.',
                 // Random facts
-                '',
+                'Aardvark burrows are used by as many as 27 different vertebrate species, including 17 mammals, making them vital to the ecosystem',
                 // Confused With
                 'Unmistakeable',
                 'Duirnal', // Activity Period
@@ -1504,20 +1537,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
-            10, // Game Score
+            30, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Serval');
+        mdl.addName(animalID, 'SERVAL');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Medium sized cat; slightly built with very long legs; straw-yellow fur with numerous black spots;  spots merge to form stripes along the back and head; relatively small head with huge ears; tail short and striped; black and white stripes on the back of ears; sexes similar.',
                 // Random facts
-                '',
+                'Servals have the longest legs relative to their body size of any cat. This makes them the second fastest running cat after the cheetah.',
                 // Confused With
                 'Cheetah, leopard',
                 'Mainly nocturnal but occasionally active at damn and dusk.', // Activity Period
@@ -1575,28 +1608,31 @@ load_animal_data = function(model, onCompleted) {
             '<b>Baboon Safety Advice</b>'
             + '<br/><br/>Baboons are very intelligent and have the potential to become dangerous when they become too used to humans. They are particularly troublesome around camps.'
             + '<br/><br/><b>Do not feed the baboons:</b> baboons become problem animals when people feed them. They start to expect food to be given, and when it is not, they will take it forcefully.'
-            + '<br/><br/><b>Don’t leave windows/doors/tents open:</b> remember to close your window, doors and tents when you leave. '
+            + '<br/><br/><b>Don\'t leave windows/doors/tents open:</b> remember to close your window, doors and tents when you leave. '
             + '<br/><br/><b>Do not leave goods unattended:</b> never leave goods, especially food lying around. Put away your rubbish in baboon-proof bins. '
-            + '<br/><br/><b>Don’t fight them:</b> if a baboon tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
+            + '<br/><br/><b>Don\'t fight them:</b> if a baboon tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
             + '<br/><br/><b>Baboon body language:</b> a baboon is showing aggression if it opens its eyes wide, bares its teeth, stands up imposingly or vocalises. '
             + '<br/><br/><b>Your body language:</b> If a baboon acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
             + '<br/><br/><b>Use men as protection:</b> baboons are sexist. They recognise women, and will pick on them. Use large males to protect a group. '
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            3, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'CHACMA BABOON, OLIVE BABOON, SAVANNAH BABOON');
+        mdl.addName(animalID, 'BABOON');
+        mdl.addName(animalID, 'CHACMA BABOON');
+        mdl.addName(animalID, 'OLIVE BABOON');
+        mdl.addName(animalID, 'SAVANNAH BABOON');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Monkey-like appearance; dog-like, black face; coarse dark-grey to olive brown fur; long tail which points up from the rump then bends downward, males much larger than females, with large canine and mane across shoulders.',
                 // Random facts
-                '',
+                'Individual baboon troops have their own cultures, that differ in their diet and social interactions. Some will hunt flamingoes, some will hunt baby antelope, and some will forage for shark eggs at low tide. Much of this behaviour is passed on from generation to generation.',
                 // Confused With
                 'Vervet monkey – baboons are much larger and darker in colour ',
                 'Duirnal', // Activity Period
@@ -1658,23 +1694,23 @@ load_animal_data = function(model, onCompleted) {
             'Other Herbivores', // Category
             '<b>Warthog safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> some lodges have warthogs that walk around the camp during the day. Some of these animals are relatively tame, and may even approach you. Remember that these are still wild animals. Do not feed them, as they may become intimidating when they start to expect food. Do not chase them or act in a threatening manner towards them, as they may react aggressively, and their tusks can be deadly.'
-            + '<br/><br/><b>Don’t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
+            + '<br/><br/><b>Don\'t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            3, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'warthog');
+        mdl.addName(animalID, 'WARTHOG');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'pig-like appearance; leathery, grey skin covered with sparse, wiry hair; a long mane of wiry brown hair along the neck and back; upward-curving tusks sticking out of the mouth; prominent warts on face; males larger, with two pairs of warts on the face, one under the eyes and one on the sides of the nose, females only have a pair under the eyes.',
                 // Random facts
-                '',
+                'Warthogs always enter their borrows backwards so that if a predator tries to enter they can rush out at it tusks first.',
                 // Confused With
                 'bushpig',
                 'Mostly diurnal', // Activity Period
@@ -1728,27 +1764,27 @@ load_animal_data = function(model, onCompleted) {
             'Large Carnivores (>20kg)', // Category
             '<b>Leopard safety advice</b>'
             + '<br/><br/>Seeing a leopard is a rare and wonderful experience. This advice will help you to get the most out of your sighting while staying safe at the same time.'
-            + '<br/><br/><b>Don’t scream:</b> the excitement of seeing a leopard often causes people to shout out. This often scares them off and ends the sighting.'
+            + '<br/><br/><b>Don\'t scream:</b> the excitement of seeing a leopard often causes people to shout out. This often scares them off and ends the sighting.'
             + '<br/><br/><b>Be decisive, but be cautious:</b> leopard sightings are often fleeting, so when you see one you should decide where you will get a good view, and move there relatively swiftly. Be smooth and cautious when doing so though, as too rapid an approach could also scare the animal off.'
-            + '<br/><br/><b>Be respectful:</b> don’t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
+            + '<br/><br/><b>Be respectful:</b> don\'t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
             + '<br/><br/><b>Which individuals to look out for:</b> be particularly respectful of mothers with cubs and wounded leopards'
             + '<br/><br/><b>Leopard body language:</b> a leopard will usually look at you then move off if it feels that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or hiss they are giving you a warning that you need to move away.'
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            23, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Leopard');
+        mdl.addName(animalID, 'LEOPARD');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large, stickily built cat; fur a russet yellow colour with rosette spots covering the body; lacks the black tear-drop lines of the cheetah; ears rounded; head large and powerful; sexes similar, males larger than females.',
                 // Random facts
-                '',
+                'Leopards are probably the most adaptable carnivore in the world, with a range that stretches from Cape Town to Russia, and includes deserts, rainforests, mountains, islands and everything in between.',
                 // Confused With
                 'cheetah, serval',
                 'mainly nocturnal, but will occasionally hunt and patrol in the mornings and evenings.', // Activity Period
@@ -1811,20 +1847,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            12, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Bushpig');
+        mdl.addName(animalID, 'BUSHPIG');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Typical pig-like appearance; body covered in coarse reddish-brown hair; mane longer and paler than body hair; sexes similar; no warts on face; tail held pointing down when running',
                 // Random facts
-                '',
+                'Bush pigs are the largest mammals in Africa to make nests. Mothers will gather huge piles of grass and leaves together, and will give birth inside them.',
                 // Confused With
                 'Warthog',
                 'Nocturnal but occasionally seen in daylight', // Activity Period
@@ -1873,20 +1909,23 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            35, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'wild dog, painted dog, African hunting dog');
+        mdl.addName(animalID, 'WILD DOG');
+        mdl.addName(animalID, 'PAINTED DOG');
+        mdl.addName(animalID, 'HUNTING DOG');
+        mdl.addName(animalID, 'AFRICAN HUNTING DOG');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'typical dog-like appearance; blotched black, white and tan coat; white tipped-tails; body slender with long legs; large, rounded ears.',
                 // Random facts
-                '',
+                'Wild dogs that have lost a leg to a snare have been known to survive for years afterwards, since the rest of the pack will support them and feed them.',
                 // Confused With
                 'brown hyaena, spotted hyaena',
                 'diurnal', // Activity Period
@@ -1955,20 +1994,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            6, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Bushbuck');
+        mdl.addName(animalID, 'BUSHBUCK');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'White spots and stripes along sides; white patch under chin, white stripe on lower neck; colour varies from rich chestnut to dull brown; Males larger than females; only males possess short, almost straight horns',
                 // Random facts
-                '',
+                'Bushbuck coats are extremely variable in their colour and pattern. Over 40 different varieties have been described.',
                 // Confused With
                 'Nyala, kudu, sitatunga',
                 'Diurnal', // Activity Period
@@ -2013,20 +2052,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            5, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Springbok');
+        mdl.addName(animalID, 'SPRINGBOK');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'a medium sized antelope;  russet-brown coat on back, distinct black stripe on the sides, white belly; white face with black strip through eye; white patch over rump; horns present on both males and females, turn in at the top.',
                 // Random facts
-                '',
+                'Springboks once participated in one of the greatest migrations on earth. Hundreds of thousands, if not millions of them, would migrate around the interior of South Africa in a single herd kilometers wide.',
                 // Confused With
                 'impala, various gazelle species',
                 'Diurnal', // Activity Period
@@ -2081,20 +2120,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
-            10, // Game Score
+            30, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Brown hyaena');
+        mdl.addName(animalID, 'HYAENA');
+        mdl.addName(animalID, 'BROWN HYAENA');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large, dog-like appearance; back slopes down from shoulders to rump; large head; pointed ears; long, shaggy brown hair; hair on neck slightly lighter than body; sexes similar',
                 // Random facts
-                '',
+                'Brown hyaenas scent mark by running long grass stalks between their anal glands, leaving behind globules of black and white pasting. One territory can contain 15 000 pastings.',
                 // Confused With
                 'spotted hyaena, aardwolf ',
                 'Nocturnal', // Activity Period
@@ -2152,20 +2192,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            20, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'caracal, desert lynx');
+        mdl.addName(animalID, 'CHEETAH');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Very tall cat with greyhound-like build; long, slender legs; slender build; long, thick tail; black tear marks on face; coat a tan colour with solid, round black spots (unlike the rosettes of a leopard); sexes similar.',
                 // Random facts
-                '',
+                'Cheetah cubs have a mantle of long grey fur along their necks and backs which they lose as they mature. It is thought that this mimics the white back of the honey badger, a foe that few predators arel willingly take on.',
                 // Confused With
                 'Serval, leopard',
                 'Duirnal', // Activity Period
@@ -2224,27 +2264,28 @@ load_animal_data = function(model, onCompleted) {
             '<b>Spotted hyaena safety advice</b>'
             + '<br/><br/>Spotted hyaenas are generally not very aggressive to people or vehicles, but there are some situations that you should be wary of. '
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space. If you see one hyaena, look all around you to determine if there are any others around.'
-            + '<br/><br/><b>Be respectful:</b> don’t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can cause them to run away or become aggressive.'
-            + '<br/><br/><b>Don’t feed hyaenas:</b> some hyaenas will prowl around lodges and campsites at night in the hope of an easy meal. By feeding them you can make them dependent on humans, and hyaenas may become intimidating or destructive when trying to get food from people.'
-            + '<br/><br/><b>Don’t keep food in the tent:</b> hyaenas are able to enter some campsites. Never keep food, especially meat like biltong, in the tent with you as you sleep. Hyeanas have been known to bite through a tent to try to get at an enticing smell, and ended up grabbing a person instead.'
-            + '<br/><br/><b>Don’t leave food lying around:</b> never leave any food lying unguarded at night when hyaenas are around.</b> They will easily chew through cooler boxes or plastic crates to get to something they want, so make sure everything is locked away.'
+            + '<br/><br/><b>Be respectful:</b> don\'t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can cause them to run away or become aggressive.'
+            + '<br/><br/><b>Don\'t feed hyaenas:</b> some hyaenas will prowl around lodges and campsites at night in the hope of an easy meal. By feeding them you can make them dependent on humans, and hyaenas may become intimidating or destructive when trying to get food from people.'
+            + '<br/><br/><b>Don\'t keep food in the tent:</b> hyaenas are able to enter some campsites. Never keep food, especially meat like biltong, in the tent with you as you sleep. Hyeanas have been known to bite through a tent to try to get at an enticing smell, and ended up grabbing a person instead.'
+            + '<br/><br/><b>Don\'t leave food lying around:</b> never leave any food lying unguarded at night when hyaenas are around.</b> They will easily chew through cooler boxes or plastic crates to get to something they want, so make sure everything is locked away.'
             + '<br/><br/><b>Be wary of hyaenas in clans:</b> hyaenas are usually quite scared of people, and will run away if you shout and chase them. However, be careful if they are in a group, as this gives them confidence, and they may become aggressive if challenged. '
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            18, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Spotted hyaena');
+        mdl.addName(animalID, 'HYAENA');
+        mdl.addName(animalID, 'SPOTTED HYAENA');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'A large, dog-like carnivore; huge head; round ears; back slopes downwards from shoulders to hips; coat a shaggy brown with irregular black spots.',
                 // Random facts
-                '',
+                'Female spotted hyeana have an enlarged clitoris that resembles the male\'s penis. When greeting each other, individuals from the same clans will smell and lick each other\'s genitals. ',
                 // Confused With
                 'Brown hyaen ',
                 'Nocturnal', // Activity Period
@@ -2314,20 +2355,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            2, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Dassie, rock dassie, tree dassie');
+        mdl.addName(animalID, 'IMPALA');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'long legs; reddish-brown fur on the back, and sides white belly; black tuft of fur on ankles; distinctive black and white “M” on backside; Males larger than females; only males have lyrate horns.',
                 // Random facts
-                '',
+                'Despite their meticulous grooming, impala are extremely pest ridden, with individuals harbouring approximately 5000 ticks at any given time.',
                 // Confused With
                 'springbok, lechwe, several gazelle species',
                 'Mainly diurnal', // Activity Period
@@ -2398,20 +2439,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            8, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Blesbok, Bontebok');
+        mdl.addName(animalID, 'BLESBOK');
+        mdl.addName(animalID, 'BONTEBOK');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Rich purplish-brown coat, lighter on shoulders and back; white on buttocks, belly face and forehead; sexes indistinct; both sexes have lyre shaped horns',
                 // Random facts
-                '',
+                'The bontebok is a distinct subspecies of the blesbok that almost went extinct in the early 20th century.',
                 // Confused With
                 'Hartebeest and Tsessebe',
                 'Diurnal, less active in the heat of the day', // Activity Period
@@ -2454,26 +2496,26 @@ load_animal_data = function(model, onCompleted) {
             '<b>Lion safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space. If you see one lion, look all around you to determine the position of other pride members.'
             + '<br/><br/><b>Plan your retreat:</b> the driver should be aware of the route they will take to back away if the lion shows aggression'
-            + '<br/><br/><b>Be respectful:</b> don’t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
-            + '<br/><br/><b>Don’t disturb a feeding lion:</b> Lions get grumpy when they feed, so keep a safe distance if they are on a kill. '
+            + '<br/><br/><b>Be respectful:</b> don\'t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
+            + '<br/><br/><b>Don\'t disturb a feeding lion:</b> Lions get grumpy when they feed, so keep a safe distance if they are on a kill. '
             + '<br/><br/><b>Beware the curious lion:</b>  Lions have been known to chew on cars out of curiosity. It may seem cute at first if a lion shows interest in your car, but it will stop being funny when they pop your tyre or bit off your wing mirror. If a lion starts sniffing around your car, close the windows and try to move away. '
-            + '<br/><br/><b>Lion body language:</b> lions will usually look at you then move off if they feel that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or charge at you, they are telling you to get away. Don’t panic, close the windows and make a fast but safe retreat.'
+            + '<br/><br/><b>Lion body language:</b> lions will usually look at you then move off if they feel that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or charge at you, they are telling you to get away. Don\'t panic, close the windows and make a fast but safe retreat.'
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            18, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Lion');
+        mdl.addName(animalID, 'LION');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Huge, powerful cat; coat uniformly straw-yellow coloured; males larger than females with a mane of long hair around the head and neck.',
                 // Random facts
-                '',
+                'Lionesses can mate with more than one male while in heat, meaning that the cubs born in the same litter can have different fathers.',
                 // Confused With
                 'unmistakeable',
                 'mainly nocturnal, but will occasionally hunt and patrol in the mornings and evenings.', // Activity Period
@@ -2509,9 +2551,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '03 Scent communication',
                 69, resourcesPrefix + name.toLowerCase()
                 + '/Lions 3- Scent communication.mp3');
-        mdl.addAudio(animalID, '04 What\s in a roar',
+        mdl.addAudio(animalID, '04 What\'s in a roar',
                 79, resourcesPrefix + name.toLowerCase()
-                + '/Lions 4- What\s in a roar_.mp3');
+                + '/Lions 4- What\'s in a roar_.mp3');
         mdl.addAudio(animalID, '05 Vulnerable at birth',
                 95, resourcesPrefix + name.toLowerCase()
                 + '/Lions 5- Vulnerable at birth.mp3');
@@ -2557,20 +2599,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            8, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Tsessebe, topi, tiang');
+        mdl.addName(animalID, 'TSESSEBE');
+        mdl.addName(animalID, 'Topi');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Back slopes downward from shoulders to hips; reddish brown body that has a scorched appearance; lighter brown “stockings”; long black face; short, slightly twisted horns; sexes similar.',
                 // Random facts
-                '',
+                'Tsessebe are reported to be the fastest running antelope, attaining speeds of up to 100km/h.',
                 // Confused With
                 'Hartebeests, blesbok, wildebeest.',
                 'Mostly diurnal', // Activity Period
@@ -2629,14 +2672,15 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Gemsbok, oryx, East African Oryx');
+        mdl.addName(animalID, 'GEMSBOK');
+        mdl.addName(animalID, 'ORYX');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'distinct black and white facial pattern; black and white markings along neck, belly and legs; long, straight, sharp horns; thick neck; horse-like tail; males and females similar, males slightly larger',
                 // Random facts
-                '',
+                'Gemsbok horns were once sold in Europe as real unicorn horns',
                 // Confused With
                 'Roan, eland',
                 'Early morning, late afternoon and night, rest in the heat of the day', // Activity Period
@@ -2693,20 +2737,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            17, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Sable antelope, giant sable antelope');
+        mdl.addName(animalID, 'SABLE');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Striking looking antelope; distinctive dark brown to black coat, white belly; face a conspicuous black and white mask; extremely long, ridged horns that curve backwards; females smaller than males with brown coat and smaller horns.',
                 // Random facts
-                '',
+                'Breeding sable bulls are some of the most expensive animals in Africa. One specimen was sold for $1.2 million.',
                 // Confused With
                 'Roan, gemsbok',
                 'Mostly early morning and late afternoon', // Activity Period
@@ -2715,7 +2759,7 @@ load_animal_data = function(model, onCompleted) {
                 // Diet
                 'Fussy eaters, preferring long grass, but will switch to browse when necessary.',
                 'Lions, spotted hyaena, leopards and wild dogs.', // Predators
-                'they are “edge species”, preferring mixed grassland and woodlands with dense stands of long grass. They avoid dense woodland or short grasslands', // Habitat
+                'they are &quot;edge species&quot;, preferring mixed grassland and woodlands with dense stands of long grass. They avoid dense woodland or short grasslands', // Habitat
                 'Least concern', // Red List Status
                 'Stable', // Population
                 'Sable have disappeared from much of their former range because of habitat loss and poaching for meat. They are stable in other parts of their range, and are popular with sport hunters.', // Threats
@@ -2761,23 +2805,23 @@ load_animal_data = function(model, onCompleted) {
             'Large Antelope (>100kg)', // Category
             '<b>Warthog safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> some lodges have warthogs that walk around the camp during the day. Some of these animals are relatively tame, and may even approach you. Remember that these are still wild animals. Do not feed them, as they may become intimidating when they start to expect food. Do not chase them or act in a threatening manner towards them, as they may react aggressively, and their tusks can be deadly.'
-            + '<br/><br/><b>Don’t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
+            + '<br/><br/><b>Don\'t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            4, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'waterbuck');
+        mdl.addName(animalID, 'WATERBUCK');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large antelope; cshaggy brown coat, long, straggly hair under the neck; distinctive white ring on backside (solid white patch in northern subspecies); extremely large ears; males larger; only males have long, forward curving horns with prominent ridges.',
                 // Random facts
-                '',
+                'Waterbuck excrete a smelly oil from their skin to make their fur more waterproof. Some believe that this smell is a deterent to predators like lions and crocodiles.',
                 // Confused With
                 'lechwe, puku, roan, kudu',
                 'diurnal', // Activity Period
@@ -2828,20 +2872,22 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
-            10, // Game Score
+            3, // Game Score
             function(name, animalID) {
         name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'blue wildebeest, common wildebeest, brindled gnu');
+        mdl.addName(animalID, 'WILDEBEEST');
+        mdl.addName(animalID, 'BLUE WILDEBEEST');
+        mdl.addName(animalID, 'GNU');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'downward sloping back; dark grey coat with dark vertical striped down sides; black tail and mane; broad face; sexes similar; males slightly larger; both have horns that grow outwards and upwards from the head',
                 // Random Facts
-                '',
+                'Wildebeest sleep in rows at night. That way they have the security of being in a group, but can run away quickly without tripping over other members of their herd.',
                 // Confused With
                 'black wildebeest, buffalo, ',
                 'Diurnal', // Activity Period
@@ -2890,7 +2936,7 @@ load_animal_data = function(model, onCompleted) {
     });
     // =========================================================================
 
-    // Buffalo ==================================================================
+    //Buffalo ==================================================================
     animalName = 'Buffalo'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('African buffalo (Cycerus caffer)',
             animalName, // Thumbnail Name & Folder name under 'animals'
@@ -2898,7 +2944,7 @@ load_animal_data = function(model, onCompleted) {
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant herbivores (>300kg)', // Category
             '<b>Buffalo Safety Advice</b>'
-            + '<br/><br/><b>Don’t underestimate buffalo:</b> Buffalo may seem docile at times, but do not be fooled into thinking that they are harmless. They are one of the most dangerous animals to encounter on foot, and have also been known to be aggressive towards vehicles so please take note of the following advice.'
+            + '<br/><br/><b>Don\'t underestimate buffalo:</b> Buffalo may seem docile at times, but do not be fooled into thinking that they are harmless. They are one of the most dangerous animals to encounter on foot, and have also been known to be aggressive towards vehicles so please take note of the following advice.'
             + '<br/><br/><b>Walking in buffalo areas:</b> never walk around without a guide in areas where buffalo are present. Find out from your lodge if buffalo are able to enter the camp, and ask to briefed on safety procedure within the camp if they can.'
             + '<br/><br/><b>Be cautious:</b> Buffalo are usually quite tolerant of vehicles but it is always good to be cautious.  If you spot a buffalo, look around on both sides of the road to assess the position of the rest of the herd.  Never get in the middle of a herd of buffalo. '
             + '<br/><br/><b>Buffalo body language:</b> If you see a buffalo or a herd, approach slowly, gauging their level of comfort. If they stop eating and turn to stare at you, you should stop moving closer until they have resolved normal activity.  '
@@ -2907,20 +2953,22 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be wary of old males:</b> The individuals to be most wary of are the big, old males. These guys are notoriously bad tempered, so give them a wide birth.'
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            13, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'African buffalo, Cape buffalo');
+        mdl.addName(animalID, 'BUFFALO');
+        mdl.addName(animalID, 'CAPE BUFFALO');
+        mdl.addName(animalID, 'AFRICAN BUFFALO');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Large, cow-like appearance; coat dark-brown to black; males larger than females; horns present on males and females; horns grow down and outward, then up and inward; male horns have thick base, called boss.',
                 // Random Facts
-                '',
+                'The buffalo is the most dangerous of all the Big 5. They kill more hunters each year than any other animal.',
                 // Confused With
                 ' wildebeest, domestic cattle',
                 'Diurnal, resting in the heat of the day', // Activity Period
@@ -2982,20 +3030,20 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            17, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Roan antelope');
+        mdl.addName(animalID, 'ROAN');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'A large, horse-like antelope; coat a uniform straw colour; face a conspicuous black and white mask; horns long and ridged and curve backwards; ears very long; sexes similar, males slightly larger with larger horns.',
                 // Random Facts
-                '',
+                'Roan mothers will hide their calves in long grass for the first few weeks of their lives. They will eat their dung to hide their scent from predators.',
                 // Confused With
                 'Sable, gemsbok, eland, kudu',
                 'Diurnal', // Activity Period
@@ -3047,20 +3095,21 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            8, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Kudu, greater kudu');
+        mdl.addName(animalID, 'KUDU');
+        mdl.addName(animalID, 'GREATER KUDU');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'A tall, graceful antelope with long legs; grey-brown fur with six to eight vertical white stripes down the sides; white stripe between eyes; long ears; males larger than females; only males have long, spiralled horns. ',
                 // Random Facts
-                '',
+                'The tips of a male kudu\'s horns often reflect the habitat that it lives in. If it lives in dense thickets, the tips will be close together, if in more open habitat, they will be wider apart.',
                 // Confused With
                 'nyala, waterbuck, roan, eland',
                 'Mainly diurnal, active in the mornings and evenings', // Activity Period
@@ -3114,7 +3163,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/>Hippos are great to watch, but are notoriously bad tempered so always be careful when watching them.'
             + '<br/><br/><b>Be catious around water:</b> hippos are extremely territorial, and can perceive anything as a threat. When approaching a water body in a vehicle, approach slowly, and keep your eye out for hippos on the bank and in the water. Never get out of your vehicle near water.'
             + '<br/><br/><b>Plan your retreat:</b> the driver should be aware of the route they will take to back away if the hippo shows aggression'
-            + '<br/><br/><b>Be respectful:</b> don’t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
+            + '<br/><br/><b>Be respectful:</b> don\'t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
             + '<br/><br/><b>Hippo body language:</b> if a hippo looks at you and opens its mouth wide, it is issuing a warning that you are too close. Move slowly away. '
             + '<br/><br/><b>Be wary of mothers:</b> mother hippos can be very protective when with their calves. Do not get too close to a mother, and do not make fast or erratic movements.'
             + '<br/><br/><b>Be wary at night:</b> hippos come out onto land at night to feed. Sometimes they may feed on the lawns inside lodges. Ask you lodge if hippos are able to enter the grounds, and ask them to brief you on their safety protocol at night.'
@@ -3126,14 +3175,14 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Hippo');
+        mdl.addName(animalID, 'HIPPO');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Huge size; skin a dark grey, smooth and hairless with pink tinge around eyes and mouth; small ears; usually in or close to water; short legs, barrel shaped body; huge head, large mouth.',
                 // Random facts
-                '',
+                'Hippos are the only animal with naturally pink milk. George Washington had false teeth made out of hippo ivory.',
                 // Confused With
                 'rhinos when on land',
                 'Nocturnal', // Activity Period
@@ -3200,28 +3249,32 @@ load_animal_data = function(model, onCompleted) {
             '<b>Rhino safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space. If you see one rhino, look all around you to determine if there are any others around.'
             + '<br/><br/><b>Plan your retreat:</b> the driver should be aware of the route they will take to back away if the rhino shows aggression'
-            + '<br/><br/><b>Be respectful:</b> don’t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
-            + '<br/><br/><b>Don’t challenge a rhino:</b> rhinos often move in the road, and have been known to cause traffic jams on occasion. IN such an event, do not try to push the rhino off the road, as they may become aggressive. Be patient and wait for them to give you space.'
-            + '<br/><br/><b>Don’t startle a rhino:</b> rhinos have very poor eyesight, but excellent hearing and smell. Occasionally their senses can fail to detect a parked car, and they may move towards you. Do not panic. Do not start the car suddenly or make loud noises, stay still, and do not make sudden movements. '
+            + '<br/><br/><b>Be respectful:</b> don\'t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
+            + '<br/><br/><b>Don\'t challenge a rhino:</b> rhinos often move in the road, and have been known to cause traffic jams on occasion. IN such an event, do not try to push the rhino off the road, as they may become aggressive. Be patient and wait for them to give you space.'
+            + '<br/><br/><b>Don\'t startle a rhino:</b> rhinos have very poor eyesight, but excellent hearing and smell. Occasionally their senses can fail to detect a parked car, and they may move towards you. Do not panic. Do not start the car suddenly or make loud noises, stay still, and do not make sudden movements. '
             + '<br/><br/><b>Be wary of black rhinos:</b> black rhinos are notoriously aggressive. If you see one, keep a safe distance.'
             + '<br/><br/><b>Be wary of mother rhinos:</b> mother rhinos can be aggressive in defending their calves. Give mothers a wide birth, and never get between a mother and her calf. '
 
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            15, /* 28 Black Rhino */ // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'White rhino, square-lipped rhino, black rhino, hooked-lipped rhino');
+        mdl.addName(animalID, 'RHINO');
+        mdl.addName(animalID, 'WHITE RHINO');
+        mdl.addName(animalID, 'SQUARE LIPPED RHINO');
+        mdl.addName(animalID, 'BLACK RHINO');
+        mdl.addName(animalID, 'HOOKED LIPPED RHINO');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable; huge size; two long horns on nose. White rhino: Broad, square lips; huge head that slopes down to the floor, large hump around the shoulders; back concave; tail curls upwards when running; Black rhino: pointed top lip; head held in line with the shoulders; black relatively flat; tail help straight up when running.',
                 // Random facts
-                '',
+                'Rhinos are related to the largest land mammal ever to have lived, called the giant giraffe rhinoceros. It wieghed up to 16 tons, and lived 34 million years ago.',
                 // Confused With
                 'unmistakeable',
                 'Not Listed', // Activity Period
@@ -3301,14 +3354,16 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Eland, common eland, giant eland');
+        mdl.addName(animalID, 'ELAND');
+        mdl.addName(animalID, 'GREATER ELAND');
+        mdl.addName(animalID, 'LIVINGSTONE\'S ELAND');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Huge, bulky build; slightly cow-like in appearance; almost uniformly coloured tan to blue-grey coat; both sexes have straight, corkscrew shaped horns; Male horns heavier than females; males have hump around shoulders, a dewlap of loose skin under the neck and a tuft of hair between the eyes',
                 // Random facts
-                '',
+                'Eland herds make loud clicking noises as they move. It is thought that this comes from the two halves of their hooves banging together when they lift their feet.',
                 // Confused With
                 'Gemsbok, kudu, roan',
                 'Diurnal', // Activity Period
@@ -3364,22 +3419,24 @@ load_animal_data = function(model, onCompleted) {
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            4, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Zebra');
+        mdl.addName(animalID, 'ZEBRA');
+        mdl.addName(animalID, 'PLAINS ZEBRA');
+        mdl.addName(animalID, 'BURCHELL\'S ZEBRA');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 ' large, horse-like appearance; black and white stripe pattern on the coat; black stripes separated by brown “shadow stripe”, distinguishing this from other zebra species; stripes connect on the belly; no dewlap of loose skin on throat.',
                 // Random facts
-                '',
+                'Male zebras have a sharp canine tooth that they use to bite each other\'s legs. Their vicious fights often end in one biting off the tail of the other as he runs away.',
                 // Confused With
-                'Cape and Hartmann’s mountain zebras',
+                'Cape and Hartmann\'s mountain zebras',
                 'mainly diurnal but will move and feed at night', // Activity Period
                 '±12.5 months', // Gestation Period
                 '±18-20 years', // Lifespan
@@ -3445,14 +3502,14 @@ load_animal_data = function(model, onCompleted) {
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Giraffe');
+        mdl.addName(animalID, 'GIRAFFE');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
                 'Unmistakeable; extremely tall; neck and legs very long; patchwork brown and yellow pattern on coat.',
                 // Random facts
-                '',
+                'Giraffes have the highest blood pressure of any mammal, as they need to pump blood 2m up their neck to get to their brain.',
                 // Confused With
                 'Unmistakeable',
                 'Active day and night', // Activity Period
@@ -3527,28 +3584,29 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/>If they look at you and flap their ears, trumpet or shake their head, they have become agitated. You should not panic, just slowly back away until they calm down.'
             + '<br/><br/>If they charge with their ears out, it is a warning charge, and you should back away quickly without panicking. '
             + '<br/><br/>If they charge with their ears in, it is a full charge and you should try get away from them as quickly as possible.'
-            + '<br/><br/><b>Be respectful:</b> don’t tease them, throw things at them or shout at them. '
-            + '<br/><br/><b>Don’t get between a mother and her calf:</b> when a family herd passes by, keep a safe distance, and don’t place yourself between a mother and her calf'
+            + '<br/><br/><b>Be respectful:</b> don\'t tease them, throw things at them or shout at them. '
+            + '<br/><br/><b>Don\'t get between a mother and her calf:</b> when a family herd passes by, keep a safe distance, and don\'t place yourself between a mother and her calf'
             + '<br/><br/><b>Be wary of musth bulls:</b> If an elephant has liquid leaking from behind its eye, has its penis hanging out and is dribbling urine, it is in musth, a state of heightened aggression. Give these guys a wide berth'
-            + '<br/><br/><b>Don’t try intimidate them:</b> elephants can dominate the road sometimes. Don’t try to intimidate them into moving. Be patient and wait for them to give you space'
+            + '<br/><br/><b>Don\'t try intimidate them:</b> elephants can dominate the road sometimes. Don\'t try to intimidate them into moving. Be patient and wait for them to give you space'
             + '<br/><br/><b>Stay in your car:</b> do not stand up, make sudden movements, lean out or get out of your car when near an elephant'
-            + '<br/><br/><b>Don’t feed the elephants:</b> Do not be tempted to share your food with them. If an elephant develops a taste for human food they can become extremely dangerous.'
+            + '<br/><br/><b>Don\'t feed the elephants:</b> Do not be tempted to share your food with them. If an elephant develops a taste for human food they can become extremely dangerous.'
             + '', // Safety Advise
             PayStatus.PAID, // Animal Status
-            10, // Game Score
+            15, // Game Score
             function(name, animalID) {
 
         animal_counter++;
 
         // Common Names listed seperately
-        mdl.addName(animalID, 'Elephant');
+        mdl.addName(animalID, 'ELEPHANT');
+        mdl.addName(animalID, 'AFRICAN ELEPHANT');
 
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
-                ': Unmistakable; huge size; long trunk that reaches the floor; white ivory tusks protruding from mouth; huge ears; males larger than females; in profile females have a square forehead while a male’s is rounded',
+                ': Unmistakable; huge size; long trunk that reaches the floor; white ivory tusks protruding from mouth; huge ears; males larger than females; in profile females have a square forehead while a male\'s is rounded',
                 // Random facts
-                '',
+                'Elephants hate the noise of an angry beehive and the smell of chillis. These are used as crop defences by some rural communities.',
                 // Confused With
                 'Unmistakeable',
                 'Active day and night, will rest in the heat of the day', // Activity Period
