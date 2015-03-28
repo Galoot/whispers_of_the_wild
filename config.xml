@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="za.co.galoot.wotw" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="za.co.galoot.wotw" version="1.0.1">
     <name>Whispers of the Wild</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -9,6 +9,10 @@
     </author>
     <content src="index.html"/>
     <access origin="*"/>
-    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
     <preference name="orientation" value="portrait" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="WebViewBounce" value="false" />
+    
 </widget>
