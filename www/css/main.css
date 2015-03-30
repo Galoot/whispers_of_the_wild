@@ -1742,7 +1742,7 @@ input {
 /*    margin-top: 27px;*/
 }
 
-.game-winning-result {
+#game-animal-winner .content .game-winner-scroller {
     /* padding-top: 20px; */
     margin: 0 auto;
     margin-top: 10px;
@@ -1904,6 +1904,12 @@ input {
     border-radius: 5px;
 }
 
+.game-win-content-left {
+    overflow: hidden;
+    min-height: 50px;
+    border: 2px dashed #f0f;
+}
+
 .ribbon-wrapper {
   width: 85px;
   height: 88px;
@@ -1989,11 +1995,11 @@ input {
   /* width: 142px; */
   text-shadow: 1px 1px 2px #000;
   font-size: 16px;
-  
+
       line-height: 9;
       /* margin-top: 58px; */
   /* position: static; */
-  
+
       display: block;
   /* top: 100px; */
 }

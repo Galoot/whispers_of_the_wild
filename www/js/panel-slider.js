@@ -91,6 +91,9 @@ var initSlider = function (panelClass, actionClass) {
                     current_height = $(".game-spot-grid").outerHeight(false);
                     $(".game-spot-grid").css("height", current_height + footerHeight);
 
+                    current_height = $(".game-winner-scroller").outerHeight(false);
+                    $("#game-animal-winner .content .game-winner-scroller").css("height", current_height + footerHeight);
+
                     $("#search-by-size").css("bottom", (0 + 20) + "px");
                 }, 350);
 
@@ -109,6 +112,9 @@ var initSlider = function (panelClass, actionClass) {
 
                         current_height = $(".game-spot-grid").outerHeight(false);
                         $(".game-spot-grid").css("height", current_height - footerHeight);
+
+                        current_height = $(".game-winner-scroller").outerHeight(false);
+                        $(".game-winner-scroller").css("height", current_height - footerHeight);
 
                         $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
 
