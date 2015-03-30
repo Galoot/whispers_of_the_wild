@@ -173,21 +173,26 @@ function buildWinnerGrid() {
             var selectionCount = 0;
             for (var y = 0; y < app.game.players[x].selection.length; y++) {
                 if (app.game.players[x].selection[y].selected) {
-                    selectionCount++;
                     winnerhtml += "<div "
                                 + "id=\"game-winner-animalID_" + x + "_" + y + "\" "
                                 + "class=\"game-spot-animal-block\">"
                                     + "<img class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                             + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
-                            + "</div>";
+                                    + "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">"
+                                            + app.game.players[x].selection[y].animal.score
+                                            + "</div></div>"
+                                + "</div>";
                     score += parseInt(app.game.players[x].selection[y].animal.score);
                     if (parseInt(app.game.players[x].selection[y].animal.score) > winnerAnimalScore) {
                         winnerAnimalScore = parseInt(app.game.players[x].selection[y].animal.score);
                         winnerAnimal = app.game.players[x].selection[y].animal;
                     }
                 } else {
-                    winnerhtml += "<div class=\"game-spot-animal-block\"></div>"
+                    selectionCount++;
                 }
+            }
+            for (var z = 0; z < selectionCount; z++) {
+                winnerhtml += "<div class=\"game-spot-animal-block\"></div>";
             }
 
             winnerhtml += "<div "
@@ -223,6 +228,9 @@ function buildSpotGrid() {
                                             + app.game.players[x].selection[y].animalID + "\" "
                                             + "class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                             + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
+                                    + "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">"
+                                            + app.game.players[x].selection[y].animal.score
+                                            + "</div></div>"
                             + "</div>";
                 }
                 var lastSelection = (y === app.game.players[x].selection.length - 1);

@@ -1432,7 +1432,7 @@ hr.style-five {
     bottom: 100px;
     margin-left: 80px;
     overflow: hidden;
-  
+
     margin-left: 80px;
 }
 
@@ -1522,7 +1522,7 @@ hr.style-five {
 }
 
 input.game-player-edit {
-background-color: transparent; 
+background-color: transparent;
 border: none !important;
 color: #fff;
     -webkit-user-select: auto !important;
@@ -1634,7 +1634,7 @@ input {
     height: 40px;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 #game-select-instruction {
@@ -1643,7 +1643,7 @@ input {
 }
 
 .game-spot-player {
-    display: block;   
+    display: block;
 }
 
 .icon-selected {
@@ -1667,7 +1667,7 @@ input {
     .game-select-animal-icon.icon-selected.player-3 {
     border: 3px solid #e87722;
     }
-    
+
      .game-spot-player-block.player-0 {
     background-color: greenyellow;
 }
@@ -1683,7 +1683,7 @@ input {
     .game-spot-player-block.player-3 {
         background-color: #e87722;
     }
-    
+
     .game-spot-animal-icon.icon-selected.player-0 {
     border: 3px solid yellowgreen;
     }
@@ -1699,7 +1699,7 @@ input {
     .game-spot-animal-icon.icon-selected.player-3 {
     border: 3px solid #e87722;
     }
-   
+
 
 #game-animal-grid {
     /* padding-top: 20px; */
@@ -1742,6 +1742,19 @@ input {
 /*    margin-top: 27px;*/
 }
 
+.game-winning-result {
+    /* padding-top: 20px; */
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 100%;
+    /* margin-left:25px; */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+/*    margin-top: 27px;*/
+}
 
 .game-select-animal-block, .game-spot-animal-block, .game-spot-player-block, .game-winner-player-block, .game-winner-score-block {
     vertical-align: top;
@@ -1751,7 +1764,8 @@ input {
     margin: 10px;
     margin-left: 25px;
     margin-bottom: 25px;
-    display: inline-block;  
+    display: inline-block;
+    position: relative;
 }
 
 .game-winner-player-block {
@@ -1854,7 +1868,7 @@ input {
     float: left;
 }
 
-.game-link-spot { 
+.game-link-spot {
     float: left;
     width: 150px;
     margin: 10px;
@@ -1887,13 +1901,70 @@ input {
     height: 40px;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
-.game-win-content-left {
-    overflow: hidden;
-    min-height: 50px;
-    border: 2px dashed #f0f;
+.ribbon-wrapper {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45);
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45);
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  border-top:   3px solid #6e8900;
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon:before {
+  left: 0;
+}
+.ribbon:after {
+  right: 0;
+}​
+
+.game-winner-player-icon {
+    vertical-align: top;
+    text-align: center;
+    width: 142px;
+    height: 142px;
+    /* margin: 10px; */
+    /* margin-left: 25px; */
+    /* margin-bottom: 25px; */
+    display: inline-block;
+    background-color:  yellowgreen;
 }
 
 .game-win-content-right {
