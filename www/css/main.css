@@ -1768,6 +1768,19 @@ input {
     position: relative;
 }
 
+.game-winner-player-block {
+    margin-left: 0px !important;
+    margin-bottom: 20px;
+}
+
+.game-winning-result {
+    margin: 10px;
+    margin-right: 50px;
+    margin-left: 25px;
+    border-radius: 5px;
+    background-color: #CBC9C5;
+}
+
 .game-spot-player-block {
     background-color: yellowgreen;
     border-radius: 5px;
@@ -1776,13 +1789,14 @@ input {
 
 .game-spot-player-icon {
     text-align: center;
-    /* height: 142px; */
-    /* width: 142px; */
+    height: 142px;
+    width: 142px;
     text-shadow: 1px 1px 2px #000;
     font-size: 16px;
-    margin-top: 58px;
+    line-height: 9;
+    /* margin-top: 58px; */
     /* position: static; */
-    display: block;
+    /* display: block; */
     /* top: 100px; */
 }
 
@@ -1820,7 +1834,7 @@ input {
 
 .game-winner-player-score {
     height: 30px;
-    background-color: #cbc9c5;
+    background-color: #525055;
     display: block;
     border-radius: 5px;
     margin-top: 25px;
@@ -1830,7 +1844,7 @@ input {
 
 .game-winner-player-bonus {
     height: 30px;
-    background-color: #cbc9c5;
+    background-color: #525055;
     display: block;
     border-radius: 5px;
     margin-top: 10px;
@@ -1858,6 +1872,7 @@ input {
     float: left;
     width: 150px;
     margin: 10px;
+    margin-left: 25px;
     background-image: url('../resources/buttons/game/go_back.png');
     background-size: auto 40px;
     height: 40px;
@@ -1951,6 +1966,53 @@ input {
     display: inline-block;
     background-color:  yellowgreen;
 }
+
+.game-win-content-right {
+    float: right;
+    min-height: 50px;
+    margin-left: 10px;
+    /* border: 2px dashed #00f ; */
+    width: 72%;
+}
+
+.game-winner-animal {
+    margin: 20px 50px 20px 25px;
+}
+
+.game-winning-result {
+    /* border: 1px solid pink; */
+}
+
+.game-winner-player-icon {
+      text-align: center;
+  /* height: 142px; */
+  /* width: 142px; */
+  text-shadow: 1px 1px 2px #000;
+  font-size: 16px;
+  
+      line-height: 9;
+      /* margin-top: 58px; */
+  /* position: static; */
+  
+      display: block;
+  /* top: 100px; */
+}
+
+ .game-winner-player-icon.player-0 {
+    background-color: greenyellow;
+}
+
+    .game-winner-player-icon.player-1 {
+        background-color: red;
+    }
+
+    .game-winner-player-icon.player-2 {
+        background-color: deepskyblue;
+    }
+
+    .game-winner-player-icon.player-3 {
+        background-color: #e87722;
+    }
 
 @keyframes fade {
     from { opacity: 1.0; }
