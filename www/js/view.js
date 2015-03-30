@@ -364,7 +364,12 @@ function View() {
                         + "class=\"" + idPrefix + "animal-block paid-mode-" + isPaid + "\" "
                         + "category=\"" + animals[x].category + "\" "
                         + "animalSize=\"" + animals[x].animalID + "\">";
+
                 animalGridHtml += "<img id=\"" + idPrefix + "animal-icon-" + animals[x].animalID + "\" class=\"" + idPrefix + "animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
+                if (idPrefix.toLowerCase().indexOf('game') > -1) {
+                    animalGridHtml += "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">" + animals[x].score + "</div></div>";
+                }
+                animalGridHtml += "<div class=\"animal-text\">" + animals[x].thumbName + "</div>";
                 animalGridHtml += "</div>";
             }
 
