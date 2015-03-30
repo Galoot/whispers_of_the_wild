@@ -75,6 +75,8 @@ function Model() {
     this.getAnimals = function(onResults) {
         this.data.dbQuery(_get_animals, null,
                 function(results) {
+                    // just make sure we get the animal data...
+                    app.animals = jQuery.parseJSON(results).results;
                     onResults(jQuery.parseJSON(results).results);
                 });
     };

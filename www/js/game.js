@@ -162,12 +162,12 @@ function buildWinnerGrid() {
             winnerIndex = x;
         }
     }
-
     for (var x = 0; x < app.game.players.length; x++) {
-        if (x > 0) {
-            winnerhtml += "<br/>";
-        }
-        winnerhtml += "<div class=\"game-winner-player-block player-" + x + "\"><span class=\"game-winner-player-icon player-" + x + "\">" + app.game.players[x].name + "</span></div>";
+        winnerhtml += "<div class\"game-winner-player-row\">";
+
+        winnerhtml += "<div class=\"game-winner-player-block player-" + x + "\">"
+                    + "<span class=\"game-winner-player-icon player-" + x + "\">" + app.game.players[x].name + "</span>"
+                + "</div>";
         if (app.game.players[x].selection) {
             var score = 0;
             var selectionCount = 0;
@@ -185,11 +185,9 @@ function buildWinnerGrid() {
                         winnerAnimalScore = parseInt(app.game.players[x].selection[y].animal.score);
                         winnerAnimal = app.game.players[x].selection[y].animal;
                     }
+                } else {
+                    winnerhtml += "<div class=\"game-spot-animal-block\"></div>"
                 }
-            }
-            // spacer
-            if (selectionCount < 2) {
-                winnerhtml += "<div class=\"game-spot-animal-block\"></div>";
             }
 
             winnerhtml += "<div "
@@ -202,6 +200,7 @@ function buildWinnerGrid() {
             }
             winnerhtml += "</div>";
         }
+        winnerhtml += "</div>";
     }
     $(".game-winner-animal-icon").attr("src", winnerAnimal.iconFilePath);
     $(".game-winner-animal-info").html(winnerAnimal.randomFacts);
@@ -216,14 +215,16 @@ function buildSpotGrid() {
                 + "</span></div>";
         if (app.game.players[x].selection) {
             for (var y = 0; y < app.game.players[x].selection.length; y++) {
-                spotHtml += "<div "
-                            + "id=\"game-spot-animalID_" + x + "_" + y + "\" "
-                            + "class=\"game-spot-animal-block player-" + x + "\">"
-                                + "<img id=\"game-spot-animal-"
-                                        + app.game.players[x].selection[y].animal.animalID + "\" "
-                                        + "class=\"game-spot-animal-icon player-" + x + "\" src=\""
-                                        + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
-                        + "</div>";
+                if (app.game.players[x].selection[y] && app.game.players[x].selection[y].animal) {
+                    spotHtml += "<div "
+                                + "id=\"game-spot-animalID_" + x + "_" + y + "\" "
+                                + "class=\"game-spot-animal-block player-" + x + "\">"
+                                    + "<img id=\"game-spot-animal-"
+                                            + app.game.players[x].selection[y].animalID + "\" "
+                                            + "class=\"game-spot-animal-icon player-" + x + "\" src=\""
+                                            + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
+                            + "</div>";
+                }
                 var lastSelection = (y === app.game.players[x].selection.length - 1);
                 if (lastSelection) {
                     spotHtml += "<br/>";

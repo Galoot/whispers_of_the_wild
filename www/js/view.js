@@ -10,6 +10,7 @@ function View() {
     model.load_data(function() {
         console.log("model.load_data() completed...reaeding animals...");
         model.getAnimals(function(animals) {
+            // Here we dont really know if it has completed loading...
             console.log("Completed loading, found " + animals.length + " animals...");
             app.animals = animals;
         });
