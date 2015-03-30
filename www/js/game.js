@@ -191,7 +191,7 @@ function buildWinnerGrid() {
                     selectionCount++;
                 }
             }
-            for (var z = 0; z < selectionCount; z++) {
+            for (var z = 0; z < selectionCount - 1; z++) {
                 winnerhtml += "<div class=\"game-spot-animal-block\"></div>";
             }
 
