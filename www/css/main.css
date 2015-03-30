@@ -1927,6 +1927,12 @@ input {
   /* top: 100px; */
 }
 
+.game-winner-player-row {
+    border-radius: 5px;
+    background-color: pink;
+    border: red;
+}
+
  .game-winner-player-icon.player-0 {
     background-color: greenyellow;
 }
