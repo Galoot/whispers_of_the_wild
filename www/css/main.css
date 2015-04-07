@@ -2004,10 +2004,13 @@ input {
   /* top: 100px; */
 }
 
-.game-winner-player-row {
-    border-radius: 5px;
-    background-color: pink;
-    border: red;
+.game-spot-animal-block, .game-winner-player-block {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#game-winner-player-row {
+    border: 1px solid red;
 }
 
  .game-winner-player-icon.player-0 {
