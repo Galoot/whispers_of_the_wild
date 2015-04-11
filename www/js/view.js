@@ -435,8 +435,15 @@ function View() {
                     // Animals -----------------------------------------------------
                     var animalGridHtml = "";
                     for (var x = 0; x < animals.length; x++) {
+                        var freeApp = (app.mode === app.MODE_FREE);
+                        var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
+                        var earnedAnimal = (animals[x].isEarned === "true");
+                        var paidAnimal = (animals[x].isPaid === "true");
+                        var nonFreeAnimal = (earnedAnimal || paidAnimal);
+                        var disableAnimal = ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal));
+
                         animalGridHtml += "<div id=\"animalID_" + animals[x].animalID + "\" "
-                                + "class=\"animal-block\" "
+                                + "class=\"animal-block " + (disableAnimal ? " icon-selected" : "") + "\" "
                                 + "category=\"" + animals[x].category + "\" "
                                 + "animalSize=\"" + animals[x].animalID + "\">";
                         animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
