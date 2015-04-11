@@ -47,6 +47,7 @@ function View() {
                 app.mode = app.MODE_FREE_UNLOCKED;
                 app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
 //                    console.log('unlocked ok');
+                view.modal("animalUnlockedMessage");
                     if (onComplete) {
                         onComplete();
                     }
