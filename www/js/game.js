@@ -163,7 +163,7 @@ function buildWinnerGrid() {
         }
     }
     for (var x = 0; x < app.game.players.length; x++) {
-        winnerhtml += "<div class\"game-winner-player-row\">";
+        winnerhtml += "<div class=\"game-winner-player-row\">";
 
         winnerhtml += "<div class=\"game-winner-player-block player-" + x + "\">"
                     + "<span class=\"game-winner-player-icon player-" + x + "\">" + app.game.players[x].name + "</span>"
@@ -265,8 +265,8 @@ function animalSpot(playerIndex, selectionIndex) {
     var winnerName = "???";
     for (var x = 0; x < app.game.players.length; x++) {
         var p = app.game.players[x];
-        sbHtml += "<div class=\"game-scoreboard-player\">" + p.name + "</div>";
         sbHtml += "<div class=\"game-scoreboard-score\">" + p.runningScore + "</div>";
+        sbHtml += "<div class=\"game-scoreboard-player\">" + p.name + "</div>";
         sbHtml += "<br/>";
         if (p.runningScore > winnerScore) {
             winnerScore = p.runningScore;
