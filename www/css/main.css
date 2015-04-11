@@ -1831,7 +1831,7 @@ input {
     border-radius: 5px;
 }
 
-.content .game-scoreboard {
+#game-animal-scoreboard .content {
     border: none;
 /*    // position: absolute;
     // left: 0%;
@@ -1842,14 +1842,14 @@ input {
     text-align: center;
 /*    // vertical-align: middle;*/
     overflow: auto;
-    background-image: url('../resources/game/player_selectbg.jpg');
+    background-image: url('../resources/game/scoreboard_bg.jpg');
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100% auto;
 }
 
 .game-scoreboard-player {
-    overflow: hidden;
+  overflow: hidden;
   margin-left: 25px;
   border-radius: 10px;
   font-size: 20px;
