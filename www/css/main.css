@@ -1856,13 +1856,29 @@ input {
   height: 20px;
   padding: 10px;
   margin-top: 15px;
+  margin-right: -100px;
   box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
   text-shadow: 1px 1px 2px #000;
+  background-color: yellowgreen;
+  width: 70%;
 }
+
 .game-scoreboard-score {
-    display: inline-block;
-    height: 30px;
-    width: 20px;
+    /* height: 20px; */   
+    padding: 10px;
+  float: right;
+  width: 80px;
+  
+    margin-left: -50px;
+  
+    margin-right: 50px;
+  background-size: auto 40px;
+  height: 20px;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+  border-radius: 5px;
+    background-color: #000;
+    margin-top: 15px;
 }
 
 .game-spot-grid-buttons {
@@ -2005,7 +2021,7 @@ input {
 }
 .ribbon:after {
   right: 0;
-}ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â¹
+}
 
 .game-winner-player-icon {
     vertical-align: top;
@@ -2077,7 +2093,12 @@ input {
         background-color: #e87722;
     }
     
-    .game-scoreboard-result {
+.game-scoreboard-heading {
+       margin-top: 30px;
+       font-size: 20px;
+    }
+    
+.game-scoreboard-result {
         margin: 10px;
         margin-right: 50px;
         margin-left: 25px;
@@ -2091,11 +2112,23 @@ input {
     }   
     
 .game-scoreboard-score {
-        width: 100%;
-        margin-left: 25px;
-        margin-right: 50px;
-    }   
-
+        width: 10%;
+        /* margin-left: 25px; */
+        /* margin-right: 50px; */
+    } 
+    
+    .game-scoreboard-winner {
+        margin-top: 250px;
+        background-color: #fff;
+        margin-left: 0px;
+        float: right;
+        height: 80px;
+        width: 300px;
+        color: #000;
+        font-size: 30px;
+        padding-top: 40px;
+    }
+ 
     
 @keyframes fade {
     from { opacity: 1.0; }
