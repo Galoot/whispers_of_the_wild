@@ -175,6 +175,12 @@ function Datastore() {
                             + "animalID INTEGER, "
                             + "name TEXT)");
 
+                    if (drop_and_create_tables) tx.executeSql("DROP TABLE IF EXISTS ANM_Category");
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Category "
+                            + "(nameCategoryID INTEGER PRIMARY KEY UNIQUE, "
+                            + "animalID INTEGER, "
+                            + "category TEXT)");
+
 //                    tx.executeSql("DELETE FROM ANM_Image");
                     if (drop_and_create_tables) tx.executeSql("DROP TABLE IF EXISTS ANM_Image");
                     tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Image "

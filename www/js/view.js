@@ -468,12 +468,14 @@ function View() {
                         $(this).off();
                         $(this).on("click", function(event) {
                             $("#search-by-category").toggle();
-                            var category = event.target.id;
+                            var selectedCategory = event.target.id;
 
                             $(".animal-block").each(function() {
-                                if (category === ("all")) {
+                                var animalCategories = $(this).attr("category");
+
+                                if (selectedCategory === ("all")) {
                                     $(this).show();
-                                } else if (category == $(this).attr("category")) {
+                                } else if (animalCategories.indexOf(selectedCategory) !== -1) {
                                     $(this).show();
                                 } else {
                                     $(this).hide();
