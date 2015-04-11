@@ -1863,6 +1863,22 @@ input {
   width: 70%;
 }
 
+.game-scoreboard-player.player-0 {
+    background-color: greenyellow;
+}
+
+    .game-scoreboard-player.player-1 {
+        background-color: red;
+    }
+
+    .game-scoreboard-player.player-2 {
+        background-color: deepskyblue;
+    }
+
+    .game-scoreboard-player.player-3 {
+        background-color: #e87722;
+    }
+
 .game-scoreboard-score {
     /* height: 20px; */   
     padding: 10px;
