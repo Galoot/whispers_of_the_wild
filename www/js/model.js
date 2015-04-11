@@ -202,8 +202,6 @@ function Model() {
     };
 
     this.load_data = function(onCompleted) {
-
-
         this.data.checkDatabaseExists(this,
                 function(model) {
                     console.log('Existing database, NOT inserting data');
@@ -212,8 +210,8 @@ function Model() {
                     }
                 }, function(model) {
                     console.log('New database, inserting data');
+                    model.data.init(true); // drop and create tables
                     load_animal_data(model, onCompleted);
                 });
-//        load_animal_data(this, onCompleted);
     };
 }
