@@ -2,7 +2,7 @@ app = new Application();
 // Settings for the app
 app.mode = app.MODE_FREE;
 app.useExpansion = false;
-app.dataVersion = "1";
+app.dataVersion = "1.0";
 
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -119,6 +119,11 @@ function Application() {
 
     var initialiseListeners = function () {
         // ==== Splash =========================================================
+        $("#splash").off();
+        $("#splash").on("click", function (event) {
+            // playAudio("resources/audio/intro.mp3");
+            location.href = "#menu";
+        });
         $("#enter").off();
         $("#enter").on("click", function (event) {
             // playAudio("resources/audio/intro.mp3");
