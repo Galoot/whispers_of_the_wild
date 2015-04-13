@@ -1943,6 +1943,7 @@ input {
     background-size: auto 40px;
     height: 40px;
     width: 230px;
+    margin-right: 50px;
 }
 
 .game-link-scoreboard.left  /*.player-0*/{
