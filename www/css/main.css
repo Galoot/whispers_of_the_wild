@@ -1034,20 +1034,33 @@ hr.style-five {
     text-align: center;
 }
 
+#social_container .share-facebook {
+    background-image: url('../resources/buttons/other/facebook_share.png');
+    width: 143px;
+    height: 46px;
+    margin: 15px 0px 10px 90px;
+    float: left;}
+
+#social_container .share-twitter {
+    background-image: url('../resources/buttons/other/twitter_share.png');
+    width: 143px;
+    height: 46px;
+    margin: 15px 90px 10px 0px;
+    float: right;
+}
+
 .share-facebook {
     background-image: url('../resources/buttons/other/facebook_share.png');
     width: 143px;
     height: 46px;
-    margin-left: 120px;
-    margin-bottom: 10px;
+    margin: 10px 0 10px 60px;
     float: left;}
 
 .share-twitter {
     background-image: url('../resources/buttons/other/twitter_share.png');
     width: 143px;
     height: 46px;
-    margin-right: 120px;
-    margin-bottom: 10px;
+    margin: 10px 60px 10px 0px;
     float: right;
 }
 
@@ -1369,7 +1382,8 @@ hr.style-five {
     border: 2px solid #ffffff;
     border-radius: 5px;
     width: 480px;
-    /* margin: 0 auto; */
+    left: 50%; /* centre div */
+    margin-left:-240px;
 }
 
 #question-social .share-facebook {
@@ -1647,9 +1661,8 @@ input {
 }
 
 .icon-selected {
-    height: 20px;
+    
     opacity: 0.4;
-    background-color: #fff;
     filter: alpha(opacity=40);
 }
     .game-select-animal-icon.icon-selected.player-0 {
