@@ -119,6 +119,11 @@ function Application() {
 
     var initialiseListeners = function () {
         // ==== Splash =========================================================
+        $("#splash").off();
+        $("#splash").on("click", function (event) {
+            // playAudio("resources/audio/intro.mp3");
+            location.href = "#menu";
+        });
         $("#enter").off();
         $("#enter").on("click", function (event) {
             // playAudio("resources/audio/intro.mp3");
