@@ -911,6 +911,10 @@ function View() {
             (animalsHeight + footer_oh - searchBySizeHeight
             - sliderBottomHandleHeight + 20) + "px");
 
+        $(".scrollable").css("height",
+            (animalsHeight + footer_oh - searchBySizeHeight
+            - sliderBottomHandleHeight + 20) + "px");
+
         $(".game-spot-grid").css("height",
             (animalsHeight + footer_oh - searchBySizeHeight
             - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
