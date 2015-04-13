@@ -47,6 +47,7 @@ function View() {
                 app.mode = app.MODE_FREE_UNLOCKED;
                 app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
 //                    console.log('unlocked ok');
+                view.modal("animalUnlockedMessage");
                     if (onComplete) {
                         onComplete();
                     }
@@ -435,8 +436,15 @@ function View() {
                     // Animals -----------------------------------------------------
                     var animalGridHtml = "";
                     for (var x = 0; x < animals.length; x++) {
+                        var freeApp = (app.mode === app.MODE_FREE);
+                        var unlockedApp = (app.mode === app.MODE_FREE_UNLOCKED);
+                        var earnedAnimal = (animals[x].isEarned === "true");
+                        var paidAnimal = (animals[x].isPaid === "true");
+                        var nonFreeAnimal = (earnedAnimal || paidAnimal);
+                        var disableAnimal = ((freeApp && nonFreeAnimal) || (unlockedApp && paidAnimal));
+
                         animalGridHtml += "<div id=\"animalID_" + animals[x].animalID + "\" "
-                                + "class=\"animal-block\" "
+                                + "class=\"animal-block " + (disableAnimal ? " icon-selected" : "") + "\" "
                                 + "category=\"" + animals[x].category + "\" "
                                 + "animalSize=\"" + animals[x].animalID + "\">";
                         animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
@@ -460,12 +468,14 @@ function View() {
                         $(this).off();
                         $(this).on("click", function(event) {
                             $("#search-by-category").toggle();
-                            var category = event.target.id;
+                            var selectedCategory = event.target.id;
 
                             $(".animal-block").each(function() {
-                                if (category === ("all")) {
+                                var animalCategories = $(this).attr("category");
+
+                                if (selectedCategory === ("all")) {
                                     $(this).show();
-                                } else if (category == $(this).attr("category")) {
+                                } else if (animalCategories.indexOf(selectedCategory) !== -1) {
                                     $(this).show();
                                 } else {
                                     $(this).hide();

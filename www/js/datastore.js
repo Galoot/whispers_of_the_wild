@@ -38,7 +38,18 @@ function Datastore() {
                                 if (results.rows.length > 0) {
                                     var row = results.rows.item(0);
                                     if (onExists && row.num > 0) {
-                                        onExists(model);
+                                        // check data version
+                                        app.view.getProperty('dataVersion', function(results) {
+                                            var currentDataVersion = (results && results[0]) ? results[0].value : null;
+                                            if (currentDataVersion != app.dataVersion) {
+                                                console.log("Found data version update [" + currentDataVersion + " vs " + app.dataVersion + "]");
+                                                model.data.updateDataVersion();
+                                                onNotExists(model);
+                                            } else {
+                                                onExists(model);
+                                            }
+                                        });
+
                                     } else if (onNotExists) {
                                         onNotExists(model);
                                     }
@@ -105,9 +116,25 @@ function Datastore() {
         );
     };
 
+    this.updateDataVersion = function() {
+        this.getDB().transaction(
+                function (tx) {
+                    tx.executeSql("DELETE FROM SYS_Property WHERE property = 'dataVersion'");
+                    tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('dataVersion', '" + app.dataVersion + "')");
+                },
+                function (error) {
+                    alert("SQL Error Inserting into tables: " + error.code + ", " + error.message);
+                },
+                function () {
+                    // do nothing
+                }
+        );
+    };
+
     this.createDefaultProperties = function() {
         this.getDB().transaction(
                 function (tx) {
+                    tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('dataVersion', '0')");
                     tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('unlocked', 'false')");
                     tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('mode', '" + app.mode + "')");
                 },
@@ -120,7 +147,11 @@ function Datastore() {
         );
     };
 
-    this.init = function () {
+    this.init = function (dropData) {
+        if (dropData) {
+            drop_and_create_tables = true;
+        }
+
         this.getDB().transaction(
                 function (tx) {
                     // tx.executeSql("DROP TABLE IF EXISTS SYS_Property"); /* Dont drop or we will losing the app mode */
@@ -143,6 +174,12 @@ function Datastore() {
                             + "(nameID INTEGER PRIMARY KEY UNIQUE, "
                             + "animalID INTEGER, "
                             + "name TEXT)");
+
+                    if (drop_and_create_tables) tx.executeSql("DROP TABLE IF EXISTS ANM_Category");
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS ANM_Category "
+                            + "(nameCategoryID INTEGER PRIMARY KEY UNIQUE, "
+                            + "animalID INTEGER, "
+                            + "category TEXT)");
 
 //                    tx.executeSql("DELETE FROM ANM_Image");
                     if (drop_and_create_tables) tx.executeSql("DROP TABLE IF EXISTS ANM_Image");

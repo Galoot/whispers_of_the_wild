@@ -1,7 +1,8 @@
 app = new Application();
 // Settings for the app
-app.mode = app.MODE_PAID;
-app.useExpansion = isMobile.Android() && false;
+app.mode = app.MODE_FREE;
+app.useExpansion = false;
+app.dataVersion = "1";
 
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -32,6 +33,7 @@ function Application() {
 
     this.mode = this.MODE_FREE;
     this.useExpansion = false;
+    this.dataVersion = "1";
 
     // game
     this.game = new SpotTheGame();

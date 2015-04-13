@@ -29,6 +29,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'BATS');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -101,6 +104,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'THICK-TAILED BUSH BABY');
         mdl.addName(animalID, 'GALAGO');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Primate');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -167,6 +173,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'SQUIRREL');
         mdl.addName(animalID, 'TREE SQUIRREL');
         mdl.addName(animalID, 'GROUND SQUIRREL');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -240,6 +249,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'MEERKAT');
         mdl.addName(animalID, 'BANDED MONGOOSE');
         mdl.addName(animalID, 'DWARF MONGOOSE');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -318,6 +330,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'GREY MONGOOSE');
         mdl.addName(animalID, 'SLENDER MONGOOSE');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -389,6 +404,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'CAT');
         mdl.addName(animalID, 'SMALL-SPOTTED CAT');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -450,6 +468,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'GENET');
         mdl.addName(animalID, 'SMALL-SPOTTED GENET');
         mdl.addName(animalID, 'LARGE-SPOTTED GENET');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -517,6 +538,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'SCRUB HARE');
         mdl.addName(animalID, 'RABBIT');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Primate');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -583,6 +607,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'HYRAX');
         mdl.addName(animalID, 'ROCK HYRAX');
         mdl.addName(animalID, 'TREE HYRAX');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Primate');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -654,6 +681,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'HONEY BADGER');
         mdl.addName(animalID, 'RATEL');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -727,6 +757,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'AFRICAN WILDCAT');
         mdl.addName(animalID, 'WILDCAT');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -797,6 +830,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'MONKEY');
         mdl.addName(animalID, 'VERVET MONKEY');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Primate');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -871,6 +907,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'PANGOLIN');
         mdl.addName(animalID, 'GROUND PANGOLIN');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -890,7 +929,7 @@ load_animal_data = function(model, onCompleted) {
                 'Decreasing', // Population
                 'Pangolin meat is considered a delicacy in some Asian countries and they are increasingly being hunted for this purpose. Pangolin scales are used for a variety of medicinal purposes in Africa and Asia. Poaching is on the increase, mostly to supply the Asian market. In South Africa, electric fences kill between 2 and 13% of the South African population each year.', // Threats
                 '70-100cm ', // Length
-                '0.4cm', // Height
+                '40cm', // Height
                 '5-15kg', // Weight
                 '', 0 // Path to sound clip and duration in seconds
                 );
@@ -942,6 +981,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'JACKAL');
         mdl.addName(animalID, 'BLACK-BACKED JACKAL');
         mdl.addName(animalID, 'SIDE-STRIPED JACKAL');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1014,6 +1056,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'CAPE-CLAWLESS OTTER');
         mdl.addName(animalID, 'SPOTTED-NECKED OTTER');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1083,6 +1128,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'CIVIT');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1155,6 +1203,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'CARACAL');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1224,6 +1275,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'AARDWOLF');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1289,6 +1343,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'STEENBOK');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Antelope (<100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1348,6 +1405,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'PORCUPINE');
         mdl.addName(animalID, 'CRESTED PORCUPINE');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1417,6 +1477,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'DUIKER');
         mdl.addName(animalID, 'COMMON DUIKER');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Antelope (<100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1475,6 +1538,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'AARDVARK');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1544,6 +1610,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'SERVAL');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1627,6 +1696,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'OLIVE BABOON');
         mdl.addName(animalID, 'SAVANNAH BABOON');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Primate');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1705,6 +1777,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'WARTHOG');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Other Herbivores');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1778,6 +1853,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'LEOPARD');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Carnivores (>20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1855,6 +1933,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'BUSHPIG');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Other Herbivores');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -1919,6 +2000,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'PAINTED DOG');
         mdl.addName(animalID, 'HUNTING DOG');
         mdl.addName(animalID, 'AFRICAN HUNTING DOG');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Carnivores (>20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2002,6 +2086,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'BUSHBUCK');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Antelope (<100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -2059,6 +2146,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'SPRINGBOK');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Antelope (<100kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2128,6 +2218,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'HYAENA');
         mdl.addName(animalID, 'BROWN HYAENA');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Carnivores (>20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2199,6 +2292,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'CHEETAH');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Carnivores (>20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2279,6 +2375,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'HYAENA');
         mdl.addName(animalID, 'SPOTTED HYAENA');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Carnivores (>20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2362,6 +2461,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'IMPALA');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Antelope (<100kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2448,6 +2550,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'BLESBOK');
         mdl.addName(animalID, 'BONTEBOK');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Small Antelope (<100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -2509,6 +2614,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'LION');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Carnivores (>20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2608,6 +2716,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'TSESSEBE');
         mdl.addName(animalID, 'Topi');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -2674,6 +2785,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'GEMSBOK');
         mdl.addName(animalID, 'ORYX');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2744,6 +2858,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'SABLE');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2816,6 +2933,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'WATERBUCK');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -2881,6 +3001,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'WILDEBEEST');
         mdl.addName(animalID, 'BLUE WILDEBEEST');
         mdl.addName(animalID, 'GNU');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -2963,6 +3086,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'CAPE BUFFALO');
         mdl.addName(animalID, 'AFRICAN BUFFALO');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -3038,6 +3164,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'ROAN');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -3103,6 +3232,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'KUDU');
         mdl.addName(animalID, 'GREATER KUDU');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3176,6 +3308,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'HIPPO');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3269,6 +3404,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'BLACK RHINO');
         mdl.addName(animalID, 'HOOKED LIPPED RHINO');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -3358,6 +3496,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'GREATER ELAND');
         mdl.addName(animalID, 'LIVINGSTONE\'S ELAND');
 
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Large Antelope (>100kg)');
+
         // Profile Information
         mdl.addProfile(animalID,
                 // Identification Pointer
@@ -3428,6 +3569,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'ZEBRA');
         mdl.addName(animalID, 'PLAINS ZEBRA');
         mdl.addName(animalID, 'BURCHELL\'S ZEBRA');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3503,6 +3647,9 @@ load_animal_data = function(model, onCompleted) {
 
         // Common Names listed seperately
         mdl.addName(animalID, 'GIRAFFE');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3600,6 +3747,9 @@ load_animal_data = function(model, onCompleted) {
         // Common Names listed seperately
         mdl.addName(animalID, 'ELEPHANT');
         mdl.addName(animalID, 'AFRICAN ELEPHANT');
+
+        // Categories listed seperately
+        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,

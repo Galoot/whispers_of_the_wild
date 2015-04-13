@@ -12,9 +12,9 @@ function Model() {
 
     var _get_property = "SELECT value FROM SYS_Property WHERE property = ?";
 
-    var _get_categories = "SELECT DISTINCT category FROM ANM_Animal ORDER BY category ASC";
+    var _get_categories = "SELECT DISTINCT category FROM ANM_Category ORDER BY category ASC";
 
-    var _get_animals = "SELECT a.animalID, idPointers, randomFacts, name, thumbName, commonNames, score, iconFilePath, category, isPaid FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
+    var _get_animals = "SELECT a.animalID, idPointers, randomFacts, name, thumbName, commonNames, score, iconFilePath, category, isFree, isEarned, isPaid FROM ANM_Animal a, ANM_Profile p WHERE a.animalID = p.animalID ORDER BY a.animalID ASC";
 
     var _add_animal = "INSERT INTO ANM_Animal ("
             + "name, thumbName, commonNames, iconFilePath, category, cautionNotice, isFree, isEarned, isPaid, score) "
@@ -25,6 +25,11 @@ function Model() {
             animalID, name) \n\
             VALUES (?, ?)";
     var _get_names = "SELECT nameID, animalID, name FROM ANM_Name ORDER BY name";
+
+    var _add_category = "INSERT INTO ANM_Category (\n\
+            animalID, category) \n\
+            VALUES (?, ?)";
+    var _get_animal_categories = "SELECT nameCategoryID, animalID, category FROM ANM_Category WHERE animalID = ? ORDER BY category";
 
     var _add_profile = "INSERT INTO ANM_Profile (\n\
             animalID, idPointers, randomFacts, confusedWith, activityPeriod, gestation, "
@@ -95,6 +100,13 @@ function Model() {
                 });
     };
 
+    this.getAnimalCategories = function(animalID, onResults) {
+        this.data.dbQuery(_get_animal_categories, [animalID],
+                function(results) {
+                    onResults(jQuery.parseJSON(results).results);
+                });
+    };
+
     this.getProfile = function(animalID, onResults) {
         this.data.dbQuery(_get_profile, [animalID],
                 function(results) {
@@ -152,6 +164,15 @@ function Model() {
                 });
     };
 
+    this.addCategory = function(animalID, category, onCompleted) {
+        this.data.dbQuery(_add_category, [animalID, category],
+                function(results) {
+                    if (onCompleted) {
+                        onCompleted();
+                    }
+                });
+    };
+
     this.addProfile = function(animalID, idPointers, randomFacts, confusedWith, activityPeriod,
             gestation, lifespan, diet, predators, habitat, redListStatus, population, threats,
             length, height, weight, soundPath, soundDuration, onCompleted) {
@@ -202,8 +223,6 @@ function Model() {
     };
 
     this.load_data = function(onCompleted) {
-
-
         this.data.checkDatabaseExists(this,
                 function(model) {
                     console.log('Existing database, NOT inserting data');
@@ -212,8 +231,8 @@ function Model() {
                     }
                 }, function(model) {
                     console.log('New database, inserting data');
+                    model.data.init(true); // drop and create tables
                     load_animal_data(model, onCompleted);
                 });
-//        load_animal_data(this, onCompleted);
     };
 }
