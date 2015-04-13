@@ -17,7 +17,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Bats, fruit bats, leaf-nosed bats, sheath-tailed bats, slit-faced bats, horseshoe bats, vesper bats, free-tailed bats', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Nocturnal Creatures', // Category
+            'Small Nocturnal Creatures,Insectivores', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -31,6 +31,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Nocturnal Creatures');
+        mdl.addCategory(animalID, 'Insectivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -88,7 +89,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Lesser bushbaby, southern lesser bushbaby, lesser galago; thick-tailed bushbaby, greater galago, thick-tailed galago', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate', // Category
+            'Primate,Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -106,6 +107,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Primate');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -235,7 +237,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Banded mongoose, meerkat, suricate, dwarf mongoose', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores', // Category
+            'Small Carnivores (<20kg)', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
@@ -251,7 +253,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'DWARF MONGOOSE');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Small Carnivores');
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -313,7 +315,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'slender mongoose, yellow mongoose, white-tailed mongoose, Egyptian mongoose', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
@@ -331,7 +333,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'SLENDER MONGOOSE');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Small Carnivores');
+        mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -390,7 +393,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores (<20kg)', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -406,6 +409,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -455,7 +459,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Small-spotted genet, common genet, large-spotted genet, ', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores (<20kg)', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -471,6 +475,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -524,7 +529,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate', // Category
+            'Other Herbivores,Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
@@ -539,7 +544,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'RABBIT');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Primate');
+        mdl.addCategory(animalID, 'Other Herbivores');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -669,7 +675,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'honey badger, ratel', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores (<20kg)', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -684,6 +690,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -744,7 +751,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores (<20kg)', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -759,6 +766,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -810,7 +818,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'vervet monkey, green monkey, grivet monkey', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate', // Category
+            'Primate,Other Herbivores', // Category
             '<b>Vervet Monkey Safety Advice</b>'
             + '<br/><br/>Vervet monkeys are very intelligent and have the potential to become problem animals when they become too used to humans. They are not very dangerous to people, although they have been known to bite if cornered. They are more of a danger to your food, comfort and possessions.'
             + '<br/><br/><b>Do not feed the vervet monkeys:</b> vervet monkeys become problem animals when people feed them. They start to expect food to be given, and when it is not, they will take it by forcefully or guile.'
@@ -833,6 +841,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Primate');
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -894,7 +903,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Ground pangolin, scaly anteater, cape pangolin, South African pangolin', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Nocturnal Creatures', // Category
+            'Small Nocturnal Creatures,Insectivores', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
@@ -909,6 +918,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Nocturnal Creatures');
+        mdl.addCategory(animalID, 'Insectivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1117,7 +1127,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Civit', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores (<20kg)', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -1131,6 +1141,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1263,7 +1274,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Aardwolf', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Carnivores (<20kg)', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -1277,6 +1288,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1393,7 +1405,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'crested porcupine, cape porcupine', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Other Herbivores', // Category
+            'Other Herbivores,Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
@@ -1408,6 +1420,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Other Herbivores');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1527,7 +1540,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Aardvark, ant bear', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Small Nocturnal Creatures', // Category
+            'Small Nocturnal Creatures,Insectivores', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -1541,6 +1554,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Nocturnal Creatures');
+        mdl.addCategory(animalID, 'Insectivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1599,7 +1613,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Small Carnivores (<20kg)', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate', // Category
+            'Primate,Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
@@ -1613,6 +1627,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Small Carnivores (<20kg)');
+        mdl.addCategory(animalID, 'Small Nocturnal Creatures');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1673,7 +1688,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'CHACMA BABOON, OLIVE BABOON, SAVANNAH BABOON', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate', // Category
+            'Primate,Other Herbivores', // Category
             '<b>Baboon Safety Advice</b>'
             + '<br/><br/>Baboons are very intelligent and have the potential to become dangerous when they become too used to humans. They are particularly troublesome around camps.'
             + '<br/><br/><b>Do not feed the baboons:</b> baboons become problem animals when people feed them. They start to expect food to be given, and when it is not, they will take it forcefully.'
@@ -1698,6 +1713,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Primate');
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3065,7 +3081,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'African buffalo, Cape buffalo', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Giant herbivores (>300kg)', // Category
+            'Giant Herbivores (>300kg)', // Category
             '<b>Buffalo Safety Advice</b>'
             + '<br/><br/><b>Don\'t underestimate buffalo:</b> Buffalo may seem docile at times, but do not be fooled into thinking that they are harmless. They are one of the most dangerous animals to encounter on foot, and have also been known to be aggressive towards vehicles so please take note of the following advice.'
             + '<br/><br/><b>Walking in buffalo areas:</b> never walk around without a guide in areas where buffalo are present. Find out from your lodge if buffalo are able to enter the camp, and ask to briefed on safety procedure within the camp if they can.'
@@ -3087,7 +3103,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'AFRICAN BUFFALO');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3290,7 +3306,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Hippo', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Giant herbivores (>300kg)', // Category
+            'Giant Herbivores (>300kg)', // Category
             '<b>Hippo Safety Advice</b>'
             + '<br/><br/>Hippos are great to watch, but are notoriously bad tempered so always be careful when watching them.'
             + '<br/><br/><b>Be catious around water:</b> hippos are extremely territorial, and can perceive anything as a threat. When approaching a water body in a vehicle, approach slowly, and keep your eye out for hippos on the bank and in the water. Never get out of your vehicle near water.'
@@ -3310,7 +3326,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'HIPPO');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3380,7 +3396,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'White rhino, square-lipped rhino, black rhino, hooked-lipped rhino', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Giant herbivores (>300kg)', // Category
+            'Giant Herbivores (>300kg),Other Herbivores', // Category
             '<b>Rhino safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space. If you see one rhino, look all around you to determine if there are any others around.'
             + '<br/><br/><b>Plan your retreat:</b> the driver should be aware of the route they will take to back away if the rhino shows aggression'
@@ -3405,7 +3421,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'HOOKED LIPPED RHINO');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3482,7 +3499,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Eland, common eland, giant eland', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Large Antelope (>100kg)', // Category
+            'Large Antelope (>100kg),Giant Herbivores (>300kg)', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
@@ -3498,6 +3515,7 @@ load_animal_data = function(model, onCompleted) {
 
         // Categories listed seperately
         mdl.addCategory(animalID, 'Large Antelope (>100kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3556,7 +3574,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Zebra', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Giant herbivores (>300kg)', // Category
+            'Giant Herbivores (>300kg),Other Herbivores', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -3571,7 +3589,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'BURCHELL\'S ZEBRA');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3636,7 +3655,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Giraffe', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Giant herbivores (>300kg)', // Category
+            'Giant Herbivores (>300kg)', // Category
             '', // Safety Advise
 
             PayStatus.PAID, // Animal Status
@@ -3649,7 +3668,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'GIRAFFE');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -3721,7 +3740,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'African elephant, elephant ', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Giant herbivores (>300kg)', // Category
+            'Giant Herbivores (>300kg),Other Herbivores', // Category
             '<b>Elephant Safety Advice</b>'
             + '<br/><br/>Elephants are capable of overturning and crushing vehicles, so follow these basic rules to keep yourself safe. '
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space'
@@ -3749,7 +3768,8 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'AFRICAN ELEPHANT');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Giant herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Giant Herbivores (>300kg)');
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
