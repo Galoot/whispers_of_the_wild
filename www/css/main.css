@@ -1133,7 +1133,7 @@ hr.style-five {
 .modal-content {
     overflow-y: scroll;
     overflow-x: auto;
-    max-height: 400px;
+    /*max-height: 400px;*/
 }
 
 /* Category styling */
