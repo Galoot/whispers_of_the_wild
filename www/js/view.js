@@ -33,7 +33,7 @@ function View() {
     this.currentAnimal = null;
 
     // state of footer being collapsed or not
-    this.footerCollapsed = true;
+    this.footerCollapsed = false;
     this.navigationCollapsed = false;
     /**
      * Will change the mode from FREE to FREE_UNLOCKED.
@@ -46,8 +46,7 @@ function View() {
             if (currentMode == app.MODE_FREE) {
                 app.mode = app.MODE_FREE_UNLOCKED;
                 app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
-//                    console.log('unlocked ok');
-                view.modal("animalUnlockedMessage");
+                    app.view.modal("animalUnlockedMessage");
                     if (onComplete) {
                         onComplete();
                     }
@@ -449,6 +448,11 @@ function View() {
                                 + "animalSize=\"" + animals[x].animalID + "\">";
                         animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
                         animalGridHtml += "<div class=\"animal-text\">" + animals[x].thumbName + "</div>";
+
+                        if (app.mode == app.MODE_FREE && earnedAnimal) {
+                            animalGridHtml += "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">Unlock</div></div>";
+                        }
+
                         animalGridHtml += "</div>";
                     }
                     this.animal_animalGrid
@@ -908,6 +912,10 @@ function View() {
             - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
 
         $(".game-winner-scroller").css("height",
+            (animalsHeight + footer_oh - searchBySizeHeight
+            - sliderBottomHandleHeight + 20) + "px");
+
+        $(".scrollable").css("height",
             (animalsHeight + footer_oh - searchBySizeHeight
             - sliderBottomHandleHeight + 20) + "px");
 

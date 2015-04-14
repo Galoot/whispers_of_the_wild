@@ -8,6 +8,7 @@ var shareFacebook = function() {
                 'https://www.facebook.com/whispersofthewild', /* URL to share goes here */
                 function () {
                     app.view.unlockFreeApp();
+                    app.view.animal_loadAnimals();
                 },
                 function (errormsg) {
                     console.log('Error with facebook share...' + errormsg);
@@ -15,6 +16,8 @@ var shareFacebook = function() {
         );
     } else {
         console.log("Could not find scoialsharing plugin");
+        app.view.unlockFreeApp();
+        app.view.animal_loadAnimals();
     }
 };
 
@@ -29,6 +32,7 @@ var shareTwitter = function() {
                 null, //'https://www.facebook.com/whispersofthewild', /* URL to share goes here */
                 function () {
                     app.view.unlockFreeApp();
+                    app.view.animal_loadAnimals();
                 },
                 function (errormsg) {
                     console.log('Error with twitter share...' + errormsg);
@@ -37,6 +41,8 @@ var shareTwitter = function() {
         );
     } else {
         console.log("Could not find scoialsharing plugin");
+        app.view.unlockFreeApp();
+        app.view.animal_loadAnimals();
     }
     // share(SOCIAL_SHARE_TWITTER, "Wispers of the Wild", "Checkout this awesome new app!", "http://www.galoot.co.za");
 };

@@ -3745,7 +3745,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/>Elephants are capable of overturning and crushing vehicles, so follow these basic rules to keep yourself safe. '
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space'
             + '<br/><br/><b>Plan your retreat:</b> The driver should be aware of the route they will take to back away if the elephant shows aggression'
-            + '<br/><br/><b>Watch their body language:</br> If an elephant is feeding and not paying you much attention then it is comfortable. '
+            + '<br/><br/><b>Watch their body language:</b> If an elephant is feeding and not paying you much attention then it is comfortable. '
             + '<br/><br/>When they pretend to eat without putting food into their mouth, you have started to make them uncomfortable, and they are assessing you as a threat.  Do not move any closer until they have resumed normal activity. '
             + '<br/><br/>If they look at you and flap their ears, trumpet or shake their head, they have become agitated. You should not panic, just slowly back away until they calm down.'
             + '<br/><br/>If they charge with their ears out, it is a warning charge, and you should back away quickly without panicking. '
