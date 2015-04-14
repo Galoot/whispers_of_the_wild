@@ -46,7 +46,7 @@ function View() {
             if (currentMode == app.MODE_FREE) {
                 app.mode = app.MODE_FREE_UNLOCKED;
                 app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
-                    view.modal("animalUnlockedMessage");
+                    app.view.modal("animalUnlockedMessage");
                     if (onComplete) {
                         onComplete();
                     }
@@ -448,6 +448,11 @@ function View() {
                                 + "animalSize=\"" + animals[x].animalID + "\">";
                         animalGridHtml += "<img class=\"animal-icon\" src=\"" + animals[x].iconFilePath + "\"/>";
                         animalGridHtml += "<div class=\"animal-text\">" + animals[x].thumbName + "</div>";
+
+                        if (app.mode == app.MODE_FREE && earnedAnimal) {
+                            animalGridHtml += "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">Unlock</div></div>";
+                        }
+
                         animalGridHtml += "</div>";
                     }
                     this.animal_animalGrid
