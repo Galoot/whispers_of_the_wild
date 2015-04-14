@@ -614,7 +614,7 @@ hr.style-five {
     padding-left: -50px;
     height: 20px;
     z-index: 999;
-    background-image: url('../resources/buttons/media_player/bottom-handle-o.png');
+    background-image: url('../resources/buttons/media_player/bottom-handle-c.png');
     background-repeat: no-repeat;
     background-size: auto 20px;
     width: 110px;
@@ -1670,7 +1670,7 @@ input {
 }
 
 .icon-selected {
-    
+
     opacity: 0.4;
     filter: alpha(opacity=40);
 }

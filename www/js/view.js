@@ -33,7 +33,7 @@ function View() {
     this.currentAnimal = null;
 
     // state of footer being collapsed or not
-    this.footerCollapsed = true;
+    this.footerCollapsed = false;
     this.navigationCollapsed = false;
     /**
      * Will change the mode from FREE to FREE_UNLOCKED.
@@ -46,8 +46,7 @@ function View() {
             if (currentMode == app.MODE_FREE) {
                 app.mode = app.MODE_FREE_UNLOCKED;
                 app.view.setProperty('mode', '' + app.MODE_FREE_UNLOCKED, function() {
-//                    console.log('unlocked ok');
-                view.modal("animalUnlockedMessage");
+                    view.modal("animalUnlockedMessage");
                     if (onComplete) {
                         onComplete();
                     }
