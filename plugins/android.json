@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"XAPKReader\"><param name=\"android-package\" value=\"org.apache.cordova.xapkreader.XAPKReader\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -135,6 +139,9 @@
             "MAIN_VERSION": "1",
             "PATCH_VERSION": "1",
             "FILE_SIZE": "56252326",
+            "PACKAGE_NAME": "za.co.galoot.wotw"
+        },
+        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "za.co.galoot.wotw"
         }
     },

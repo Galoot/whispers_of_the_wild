@@ -133,7 +133,7 @@ public class XAPKReader extends CordovaPlugin {
         ZipResourceFile expansionFile = APKExpansionSupport.getAPKExpansionZipFile(ctx, mainVersion, patchVersion);
 
         if (null == expansionFile) {
-            Log.e(LOG_TAG, "APKExpansionFile not found.");
+            Log.e(LOG_TAG, "APKExpansionFile not found (mainVersion [" + mainVersion + "], patchVersion [" + patchVersion + "]).");
             throw new IOException("APKExpansionFile not found.");
         }
 
@@ -190,7 +190,7 @@ public class XAPKReader extends CordovaPlugin {
         ZipResourceFile expansionFile = APKExpansionSupport.getAPKExpansionZipFile(ctx, mainVersion, patchVersion);
 
         if (null == expansionFile) {
-            Log.e(LOG_TAG, "APKExpansionFile not found.");
+            Log.e(LOG_TAG, "APKExpansionFile not found (mainVersion [" + mainVersion + "], patchVersion [" + patchVersion + "]).");
             throw new IOException("APKExpansionFile not found.");
         }
 
