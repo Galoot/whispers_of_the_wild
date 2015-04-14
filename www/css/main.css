@@ -618,7 +618,7 @@ hr.style-five {
     padding-left: -50px;
     height: 20px;
     z-index: 999;
-    background-image: url('../resources/buttons/media_player/bottom-handle-o.png');
+    background-image: url('../resources/buttons/media_player/bottom-handle-c.png');
     background-repeat: no-repeat;
     background-size: auto 20px;
     width: 110px;
@@ -1109,6 +1109,15 @@ hr.style-five {
     overflow: hidden;
 }
 
+.scrollable {
+    height: 300px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* This gives us scrollbars. */
+    position: fixed; /* This means we don't have to worry about overflow issues */
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
+}
+
 .animal-grid {
 /*    padding: 50px 25px 50px 15px;*/
     margin: 0 auto;
@@ -1131,6 +1140,7 @@ hr.style-five {
     margin-right: 10px;
     display: inline-block;
     text-align: center;
+    position: relative;
 }
 
 .animal-icon {
@@ -1152,7 +1162,7 @@ hr.style-five {
 .modal-content {
     overflow-y: scroll;
     overflow-x: auto;
-    max-height: 400px;
+    /*max-height: 400px;*/
 }
 
 /* Category styling */
@@ -1689,7 +1699,7 @@ input {
 }
 
 .icon-selected {
-    
+
     opacity: 0.4;
     filter: alpha(opacity=40);
 }
