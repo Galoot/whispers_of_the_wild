@@ -1,7 +1,7 @@
 app = new Application();
 // Settings for the app
 app.mode = app.MODE_FREE;
-app.useExpansion = true;
+app.useExpansion = false;
 app.dataVersion = "1.0";
 
 $(document).ready(function () {
