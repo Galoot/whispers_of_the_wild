@@ -367,6 +367,10 @@ footer-controls {
     /* padding-bottom: 40px; */
 }
 
+#audio .profile-content {
+    background-color: #302d32;
+}
+
 .audiocontent {
     width: auto;
     position: absolute;
@@ -864,7 +868,27 @@ hr.style-five {
 }
 
 #menu-donate .content {
-    background-color: #cbc9c5;
+    background-image: url('../resources/donate.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% auto;
+}
+
+.donate-topimage {
+    max-width: 23%;
+    height: auto;
+    margin:0;
+}
+
+.donate-button {
+    background-image: url('../resources/buttons/other/donate_button.png');
+    background-size: auto 34px;
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 34px;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* bottom: 100px; */
 }
 
 .title {
@@ -1038,6 +1062,7 @@ hr.style-five {
     background-image: url('../resources/buttons/other/facebook_share.png');
     width: 143px;
     height: 46px;
+    background-size: auto 46px;
     margin: 15px 0px 10px 90px;
     float: left;}
 
@@ -1045,6 +1070,7 @@ hr.style-five {
     background-image: url('../resources/buttons/other/twitter_share.png');
     width: 143px;
     height: 46px;
+    background-size: auto 46px;
     margin: 15px 90px 10px 0px;
     float: right;
 }
@@ -1053,6 +1079,7 @@ hr.style-five {
     background-image: url('../resources/buttons/other/facebook_share.png');
     width: 143px;
     height: 46px;
+    background-size: auto 46px;
     margin: 10px 0 10px 60px;
     float: left;}
 
@@ -1060,6 +1087,7 @@ hr.style-five {
     background-image: url('../resources/buttons/other/twitter_share.png');
     width: 143px;
     height: 46px;
+    background-size: auto 46px;
     margin: 10px 60px 10px 0px;
     float: right;
 }

@@ -1172,6 +1172,26 @@ padding-top: 15px;
         margin-top: 5px;
     }
     
+    #social_container .share-facebook {
+        background-image: url('../resources/buttons/other/facebook_share.png');
+        background-size: auto 30px;
+        height: 30px;
+        width: 93px;
+        float: left;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    #social_container  .share-twitter {
+        background-image: url('../resources/buttons/other/twitter_share.png');
+        background-size: auto 30px;
+        height: 30px;
+        width: 93px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+    
     #question-social {
         display: block;
         text-transform: uppercase;
