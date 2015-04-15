@@ -16,7 +16,7 @@ function View() {
         });
     });
 
-    this.sliderDisplayDelay = 0;
+    this.sliderDisplayDelay = 1000;
     this.animal = new Animal();
     this.percProgress = 0;
 
