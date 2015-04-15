@@ -16,7 +16,7 @@ function View() {
         });
     });
 
-    this.sliderDisplayDelay = 1000;
+    this.sliderDisplayDelay = 500;
     this.animal = new Animal();
     this.percProgress = 0;
 
@@ -111,10 +111,12 @@ function View() {
     };
 
     this.reloadImageSliders = function() {
+        $.blockUI({ message: $("#loader"), css: { backgroundColor: '#0000', color: '#000', border: 'none'} });
         window.setTimeout(function() {
             app.view.profileSlider = app.view.reloadImageSlider(app.view.profileSlider, $('#image-slider-profile'));
             app.view.mapSlider = app.view.reloadImageSlider(app.view.mapSlider, $('#image-slider-map'));
             app.view.footprintSlider = app.view.reloadImageSlider(app.view.footprintSlider, $('#image-slider-footprints'));
+            $.unblockUI();
         }, app.view.sliderDisplayDelay);
     };
 
