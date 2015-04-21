@@ -31,3 +31,66 @@ del /Q android_dist\za.co.galoot.wotw\WhispersoftheWild-release.apk
 del /Q android_dist\za.co.galoot.wotw\main.2.za.co.galoot.wotw.obb
 copy /Y main_expansion.zip android_dist\za.co.galoot.wotw\main.1.za.co.galoot.wotw.obb
 copy /Y platforms\android\bin\WhispersoftheWild-release.apk android_dist\za.co.galoot.wotw\.
+
+
+
+1) Netbeans -> project clean & build
+2) Update versions
+2.1) platform/android/AndroidManifest.xml
+        <manifest android:hardwareAccelerated="true" android:versionCode="X"
+        ...
+        <meta-data android:name="mainVersion" android:value="X" />
+        <meta-data android:name="patchVersion" android:value="X" />
+
+2.1) platform/android/res/values/xapkreader.xml
+        <integer name="main_version">X</integer>
+        <integer name="patch_version">X</integer>
+
+3) cmd> android build
+4) cmd> ant release -builfile platform/android/build.xml
+
+
+Free App
+========
+    Size: 56252326
+    Key : MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMU+HNQb5ebIFAvnDgh8gli8/pwbG3XdA5AoHGiDjEGHtb+jwry1G9QcxyNpDm7s9z9s6cyazu21Dn2yZ6kMhFH0kDTMLG3VGmECLE95as8r6k1Y+M7fH1s/OdBn8HAGG/ry3qekqjzAvBoGaNJre4enmFoLBOt1USzm7SfbbLz1ZwXNzUodTtK46MiUjFZBbKdFYWZT3rTmNbrPi4VwoYoh1yqVD5m5KApcX0tp58R2E4Ar3qV05f7K2b9yWG9AC4GKVB0n6Ac0MqP2fnIJO2Qldh+nmcFwpq1/cTsZVlo/oxoKylcXpO48pNS+xfyx343OiXYJe468awRUx715YwIDAQAB
+
+    init.js
+        app.mode = app.MODE_FREE;
+        app.contentProviderName = "org.apache.cordova.xapkreader";
+    AndroidManifest.xml
+        <manifest ... package="za.co.galoot.wotw"
+        <provider android:authorities="org.apache.cordova.xapkreader" ...
+    android.json
+        "xml": "<string name=\"xapk_expansion_authority\">za.co.galoot.wotw</string>",
+        "xml": "<string name=\"xapk_google_play_public_key\">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMU+HNQb5ebIFAvnDgh8gli8/pwbG3XdA5AoHGiDjEGHtb+jwry1G9QcxyNpDm7s9z9s6cyazu21Dn2yZ6kMhFH0kDTMLG3VGmECLE95as8r6k1Y+M7fH1s/OdBn8HAGG/ry3qekqjzAvBoGaNJre4enmFoLBOt1USzm7SfbbLz1ZwXNzUodTtK46MiUjFZBbKdFYWZT3rTmNbrPi4VwoYoh1yqVD5m5KApcX0tp58R2E4Ar3qV05f7K2b9yWG9AC4GKVB0n6Ac0MqP2fnIJO2Qldh+nmcFwpq1/cTsZVlo/oxoKylcXpO48pNS+xfyx343OiXYJe468awRUx715YwIDAQAB</string>",
+        "xml": "<integer name=\"file_size\">56252326</integer>",
+        "PACKAGE_NAME": "za.co.galoot.wotw"
+    config.xml
+        <widget id="za.co.galoot.wotw" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    xapkreader.xml
+        <integer name="file_size">56252326</integer>
+        <string name="xapk_expansion_authority">za.co.galoot.wotw</string>
+        <string name="xapk_google_play_public_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMU+HNQb5ebIFAvnDgh8gli8/pwbG3XdA5AoHGiDjEGHtb+jwry1G9QcxyNpDm7s9z9s6cyazu21Dn2yZ6kMhFH0kDTMLG3VGmECLE95as8r6k1Y+M7fH1s/OdBn8HAGG/ry3qekqjzAvBoGaNJre4enmFoLBOt1USzm7SfbbLz1ZwXNzUodTtK46MiUjFZBbKdFYWZT3rTmNbrPi4VwoYoh1yqVD5m5KApcX0tp58R2E4Ar3qV05f7K2b9yWG9AC4GKVB0n6Ac0MqP2fnIJO2Qldh+nmcFwpq1/cTsZVlo/oxoKylcXpO48pNS+xfyx343OiXYJe468awRUx715YwIDAQAB</string>
+Full App
+========
+    Size: 241190384
+    Key : MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyHRrqTBsp/F5S4jZsGxlH5wi9wzLkd+A++49h+ZoqZu1GmPwItHMazXySRizZ7WCzs18+jcitsehUHkaH/KaZLJU1YmvDSjQU2/hvOCk3sLoVq/wajpbQbYVR3uSXdPVNq3FnPvEzhUSK3Hn5DabAHI8hQk2j3Nw4SOnCWMi5lFtjFeHGe5l9nNxckmHTXstOZuKO0j9Bk8YFtHEEUI8RmnNzgVEd8DmD4W7zMMvQSBVshTkaQ+tWmvbYAhXm/GbzLUaypfdFQup3SuV1i2DmeGqYIfFjriw6MWcNCjyCKAEICOuNS+gFD9pI1I/KMAoX7jgk8a8YmyGM6PF3vINQIDAQAB
+
+    init.js
+        app.mode = app.MODE_PAID;
+        app.contentProviderName = "org.apache.cordova.xapkreader.full";
+    AndroidManifest.xml
+        <manifest ... package="za.co.galoot.wotwfull"
+        <provider android:authorities="org.apache.cordova.xapkreader.full" ...
+    android.json
+        "xml": "<string name=\"xapk_expansion_authority\">za.co.galoot.wotwfull</string>",
+        "xml": "<string name=\"xapk_google_play_public_key\">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyHRrqTBsp/F5S4jZsGxlH5wi9wzLkd+A++49h+ZoqZu1GmPwItHMazXySRizZ7WCzs18+jcitsehUHkaH/KaZLJU1YmvDSjQU2/hvOCk3sLoVq/wajpbQbYVR3uSXdPVNq3FnPvEzhUSK3Hn5DabAHI8hQk2j3Nw4SOnCWMi5lFtjFeHGe5l9nNxckmHTXstOZuKO0j9Bk8YFtHEEUI8RmnNzgVEd8DmD4W7zMMvQSBVshTkaQ+tWmvbYAhXm/GbzLUaypfdFQup3SuV1i2DmeGqYIfFjriw6MWcNCjyCKAEICOuNS+gFD9pI1I/KMAoX7jgk8a8YmyGM6PF3vINQIDAQAB</string>",
+        "xml": "<integer name=\"file_size\">241190384</integer>",
+        "PACKAGE_NAME": "za.co.galoot.wotwfull"
+    config.xml
+        <widget id="za.co.galoot.wotwfull" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    xapkreader.xml
+        <integer name="file_size">241190384</integer>
+        <string name="xapk_expansion_authority">za.co.galoot.wotwfull</string>
+        <string name="xapk_google_play_public_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuyHRrqTBsp/F5S4jZsGxlH5wi9wzLkd+A++49h+ZoqZu1GmPwItHMazXySRizZ7WCzs18+jcitsehUHkaH/KaZLJU1YmvDSjQU2/hvOCk3sLoVq/wajpbQbYVR3uSXdPVNq3FnPvEzhUSK3Hn5DabAHI8hQk2j3Nw4SOnCWMi5lFtjFeHGe5l9nNxckmHTXstOZuKO0j9Bk8YFtHEEUI8RmnNzgVEd8DmD4W7zMMvQSBVshTkaQ+tWmvbYAhXm/GbzLUaypfdFQup3SuV1i2DmeGqYIfFjriw6MWcNCjyCKAEICOuNS+gFD9pI1I/KMAoX7jgk8a8YmyGM6PF3vINQIDAQAB</string>
