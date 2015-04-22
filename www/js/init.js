@@ -1,8 +1,9 @@
 app = new Application();
 // Settings for the app
-app.mode = app.MODE_FREE;
+app.mode = app.MODE_PAID;
 app.useExpansion = false;
 app.dataVersion = "1.0";
+app.contentProviderName = "org.apache.cordova.xapkreader.full";
 
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -34,6 +35,7 @@ function Application() {
     this.mode = this.MODE_FREE;
     this.useExpansion = false;
     this.dataVersion = "1";
+    this.contentProviderName = "org.apache.cordova.xapkreader";
 
     // game
     this.game = new SpotTheGame();

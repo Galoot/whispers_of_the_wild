@@ -542,7 +542,7 @@ hr.style-five {
     text-shadow: 1px 1px 2px #000;
     text-align: center;
     text-transform: uppercase;
-    
+
 
 
     font-size: 13px;
@@ -550,7 +550,7 @@ hr.style-five {
     //display:inline-block;
     //margin: 15px;*/
 
-    
+
 
 
     -webkit-box-shadow: 4px 0px 5px -4px #000 ;
@@ -563,7 +563,7 @@ left: -128px;
 
 .profile-tabs.left {
     left: 0px !important;
-    
+
 }
 
 .profile-tab-selected {
@@ -881,7 +881,7 @@ left: -128px;
 #menu-donate .content {
     background-image: url('../resources/donate.jpg');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left bottom;
     background-size: 100% auto;
     text-align: center !important;
 }
@@ -974,7 +974,7 @@ left: -128px;
 
     background-image: url('../resources/indexbg1.jpg');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left bottom;
     background-size: 100% auto;
 }
 
@@ -1530,7 +1530,7 @@ left: -128px;
 
     background-image: url('../resources/game/game-splash.jpg');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left bottom;
     background-size: 100% auto;
 }
 

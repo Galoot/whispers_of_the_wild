@@ -76,7 +76,7 @@ function playAudio(src, duration, setPosition, onTrackCompleted) {
         // create/init [audioElement]
         if (!useHtml5) {
             // (Cordova MEDIA element)
-            var apkExpPrefix = 'content://org.apache.cordova.xapkreader/';
+            var apkExpPrefix = 'content://' + app.contentProviderName + '/';
             if (app.useExpansion && src.indexOf(apkExpPrefix) !== -1) {
                 console.log("za.co.galoot.wotw - Finding audio track original: [" + src + "] in APK expansion file...");
 

@@ -353,7 +353,7 @@ function View() {
                 var isPaid = animals[x].isPaid;
                 // console.log("Displaying thumbnail image: [" + animals[x].iconFilePath + "]");
                 //
-//                var filePrefix = 'content://org.apache.cordova.xapkreader/';
+//                var filePrefix = 'content://' + app.contentProviderName + '/';
 //                var requestFileName = animals[x].iconFilePath.substring(filePrefix.length, animals[x].iconFilePath.length);
 //                XAPKReader.get(requestFileName,
 //                    function(url) { // success
@@ -892,8 +892,15 @@ function View() {
 
         var animal_grid_collapsing = 0;
 
+        var menuFooterAdjustment = 43;
+        var gameFooterAdjustment = 98;
+        var donateFooterAdjustment = footer_oh;
+
         if (app.view.footerCollapsed) {
             c_new += footer_oh;
+            menuFooterAdjustment = menuFooterAdjustment * -1;
+            gameFooterAdjustment -= footer_oh;
+            donateFooterAdjustment -= footer_oh
         } else {
             animal_grid_collapsing = footer_oh;
         }
@@ -926,5 +933,9 @@ function View() {
             - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
 
         $("#search-by-size").css("bottom", ((app.view.footerCollapsed ? 0 : 0) + 20 + animal_grid_collapsing) + "px");
+
+        $("#menu .content").css("height", ($("#menu .content").height() + menuFooterAdjustment) + "px");
+        $("#game .content").css("height", ($("#game .content").height() + gameFooterAdjustment) + "px");
+        $("#menu-donate .content").css("height", ($("#menu-donate .content").height() + donateFooterAdjustment) + "px");
     };
 };

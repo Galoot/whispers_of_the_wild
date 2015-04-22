@@ -3,7 +3,7 @@ load_animal_data = function(model, onCompleted) {
     var animal_counter = 0;
     var resourcesPrefix = 'resources/animals/';
     if (app.useExpansion) {
-        resourcesPrefix = 'content://org.apache.cordova.xapkreader/' + resourcesPrefix;
+        resourcesPrefix = 'content://' + app.contentProviderName + '/' + resourcesPrefix;
         console.log("Using Android APK expansion path for animal data: " + resourcesPrefix);
     }
     var animalName;
