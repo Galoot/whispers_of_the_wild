@@ -934,8 +934,20 @@ function View() {
 
         $("#search-by-size").css("bottom", ((app.view.footerCollapsed ? 0 : 0) + 20 + animal_grid_collapsing) + "px");
 
-        $("#menu .content").css("height", ($("#menu .content").height() + menuFooterAdjustment) + "px");
-        $("#game .content").css("height", ($("#game .content").height() + gameFooterAdjustment) + "px");
-        $("#menu-donate .content").css("height", ($("#menu-donate .content").height() + donateFooterAdjustment) + "px");
+        // determine current page so that we only applu the below changes to the specific pages, and not the profile or about-us pages.
+        // those pages look messed up when they get applied...
+        var currentPage = window.location.href;
+        if (currentPage.indexOf("#") > -1) {
+            currentPage = currentPage.substring(currentPage.indexOf('#')+1);
+        }
+        if ("menu" === currentPage) {
+            $("#menu .content").css("height", ($("#menu .content").height() + menuFooterAdjustment) + "px");
+        }
+        if ("game" === currentPage) {
+            $("#game .content").css("height", ($("#game .content").height() + gameFooterAdjustment) + "px");
+        }
+        if ("menu-donate" === currentPage) {
+            $("#menu-donate .content").css("height", ($("#menu-donate .content").height() + donateFooterAdjustment) + "px");
+        }
     };
 };
