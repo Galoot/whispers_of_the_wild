@@ -78,6 +78,8 @@ var initSlider = function (panelClass, actionClass) {
             }, 220);
 
         } else if (actionClass == 'bottom') {
+            $.blockUI({ message: $("#loader"), css: { backgroundColor: '#0000', color: '#000', border: 'none'} });
+
             app.view.footerCollapsed = !app.view.footerCollapsed;
 
             if (app.view.footerCollapsed) {
@@ -101,6 +103,8 @@ var initSlider = function (panelClass, actionClass) {
                     $(".scrollable").css("height", current_height + footerHeight);
 
                     $("#search-by-size").css("bottom", (0 + 20) + "px");
+
+                    $.unblockUI();
                 }, 350);
 
             } else {
@@ -127,6 +131,7 @@ var initSlider = function (panelClass, actionClass) {
 
                         $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
 
+                        $.unblockUI();
                     }, 350);
             }
         }
