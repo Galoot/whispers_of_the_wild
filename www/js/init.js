@@ -3,7 +3,7 @@ app = new Application();
 app.mode = app.MODE_PAID;
 app.useExpansion = false;
 app.dataVersion = "1.0";
-app.contentProviderName = "org.apache.cordova.xapkreader.full";
+app.contentProviderName = "org.apache.cordova.xapkreader";
 
 $(document).ready(function () {
     document.addEventListener("deviceready", onDeviceReady, false);
