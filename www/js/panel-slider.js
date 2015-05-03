@@ -62,6 +62,8 @@ var initSlider = function (panelClass, actionClass) {
         var footerHeight = $(".footer").height();
 
         if (actionClass == 'left') {
+            $.blockUI({ message: $("#loader"), css: { backgroundColor: '#0000', color: '#000', border: 'none'} });
+
             app.view.navigationCollapsed = !app.view.navigationCollapsed;
             if (app.view.navigationCollapsed) {
                 $(".panel-slider-left-handle").css("background-image", "url('resources/buttons/navigation/left-handle-o.png')");
@@ -72,6 +74,7 @@ var initSlider = function (panelClass, actionClass) {
             window.setTimeout(function() {
                 app.view.destroySliders();
                 app.view.reloadImageSliders();
+                $.unblockUI();
             }, 220);
 
         } else if (actionClass == 'bottom') {
