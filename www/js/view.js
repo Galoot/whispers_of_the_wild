@@ -862,6 +862,7 @@ function View() {
 
 
     this.app_maxHeight = function() {
+        var portraitMode = false;
 //        console.log("=====================================");
         var header = $(".header");
         var header_oh = header.height() > 0 ? header.outerHeight(true) : 0;
@@ -886,21 +887,22 @@ function View() {
         if (header_oh < 100) {
             x_factor = 20;
             animal_grid_spacer = 10;
+            portraitMode = true;
         }
 
         var c_new = window_h - header_oh - footer_oh - content_oh + content_h + x_factor;
 
         var animal_grid_collapsing = 0;
 
-        var menuFooterAdjustment = 43;
+        var menuFooterAdjustment = 45;
         var gameFooterAdjustment = 98;
         var donateFooterAdjustment = footer_oh;
 
         if (app.view.footerCollapsed) {
             c_new += footer_oh;
-            menuFooterAdjustment = menuFooterAdjustment * -1;
+            menuFooterAdjustment = (menuFooterAdjustment + (portraitMode ? -24 : 0)) * -1;
             gameFooterAdjustment -= footer_oh;
-            donateFooterAdjustment -= footer_oh
+            donateFooterAdjustment -= footer_oh;
         } else {
             animal_grid_collapsing = footer_oh;
         }

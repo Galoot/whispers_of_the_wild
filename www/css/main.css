@@ -1558,7 +1558,7 @@ left: -128px;
     left: 50%;
     margin-left: -50px;
     position: absolute;
-    bottom: 100px;
+    bottom: 150px;
 }
 
 #players .content{
@@ -2013,7 +2013,6 @@ input {
     margin: 10px;
     border-radius: 5px;
     font-size: 20px;
-    height: 20px;
     /* margin-top: 15px; */
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     text-shadow: 1px 1px 2px #000;
@@ -2057,12 +2056,12 @@ input {
 
 .game-link-finish {
     float: right;
-    width: 150px;
+    width: 110px;
     margin: 10px;
-    margin-right: 50px;
+    margin-right: 60px;
     background-image: url('../resources/buttons/game/finish_game.png');
-    background-size: auto 40px;
-    height: 40px;
+    background-size: auto 30px;
+    height: 30px;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     border-radius: 5px;
