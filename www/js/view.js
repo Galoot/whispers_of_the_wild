@@ -897,12 +897,14 @@ function View() {
         var menuFooterAdjustment = 45;
         var gameFooterAdjustment = 98;
         var donateFooterAdjustment = footer_oh;
+        var playersFooterAdjustment = footer_oh;
 
         if (app.view.footerCollapsed) {
             c_new += footer_oh;
             menuFooterAdjustment = (menuFooterAdjustment + (portraitMode ? -24 : 0)) * -1;
             gameFooterAdjustment -= footer_oh;
             donateFooterAdjustment -= footer_oh;
+            playersFooterAdjustment -= footer_oh;
         } else {
             animal_grid_collapsing = footer_oh;
         }
@@ -950,6 +952,12 @@ function View() {
         }
         if ("menu-donate" === currentPage) {
             $("#menu-donate .content").css("height", ($("#menu-donate .content").height() + donateFooterAdjustment) + "px");
+        }
+        if ("players" === currentPage) {
+            $("#players .content").css("height", ($("#players .content").height() + playersFooterAdjustment) + "px");
+        }
+        if ("game-animal-scoreboard" === currentPage) {
+            $("#game-animal-scoreboard .content").css("height", ($("#game-animal-scoreboard .content").height() + playersFooterAdjustment) + "px");
         }
     };
 };
