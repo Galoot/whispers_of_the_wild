@@ -862,6 +862,10 @@ function View() {
 
 
     this.app_maxHeight = function() {
+        $('#animalSizeSlider').nstSlider('set_position',
+                    $('#animalSizeSlider').nstSlider('get_range_min'),
+                    $('#animalSizeSlider').nstSlider('get_range_max'));
+
         var portraitMode = false;
 //        console.log("=====================================");
         var header = $(".header");
