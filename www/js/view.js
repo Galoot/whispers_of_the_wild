@@ -964,4 +964,10 @@ function View() {
             $("#game-animal-scoreboard .content").css("height", ($("#game-animal-scoreboard .content").height() + playersFooterAdjustment) + "px");
         }
     };
+
+    this.profileQuestionFocus = function() {
+        if (!app.view.navigationCollapsed) {
+            initSlider('.profile-tabs', 'left', true);
+        }
+    };
 };

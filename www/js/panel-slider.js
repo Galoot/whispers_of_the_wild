@@ -1,6 +1,6 @@
 // http://www.inserthtml.com/2013/05/mobile-menu/
 
-var initSlider = function (panelClass, actionClass) {
+var initSlider = function (panelClass, actionClass, slideNow) {
 
     var startX, curX, startY, curY; // Variables
     var newXScroll, newYScroll, genXScroll; // More Variables!
@@ -137,11 +137,15 @@ var initSlider = function (panelClass, actionClass) {
         }
     }
 
-    $(".panel-slider-" + actionClass + "-handle")[0].addEventListener('touchend', function (e) {
+    if (slideNow) {
         slide();
-    });
+    } else {
+        $(".panel-slider-" + actionClass + "-handle")[0].addEventListener('touchend', function (e) {
+            slide();
+        });
 
-    $(".panel-slider-" + actionClass + "-handle").click(function () {
-        slide();
-    });
+        $(".panel-slider-" + actionClass + "-handle").click(function () {
+            slide();
+        });
+    }
 };

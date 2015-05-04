@@ -490,6 +490,11 @@ function Application() {
         initSlider('.profile-tabs', 'left');
         initSlider('.footer', 'bottom');
 
+        $("#question-name,#question-desc,#question-hashtags").off();
+        $("#question-name,#question-desc,#question-hashtags").on("focus", function() {
+            app.view.profileQuestionFocus();
+        });
+
         $('img').retina();
         // =====================================================================
     };
