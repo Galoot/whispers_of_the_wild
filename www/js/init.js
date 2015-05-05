@@ -1,7 +1,7 @@
 app = new Application();
 // Settings for the app
 app.mode = app.MODE_PAID;
-app.useExpansion = false;
+app.useExpansion = isMobile.Android();
 app.dataVersion = "1.0";
 app.contentProviderName = "org.apache.cordova.xapkreader";
 

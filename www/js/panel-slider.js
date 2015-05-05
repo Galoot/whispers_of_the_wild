@@ -104,6 +104,8 @@ var initSlider = function (panelClass, actionClass, slideNow) {
 
                     $("#search-by-size").css("bottom", (0 + 20) + "px");
 
+                    $(".game-spot-grid-buttons").css("bottom", 30);
+
                     $.unblockUI();
                 }, 350);
 
@@ -130,6 +132,8 @@ var initSlider = function (panelClass, actionClass, slideNow) {
                         $(".scrollable").css("height", current_height - footerHeight);
 
                         $("#search-by-size").css("bottom", (footerHeight + 20) + "px");
+
+                        $(".game-spot-grid-buttons").css("bottom", 30 + footerHeight);
 
                         $.unblockUI();
                     }, 350);

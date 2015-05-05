@@ -940,9 +940,12 @@ function View() {
             (animalsHeight + footer_oh - searchBySizeHeight
             - sliderBottomHandleHeight + 20) + "px");
 
+        var spotButtonsHeight = $(".game-spot-grid-buttons").outerHeight(false);
         $(".game-spot-grid").css("height",
             (animalsHeight + footer_oh - searchBySizeHeight
-            - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer) + "px");
+            - sliderBottomHandleHeight - $(".category-label").height() - 60 - animal_grid_spacer - spotButtonsHeight) + "px");
+
+        $(".game-spot-grid-buttons").css("bottom", 30 + (app.view.footerCollapsed ? 0 : footer_oh));
 
         $("#search-by-size").css("bottom", ((app.view.footerCollapsed ? 0 : 0) + 20 + animal_grid_collapsing) + "px");
 
