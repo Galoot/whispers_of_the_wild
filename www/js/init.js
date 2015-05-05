@@ -466,6 +466,11 @@ function Application() {
             location.href = "#game-animal-spot";
         });
 
+        $("#game-animal-scoreboard .game-link-spot").off();
+        $("#game-animal-scoreboard .game-link-spot").on("click", function (event) {
+            window.history.back();
+        });
+
         $(".game-link-next").off();
         $(".game-link-next").on("click", function (event) {
             // same player, keep scores, select different animals
