@@ -251,7 +251,7 @@ function openPage(url) {
     if (isMobile.iOS()) {
         window.open(url, '_system');
     } else {
-        window.open(url);
+        window.open(url, '_system');
     }
 }
 
