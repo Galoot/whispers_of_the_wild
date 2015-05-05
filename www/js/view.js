@@ -127,6 +127,10 @@ function View() {
         }
 
         pauseAudio();
+
+        if (trackName.length > 40) {
+            trackName = trackName.substr(0, 40) + "...";
+        }
         $(".footer-trackName").html(trackName);
         $(".audio-play-pause").css("background-image", "url('resources/buttons/media_player/pause.png')");
 

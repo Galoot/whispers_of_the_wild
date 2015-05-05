@@ -326,9 +326,9 @@ function Application() {
                 "left_grip_selector": ".leftGrip",
                 "value_bar_selector": ".bar",
                 "value_changed_callback": function (cause, leftValue, rightValue) {
-//                    if (useHtml5) {
-//                        my_media.currentTime = leftValue;
-//                    }
+                    if (cause === 'drag_start') {
+                        skipToPosition(leftValue);
+                    }
                 }
             });
         });

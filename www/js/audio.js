@@ -119,6 +119,12 @@ function resumeAudio() {
     }
     return false;
 }
+// Skip to audio position
+//
+function skipToPosition(position) {
+    var seekMillis = ((my_media.getDuration()*1000) * (position / 100));
+    my_media.seekTo(seekMillis);
+}
 //
 // Pause audio
 //
