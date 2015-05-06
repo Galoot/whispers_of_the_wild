@@ -1,5 +1,5 @@
 playerColours = ['green', 'red', 'blue', 'orange'];
-
+var bonusPoints = 15;
 
 
 function saveNames() {
@@ -149,16 +149,16 @@ function buildWinnerGrid() {
     var winnerAnimalScore = -1;
 
     var winnerIndex = -1;
-    var winnerScore = -1;
     for (var x = 0; x < app.game.players.length; x++) {
         var gameScore = 0;
+        var selectedCount = 0;
         for (var y = 0; y < app.game.players[x].selection.length; y++) {
             if (app.game.players[x].selection[y].selected) {
+                selectedCount += 1;
                 gameScore += parseInt(app.game.players[x].selection[y].animal.score);
             }
         }
-        if (gameScore > winnerScore) {
-            winnerScore = gameScore;
+        if (selectedCount >= 2) {
             winnerIndex = x;
         }
     }
@@ -178,6 +178,11 @@ function buildWinnerGrid() {
                                 + "class=\"game-spot-animal-block\">"
                                     + "<img class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                             + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
+
+//                                    + "<div class=\"animal-text\">"
+                                        + app.game.players[x].selection[y].animal.thumbName
+//                                    + "</div>";
+
                                     + "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">"
                                             + app.game.players[x].selection[y].animal.score
                                             + "</div></div>"
@@ -201,7 +206,7 @@ function buildWinnerGrid() {
 
             winnerhtml += "<div class=\"game-winner-player-score\">" + score + "</div>";
             if (winnerIndex === x) {
-                winnerhtml += "<div class=\"game-winner-player-bonus\">40 bonus points</div>";
+                winnerhtml += "<div class=\"game-winner-player-bonus\">" + bonusPoints + " bonus points</div>";
             }
             winnerhtml += "</div>";
         }
@@ -228,9 +233,14 @@ function buildSpotGrid() {
                                             + app.game.players[x].selection[y].animalID + "\" "
                                             + "class=\"game-spot-animal-icon player-" + x + "\" src=\""
                                             + app.game.players[x].selection[y].animal.iconFilePath + "\"/>"
-                                    + "<div class=\"ribbon-wrapper\"><div class=\"ribbon\">"
+//                                    + "<div class=\"animal-text\">"
+                                        + app.game.players[x].selection[y].animal.thumbName
+//                                    + "</div>";
+                                    + "<div class=\"ribbon-wrapper\">"
+                                        + "<div class=\"ribbon\">"
                                             + app.game.players[x].selection[y].animal.score
-                                            + "</div></div>"
+                                        + "</div>"
+                                    + "</div>"
                             + "</div>";
                 }
                 var lastSelection = (y === app.game.players[x].selection.length - 1);
@@ -259,6 +269,17 @@ function animalSpot(playerIndex, selectionIndex) {
     selection.selected = !selection.selected;
     player.runningScore += (parseInt(player.selection[selectionIndex].animal.score) * (selection.selected ? 1 : -1));
 
+    // check if this player has two animals selected
+    var selectionCount = 0;
+    for (var x = 0; x < player.selection.length; x++) {
+        if (player.selection[x].selected) {
+            selectionCount++;
+        }
+    }
+    if (selectionCount >= 2) {
+        player.runningScore += bonusPoints;
+    }
+
     // update scoreboard
     var sbHtml = "";
     var winnerScore = -1;
@@ -279,13 +300,7 @@ function animalSpot(playerIndex, selectionIndex) {
     // update winner screen
     buildWinnerGrid();
 
-    // check if this player has two animals selected
-    var selectionCount = 0;
-    for (var x = 0; x < player.selection.length; x++) {
-        if (player.selection[x].selected) {
-            selectionCount++;
-        }
-    }
+
     if (selectionCount >= 2) {
         location.href = "#game-animal-winner";
     }

@@ -2,7 +2,7 @@ app = new Application();
 // Settings for the app
 app.mode = app.MODE_PAID;
 app.useExpansion = isMobile.Android();
-app.dataVersion = "1.0";
+app.dataVersion = "10";
 app.contentProviderName = "org.apache.cordova.xapkreader";
 
 $(document).ready(function () {
@@ -466,8 +466,8 @@ function Application() {
             location.href = "#game-animal-spot";
         });
 
-        $("#game-animal-scoreboard .game-link-spot").off();
-        $("#game-animal-scoreboard .game-link-spot").on("click", function (event) {
+        $("#game-animal-scoreboard .game-link-spot-finish").off();
+        $("#game-animal-scoreboard .game-link-spot-finish").on("click", function (event) {
             window.history.back();
         });
 

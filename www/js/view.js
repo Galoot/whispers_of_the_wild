@@ -16,7 +16,7 @@ function View() {
         });
     });
 
-    this.sliderDisplayDelay = 500;
+    this.sliderDisplayDelay = 20;
     this.animal = new Animal();
     this.percProgress = 0;
 
@@ -948,6 +948,15 @@ function View() {
         $(".game-spot-grid-buttons").css("bottom", 30 + (app.view.footerCollapsed ? 0 : footer_oh));
 
         $("#search-by-size").css("bottom", ((app.view.footerCollapsed ? 0 : 0) + 20 + animal_grid_collapsing) + "px");
+
+//        if (!app.view.navigationCollapsed) {
+//            var donateWidth = $("#donate .copywrap-about").width();
+//            console.log("before - #donate .copywrap-about: " + donateWidth + ", option_width: " + $(".profile-option").width());
+//            $("#donate .copywrap-about").css("width", (donateWidth - $(".profile-option").width()) + "px");
+//            var donateWidth = $("#donate .copywrap-about").width();
+//            console.log("after - #donate .copywrap-about: " + donateWidth);
+//        }
+
 
         // determine current page so that we only applu the below changes to the specific pages, and not the profile or about-us pages.
         // those pages look messed up when they get applied...

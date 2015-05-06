@@ -721,6 +721,13 @@ left: -128px;
     background-repeat: no-repeat;
 }
 
+#donate .copywrap-about {
+    text-align: center !important;
+    color: #fff;
+    min-width: 80%;
+    overflow-x: hidden;
+}
+
 /*   About Us Section   */
 
 .copywrap-about {
@@ -879,6 +886,14 @@ left: -128px;
 }
 
 #menu-donate .content {
+    background-image: url('../resources/donate.jpg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% auto;
+    text-align: center !important;
+}
+
+#donate .profile-content {
     background-image: url('../resources/donate.jpg');
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -1830,8 +1845,8 @@ input {
     text-align: center;
     width: 145px;
     height: 145px;
-    margin: 15px;
-    margin-left: 16px;
+    margin: 10px;
+    margin-left: 10px;
     margin-bottom: 25px;
     display: inline-block;
     position: relative;
@@ -2010,7 +2025,7 @@ input {
     background-image: url('../resources/buttons/game/view_leaderboard.png');
     background-size: auto 40px;
     height: 40px;
-    width: 230px;
+    width: 239px;
     margin-right: 50px;
 }
 
@@ -2034,25 +2049,39 @@ input {
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     border-radius: 5px; }
 
-.game-link-next {
+ .game-link-spot-finish {
     float: left;
-    width: 150px;
+    width: 163px;
     margin: 10px;
-    background-image: url('../resources/buttons/game/next_round.png');
+    margin-left: 25px;
+    background-image: url('../resources/buttons/game/go_back.png');
     background-size: auto 40px;
     height: 40px;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     border-radius: 5px; }
 
+.game-link-next {
+    float: left;
+    width: 165px;
+    margin: 10px;
+    background-image: url('../resources/buttons/game/next_round.png');
+    background-size: auto 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
 .game-link-finish {
     float: right;
-    width: 110px;
+    width: 150px;
     margin: 10px;
     margin-right: 60px;
     background-image: url('../resources/buttons/game/finish_game.png');
-    background-size: auto 30px;
-    height: 30px;
+    background-size: auto 40px;
+    height: 40px;
     background-repeat: no-repeat;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
     border-radius: 5px;
@@ -2162,7 +2191,7 @@ input {
     background-color: #2f2d33;
     border-radius: 5px;
     margin: 20px 20px -10px 20px;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-left: 15px;
     box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4);
 }
@@ -2194,7 +2223,7 @@ input {
     margin: 10px;
     margin-right: 50px;
     margin-left: 25px;
-    margin-top: 20px;
+    margin-top: 0px;
     border-radius: 5px;
     background-color: #CBC9C5;
     padding-top: 1px;
@@ -2210,7 +2239,7 @@ input {
 }
 
 .game-scoreboard-winner {
-    margin-top: 250px;
+    margin-top: 100px;
     background-color: #fff;
     margin-left: 0px;
     float: right;

@@ -599,7 +599,7 @@ load_animal_data = function(model, onCompleted) {
             animalName, // Thumbnail Name & Folder name under 'animals'
             'Dassie, rock dassie, tree dassie', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate', // Category
+            'Other Herbivores', // Category
             '', // Safety Advise
 
             PayStatus.FREE, // Animal Status
@@ -615,7 +615,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addName(animalID, 'TREE HYRAX');
 
         // Categories listed seperately
-        mdl.addCategory(animalID, 'Primate');
+        mdl.addCategory(animalID, 'Other Herbivores');
 
         // Profile Information
         mdl.addProfile(animalID,
@@ -1611,9 +1611,9 @@ load_animal_data = function(model, onCompleted) {
     animalName = 'Serval'; // Thumbnail Name & Folder name under 'animals'
     mdl.addAnimal('Serval (Leptailurus serval)',
             animalName, // Thumbnail Name & Folder name under 'animals'
-            'Small Carnivores (<20kg)', // Common Names
+            'Serval', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
-            'Primate,Small Nocturnal Creatures', // Category
+            'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
             '', // Safety Advise
 
             PayStatus.EARNED, // Animal Status
