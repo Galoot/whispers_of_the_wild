@@ -1665,6 +1665,26 @@ input {
     box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4);
 }
 
+.game-players #player-4 {
+    background-color: #e87722;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 30px;
+    padding-top: 10px;
+    margin-top: 15px;
+    box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4);
+}
+
+.game-players #player-5 {
+    background-color: #e87722;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 30px;
+    padding-top: 10px;
+    margin-top: 15px;
+    box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.4);
+}
+
 .game-players-next {
     background-image: url('../resources/buttons/game/continue.png');
     background-size: auto 40px;
@@ -1709,6 +1729,14 @@ input {
     background-color: #e87722;
 }
 
+#player-selecting.player-4 {
+    background-color: #e87722;
+}
+
+#player-selecting.player-5 {
+    background-color: #e87722;
+}
+
 #player-selecting-next {
     float: right;
     width: 80px;
@@ -1737,19 +1765,27 @@ input {
     filter: alpha(opacity=40);
 }
     .game-select-animal-icon.icon-selected.player-0 {
-    border: 3px solid yellowgreen;
+        border: 3px solid yellowgreen;
     }
 
     .game-select-animal-icon.icon-selected.player-1 {
-    border: 3px solid red;
+        border: 3px solid red;
     }
 
     .game-select-animal-icon.icon-selected.player-2 {
-    border: 3px solid deepskyblue;
+        border: 3px solid deepskyblue;
     }
 
     .game-select-animal-icon.icon-selected.player-3 {
-    border: 3px solid #e87722;
+        border: 3px solid #e87722;
+    }
+
+    .game-select-animal-icon.icon-selected.player-4 {
+        border: 3px solid #e87722;
+    }
+
+    .game-select-animal-icon.icon-selected.player-5 {
+        border: 3px solid #e87722;
     }
 
      .game-spot-player-block.player-0 {
@@ -1768,6 +1804,14 @@ input {
         background-color: #e87722;
     }
 
+    .game-spot-player-block.player-4 {
+        background-color: #e87722;
+    }
+
+    .game-spot-player-block.player-5 {
+        background-color: #e87722;
+    }
+
     .game-spot-animal-icon.icon-selected.player-0 {
     border: 3px solid yellowgreen;
     }
@@ -1781,7 +1825,15 @@ input {
     }
 
     .game-spot-animal-icon.icon-selected.player-3 {
-    border: 3px solid #e87722;
+        border: 3px solid #e87722;
+    }
+
+    .game-spot-animal-icon.icon-selected.player-4 {
+        border: 3px solid #e87722;
+    }
+
+    .game-spot-animal-icon.icon-selected.player-5 {
+        border: 3px solid #e87722;
     }
 
 
@@ -1951,17 +2003,25 @@ input {
     background-color: greenyellow;
 }
 
-    .game-scoreboard-player.player-1 {
-        background-color: red;
-    }
+.game-scoreboard-player.player-1 {
+    background-color: red;
+}
 
-    .game-scoreboard-player.player-2 {
-        background-color: deepskyblue;
-    }
+.game-scoreboard-player.player-2 {
+    background-color: deepskyblue;
+}
 
-    .game-scoreboard-player.player-3 {
-        background-color: #e87722;
-    }
+.game-scoreboard-player.player-3 {
+    background-color: #e87722;
+}
+
+.game-scoreboard-player.player-4 {
+    background-color: #e87722;
+}
+
+.game-scoreboard-player.player-5 {
+    background-color: #e87722;
+}
 
 .game-scoreboard-score {
     /* height: 20px; */
@@ -2202,17 +2262,25 @@ input {
     background-color: greenyellow;
 }
 
-    .game-winner-player-icon.player-1 {
-        background-color: red;
-    }
+.game-winner-player-icon.player-1 {
+    background-color: red;
+}
 
-    .game-winner-player-icon.player-2 {
-        background-color: deepskyblue;
-    }
+.game-winner-player-icon.player-2 {
+    background-color: deepskyblue;
+}
 
-    .game-winner-player-icon.player-3 {
-        background-color: #e87722;
-    }
+.game-winner-player-icon.player-3 {
+    background-color: #e87722;
+}
+
+.game-winner-player-icon.player-4 {
+    background-color: #e87722;
+}
+
+.game-winner-player-icon.player-5 {
+    background-color: #e87722;
+}
 
 .game-scoreboard-heading {
        margin-top: 30px;

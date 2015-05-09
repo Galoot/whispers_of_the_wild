@@ -284,10 +284,29 @@ function animalSpot(playerIndex, selectionIndex) {
     var sbHtml = "";
     var winnerScore = -1;
     var winnerName = "???";
+
+    var tempPlayer;
+    var leaders = new Array();
     for (var x = 0; x < app.game.players.length; x++) {
-        var p = app.game.players[x];
-        sbHtml += "<div class=\"game-scoreboard-score player-" + x + "\">" + p.runningScore + "</div>";
-        sbHtml += "<div class=\"game-scoreboard-player player-" + x + "\">" + p.name + "</div>";
+        leaders[x] = app.game.players[x];
+    }
+    var ordered = false;
+    while (!ordered) {
+        ordered = true;
+        for (var x = 0; x < leaders.length - 1; x++) {
+            if (leaders[x].runningScore < leaders[x+1].runningScore) {
+                tempPlayer = leaders[x];
+                leaders[x] = leaders[x+1];
+                leaders[x+1] = tempPlayer;
+                ordered = false;
+            }
+        }
+    }
+
+    for (var x = 0; x < leaders.length; x++) {
+        var p = leaders[x];
+        sbHtml += "<div class=\"game-scoreboard-score player-" + p.index + "\">" + p.runningScore + "</div>";
+        sbHtml += "<div class=\"game-scoreboard-player player-" + p.index + "\">" + p.name + "</div>";
         sbHtml += "<br/>";
         if (p.runningScore > winnerScore) {
             winnerScore = p.runningScore;
@@ -308,10 +327,12 @@ function animalSpot(playerIndex, selectionIndex) {
 
 function resetPlayers() {
     app.game.players = [];
-    app.game.players.push(new Player('PLAYER 1 NAME'));
-    app.game.players.push(new Player('PLAYER 2 NAME'));
-    app.game.players.push(new Player('PLAYER 3 NAME'));
-    app.game.players.push(new Player('PLAYER 4 NAME'));
+    app.game.players.push(new Player('PLAYER 1 NAME', 0));
+    app.game.players.push(new Player('PLAYER 2 NAME', 1));
+    app.game.players.push(new Player('PLAYER 3 NAME', 2));
+    app.game.players.push(new Player('PLAYER 4 NAME', 3));
+    app.game.players.push(new Player('PLAYER 5 NAME', 4));
+    app.game.players.push(new Player('PLAYER 6 NAME', 5));
 
     var content = "";
     for (var x = 0; x < app.game.players.length; x++) {
@@ -353,10 +374,10 @@ function Selection(animalID) {
     }
 };
 
-function Player(playerName) {
+function Player(playerName, order) {
     this.name = playerName;
     this.runningScore= 0;
-
+    this.index = order;
     this.selection = [];
 
     this.getSelectionHtml = function() {
