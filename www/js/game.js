@@ -35,7 +35,7 @@ function loanAnimalSelection() {
     var playerIndex = app.game.animalSelectplayerIndex;
     $("#player-selecting").html(app.game.players[playerIndex].name);
     // remove all player classes
-    for (var pi = 0; pi < 4; pi++) {
+    for (var pi = 0; pi < app.game.players.length; pi++) {
         $("#player-selecting").removeClass("player-" + pi);
         $(".game-select-animal-icon").removeClass("player-" + pi);
     }

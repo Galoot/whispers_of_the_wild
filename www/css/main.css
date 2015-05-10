@@ -1625,7 +1625,7 @@ input {
 }
 
 .game-players #player-0 {
-    background-color: greenyellow;
+    background-color: #1cd956;
     border-radius: 10px;
     font-size: 20px;
     height: 30px;
@@ -1666,7 +1666,7 @@ input {
 }
 
 .game-players #player-4 {
-    background-color: #e87722;
+    background-color: #e365fa;
     border-radius: 10px;
     font-size: 20px;
     height: 30px;
@@ -1676,7 +1676,7 @@ input {
 }
 
 .game-players #player-5 {
-    background-color: #e87722;
+    background-color: #e7f363;
     border-radius: 10px;
     font-size: 20px;
     height: 30px;
@@ -1714,7 +1714,7 @@ input {
 }
 
 #player-selecting.player-0 {
-    background-color: greenyellow;
+    background-color: #1cd956;
 }
 
 #player-selecting.player-1 {
@@ -1730,11 +1730,11 @@ input {
 }
 
 #player-selecting.player-4 {
-    background-color: #e87722;
+    background-color: #e365fa;
 }
 
 #player-selecting.player-5 {
-    background-color: #e87722;
+    background-color: #e7f363;
 }
 
 #player-selecting-next {
@@ -1764,78 +1764,77 @@ input {
     opacity: 0.4;
     filter: alpha(opacity=40);
 }
-    .game-select-animal-icon.icon-selected.player-0 {
-        border: 3px solid yellowgreen;
-    }
-
-    .game-select-animal-icon.icon-selected.player-1 {
-        border: 3px solid red;
-    }
-
-    .game-select-animal-icon.icon-selected.player-2 {
-        border: 3px solid deepskyblue;
-    }
-
-    .game-select-animal-icon.icon-selected.player-3 {
-        border: 3px solid #e87722;
-    }
-
-    .game-select-animal-icon.icon-selected.player-4 {
-        border: 3px solid #e87722;
-    }
-
-    .game-select-animal-icon.icon-selected.player-5 {
-        border: 3px solid #e87722;
-    }
-
-     .game-spot-player-block.player-0 {
-    background-color: greenyellow;
+.game-select-animal-icon.icon-selected.player-0 {
+    border: 3px solid #1cd956;
 }
 
-    .game-spot-player-block.player-1 {
-        background-color: red;
-    }
-
-    .game-spot-player-block.player-2 {
-        background-color: deepskyblue;
-    }
-
-    .game-spot-player-block.player-3 {
-        background-color: #e87722;
-    }
-
-    .game-spot-player-block.player-4 {
-        background-color: #e87722;
-    }
-
-    .game-spot-player-block.player-5 {
-        background-color: #e87722;
-    }
-
-    .game-spot-animal-icon.icon-selected.player-0 {
-    border: 3px solid yellowgreen;
-    }
-
-    .game-spot-animal-icon.icon-selected.player-1 {
+.game-select-animal-icon.icon-selected.player-1 {
     border: 3px solid red;
-    }
+}
 
-    .game-spot-animal-icon.icon-selected.player-2 {
+.game-select-animal-icon.icon-selected.player-2 {
     border: 3px solid deepskyblue;
-    }
+}
 
-    .game-spot-animal-icon.icon-selected.player-3 {
-        border: 3px solid #e87722;
-    }
+.game-select-animal-icon.icon-selected.player-3 {
+    border: 3px solid #e87722;
+}
 
-    .game-spot-animal-icon.icon-selected.player-4 {
-        border: 3px solid #e87722;
-    }
+.game-select-animal-icon.icon-selected.player-4 {
+    border: 3px solid #e365fa;
+}
 
-    .game-spot-animal-icon.icon-selected.player-5 {
-        border: 3px solid #e87722;
-    }
+.game-select-animal-icon.icon-selected.player-5 {
+    border: 3px solid #e7f363;
+}
 
+ .game-spot-player-block.player-0 {
+    background-color: #1cd956;
+}
+
+.game-spot-player-block.player-1 {
+    background-color: red;
+}
+
+.game-spot-player-block.player-2 {
+    background-color: deepskyblue;
+}
+
+.game-spot-player-block.player-3 {
+    background-color: #e87722;
+}
+
+.game-spot-player-block.player-4 {
+    background-color: #e365fa;
+}
+
+.game-spot-player-block.player-5 {
+    background-color: #e7f363;
+}
+
+.game-spot-animal-icon.icon-selected.player-0 {
+    border: 3px solid #1cd956;
+}
+
+.game-spot-animal-icon.icon-selected.player-1 {
+    border: 3px solid red;
+}
+
+.game-spot-animal-icon.icon-selected.player-2 {
+    border: 3px solid deepskyblue;
+}
+
+.game-spot-animal-icon.icon-selected.player-3 {
+    border: 3px solid #e87722;
+}
+
+.game-spot-animal-icon.icon-selected.player-4 {
+    border: 3px solid #e365fa;
+}
+
+.game-spot-animal-icon.icon-selected.player-5 {
+    border: 3px solid #e7f363;
+}
 
 #game-animal-grid {
     /* padding-top: 20px; */
@@ -1934,7 +1933,7 @@ input {
 }
 
 .game-spot-player-block {
-    background-color: yellowgreen;
+    background-color: #1cd956;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
 }
@@ -1995,12 +1994,12 @@ input {
   margin-right: -100px;
   box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
   text-shadow: 1px 1px 2px #000;
-  background-color: yellowgreen;
+  background-color: #1cd956;
   width: 70%;
 }
 
 .game-scoreboard-player.player-0 {
-    background-color: greenyellow;
+    background-color: #1cd956;
 }
 
 .game-scoreboard-player.player-1 {
@@ -2016,11 +2015,11 @@ input {
 }
 
 .game-scoreboard-player.player-4 {
-    background-color: #e87722;
+    background-color: #e365fa;
 }
 
 .game-scoreboard-player.player-5 {
-    background-color: #e87722;
+    background-color: #e7f363;
 }
 
 .game-scoreboard-score {
@@ -2213,7 +2212,7 @@ input {
     /* margin-left: 25px; */
     /* margin-bottom: 25px; */
     display: inline-block;
-    background-color:  yellowgreen;
+    background-color:  #1cd956;
 }
 
 .game-win-content-right {
@@ -2259,7 +2258,7 @@ input {
 .game-winning-result .game-spot-animal-block {margin-left: 8px;margin-right: 8px;}
 
  .game-winner-player-icon.player-0 {
-    background-color: greenyellow;
+    background-color: #1cd956;
 }
 
 .game-winner-player-icon.player-1 {
@@ -2275,11 +2274,11 @@ input {
 }
 
 .game-winner-player-icon.player-4 {
-    background-color: #e87722;
+    background-color: #e365fa;
 }
 
 .game-winner-player-icon.player-5 {
-    background-color: #e87722;
+    background-color: #e7f363;
 }
 
 .game-scoreboard-heading {

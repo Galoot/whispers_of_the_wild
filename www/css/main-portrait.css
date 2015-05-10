@@ -1178,7 +1178,7 @@
     }
 
     .game-players #player-0 {
-        background-color: greenyellow;
+        background-color: #1cd956;
         border-radius: 10px;
         font-size: 20px;
         height: 30px;
@@ -1219,7 +1219,7 @@
     }
 
     .game-players #player-4 {
-        background-color: #e87722;
+        background-color: #e365fa;
         border-radius: 10px;
         font-size: 20px;
         height: 30px;
@@ -1229,7 +1229,7 @@
     }
 
     .game-players #player-5 {
-        background-color: #e87722;
+        background-color: #e7f363;
         border-radius: 10px;
         font-size: 20px;
         height: 30px;
@@ -1267,7 +1267,7 @@
     }
 
     #player-selecting.player-0 {
-        background-color: greenyellow;
+        background-color: #1cd956;
     }
 
     #player-selecting.player-1 {
@@ -1283,11 +1283,11 @@
     }
 
     #player-selecting.player-4 {
-        background-color: #e87722;
+        background-color: #e365fa;
     }
 
     #player-selecting.player-5 {
-        background-color: #e87722;
+        background-color: #e7f363;
     }
 
     #player-selecting-next {
@@ -1318,7 +1318,7 @@
     }
 
     .game-select-animal-icon.icon-selected.player-0 {
-        border: 3px solid yellowgreen;
+        border: 3px solid #1cd956;
     }
 
     .game-select-animal-icon.icon-selected.player-1 {
@@ -1334,15 +1334,15 @@
     }
 
     .game-select-animal-icon.icon-selected.player-4 {
-        border: 3px solid #e87722;
+        border: 3px solid #e365fa;
     }
 
     .game-select-animal-icon.icon-selected.player-5 {
-        border: 3px solid #e87722;
+        border: 3px solid #e7f363;
     }
 
      .game-spot-player-block.player-0 {
-        background-color: greenyellow;
+        background-color: #1cd956;
     }
 
     .game-spot-player-block.player-1 {
@@ -1358,15 +1358,15 @@
     }
 
     .game-spot-player-block.player-4 {
-        background-color: #e87722;
+        background-color: #e365fa;
     }
 
     .game-spot-player-block.player-5 {
-        background-color: #e87722;
+        background-color: #e7f363;
     }
 
     .game-spot-animal-icon.icon-selected.player-0 {
-        border: 3px solid yellowgreen;
+        border: 3px solid #1cd956;
     }
 
     .game-spot-animal-icon.icon-selected.player-1 {
@@ -1382,11 +1382,11 @@
     }
 
     .game-spot-animal-icon.icon-selected.player-4 {
-        border: 3px solid #e87722;
+        border: 3px solid #e365fa;
     }
 
     .game-spot-animal-icon.icon-selected.player-5 {
-        border: 3px solid #e87722;
+        border: 3px solid #e7f363;
     }
 
     #game-animal-grid {
@@ -1548,12 +1548,12 @@
         margin-right: 50px;
         box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4);
         text-shadow: 1px 1px 2px #000;
-        background-color: yellowgreen;
+        background-color: #1cd956;
         width: 70%;
     }
 
     .game-scoreboard-player.player-0 {
-        background-color: greenyellow;
+        background-color: #1cd956;
     }
 
     .game-scoreboard-player.player-1 {
@@ -1569,11 +1569,11 @@
     }
 
     .game-scoreboard-player.player-4 {
-        background-color: #e87722;
+        background-color: #e365fa;
     }
 
     .game-scoreboard-player.player-5 {
-        background-color: #e87722;
+        background-color: #e7f363;
     }
 
     .game-scoreboard-score {
@@ -1806,7 +1806,7 @@
         /* margin-left: 25px; */
         /* margin-bottom: 25px; */
         display: inline-block;
-        background-color:  yellowgreen;
+        background-color:  #1cd956;
     }
 
     .game-win-content-right {
@@ -1860,8 +1860,8 @@
         height: 100px;
     }
 
-     .game-winner-player-icon.player-0 {
-        background-color: greenyellow;
+    .game-winner-player-icon.player-0 {
+        background-color: #1cd956;
     }
 
     .game-winner-player-icon.player-1 {
@@ -1877,11 +1877,11 @@
     }
 
     .game-winner-player-icon.player-4 {
-        background-color: #e87722;
+        background-color: #e365fa;
     }
 
     .game-winner-player-icon.player-5 {
-        background-color: #e87722;
+        background-color: #e7f363;
     }
 
     .game-scoreboard-heading {
