@@ -390,10 +390,12 @@ function Application() {
 
         $(".menu_donate, .header-option-donate").off();
         $(".menu_donate, .header-option-donate").on("click", function (event) {
+            $.blockUI({ message: $("#loader"), css: { backgroundColor: '#0000', color: '#000', border: 'none'} });
             app.view.animal_loadAnimals(function () {
                 $(".header-options-popup").hide();
                 $("#menu-donate .title").html('Donate');
                 ga_storage._trackPageview('/index.html#menu-donate');
+                $.unblockUI();
                 location.href = "#menu-donate";
             });
         });
