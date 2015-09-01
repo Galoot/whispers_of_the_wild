@@ -3,9 +3,9 @@ var shareFacebook = function() {
     if (window.plugins && window.plugins.socialsharing) {
         console.log('Proceeding with facebook share...');
         window.plugins.socialsharing.shareViaFacebook(
-                null,
+                'What an awesome app, it is teaching me so much about wildlife. #whispers.',
                 null, /* Image to share goes here */
-                'https://www.facebook.com/whispersofthewild', /* URL to share goes here */
+                'http://www.whispersofthewild.com', /* URL to share goes here */
                 function () {
                     app.view.unlockFreeApp();
                     app.view.animal_loadAnimals();
@@ -26,10 +26,11 @@ var shareTwitter = function() {
     if (window.plugins && window.plugins.socialsharing) {
         console.log('Proceeding with twitter share...');
         window.plugins.socialsharing.shareViaTwitter(
-                '@Whispers_Wild\n' + 'https://www.facebook.com/whispersofthewild\n'
+                'What an awesome app, it is teaching me so much about wildlife. #whispers.'
+                // + '@Whispers_Wild\n' + 'https://www.whispersofthewild.com\n'
                 + '', /* Text to share goes here */
-                'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png', /* Image to share goes here */
-                null, //'https://www.facebook.com/whispersofthewild', /* URL to share goes here */
+                null, // 'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10714113_734077916675567_3272036327475912665_o.png', /* Image to share goes here */
+                'http://www.whispersofthewild.com', /* URL to share goes here */
                 function () {
                     app.view.unlockFreeApp();
                     app.view.animal_loadAnimals();

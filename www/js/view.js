@@ -986,4 +986,14 @@ function View() {
             initSlider('.profile-tabs', 'left', true);
         }
     };
+
+    this.showFullApp = function() {
+        if (isMobile.iOS()) {
+            var key = '981297161';
+            window.open('itms-apps://itunes.apple.com/app/id' + key, '_system');
+        } else {
+            var key = 'za.co.galoot.wotwfull';
+            window.open('market://details?id=' + key, '_system');
+        }
+    }
 };

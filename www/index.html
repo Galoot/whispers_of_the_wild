@@ -51,6 +51,7 @@
         <script type="text/javascript" src="js/game.js"></script>
 
         <!-- local scripts & styling ======================================= -->
+        <script type="text/javascript" src="js/servercomms.js"></script>
         <script type="text/javascript" src="js/view.js"></script>
         <script type="text/javascript" src="js/panel-slider.js"></script>
         <script type="text/javascript" src="js/datastore.js"></script>
@@ -1713,7 +1714,7 @@
                     <div class="modal-content">
                         Purchase the full version to get unlimited access to the game and all animals
                         <br/><br/>
-                        <div class="purchaseButton">Available soon...</div>
+                        <div class="purchaseButton" onClick="app.view.showFullApp(); $.pgwModal('close');">-- App Store Logo --</div>
                         <br/>
                         Share and unlock 5 free animals
                         <br/>

@@ -120,6 +120,25 @@ function Application() {
     };
 
     var initialiseListeners = function () {
+
+        /*
+        var server = new Server();
+        server.getSuppliers(function(data) {
+            console.log(data);
+            data.forEach(function(d) {
+                console.log('Vendor: ' + d);
+            })
+        });
+
+        server.submitRegistration('Rudi Minty', 'rudi.minty@email.com', 'Galoot',
+            function(regId) {
+                console.log("Registration Success: " + regId);
+            },
+            function() {
+                console.log("Server is not available...");
+            });
+        */
+       
         // ==== Splash =========================================================
         $("#splash").off();
         $("#splash").on("click", function (event) {
