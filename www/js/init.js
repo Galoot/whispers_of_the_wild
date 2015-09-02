@@ -43,6 +43,9 @@ function Application() {
         resetPlayers();
     });
 
+    // server comms object
+    this.server = new Server();
+
     // applicatiom view
     this.view = new View();
 
@@ -121,34 +124,18 @@ function Application() {
 
     var initialiseListeners = function () {
 
-        /*
-        var server = new Server();
-        server.getSuppliers(function(data) {
-            console.log(data);
-            data.forEach(function(d) {
-                console.log('Vendor: ' + d);
-            })
-        });
-
-        server.submitRegistration('Rudi Minty', 'rudi.minty@email.com', 'Galoot',
-            function(regId) {
-                console.log("Registration Success: " + regId);
-            },
-            function() {
-                console.log("Server is not available...");
-            });
-        */
-       
         // ==== Splash =========================================================
         $("#splash").off();
         $("#splash").on("click", function (event) {
             // playAudio("resources/audio/intro.mp3");
             location.href = "#menu";
+            app.server.checkRegistered();
         });
         $("#enter").off();
         $("#enter").on("click", function (event) {
             // playAudio("resources/audio/intro.mp3");
             location.href = "#menu";
+            app.server.checkRegistered();
         });
 
         // Pre-load first track

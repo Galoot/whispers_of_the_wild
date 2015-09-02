@@ -66,6 +66,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" type="text/css" href="css/main-landscape.css" />
         <link rel="stylesheet" type="text/css" href="css/main-portrait.css" />
+        <link rel="stylesheet" type="text/css" href="css/form.css" />
         <!-- =============================================================== -->
 
         <script type="text/javascript" src="js/libs/google-analytics/ga.js"></script>
@@ -1720,6 +1721,82 @@
                         <br/>
                         <div class="share-facebook share" onClick="shareFacebook(); $.pgwModal('close');"></div>
                         <div class="share-twitter share" onClick="shareTwitter(); $.pgwModal('close');"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="registrationMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Register once and never see this again</div>
+                    <br/>
+                    <div class="modal-content">
+                        Take 5 seconds to register so that we can thank our partners.
+                        <br/><br/>
+                        <table width="100%">
+                            <tr>
+                                <td style="width:50%"><div class="reg_label">Name & Surname</div></td>
+                                <td style="width:50%"><div class="reg_field"><input type="text" id="reg_name" onblur="app.server.reg_name = this.value;"/></div></td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%"><div class="reg_label">Email Address</div></td>
+                                <td style="width:50%"><div class="reg_field"><input type="email" id="reg_email" onblur="app.server.reg_email = this.value;"/></div></td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%"><div class="reg_label">Who told you about us</div></td>
+                                <td style="width:50%">
+                                    <div class="reg_field" id="reg_vendor_div">
+                                        <select id="reg_vendor" onChange="app.server.reg_vendor = this.options[this.selectedIndex].value;">
+                                            <option value="Our website">Our website</option>
+                                            <option value="Social Media">Social Media</option>
+                                            <option value="Browsing the app store">Browsing the app store</option>
+                                            <option value="Media">Media</option>
+                                            <option value="Word of mouth">Word of mouth</option>
+                                            <optgroup label="One of out vendors:">
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <div id="reg_why" onClick="app.view.modal('whyRegisterMessage');">Why must I register?</div>
+                        <br/>
+                        <div id="reg_submit" onClick="app.server.register();">Register</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="whyRegisterMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Why Register?</div>
+                    <br/>
+                    <div class="modal-content">
+                        By registering you allow us to thank the people that told you about Whispers of the Wild.
+                        <br/>Your information will be kept safe, and will not be used for marketing purposes.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="successRegisterMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Thank you!</div>
+                    <br/>
+                    <div class="modal-content">
+                        Your registration was successful. Please enjoy.
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="failRegisterMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Sorry</div>
+                    <br/>
+                    <div class="modal-content">
+                        Your registration was unsuccessful because of a lack of network connectivity. You will have to try again next time.
                     </div>
 
                 </div>

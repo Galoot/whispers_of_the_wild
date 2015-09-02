@@ -137,6 +137,7 @@ function Datastore() {
                     tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('dataVersion', '0')");
                     tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('unlocked', 'false')");
                     tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('mode', '" + app.mode + "')");
+                    tx.executeSql("INSERT INTO SYS_Property (property, value) VALUES ('registered', 'false')");
                 },
                 function (error) {
                     alert("SQL Error Inserting into tables: " + error.code + ", " + error.message);

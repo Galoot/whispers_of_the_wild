@@ -63,6 +63,10 @@ function View() {
         model.setProperty(property, value, onComplete);
     };
 
+    this.addProperty = function(property, value, onComplete) {
+        model.addProperty(property, value, onComplete);
+    };
+
     this.getProperty = function(property, onResult) {
         model.getProperty(property, onResult);
     };

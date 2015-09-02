@@ -1613,14 +1613,14 @@ color: #fff;
     -webkit-user-select: auto !important;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:not(.reg_field .reg_label):focus{
     outline: 0;
     background: transparent;
     margin-top: -14px;
     color: #fff;
 }
 
-input {
+input:not(.reg_field .reg_label) {
     color: #fff !important;
 }
 

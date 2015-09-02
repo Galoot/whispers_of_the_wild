@@ -9,6 +9,7 @@ function Model() {
     this.data.init();
 
     var _set_property = "UPDATE SYS_Property SET value = ? WHERE property = ?";
+    var _add_property = "INSERT INTO SYS_Property (property, value) VALUES (?, ?)";
 
     var _get_property = "SELECT value FROM SYS_Property WHERE property = ?";
 
@@ -56,6 +57,15 @@ function Model() {
 
     this.setProperty = function(property, value, onComplete) {
         this.data.dbQuery(_set_property, [value, property],
+                function(results) {
+                    if (onComplete) {
+                        onComplete();
+                    }
+                });
+    };
+
+    this.addProperty = function(property, value, onComplete) {
+        this.data.dbQuery(_add_property, [property, value],
                 function(results) {
                     if (onComplete) {
                         onComplete();
