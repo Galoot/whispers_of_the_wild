@@ -138,6 +138,10 @@ function Application() {
             app.server.checkRegistered();
         });
 
+        if (app.mode == app.MODE_PAID || app.mode == app.MODE_FREE_UNLOCKED) {
+            $(".share_and_unlock").html('Love Whispers of the Wild? Why not tell your friends.');
+        }
+
         // Pre-load first track
         app.view.queueIntroTrack();
         // app.view.playNextAudioTrack();

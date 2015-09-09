@@ -57,17 +57,27 @@ function Server() {
         var email = this.reg_email;
         var vendor = this.reg_vendor;
 
-        this.submitRegistration(name, email, vendor,
-                function(regId) {
-                    console.log('registrationID:' + regId);
+        if (name == '') {
+            alert('Please supply a valid name.');
+            console.log('no valid name');
+        } else if (email == '') {
+            alert('Please supply a valid email.');
+        } else if (vendor == '') {
+            alert('Please supply a valid vendor.');
+        } else {
+            $.pgwModal('close');
+            this.submitRegistration(name, email, vendor,
+                    function(regId) {
+                        console.log('registrationID:' + regId);
 
-                    app.view.setProperty('registered', regId, function() {
-                        app.view.modal('successRegisterMessage');
+                        app.view.setProperty('registered', regId, function() {
+                            app.view.modal('successRegisterMessage');
+                        });
+                    },
+                    function() {
+                        app.view.modal('failRegisterMessage');
                     });
-                },
-                function() {
-                    app.view.modal('failRegisterMessage');
-                });
+        }
     };
 
     this.showRegistration = function() {
@@ -76,6 +86,7 @@ function Server() {
 
             var selectHtml =
                     "<select id='reg_vendor' onChange='app.server.reg_vendor = this.value;'>"
+                        + "<option value=''>-- SELECT ONE --</option>"
                         + "<option value='Our website'>Our website</option>"
                         + "<option value='Social Media'>Social Media</option>"
                         + "<option value='Browsing the app store'>Browsing the app store</option>"
@@ -95,6 +106,7 @@ function Server() {
         }, function() {
             var selectHtml =
                     "<select id='reg_vendor' onChange='app.server.reg_vendor = this.value;'>"
+                        + "<option value=''>-- SELECT ONE --</option>"
                         + "<option value='Our website'>Our website</option>"
                         + "<option value='Social Media'>Social Media</option>"
                         + "<option value='Browsing the app store'>Browsing the app store</option>"

@@ -1620,10 +1620,6 @@ textarea:focus, input:not(.reg_field .reg_label):focus{
     color: #fff;
 }
 
-input:not(.reg_field .reg_label) {
-    color: #fff !important;
-}
-
 .game-players #player-0 {
     background-color: #1cd956;
     border-radius: 10px;
