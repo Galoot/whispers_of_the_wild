@@ -1802,6 +1802,19 @@
                 </div>
             </div>
 
+            <div id="soundWarningMessage">
+                <div style="text-align: center;">
+                    <div class="modal-title">Warning!</div>
+                    <br/>
+                    <div class="modal-content">
+                        Playing a <span id="warningAnimalSound">lion roar</span> around other animals can cause them to react aggressively or to run away.<br/>
+                        Only click continue if there are no other animals around you.
+                    </div>
+                    <br/>
+                    <div id="sound_warning_continue" onClick="app.view.playAnimalSound(); $.pgwModal('close'); ">Continue</div>
+                </div>
+            </div>
+
             <div id="loader" style="text-align:center;">
                 <img style="height: 65px; width: 65px; margin: 0 auto;" src="resources/loader.gif"/>
             </div>

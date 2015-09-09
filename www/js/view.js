@@ -188,6 +188,15 @@ function View() {
         app.view.playAudioTrack("resources/safety.mp3", 275, "Safety Advice");
     };
 
+    this.soundProfile = null;
+    this.soundAnimal = null;
+    this.playAnimalSound = function() {
+        app.view.playAudioTrack(
+                app.view.soundProfile.soundPath,
+                app.view.soundProfile.soundDuration,
+                ('Listen to a ' + app.view.soundAnimal.thumbName));
+    };
+
     this.animal_loadProfile = function(animal, onComplete) {
         model.getProfile(animal.animalID, function(profile) {
             model.getImages(animal.animalID, function(images) {
@@ -213,7 +222,13 @@ function View() {
                     $(".listen-to").off();
                     $(".listen-to").on("click",
                         function(event) {
-                            app.view.playAudioTrack(profile.soundPath, profile.soundDuration, ('Listen to a ' + animal.thumbName));
+                            app.view.soundProfile = profile;
+                            app.view.soundAnimal = animal;
+                            if ('Lion' === animal.thumbName) {
+                                app.view.showSoundWarningPrompt();
+                            } else {
+                                app.view.playAnimalSound();
+                            }
                         });
                 } else {
                     $(".listen-to").hide();
@@ -999,5 +1014,9 @@ function View() {
             var key = 'za.co.galoot.wotwfull';
             window.open('market://details?id=' + key, '_system');
         }
-    }
+    };
+
+    this.showSoundWarningPrompt = function() {
+        app.view.modal("soundWarningMessage");
+    };
 };
