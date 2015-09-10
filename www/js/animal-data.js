@@ -18,7 +18,7 @@ load_animal_data = function(model, onCompleted) {
             'Bats, fruit bats, leaf-nosed bats, sheath-tailed bats, slit-faced bats, horseshoe bats, vesper bats, free-tailed bats', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures,Insectivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             7, // Game Score
@@ -90,7 +90,7 @@ load_animal_data = function(model, onCompleted) {
             'Lesser bushbaby, southern lesser bushbaby, lesser galago; thick-tailed bushbaby, greater galago, thick-tailed galago', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Primate,Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             15, // Game Score
@@ -163,7 +163,7 @@ load_animal_data = function(model, onCompleted) {
             'Ground squirrel, tree squirrel', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.EARNED, // Animal Status
             7, // Game Score
@@ -238,7 +238,7 @@ load_animal_data = function(model, onCompleted) {
             'Banded mongoose, meerkat, suricate, dwarf mongoose', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.EARNED, // Animal Status
             11, // Game Score
@@ -316,7 +316,7 @@ load_animal_data = function(model, onCompleted) {
             'slender mongoose, yellow mongoose, white-tailed mongoose, Egyptian mongoose', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             11, // Game Score
@@ -394,7 +394,7 @@ load_animal_data = function(model, onCompleted) {
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             30, // Game Score
@@ -460,7 +460,7 @@ load_animal_data = function(model, onCompleted) {
             'Small-spotted genet, common genet, large-spotted genet, ', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             18, // Game Score
@@ -530,7 +530,7 @@ load_animal_data = function(model, onCompleted) {
             'Savannah hare, scrub hare, cape hare, riverine rabbit, red rock rabbits', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores,Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             8, // Game Score
@@ -600,7 +600,7 @@ load_animal_data = function(model, onCompleted) {
             'Dassie, rock dassie, tree dassie', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             8, // Game Score
@@ -676,7 +676,7 @@ load_animal_data = function(model, onCompleted) {
             'honey badger, ratel', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             30, // Game Score
@@ -752,7 +752,7 @@ load_animal_data = function(model, onCompleted) {
             '', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             25, // Game Score
@@ -827,7 +827,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Don\'t fight them:</b> if a vervet monkey tries to grab something from you, let them have it. If you try fight them, they can become aggressive.'
             + '<br/><br/><b>Vervet monkey body language:</b> a vervet monkey is showing aggression if it opens its eyes wide showing its white eyelids, bares its teeth, advances imposingly or vocalises. '
             + '<br/><br/><b>Your body language:</b> If a vervet monkey acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
-            + '', // Safety Advise
+            + '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             3, // Game Score
@@ -904,7 +904,7 @@ load_animal_data = function(model, onCompleted) {
             'Ground pangolin, scaly anteater, cape pangolin, South African pangolin', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures,Insectivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             50, // Game Score
@@ -979,7 +979,7 @@ load_animal_data = function(model, onCompleted) {
             'Jackals, BLACK-BACKED JACKAL, SIDE-STRIPED JACKAL', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             12, // Game Score
@@ -1053,7 +1053,7 @@ load_animal_data = function(model, onCompleted) {
             'Cape clawless otter, Spotted-necked otter', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             35, // Game Score
@@ -1128,7 +1128,7 @@ load_animal_data = function(model, onCompleted) {
             'Civit', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             18, // Game Score
@@ -1185,7 +1185,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '05 Poisonous diet',
                 69, resourcesPrefix + name.toLowerCase()
                 + '/Civit 5- Poisonous diet.mp3');
-        mdl.addAudio(animalID, '05 Role in the ecosystem.mp3',
+        mdl.addAudio(animalID, '06 Role in the ecosystem.mp3',
                 42, resourcesPrefix + name.toLowerCase()
                 + '/Civit 6- Role in the ecosystem.mp3');
         // Maps(s)
@@ -1203,7 +1203,7 @@ load_animal_data = function(model, onCompleted) {
             'caracal, desert lynx', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             25, // Game Score
@@ -1275,7 +1275,7 @@ load_animal_data = function(model, onCompleted) {
             'Aardwolf', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             30, // Game Score
@@ -1344,7 +1344,7 @@ load_animal_data = function(model, onCompleted) {
             'Steenbok', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             5, // Game Score
@@ -1384,6 +1384,7 @@ load_animal_data = function(model, onCompleted) {
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
 
         // Audio
         mdl.addAudio(animalID, '01 Secretive habits',
@@ -1406,7 +1407,7 @@ load_animal_data = function(model, onCompleted) {
             'crested porcupine, cape porcupine', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores,Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             21, // Game Score
@@ -1478,7 +1479,7 @@ load_animal_data = function(model, onCompleted) {
             'Common duiker, grey duiker', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             5, // Game Score
@@ -1541,7 +1542,7 @@ load_animal_data = function(model, onCompleted) {
             'Aardvark, ant bear', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Nocturnal Creatures,Insectivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             30, // Game Score
@@ -1614,7 +1615,7 @@ load_animal_data = function(model, onCompleted) {
             'Serval', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Carnivores (<20kg),Small Nocturnal Creatures', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.EARNED, // Animal Status
             30, // Game Score
@@ -1698,7 +1699,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Baboon body language:</b> a baboon is showing aggression if it opens its eyes wide, bares its teeth, stands up imposingly or vocalises. '
             + '<br/><br/><b>Your body language:</b> If a baboon acts aggressively, do not cower or run away. Stand tall and confident. Shout and make loud noises, and even pretend to throw something at them if they start to get too close.'
             + '<br/><br/><b>Use men as protection:</b> baboons are sexist. They recognise women, and will pick on them. Use large males to protect a group. '
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             3, // Game Score
             function(name, animalID) {
@@ -1783,7 +1784,7 @@ load_animal_data = function(model, onCompleted) {
             '<b>Warthog safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> some lodges have warthogs that walk around the camp during the day. Some of these animals are relatively tame, and may even approach you. Remember that these are still wild animals. Do not feed them, as they may become intimidating when they start to expect food. Do not chase them or act in a threatening manner towards them, as they may react aggressively, and their tusks can be deadly.'
             + '<br/><br/><b>Don\'t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             3, // Game Score
             function(name, animalID) {
@@ -1822,6 +1823,8 @@ load_animal_data = function(model, onCompleted) {
         // Images
         mdl.addImage(animalID, 'Image 1', resourcesPrefix + name.toLowerCase() + '/image1.jpg');
         mdl.addImage(animalID, 'Image 2', resourcesPrefix + name.toLowerCase() + '/image2.jpg');
+        mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
+        mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
 
         // Audio
         mdl.addAudio(animalID, '01 Why do they have warts',
@@ -1860,7 +1863,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be respectful:</b> don\'t lean out of the vehicle, tease or throw things at the animal or get out of the car. Remember that the animal perceives the vehicle as one object, but when you stand up or lean out of it then the animal can identify individuals on the back, which can make them aggressive.'
             + '<br/><br/><b>Which individuals to look out for:</b> be particularly respectful of mothers with cubs and wounded leopards'
             + '<br/><br/><b>Leopard body language:</b> a leopard will usually look at you then move off if it feels that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or hiss they are giving you a warning that you need to move away.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             23, // Game Score
             function(name, animalID) {
@@ -1902,7 +1905,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 3', resourcesPrefix + name.toLowerCase() + '/image3.jpg');
         mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         mdl.addImage(animalID, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
-        mdl.addImage(animalID, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image7.jpg');
+        mdl.addImage(animalID, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
 
         // Audio
         mdl.addAudio(animalID, '01 Introduction',
@@ -1923,6 +1926,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '06 Hoisting kills into trees',
                 67, resourcesPrefix + name.toLowerCase()
                 + '/Leopard 6- Hoisting kills into trees.mp3');
+        mdl.addAudio(animalID, 'Leopard Special - Humans in a leopards world',
+                67, resourcesPrefix + name.toLowerCase()
+                + '/Leopard special- Humans in a leopards world.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
@@ -1938,7 +1944,7 @@ load_animal_data = function(model, onCompleted) {
             'Bushpig', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Other Herbivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             12, // Game Score
@@ -2003,7 +2009,7 @@ load_animal_data = function(model, onCompleted) {
             'wild dog, painted dog, African hunting dog', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             35, // Game Score
@@ -2091,7 +2097,7 @@ load_animal_data = function(model, onCompleted) {
             'Bushbuck', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             6, // Game Score
@@ -2152,7 +2158,7 @@ load_animal_data = function(model, onCompleted) {
             'Springbok', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             5, // Game Score
@@ -2223,7 +2229,7 @@ load_animal_data = function(model, onCompleted) {
             'Brown hyaena', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.EARNED, // Animal Status
             30, // Game Score
@@ -2298,7 +2304,7 @@ load_animal_data = function(model, onCompleted) {
             'Cheetah', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Carnivores (>20kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             20, // Game Score
@@ -2358,6 +2364,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '05 Cheetahs and humans',
                 87, resourcesPrefix + name.toLowerCase()
                 + '/Cheetah 5- Cheetahs and humans.mp3');
+        mdl.addAudio(animalID, 'Cheetah special - Secrets to speed',
+                291, resourcesPrefix + name.toLowerCase()
+                + '/Cheetah special - Secrets to speed.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
@@ -2381,7 +2390,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Don\'t keep food in the tent:</b> hyaenas are able to enter some campsites. Never keep food, especially meat like biltong, in the tent with you as you sleep. Hyeanas have been known to bite through a tent to try to get at an enticing smell, and ended up grabbing a person instead.'
             + '<br/><br/><b>Don\'t leave food lying around:</b> never leave any food lying unguarded at night when hyaenas are around.</b> They will easily chew through cooler boxes or plastic crates to get to something they want, so make sure everything is locked away.'
             + '<br/><br/><b>Be wary of hyaenas in clans:</b> hyaenas are usually quite scared of people, and will run away if you shout and chase them. However, be careful if they are in a group, as this gives them confidence, and they may become aggressive if challenged. '
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             18, // Game Score
             function(name, animalID) {
@@ -2467,7 +2476,7 @@ load_animal_data = function(model, onCompleted) {
             'Impala', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             2, // Game Score
@@ -2554,7 +2563,7 @@ load_animal_data = function(model, onCompleted) {
             'Blesbok, bontebok', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Small Antelope (<100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             8, // Game Score
@@ -2621,7 +2630,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Don\'t disturb a feeding lion:</b> Lions get grumpy when they feed, so keep a safe distance if they are on a kill. '
             + '<br/><br/><b>Beware the curious lion:</b>  Lions have been known to chew on cars out of curiosity. It may seem cute at first if a lion shows interest in your car, but it will stop being funny when they pop your tyre or bit off your wing mirror. If a lion starts sniffing around your car, close the windows and try to move away. '
             + '<br/><br/><b>Lion body language:</b> lions will usually look at you then move off if they feel that you have invaded their space. If they feel threatened they might flatten their ears while staring at you. If they growl or charge at you, they are telling you to get away. Don\'t panic, close the windows and make a fast but safe retreat.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             18, // Game Score
             function(name, animalID) {
@@ -2720,7 +2729,7 @@ load_animal_data = function(model, onCompleted) {
             'Tsessebe, topi, tiang', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             8, // Game Score
@@ -2790,7 +2799,7 @@ load_animal_data = function(model, onCompleted) {
             'Gemsbok, oryx, East African Oryx', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             10, // Game Score
@@ -2864,7 +2873,7 @@ load_animal_data = function(model, onCompleted) {
             'Sable antelope, giant sable antelope', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             17, // Game Score
@@ -2939,7 +2948,7 @@ load_animal_data = function(model, onCompleted) {
             '<b>Warthog safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> some lodges have warthogs that walk around the camp during the day. Some of these animals are relatively tame, and may even approach you. Remember that these are still wild animals. Do not feed them, as they may become intimidating when they start to expect food. Do not chase them or act in a threatening manner towards them, as they may react aggressively, and their tusks can be deadly.'
             + '<br/><br/><b>Don\'t block a warthog burrow:</b> if you see a large hole in the ground that could be a warthog burrow, do not stand in the entrance, blocking their escape route. Warthogs always enter their burrows backwards, and when trapped inside, will burst out tusks first. They are extremely powerful, and can cause fatal injuries with their tusks.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             4, // Game Score
             function(name, animalID) {
@@ -3005,7 +3014,7 @@ load_animal_data = function(model, onCompleted) {
             'blue wildebeest, common wildebeest, brindled gnu', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.FREE, // Animal Status
             3, // Game Score
@@ -3090,7 +3099,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Plan your retreat:</b> If they start to advance towards you threateningly, then slowly back away from them. Always be aware of the route you will take to do this. '
             + '<br/><br/><b>Be respectful:</b> never lean out of the vehicle, and never get out of the car when in the presence of buffalo. Do not throw things, shout or tease the buffalo. '
             + '<br/><br/><b>Be wary of old males:</b> The individuals to be most wary of are the big, old males. These guys are notoriously bad tempered, so give them a wide birth.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             13, // Game Score
             function(name, animalID) {
@@ -3169,7 +3178,7 @@ load_animal_data = function(model, onCompleted) {
             'Roan antelope', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             17, // Game Score
@@ -3237,7 +3246,7 @@ load_animal_data = function(model, onCompleted) {
             'Kudu, greater kudu', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             8, // Game Score
@@ -3315,7 +3324,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Hippo body language:</b> if a hippo looks at you and opens its mouth wide, it is issuing a warning that you are too close. Move slowly away. '
             + '<br/><br/><b>Be wary of mothers:</b> mother hippos can be very protective when with their calves. Do not get too close to a mother, and do not make fast or erratic movements.'
             + '<br/><br/><b>Be wary at night:</b> hippos come out onto land at night to feed. Sometimes they may feed on the lawns inside lodges. Ask you lodge if hippos are able to enter the grounds, and ask them to brief you on their safety protocol at night.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             10, // Game Score
             function(name, animalID) {
@@ -3382,6 +3391,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '08 Hippos and humans',
                 161, resourcesPrefix + name.toLowerCase()
                 + '/Hippo 8- Hippos and humans.mp3');
+        mdl.addAudio(animalID, 'Hippos Special - Underwater senses',
+                161, resourcesPrefix + name.toLowerCase()
+                + '/Hippo special- Underwater senses.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
@@ -3395,7 +3407,7 @@ load_animal_data = function(model, onCompleted) {
     mdl.addAnimal('Rhinoceros (Ceratotherium simum and Diceros bicornis)',
             animalName, // Thumbnail Name & Folder name under 'animals'
             'White rhino, square-lipped rhino, black rhino, hooked-lipped rhino', // Common Names
-            resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
+            resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant Herbivores (>300kg),Other Herbivores', // Category
             '<b>Rhino safety advice</b>'
             + '<br/><br/><b>Be cautious:</b> always approach slowly and carefully, and do not force yourself into their space. If you see one rhino, look all around you to determine if there are any others around.'
@@ -3406,11 +3418,11 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Be wary of black rhinos:</b> black rhinos are notoriously aggressive. If you see one, keep a safe distance.'
             + '<br/><br/><b>Be wary of mother rhinos:</b> mother rhinos can be aggressive in defending their calves. Give mothers a wide birth, and never get between a mother and her calf. '
 
-            + '', // Safety Advise
-            PayStatus.PAID, // Animal Status
+            + '', // Safety Advice
+            PayStatus.FREE, // Animal Status
             15, /* 28 Black Rhino */ // Game Score
             function(name, animalID) {
-
+        name = 'free-' + name;
         animal_counter++;
 
         // Common Names listed seperately
@@ -3500,7 +3512,7 @@ load_animal_data = function(model, onCompleted) {
             'Eland, common eland, giant eland', // Common Names
             resourcesPrefix + 'free-' + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Large Antelope (>100kg),Giant Herbivores (>300kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.EARNED, // Animal Status
             10, // Game Score
@@ -3575,7 +3587,7 @@ load_animal_data = function(model, onCompleted) {
             'Zebra', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant Herbivores (>300kg),Other Herbivores', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             4, // Game Score
@@ -3641,6 +3653,9 @@ load_animal_data = function(model, onCompleted) {
         mdl.addAudio(animalID, '06 Zebra domestication',
                 28, resourcesPrefix + name.toLowerCase()
                 + '/Zebra 6- Zebra domestication.mp3');
+        mdl.addAudio(animalID, 'Zebra special - Why do zebras have stripes?',
+                28, resourcesPrefix + name.toLowerCase()
+                + '/Zebra special - Why do zebras have stripes_.mp3');
         // Maps(s)
         mdl.addMap(animalID, 'Map 1', resourcesPrefix + name.toLowerCase() + '/map.jpg');
         // Footprints
@@ -3656,7 +3671,7 @@ load_animal_data = function(model, onCompleted) {
             'Giraffe', // Common Names
             resourcesPrefix + animalName.toLowerCase() + '/thumb.jpg', // Icon
             'Giant Herbivores (>300kg)', // Category
-            '', // Safety Advise
+            '', // Safety Advice
 
             PayStatus.PAID, // Animal Status
             10, // Game Score
@@ -3756,7 +3771,7 @@ load_animal_data = function(model, onCompleted) {
             + '<br/><br/><b>Don\'t try intimidate them:</b> elephants can dominate the road sometimes. Don\'t try to intimidate them into moving. Be patient and wait for them to give you space'
             + '<br/><br/><b>Stay in your car:</b> do not stand up, make sudden movements, lean out or get out of your car when near an elephant'
             + '<br/><br/><b>Don\'t feed the elephants:</b> Do not be tempted to share your food with them. If an elephant develops a taste for human food they can become extremely dangerous.'
-            + '', // Safety Advise
+            + '', // Safety Advice
             PayStatus.PAID, // Animal Status
             15, // Game Score
             function(name, animalID) {
@@ -3801,6 +3816,7 @@ load_animal_data = function(model, onCompleted) {
         mdl.addImage(animalID, 'Image 4', resourcesPrefix + name.toLowerCase() + '/image4.jpg');
         mdl.addImage(animalID, 'Image 5', resourcesPrefix + name.toLowerCase() + '/image5.jpg');
         mdl.addImage(animalID, 'Image 6', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
+        mdl.addImage(animalID, 'Image 7', resourcesPrefix + name.toLowerCase() + '/image6.jpg');
         // Audio
         mdl.addAudio(animalID, '01 Introduction',
                 29, resourcesPrefix + name.toLowerCase()

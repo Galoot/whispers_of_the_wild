@@ -414,6 +414,24 @@
         float: right;
     }
 
+.purchaseButton {
+    background-image: url('../resources/buttons/other/istore.png');
+    background-repeat: none;
+    width: 150px;
+    height: 44px;
+    background-size: auto 44px;
+    margin: 0 auto;
+}
+
+ /*   .purchaseButton {
+    background-image: url('../resources/buttons/other/playstore.png');
+    background-repeat: none;
+    width: 150px;
+    height: 44px;
+    background-size: auto 44px;
+    margin: 0 auto;
+}  */
+
     .category-label {
         /*position: absolute;
          top: 120px;
@@ -1860,7 +1878,7 @@
         height: 100px;
     }
 
-    .game-winner-player-icon.player-0 {
+     .game-winner-player-icon.player-0 {
         background-color: #1cd956;
     }
 

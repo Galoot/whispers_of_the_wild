@@ -626,7 +626,7 @@ function View() {
                 + "</div>";
         html += "<div class=\"profile-option animal-donate" + (page === "donate" ? " profile-tab-selected" : "") + "\">"
                 + "<div class=\"profile-option-image\"></div>"
-                + "<div class=\"profile-option-text\">Donate to a Conservation</div>"
+                + "<div class=\"profile-option-text\">Conservation</div>"
                 + "</div>";
         html += "<div class=\"profile-option-spacer\"></div>"
         return html;

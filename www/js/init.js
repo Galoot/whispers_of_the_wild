@@ -287,7 +287,7 @@ function Application() {
                 + "<hr/><div id=\"header-option question\" class=\"header-option header-option-question\">Ask a Question</div>"
                 + "<hr/><div id=\"header-option aboutus\" class=\"header-option header-option-about\">About Us</div>"
                 + "<hr/><div id=\"header-option advice\" class=\"header-option header-option-safety\">Safety Advice</div>"
-                + "<hr/><div id=\"header-option donate\" class=\"header-option header-option-donate\">Donate</div>"
+                + "<hr/><div id=\"header-option donate\" class=\"header-option header-option-donate\">Conservation</div>"
                 );
         $(".options").off();
         $(".options").on("click", function (event) {

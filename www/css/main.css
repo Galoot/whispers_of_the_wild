@@ -910,7 +910,8 @@ left: -128px;
 }
 
 .donate-button {
-    background-image: url('../resources/buttons/other/donate_button.png');
+    /* background-image: url('../resources/buttons/other/donate_button.png'); */
+    background-image: url('../resources/buttons/other/conservation_button.png');
     background-size: auto 34px;
     background-repeat: no-repeat;
     width: 122px;
@@ -1133,6 +1134,27 @@ left: -128px;
     height: 46px;
     float: right;
 }
+
+.purchaseButton {
+    background-image: url('../resources/buttons/other/istore.png');
+    background-repeat: none;
+    display: block;
+    width: 240px;
+    height: 70px;
+    background-size: auto 70px;
+    margin: 0 auto;
+}
+
+/* .purchaseButton {
+    background-image: url('../resources/buttons/other/playstore.png');
+    background-repeat: none;
+    display: block;
+    width: 240px;
+    height: 70px;
+    background-size: auto 70px;
+    margin: 0 auto;
+} */
+
 
 #animals .content {
     overflow: hidden;
