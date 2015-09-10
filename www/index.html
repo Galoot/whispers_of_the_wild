@@ -1736,14 +1736,20 @@
                         <table width="100%">
                             <tr>
                                 <td style="width:50%"><div class="reg_label">Name & Surname</div></td>
+                            </tr>
+                            <tr>
                                 <td style="width:50%"><div class="reg_field"><input type="text" id="reg_name" onblur="app.server.reg_name = this.value;"/></div></td>
                             </tr>
                             <tr>
                                 <td style="width:50%"><div class="reg_label">Email Address</div></td>
+                            </tr>
+                            <tr>
                                 <td style="width:50%"><div class="reg_field"><input type="email" id="reg_email" onblur="app.server.reg_email = this.value;"/></div></td>
                             </tr>
                             <tr>
                                 <td style="width:50%"><div class="reg_label">Who told you about us</div></td>
+                            </tr>
+                            <tr>
                                 <td style="width:50%">
                                     <div class="reg_field" id="reg_vendor_div">
                                         <select id="reg_vendor" onChange="app.server.reg_vendor = this.options[this.selectedIndex].value;">
@@ -1757,6 +1763,12 @@
                                         </select>
                                     </div>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%"><div class="reg_label">Details</div></td>
+                            </tr>
+                            <tr>
+                                <td style="width:50%"><div class="reg_field"><input type="text" id="reg_details" onblur="app.server.reg_details = this.value;"/></div></td>
                             </tr>
                         </table>
                         <br/>
@@ -1773,8 +1785,8 @@
                     <div class="modal-title">Why Register?</div>
                     <br/>
                     <div class="modal-content">
-                        By registering you allow us to thank the people that told you about Whispers of the Wild.
-                        <br/>Your information will be kept safe, and will not be used for marketing purposes.
+                        By registering you allow us gauge the success of our marketing strategies.
+                        <br/>Your information will be used for analysis purposes only, and will not be used for marketing.
                     </div>
 
                 </div>

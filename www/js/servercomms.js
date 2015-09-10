@@ -4,6 +4,21 @@ function Server() {
     this.reg_name = '';
     this.reg_email = '';
     this.reg_vendor = '';
+    this.reg_details = '';
+
+    this.partnerOptions = ['Our FB post',
+            'Our Twitter post',
+            'Our Instagram post',
+            'Africa Geographic Advert',
+            'A friend on social media',
+            'Browsing the app store',
+            'Browsing Google',
+            'TV (write details below)',
+            'Radio (write details below)',
+            'Print media (Write details below)',
+            'Word of mouth',
+            'A flyer (please state where)',
+            'Other (write details below)'];
 
     this.getSuppliers = function(onSuccess, onFailure) {
         var vendors = [];
@@ -25,16 +40,17 @@ function Server() {
         });
     };
 
-    this.submitRegistration = function(name, email, vendor, onSuccess, onFailure) {
+    this.submitRegistration = function(name, email, vendor, details, onSuccess, onFailure) {
         var registrationID = null;
 
         var request = $.ajax({
             url: this.hostname + '/register.php',
             type: 'post',
             data: {
-                'name'  : name,
-                'email' : email,
-                'vendor': vendor
+                'name'      : name,
+                'email'     : email,
+                'vendor'    : vendor,
+                'details'   : details
             }
         });
         request.done(function(data) {
@@ -56,17 +72,18 @@ function Server() {
         var name = this.reg_name;
         var email = this.reg_email;
         var vendor = this.reg_vendor;
+        var details = this.reg_details;
 
         if (name == '') {
             alert('Please supply a valid name.');
             console.log('no valid name');
-        } else if (email == '') {
+        } else if (email == '' || !isValidEmailAddress(email)) {
             alert('Please supply a valid email.');
         } else if (vendor == '') {
             alert('Please supply a valid vendor.');
         } else {
             $.pgwModal('close');
-            this.submitRegistration(name, email, vendor,
+            this.submitRegistration(name, email, vendor, details,
                     function(regId) {
                         console.log('registrationID:' + regId);
 
@@ -86,17 +103,22 @@ function Server() {
 
             var selectHtml =
                     "<select id='reg_vendor' onChange='app.server.reg_vendor = this.value;'>"
-                        + "<option value=''>-- SELECT ONE --</option>"
-                        + "<option value='Our website'>Our website</option>"
-                        + "<option value='Social Media'>Social Media</option>"
-                        + "<option value='Browsing the app store'>Browsing the app store</option>"
-                        + "<option value='Media'>Media</option>"
-                        + "<option value='Word of mouth'>Word of mouth</option>"
-                        + "<optgroup label='One of out vendors:'>";
+                        + "<option value=''>-- SELECT ONE --</option>";
+
+            selectHtml += "<optgroup label='One of our partners:'>";
+            var partners = "";
             data.forEach(function(d) {
-                selectHtml += "<option value='" + d + "'>" + d + "</option>";
+                partners += "<option value='" + d + "'>" + d + "</option>";
             });
+            if (partners == "") {
+                partners += "<option value=''>-</option>";
+            }
+            selectHtml += partners;
             selectHtml += "</optgroup>";
+
+            for (var p = 0; p < app.server.partnerOptions.length; p++) {
+                selectHtml += "<option value='" + app.server.partnerOptions[p] + "'>" + app.server.partnerOptions[p] + "</option>";
+            }
             selectHtml += "</select>";
 
             var selectDiv = $('#reg_vendor_div');
@@ -106,12 +128,10 @@ function Server() {
         }, function() {
             var selectHtml =
                     "<select id='reg_vendor' onChange='app.server.reg_vendor = this.value;'>"
-                        + "<option value=''>-- SELECT ONE --</option>"
-                        + "<option value='Our website'>Our website</option>"
-                        + "<option value='Social Media'>Social Media</option>"
-                        + "<option value='Browsing the app store'>Browsing the app store</option>"
-                        + "<option value='Media'>Media</option>"
-                        + "<option value='Word of mouth'>Word of mouth</option>"
+                        + "<option value=''>-- SELECT ONE --</option>";
+            for (var p = 0; p < app.server.partnerOptions.length; p++) {
+                selectHtml += "<option value='" + app.server.partnerOptions[p] + "'>" + app.server.partnerOptions[p] + "</option>";
+            }
             selectHtml += "</select>";
             var selectDiv = $('#reg_vendor_div');
             selectDiv.html(selectHtml);
