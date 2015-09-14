@@ -1,5 +1,5 @@
 function Server() {
-    this.hostname = 'http://www.galoot.co.za/whispers-reg';
+    this.hostname = 'http://www.whispersofthewild.com/whispers-reg';
 
     this.reg_name = '';
     this.reg_email = '';
