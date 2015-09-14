@@ -138,6 +138,11 @@ function Application() {
             app.server.checkRegistered();
         });
 
+        // update the logo give the platform
+        if (isMobile.Android()) {
+            $(".purchaseButton").css("background-image", "url('resources/buttons/other/playstore.png')");
+        }
+
         if (app.mode == app.MODE_PAID || app.mode == app.MODE_FREE_UNLOCKED) {
             $(".share_and_unlock").html('Love Whispers of the Wild? Why not tell your friends.');
         }

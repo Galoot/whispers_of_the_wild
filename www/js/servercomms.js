@@ -141,22 +141,24 @@ function Server() {
     };
 
     this.checkRegistered = function() {
-        app.view.getProperty('registered', function(results) {
-            if (results && results[0] && results[0].value) {
-                var registered = results[0].value;
+        if (app.mode == app.MODE_PAID) {
+            app.view.getProperty('registered', function(results) {
+                if (results && results[0] && results[0].value) {
+                    var registered = results[0].value;
 
-                if (registered == 'false') {
-                    console.log('Not yet Registered');
-                    app.server.showRegistration();
+                    if (registered == 'false') {
+                        console.log('Not yet Registered');
+                        app.server.showRegistration();
+                    } else {
+                        console.log('Registered...');
+                    }
                 } else {
-                    console.log('Registered...');
+                    console.log('Not event Registered');
+                    app.view.addProperty('registered', 'false');
+                    app.server.showRegistration();
                 }
-            } else {
-                console.log('Not event Registered');
-                app.view.addProperty('registered', 'false');
-                app.server.showRegistration();
-            }
-        });
+            });
+        }
     };
 
 
