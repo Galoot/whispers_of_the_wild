@@ -106,7 +106,7 @@ function Server() {
                     "<select id='reg_vendor' onChange='app.server.reg_vendor = this.value;'>"
                         + "<option value=''>-- SELECT ONE --</option>";
 
-            selectHtml += "<optgroup label='One of our partners:'>";
+            selectHtml += "<optgroup label='Our partners:'>";
             var partners = "";
             data.forEach(function(d) {
                 partners += "<option value='" + d + "'>" + d + "</option>";
