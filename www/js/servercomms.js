@@ -1,12 +1,13 @@
 function Server() {
-    this.hostname = 'http://www.galoot.co.za/whispers-reg';
+    this.hostname = 'http://www.whispersofthewild.com/whispers-reg';
 
     this.reg_name = '';
     this.reg_email = '';
     this.reg_vendor = '';
     this.reg_details = '';
 
-    this.partnerOptions = ['Our FB post',
+    this.partnerOptions = [
+            'Our FB post',
             'Our Twitter post',
             'Our Instagram post',
             'Africa Geographic Advert',
@@ -15,7 +16,7 @@ function Server() {
             'Browsing Google',
             'TV (write details below)',
             'Radio (write details below)',
-            'Print media (Write details below)',
+            'Media article (Write details below)',
             'Word of mouth',
             'A flyer (please state where)',
             'Other (write details below)'];
@@ -141,22 +142,24 @@ function Server() {
     };
 
     this.checkRegistered = function() {
-        app.view.getProperty('registered', function(results) {
-            if (results && results[0] && results[0].value) {
-                var registered = results[0].value;
+        if (app.mode == app.MODE_PAID) {
+            app.view.getProperty('registered', function(results) {
+                if (results && results[0] && results[0].value) {
+                    var registered = results[0].value;
 
-                if (registered == 'false') {
-                    console.log('Not yet Registered');
-                    app.server.showRegistration();
+                    if (registered == 'false') {
+                        console.log('Not yet Registered');
+                        app.server.showRegistration();
+                    } else {
+                        console.log('Registered...');
+                    }
                 } else {
-                    console.log('Registered...');
+                    console.log('Not event Registered');
+                    app.view.addProperty('registered', 'false');
+                    app.server.showRegistration();
                 }
-            } else {
-                console.log('Not event Registered');
-                app.view.addProperty('registered', 'false');
-                app.server.showRegistration();
-            }
-        });
+            });
+        }
     };
 
 
