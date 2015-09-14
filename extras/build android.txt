@@ -47,12 +47,16 @@ copy /Y platforms\android\bin\WhispersoftheWild-release.apk android_dist\za.co.g
         <integer name="patch_version">X</integer>
 
 3) cmd> android build
-4) cmd> ant release -builfile platform/android/build.xml
+4) cmd> ant release -buildfile platforms/android/build.xml
 
+Running app to device
+=====================
+ant release -buildfile platforms/android/build.xml
+"E:\Personal\Software\Java\Mobile\Android\adt-bundle-win\adt-bundle-windows-x86_64-20140321\sdk\platform-tools\adb.exe" -d install -r "platforms\android\bin\WhispersoftheWild-release.apk"
 
 Free App
 ========
-    Size: 56252326
+    Size: 66704841
     Key : MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMU+HNQb5ebIFAvnDgh8gli8/pwbG3XdA5AoHGiDjEGHtb+jwry1G9QcxyNpDm7s9z9s6cyazu21Dn2yZ6kMhFH0kDTMLG3VGmECLE95as8r6k1Y+M7fH1s/OdBn8HAGG/ry3qekqjzAvBoGaNJre4enmFoLBOt1USzm7SfbbLz1ZwXNzUodTtK46MiUjFZBbKdFYWZT3rTmNbrPi4VwoYoh1yqVD5m5KApcX0tp58R2E4Ar3qV05f7K2b9yWG9AC4GKVB0n6Ac0MqP2fnIJO2Qldh+nmcFwpq1/cTsZVlo/oxoKylcXpO48pNS+xfyx343OiXYJe468awRUx715YwIDAQAB
 
     init.js
