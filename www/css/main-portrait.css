@@ -1201,7 +1201,7 @@
         color: #fff;
     }
 
-    input {
+    input:not(.reg_field .reg_label) {
         color: #fff !important;
     }
 
