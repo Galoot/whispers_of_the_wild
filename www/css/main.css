@@ -1155,6 +1155,15 @@ left: -128px;
     margin: 0 auto;
 } */
 
+#reg_submit {
+    background-image: url('../resources/buttons/other/register.png');
+    background-repeat: none;
+    display: block;
+    width: 180px;
+    height: 48px;
+    background-size: auto 48px;
+    margin: 0 auto;
+}
 
 #animals .content {
     overflow: hidden;

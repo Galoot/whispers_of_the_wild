@@ -413,13 +413,23 @@
         height: 23px;
         float: right;
     }
-
-.purchaseButton {
+    
+    .purchaseButton {
     background-image: url('../resources/buttons/other/istore.png');
     background-repeat: none;
     width: 150px;
     height: 44px;
     background-size: auto 44px;
+    margin: 0 auto;
+}  
+
+#reg_submit {
+    background-image: url('../resources/buttons/other/register.png');
+    background-repeat: none;
+    display: block;
+    width: 119px;
+    height: 32px;
+    background-size: auto 32px;
     margin: 0 auto;
 }
 
@@ -1184,7 +1194,7 @@
         -webkit-user-select: auto !important;
     }
 
-    textarea:focus, input:focus{
+    textarea:focus, input:not(.reg_field .reg_label):focus{
         outline: 0;
         background: transparent;
         margin-top: -14px;

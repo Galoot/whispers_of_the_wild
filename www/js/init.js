@@ -1,8 +1,8 @@
 app = new Application();
 // Settings for the app
-app.mode = app.MODE_PAID;
+app.mode = app.MODE_FREE;
 app.useExpansion = isMobile.Android();
-app.dataVersion = "10";
+app.dataVersion = "11";
 app.contentProviderName = "org.apache.cordova.xapkreader";
 
 $(document).ready(function () {
@@ -397,7 +397,7 @@ function Application() {
                 location.href = "#animals";
             });
         });
-
+        
         $(".menu_donate, .header-option-donate").off();
         $(".menu_donate, .header-option-donate").on("click", function (event) {
             $.blockUI({ message: $("#loader"), css: { backgroundColor: '#0000', color: '#000', border: 'none'} });
