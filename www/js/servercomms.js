@@ -6,7 +6,8 @@ function Server() {
     this.reg_vendor = '';
     this.reg_details = '';
 
-    this.partnerOptions = ['Our FB post',
+    this.partnerOptions = [
+            'Our FB post',
             'Our Twitter post',
             'Our Instagram post',
             'Africa Geographic Advert',
@@ -15,7 +16,7 @@ function Server() {
             'Browsing Google',
             'TV (write details below)',
             'Radio (write details below)',
-            'Print media (Write details below)',
+            'Media article (Write details below)',
             'Word of mouth',
             'A flyer (please state where)',
             'Other (write details below)'];
