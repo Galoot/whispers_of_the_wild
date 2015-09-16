@@ -109,15 +109,15 @@
                             "count": 1
                         },
                         {
-                            "xml": "<integer name=\"main_version\">7</integer>",
+                            "xml": "<integer name=\"main_version\">120000</integer>",
                             "count": 1
                         },
                         {
-                            "xml": "<integer name=\"patch_version\">7</integer>",
+                            "xml": "<integer name=\"patch_version\">120000</integer>",
                             "count": 1
                         },
                         {
-                            "xml": "<integer name=\"file_size\">59327292</integer>",
+                            "xml": "<integer name=\"file_size\">66704841</integer>",
                             "count": 1
                         }
                     ]
@@ -136,9 +136,9 @@
             "PACKAGE_NAME": "za.co.galoot.wotw"
         },
         "org.apache.cordova.xapkreader": {
-            "MAIN_VERSION": "7",
-            "PATCH_VERSION": "7",
-            "FILE_SIZE": "59327292",
+            "MAIN_VERSION": "120000",
+            "PATCH_VERSION": "120000",
+            "FILE_SIZE": "66704841",
             "PACKAGE_NAME": "za.co.galoot.wotw"
         },
         "org.apache.cordova.inappbrowser": {
