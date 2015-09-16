@@ -6,8 +6,8 @@
     <string name="download_failed">Download failed</string>
     <string name="error">Error</string>
     <string name="close">Close</string>
-    <integer name="main_version">8</integer>
-    <integer name="patch_version">8</integer>
+    <integer name="main_version">120000</integer>
+    <integer name="patch_version">120000</integer>
     <integer name="file_size">66704841</integer>
     <string name="xapk_expansion_authority">za.co.galoot.wotw</string>
     <string name="xapk_google_play_public_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMU+HNQb5ebIFAvnDgh8gli8/pwbG3XdA5AoHGiDjEGHtb+jwry1G9QcxyNpDm7s9z9s6cyazu21Dn2yZ6kMhFH0kDTMLG3VGmECLE95as8r6k1Y+M7fH1s/OdBn8HAGG/ry3qekqjzAvBoGaNJre4enmFoLBOt1USzm7SfbbLz1ZwXNzUodTtK46MiUjFZBbKdFYWZT3rTmNbrPi4VwoYoh1yqVD5m5KApcX0tp58R2E4Ar3qV05f7K2b9yWG9AC4GKVB0n6Ac0MqP2fnIJO2Qldh+nmcFwpq1/cTsZVlo/oxoKylcXpO48pNS+xfyx343OiXYJe468awRUx715YwIDAQAB</string>
